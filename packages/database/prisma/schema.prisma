@@ -1,0 +1,249 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Core Models
+model Organization {
+  id          String   @id @default(cuid())
+  name        String
+  slug        String   @unique
+  domain      String?
+  logo        String?
+  isActive    Boolean  @default(true)
+  settings    String? // JSON string
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  users       User[]
+  campaigns   Campaign[]
+  integrations Integration[]
+  webhooks    Webhook[]
+  utmLinks    UTMLink[]
+  utmConversions UTMConversion[]
+
+  @@map("organizations")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  name          String?
+  avatar        String?
+  password      String
+  role          String    @default("MEMBER") // OWNER, ADMIN, MEMBER
+  emailVerified DateTime?
+  isActive      Boolean   @default(true)
+  lastLoginAt   DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  // Relations
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  sessions       UserSession[]
+
+  @@map("users")
+}
+
+model UserSession {
+  id        String   @id @default(cuid())
+  token     String   @unique
+  userId    String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("user_sessions")
+}
+
+model Integration {
+  id           String   @id @default(cuid())
+  platform     String   // META_ADS, GOOGLE_ADS, TIKTOK_ADS
+  name         String
+  accessToken  String
+  refreshToken String?
+  expiresAt    DateTime?
+  accountId    String?
+  isActive     Boolean  @default(true)
+  settings     String? // JSON string
+  lastSyncAt   DateTime?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  // Relations
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  campaigns      Campaign[]
+
+  @@map("integrations")
+}
+
+model Campaign {
+  id              String    @id @default(cuid())
+  name            String
+  platform        String    // META_ADS, GOOGLE_ADS, TIKTOK_ADS
+  externalId      String?
+  status          String    @default("ACTIVE") // ACTIVE, PAUSED, ARCHIVED
+  budgetType      String    @default("DAILY") // DAILY, LIFETIME
+  budget          Float?
+  spent           Float     @default(0)
+  impressions     Int       @default(0)
+  clicks          Int       @default(0)
+  conversions     Int       @default(0)
+  revenue         Float     @default(0)
+  startDate       DateTime?
+  endDate         DateTime?
+  lastSyncAt      DateTime?
+  syncStatus      String    @default("PENDING") // PENDING, SYNCING, SYNCED, ERROR
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  // Relations
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  integrationId  String?
+  integration    Integration? @relation(fields: [integrationId], references: [id], onDelete: SetNull)
+  metrics        CampaignMetric[]
+
+  @@map("campaigns")
+}
+
+model CampaignMetric {
+  id          String   @id @default(cuid())
+  date        DateTime
+  impressions Int      @default(0)
+  clicks      Int      @default(0)
+  spent       Float    @default(0)
+  conversions Int      @default(0)
+  revenue     Float    @default(0)
+  ctr         Float    @default(0)
+  cpc         Float    @default(0)
+  cpm         Float    @default(0)
+  roas        Float    @default(0)
+  roi         Float    @default(0)
+  createdAt   DateTime @default(now())
+
+  // Relations
+  campaignId String
+  campaign   Campaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+
+  @@unique([campaignId, date])
+  @@map("campaign_metrics")
+}
+
+model Webhook {
+  id        String   @id @default(cuid())
+  url       String
+  events    String // JSON array of event types
+  secret    String
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  deliveries     WebhookDelivery[]
+
+  @@map("webhooks")
+}
+
+model WebhookDelivery {
+  id           String   @id @default(cuid())
+  eventType    String
+  payload      String // JSON string
+  status       String   @default("PENDING") // PENDING, DELIVERED, FAILED
+  attempts     Int      @default(0)
+  lastAttempt  DateTime?
+  response     String?
+  createdAt    DateTime @default(now())
+
+  // Relations
+  webhookId String
+  webhook   Webhook @relation(fields: [webhookId], references: [id], onDelete: Cascade)
+
+  @@map("webhook_deliveries")
+}
+
+model UTMLink {
+  id            String    @id @default(cuid())
+  title         String?
+  description   String?
+  originalUrl   String
+  shortCode     String    @unique
+  shortUrl      String
+  qrCodeUrl     String?
+  utmSource     String?
+  utmMedium     String?
+  utmCampaign   String?
+  utmTerm       String?
+  utmContent    String?
+  customParams  String?   // JSON string
+  tags          String?   // JSON array
+  isPublic      Boolean   @default(false)
+  clicks        Int       @default(0)
+  uniqueClicks  Int       @default(0)
+  lastClickAt   DateTime?
+  expiresAt     DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  // Relations
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  clicks_data    UTMClick[]
+  conversions    UTMConversion[]
+
+  @@map("utm_links")
+}
+
+model UTMClick {
+  id          String   @id @default(cuid())
+  ipAddress   String?
+  userAgent   String?
+  referer     String?
+  country     String?
+  city        String?
+  device      String?
+  browser     String?
+  os          String?
+  isUnique    Boolean  @default(false)
+  clickedAt   DateTime @default(now())
+
+  // Relations
+  utmLinkId String
+  utmLink   UTMLink @relation(fields: [utmLinkId], references: [id], onDelete: Cascade)
+
+  @@map("utm_clicks")
+}
+
+model UTMConversion {
+  id            String   @id @default(cuid())
+  eventType     String
+  eventName     String?
+  value         Float?
+  currency      String?
+  customerId    String?
+  customerEmail String?
+  metadata      String?  // JSON string
+  convertedAt   DateTime @default(now())
+
+  // Relations
+  utmLinkId      String
+  utmLink        UTMLink @relation(fields: [utmLinkId], references: [id], onDelete: Cascade)
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  @@map("utm_conversions")
+}

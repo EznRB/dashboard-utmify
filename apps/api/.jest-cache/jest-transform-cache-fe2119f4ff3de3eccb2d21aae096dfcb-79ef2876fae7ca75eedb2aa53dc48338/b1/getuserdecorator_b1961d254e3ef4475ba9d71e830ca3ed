@@ -1,0 +1,116 @@
+948e0ac872655de0b54d5ecbe4c869f3
+/* istanbul ignore next */
+function cov_2kbb79g31() {
+  var path = "C:\\Users\\Enzo Marcelo\\Desktop\\Projetos Empresa\\Saas Utmify\\utmify-clone\\apps\\api\\src\\decorators\\get-user.decorator.ts";
+  var hash = "50a4e2fd8674602e502343d3005a5bff66c6fd6d";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "C:\\Users\\Enzo Marcelo\\Desktop\\Projetos Empresa\\Saas Utmify\\utmify-clone\\apps\\api\\src\\decorators\\get-user.decorator.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 2,
+          column: 23
+        },
+        end: {
+          line: 5,
+          column: 2
+        }
+      },
+      "1": {
+        start: {
+          line: 3,
+          column: 20
+        },
+        end: {
+          line: 3,
+          column: 51
+        }
+      },
+      "2": {
+        start: {
+          line: 4,
+          column: 4
+        },
+        end: {
+          line: 4,
+          column: 24
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 2,
+            column: 44
+          },
+          end: {
+            line: 2,
+            column: 45
+          }
+        },
+        loc: {
+          start: {
+            line: 2,
+            column: 59
+          },
+          end: {
+            line: 5,
+            column: 1
+          }
+        },
+        line: 2
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "C:\\Users\\Enzo Marcelo\\Desktop\\Projetos Empresa\\Saas Utmify\\utmify-clone\\apps\\api\\src\\decorators\\get-user.decorator.ts",
+      mappings: "AAAA,OAAO,EAAE,oBAAoB,EAAoB,MAAM,gBAAgB,CAAC;AAOxE,MAAM,CAAC,MAAM,OAAO,GAAG,oBAAoB,CACzC,CAAC,IAAa,EAAE,GAAqB,EAAY,EAAE;IACjD,MAAM,OAAO,GAAG,GAAG,CAAC,YAAY,EAAE,CAAC,UAAU,EAAE,CAAC;IAChD,OAAO,OAAO,CAAC,IAAI,CAAC;AACtB,CAAC,CACF,CAAC",
+      names: [],
+      sources: ["C:\\Users\\Enzo Marcelo\\Desktop\\Projetos Empresa\\Saas Utmify\\utmify-clone\\apps\\api\\src\\decorators\\get-user.decorator.ts"],
+      sourcesContent: ["import { createParamDecorator, ExecutionContext } from '@nestjs/common';\n\nexport interface AuthUser {\n  id: string;\n  email: string;\n}\n\nexport const GetUser = createParamDecorator(\n  (data: unknown, ctx: ExecutionContext): AuthUser => {\n    const request = ctx.switchToHttp().getRequest();\n    return request.user;\n  },\n);"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "50a4e2fd8674602e502343d3005a5bff66c6fd6d"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2kbb79g31 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2kbb79g31();
+import { createParamDecorator } from '@nestjs/common';
+export const GetUser =
+/* istanbul ignore next */
+(cov_2kbb79g31().s[0]++, createParamDecorator((data, ctx) => {
+  /* istanbul ignore next */
+  cov_2kbb79g31().f[0]++;
+  const request =
+  /* istanbul ignore next */
+  (cov_2kbb79g31().s[1]++, ctx.switchToHttp().getRequest());
+  /* istanbul ignore next */
+  cov_2kbb79g31().s[2]++;
+  return request.user;
+}));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVQYXJhbURlY29yYXRvciIsIkdldFVzZXIiLCJjb3ZfMmtiYjc5ZzMxIiwicyIsImRhdGEiLCJjdHgiLCJmIiwicmVxdWVzdCIsInN3aXRjaFRvSHR0cCIsImdldFJlcXVlc3QiLCJ1c2VyIl0sInNvdXJjZXMiOlsiQzpcXFVzZXJzXFxFbnpvIE1hcmNlbG9cXERlc2t0b3BcXFByb2pldG9zIEVtcHJlc2FcXFNhYXMgVXRtaWZ5XFx1dG1pZnktY2xvbmVcXGFwcHNcXGFwaVxcc3JjXFxkZWNvcmF0b3JzXFxnZXQtdXNlci5kZWNvcmF0b3IudHMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgY3JlYXRlUGFyYW1EZWNvcmF0b3IsIEV4ZWN1dGlvbkNvbnRleHQgfSBmcm9tICdAbmVzdGpzL2NvbW1vbic7XG5cbmV4cG9ydCBpbnRlcmZhY2UgQXV0aFVzZXIge1xuICBpZDogc3RyaW5nO1xuICBlbWFpbDogc3RyaW5nO1xufVxuXG5leHBvcnQgY29uc3QgR2V0VXNlciA9IGNyZWF0ZVBhcmFtRGVjb3JhdG9yKFxuICAoZGF0YTogdW5rbm93biwgY3R4OiBFeGVjdXRpb25Db250ZXh0KTogQXV0aFVzZXIgPT4ge1xuICAgIGNvbnN0IHJlcXVlc3QgPSBjdHguc3dpdGNoVG9IdHRwKCkuZ2V0UmVxdWVzdCgpO1xuICAgIHJldHVybiByZXF1ZXN0LnVzZXI7XG4gIH0sXG4pOyJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxTQUFTQSxvQkFBb0IsUUFBMEIsZ0JBQWdCO0FBT3ZFLE9BQU8sTUFBTUMsT0FBTztBQUFBO0FBQUEsQ0FBQUMsYUFBQSxHQUFBQyxDQUFBLE9BQUdILG9CQUFvQixDQUN6QyxDQUFDSSxJQUFhLEVBQUVDLEdBQXFCLEtBQWM7RUFBQTtFQUFBSCxhQUFBLEdBQUFJLENBQUE7RUFDakQsTUFBTUMsT0FBTztFQUFBO0VBQUEsQ0FBQUwsYUFBQSxHQUFBQyxDQUFBLE9BQUdFLEdBQUcsQ0FBQ0csWUFBWSxFQUFFLENBQUNDLFVBQVUsRUFBRTtFQUFDO0VBQUFQLGFBQUEsR0FBQUMsQ0FBQTtFQUNoRCxPQUFPSSxPQUFPLENBQUNHLElBQUk7QUFDckIsQ0FBQyxDQUNGIiwiaWdub3JlTGlzdCI6W119

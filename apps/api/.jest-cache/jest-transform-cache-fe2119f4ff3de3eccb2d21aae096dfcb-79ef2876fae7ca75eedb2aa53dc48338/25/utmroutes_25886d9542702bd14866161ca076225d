@@ -1,0 +1,1663 @@
+09059aec64420431ccf0beba3ca243e8
+/* istanbul ignore next */
+function cov_zxkhxngml() {
+  var path = "C:\\Users\\Enzo Marcelo\\Desktop\\Projetos Empresa\\Saas Utmify\\utmify-clone\\apps\\api\\src\\routes\\utm.routes.ts";
+  var hash = "77ace78a88fe06ab500e1915b614787060d3efd2";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "C:\\Users\\Enzo Marcelo\\Desktop\\Projetos Empresa\\Saas Utmify\\utmify-clone\\apps\\api\\src\\routes\\utm.routes.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 23
+        },
+        end: {
+          line: 6,
+          column: 39
+        }
+      },
+      "1": {
+        start: {
+          line: 7,
+          column: 26
+        },
+        end: {
+          line: 7,
+          column: 55
+        }
+      },
+      "2": {
+        start: {
+          line: 9,
+          column: 4
+        },
+        end: {
+          line: 16,
+          column: 7
+        }
+      },
+      "3": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 13,
+          column: 9
+        }
+      },
+      "4": {
+        start: {
+          line: 12,
+          column: 12
+        },
+        end: {
+          line: 12,
+          column: 19
+        }
+      },
+      "5": {
+        start: {
+          line: 15,
+          column: 8
+        },
+        end: {
+          line: 15,
+          column: 42
+        }
+      },
+      "6": {
+        start: {
+          line: 18,
+          column: 4
+        },
+        end: {
+          line: 59,
+          column: 52
+        }
+      },
+      "7": {
+        start: {
+          line: 60,
+          column: 4
+        },
+        end: {
+          line: 113,
+          column: 50
+        }
+      },
+      "8": {
+        start: {
+          line: 114,
+          column: 4
+        },
+        end: {
+          line: 159,
+          column: 54
+        }
+      },
+      "9": {
+        start: {
+          line: 160,
+          column: 4
+        },
+        end: {
+          line: 190,
+          column: 53
+        }
+      },
+      "10": {
+        start: {
+          line: 191,
+          column: 4
+        },
+        end: {
+          line: 237,
+          column: 56
+        }
+      },
+      "11": {
+        start: {
+          line: 238,
+          column: 4
+        },
+        end: {
+          line: 260,
+          column: 52
+        }
+      },
+      "12": {
+        start: {
+          line: 261,
+          column: 4
+        },
+        end: {
+          line: 273,
+          column: 52
+        }
+      },
+      "13": {
+        start: {
+          line: 274,
+          column: 4
+        },
+        end: {
+          line: 293,
+          column: 58
+        }
+      },
+      "14": {
+        start: {
+          line: 294,
+          column: 4
+        },
+        end: {
+          line: 314,
+          column: 53
+        }
+      },
+      "15": {
+        start: {
+          line: 316,
+          column: 4
+        },
+        end: {
+          line: 363,
+          column: 59
+        }
+      },
+      "16": {
+        start: {
+          line: 364,
+          column: 4
+        },
+        end: {
+          line: 411,
+          column: 65
+        }
+      },
+      "17": {
+        start: {
+          line: 412,
+          column: 4
+        },
+        end: {
+          line: 444,
+          column: 63
+        }
+      },
+      "18": {
+        start: {
+          line: 445,
+          column: 4
+        },
+        end: {
+          line: 496,
+          column: 65
+        }
+      },
+      "19": {
+        start: {
+          line: 497,
+          column: 4
+        },
+        end: {
+          line: 517,
+          column: 65
+        }
+      },
+      "20": {
+        start: {
+          line: 518,
+          column: 4
+        },
+        end: {
+          line: 538,
+          column: 65
+        }
+      },
+      "21": {
+        start: {
+          line: 540,
+          column: 4
+        },
+        end: {
+          line: 575,
+          column: 58
+        }
+      },
+      "22": {
+        start: {
+          line: 576,
+          column: 4
+        },
+        end: {
+          line: 608,
+          column: 60
+        }
+      },
+      "23": {
+        start: {
+          line: 609,
+          column: 4
+        },
+        end: {
+          line: 632,
+          column: 60
+        }
+      },
+      "24": {
+        start: {
+          line: 633,
+          column: 4
+        },
+        end: {
+          line: 652,
+          column: 60
+        }
+      },
+      "25": {
+        start: {
+          line: 653,
+          column: 4
+        },
+        end: {
+          line: 672,
+          column: 58
+        }
+      },
+      "26": {
+        start: {
+          line: 673,
+          column: 4
+        },
+        end: {
+          line: 688,
+          column: 66
+        }
+      },
+      "27": {
+        start: {
+          line: 690,
+          column: 4
+        },
+        end: {
+          line: 703,
+          column: 59
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "utmRoutes",
+        decl: {
+          start: {
+            line: 4,
+            column: 22
+          },
+          end: {
+            line: 4,
+            column: 31
+          }
+        },
+        loc: {
+          start: {
+            line: 4,
+            column: 41
+          },
+          end: {
+            line: 704,
+            column: 1
+          }
+        },
+        line: 4
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 9,
+            column: 34
+          },
+          end: {
+            line: 9,
+            column: 35
+          }
+        },
+        loc: {
+          start: {
+            line: 9,
+            column: 60
+          },
+          end: {
+            line: 16,
+            column: 5
+          }
+        },
+        line: 9
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 11,
+            column: 8
+          },
+          end: {
+            line: 13,
+            column: 9
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 11,
+            column: 8
+          },
+          end: {
+            line: 13,
+            column: 9
+          }
+        }, {
+          start: {
+            line: undefined,
+            column: undefined
+          },
+          end: {
+            line: undefined,
+            column: undefined
+          }
+        }],
+        line: 11
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 0,
+      "15": 0,
+      "16": 0,
+      "17": 0,
+      "18": 0,
+      "19": 0,
+      "20": 0,
+      "21": 0,
+      "22": 0,
+      "23": 0,
+      "24": 0,
+      "25": 0,
+      "26": 0,
+      "27": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0
+    },
+    b: {
+      "0": [0, 0]
+    },
+    inputSourceMap: {
+      file: "C:\\Users\\Enzo Marcelo\\Desktop\\Projetos Empresa\\Saas Utmify\\utmify-clone\\apps\\api\\src\\routes\\utm.routes.ts",
+      mappings: "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",
+      names: [],
+      sources: ["C:\\Users\\Enzo Marcelo\\Desktop\\Projetos Empresa\\Saas Utmify\\utmify-clone\\apps\\api\\src\\routes\\utm.routes.ts"],
+      sourcesContent: ["import { FastifyInstance } from 'fastify';\nimport { UTMController } from '../controllers/utm.controller';\nimport { UTMService } from '../services/utm.service';\nimport { requireAuth } from '../middleware/auth.middleware';\n\nexport async function utmRoutes(fastify: FastifyInstance) {\n  // Initialize services\n  const utmService = new UTMService();\n  const utmController = new UTMController(utmService);\n\n  // Apply authentication middleware to protected routes\n  fastify.addHook('preHandler', async (request, reply) => {\n    // Skip auth for redirect endpoint\n    if (request.url.startsWith('/r/')) {\n      return;\n    }\n    \n    // Apply JWT auth for other endpoints\n    await requireAuth(request, reply);\n  });\n\n  // UTM Management Routes\n  fastify.post('/utm/create', {\n    schema: {\n      description: 'Criar novo link UTM',\n      tags: ['UTM'],\n      body: {\n        type: 'object',\n        required: ['originalUrl'],\n        properties: {\n          originalUrl: { type: 'string', format: 'uri' },\n          utmSource: { type: 'string' },\n          utmMedium: { type: 'string' },\n          utmCampaign: { type: 'string' },\n          utmTerm: { type: 'string' },\n          utmContent: { type: 'string' },\n          customParams: { type: 'object' },\n          title: { type: 'string' },\n          description: { type: 'string' },\n          tags: { type: 'array', items: { type: 'string' } },\n          expiresAt: { type: 'string', format: 'date-time' },\n          isPublic: { type: 'boolean' },\n        },\n      },\n      response: {\n        201: {\n          type: 'object',\n          properties: {\n            success: { type: 'boolean' },\n            data: {\n              type: 'object',\n              properties: {\n                id: { type: 'string' },\n                shortCode: { type: 'string' },\n                shortUrl: { type: 'string' },\n                originalUrl: { type: 'string' },\n                qrCodeUrl: { type: 'string' },\n              },\n            },\n          },\n        },\n      },\n    },\n  }, utmController.createUTM.bind(utmController));\n\n  fastify.get('/utm/list', {\n    schema: {\n      description: 'Listar links UTM',\n      tags: ['UTM'],\n      querystring: {\n        type: 'object',\n        properties: {\n          page: { type: 'number', minimum: 1, default: 1 },\n          limit: { type: 'number', minimum: 1, maximum: 100, default: 20 },\n          search: { type: 'string' },\n          status: { type: 'string', enum: ['ACTIVE', 'PAUSED', 'ARCHIVED'] },\n          utmSource: { type: 'string' },\n          utmMedium: { type: 'string' },\n          utmCampaign: { type: 'string' },\n          sortBy: { type: 'string', enum: ['createdAt', 'clickCount', 'conversionCount', 'title'], default: 'createdAt' },\n          sortOrder: { type: 'string', enum: ['asc', 'desc'], default: 'desc' },\n        },\n      },\n      response: {\n        200: {\n          type: 'object',\n          properties: {\n            success: { type: 'boolean' },\n            data: {\n              type: 'array',\n              items: {\n                type: 'object',\n                properties: {\n                  id: { type: 'string' },\n                  title: { type: 'string' },\n                  shortCode: { type: 'string' },\n                  shortUrl: { type: 'string' },\n                  originalUrl: { type: 'string' },\n                  clickCount: { type: 'number' },\n                  conversionCount: { type: 'number' },\n                  status: { type: 'string' },\n                  createdAt: { type: 'string' },\n                },\n              },\n            },\n            pagination: {\n              type: 'object',\n              properties: {\n                page: { type: 'number' },\n                limit: { type: 'number' },\n                total: { type: 'number' },\n                totalPages: { type: 'number' },\n              },\n            },\n          },\n        },\n      },\n    },\n  }, utmController.listUTM.bind(utmController));\n\n  fastify.get('/utm/:id/stats', {\n    schema: {\n      description: 'Obter estat\xEDsticas de um link UTM',\n      tags: ['UTM'],\n      params: {\n        type: 'object',\n        required: ['id'],\n        properties: {\n          id: { type: 'string' },\n        },\n      },\n      querystring: {\n        type: 'object',\n        properties: {\n          period: { type: 'string', enum: ['24h', '7d', '30d', '90d', 'all'], default: '30d' },\n          groupBy: { type: 'string', enum: ['hour', 'day', 'week', 'month'], default: 'day' },\n        },\n      },\n      response: {\n        200: {\n          type: 'object',\n          properties: {\n            success: { type: 'boolean' },\n            data: {\n              type: 'object',\n              properties: {\n                link: { type: 'object' },\n                stats: {\n                  type: 'object',\n                  properties: {\n                    totalClicks: { type: 'number' },\n                    uniqueClicks: { type: 'number' },\n                    conversions: { type: 'number' },\n                    conversionRate: { type: 'number' },\n                    clicksByCountry: { type: 'array' },\n                    clicksByDevice: { type: 'array' },\n                    clicksOverTime: { type: 'array' },\n                  },\n                },\n              },\n            },\n          },\n        },\n      },\n    },\n  }, utmController.getUTMStats.bind(utmController));\n\n  fastify.post('/utm/shorten', {\n    schema: {\n      description: 'Encurtar URL',\n      tags: ['UTM'],\n      body: {\n        type: 'object',\n        required: ['url'],\n        properties: {\n          url: { type: 'string', format: 'uri' },\n          customCode: { type: 'string', minLength: 3, maxLength: 20 },\n        },\n      },\n      response: {\n        201: {\n          type: 'object',\n          properties: {\n            success: { type: 'boolean' },\n            data: {\n              type: 'object',\n              properties: {\n                id: { type: 'string' },\n                shortCode: { type: 'string' },\n                shortUrl: { type: 'string' },\n                originalUrl: { type: 'string' },\n              },\n            },\n          },\n        },\n      },\n    },\n  }, utmController.shortenUrl.bind(utmController));\n\n  fastify.post('/utm/bulk', {\n    schema: {\n      description: 'Cria\xE7\xE3o em massa de links UTM',\n      tags: ['UTM'],\n      body: {\n        type: 'object',\n        required: ['links'],\n        properties: {\n          links: {\n            type: 'array',\n            minItems: 1,\n            maxItems: 100,\n            items: {\n              type: 'object',\n              required: ['originalUrl'],\n              properties: {\n                originalUrl: { type: 'string', format: 'uri' },\n                utmSource: { type: 'string' },\n                utmMedium: { type: 'string' },\n                utmCampaign: { type: 'string' },\n                utmTerm: { type: 'string' },\n                utmContent: { type: 'string' },\n                title: { type: 'string' },\n                description: { type: 'string' },\n              },\n            },\n          },\n        },\n      },\n      response: {\n        201: {\n          type: 'object',\n          properties: {\n            success: { type: 'boolean' },\n            data: {\n              type: 'object',\n              properties: {\n                created: { type: 'array' },\n                failed: { type: 'array' },\n                total: { type: 'number' },\n              },\n            },\n          },\n        },\n      },\n    },\n  }, utmController.bulkCreateUTM.bind(utmController));\n\n  fastify.put('/utm/:id', {\n    schema: {\n      description: 'Atualizar link UTM',\n      tags: ['UTM'],\n      params: {\n        type: 'object',\n        required: ['id'],\n        properties: {\n          id: { type: 'string' },\n        },\n      },\n      body: {\n        type: 'object',\n        properties: {\n          title: { type: 'string' },\n          description: { type: 'string' },\n          tags: { type: 'array', items: { type: 'string' } },\n          status: { type: 'string', enum: ['ACTIVE', 'PAUSED', 'ARCHIVED'] },\n          expiresAt: { type: 'string', format: 'date-time' },\n        },\n      },\n    },\n  }, utmController.updateUTM.bind(utmController));\n\n  fastify.delete('/utm/:id', {\n    schema: {\n      description: 'Deletar link UTM',\n      tags: ['UTM'],\n      params: {\n        type: 'object',\n        required: ['id'],\n        properties: {\n          id: { type: 'string' },\n        },\n      },\n    },\n  }, utmController.deleteUTM.bind(utmController));\n\n  fastify.post('/utm/conversion', {\n    schema: {\n      description: 'Registrar convers\xE3o',\n      tags: ['UTM'],\n      body: {\n        type: 'object',\n        properties: {\n          utmLinkId: { type: 'string' },\n          shortCode: { type: 'string' },\n          eventType: { type: 'string' },\n          eventName: { type: 'string' },\n          value: { type: 'number' },\n          currency: { type: 'string' },\n          customerId: { type: 'string' },\n          customerEmail: { type: 'string', format: 'email' },\n          metadata: { type: 'object' },\n        },\n      },\n    },\n  }, utmController.trackConversion.bind(utmController));\n\n  fastify.get('/utm/export', {\n    schema: {\n      description: 'Exportar dados UTM',\n      tags: ['UTM'],\n      querystring: {\n        type: 'object',\n        properties: {\n          format: { type: 'string', enum: ['csv', 'json', 'xlsx'], default: 'csv' },\n          dateRange: { type: 'string', enum: ['last7days', 'last30days', 'last90days', 'custom'], default: 'last30days' },\n          startDate: { type: 'string', format: 'date' },\n          endDate: { type: 'string', format: 'date' },\n          includeClicks: { type: 'boolean', default: true },\n          includeConversions: { type: 'boolean', default: true },\n          includeMetrics: { type: 'boolean', default: true },\n          utmSource: { type: 'string' },\n          utmMedium: { type: 'string' },\n          utmCampaign: { type: 'string' },\n        },\n      },\n    },\n  }, utmController.exportData.bind(utmController));\n\n  // Notification routes\n  fastify.get('/notifications', {\n    schema: {\n      description: 'Get notification alerts for organization',\n      tags: ['utm'],\n      querystring: {\n        type: 'object',\n        properties: {\n          page: { type: 'integer', minimum: 1, default: 1 },\n          limit: { type: 'integer', minimum: 1, maximum: 100, default: 20 },\n          unread_only: { type: 'boolean', default: false }\n        }\n      },\n      response: {\n        200: {\n          type: 'object',\n          properties: {\n            alerts: {\n              type: 'array',\n              items: {\n                type: 'object',\n                properties: {\n                  id: { type: 'string' },\n                  ruleId: { type: 'string' },\n                  ruleName: { type: 'string' },\n                  message: { type: 'string' },\n                  severity: { type: 'string', enum: ['low', 'medium', 'high', 'critical'] },\n                  utmLinkId: { type: 'string' },\n                  utmCampaign: { type: 'string' },\n                  data: { type: 'object' },\n                  isRead: { type: 'boolean' },\n                  createdAt: { type: 'string' }\n                }\n              }\n            },\n            pagination: {\n              type: 'object',\n              properties: {\n                page: { type: 'integer' },\n                limit: { type: 'integer' },\n                total: { type: 'integer' },\n                totalPages: { type: 'integer' }\n              }\n            }\n          }\n        }\n      }\n    }\n  }, utmController.getNotifications.bind(utmController));\n\n  fastify.post('/notifications/rules', {\n    schema: {\n      description: 'Create notification rule',\n      tags: ['utm'],\n      body: {\n        type: 'object',\n        properties: {\n          name: { type: 'string' },\n          description: { type: 'string' },\n          isActive: { type: 'boolean', default: true },\n          triggerType: { type: 'string', enum: ['click_threshold', 'conversion_rate', 'budget_limit', 'time_based', 'performance_drop'] },\n          condition: {\n            type: 'object',\n            properties: {\n              operator: { type: 'string', enum: ['greater_than', 'less_than', 'equals', 'between'] },\n              value: { type: 'number' },\n              secondValue: { type: 'number' },\n              timeframe: { type: 'string', enum: ['hour', 'day', 'week', 'month'] }\n            },\n            required: ['operator', 'value']\n          },\n          channels: {\n            type: 'array',\n            items: { type: 'string', enum: ['email', 'sms', 'webhook', 'in_app'] }\n          },\n          recipients: {\n            type: 'array',\n            items: { type: 'string' }\n          },\n          message: { type: 'string' },\n          utmCampaigns: {\n            type: 'array',\n            items: { type: 'string' }\n          }\n        },\n        required: ['name', 'triggerType', 'condition', 'channels', 'recipients', 'message']\n      },\n      response: {\n        201: {\n          type: 'object',\n          properties: {\n            id: { type: 'string' },\n            message: { type: 'string' }\n          }\n        }\n      }\n    }\n  }, utmController.createNotificationRule.bind(utmController));\n\n  fastify.get('/notifications/rules', {\n    schema: {\n      description: 'Get notification rules for organization',\n      tags: ['utm'],\n      response: {\n        200: {\n          type: 'object',\n          properties: {\n            rules: {\n              type: 'array',\n              items: {\n                type: 'object',\n                properties: {\n                  id: { type: 'string' },\n                  name: { type: 'string' },\n                  description: { type: 'string' },\n                  isActive: { type: 'boolean' },\n                  triggerType: { type: 'string' },\n                  condition: { type: 'object' },\n                  channels: { type: 'array', items: { type: 'string' } },\n                  recipients: { type: 'array', items: { type: 'string' } },\n                  message: { type: 'string' },\n                  utmCampaigns: { type: 'array', items: { type: 'string' } },\n                  createdAt: { type: 'string' },\n                  lastTriggered: { type: 'string' }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  }, utmController.getNotificationRules.bind(utmController));\n\n  fastify.put('/notifications/rules/:id', {\n    schema: {\n      description: 'Update notification rule',\n      tags: ['utm'],\n      params: {\n        type: 'object',\n        properties: {\n          id: { type: 'string' }\n        },\n        required: ['id']\n      },\n      body: {\n        type: 'object',\n        properties: {\n          name: { type: 'string' },\n          description: { type: 'string' },\n          isActive: { type: 'boolean' },\n          triggerType: { type: 'string', enum: ['click_threshold', 'conversion_rate', 'budget_limit', 'time_based', 'performance_drop'] },\n          condition: {\n            type: 'object',\n            properties: {\n              operator: { type: 'string', enum: ['greater_than', 'less_than', 'equals', 'between'] },\n              value: { type: 'number' },\n              secondValue: { type: 'number' },\n              timeframe: { type: 'string', enum: ['hour', 'day', 'week', 'month'] }\n            }\n          },\n          channels: {\n            type: 'array',\n            items: { type: 'string', enum: ['email', 'sms', 'webhook', 'in_app'] }\n          },\n          recipients: {\n            type: 'array',\n            items: { type: 'string' }\n          },\n          message: { type: 'string' },\n          utmCampaigns: {\n            type: 'array',\n            items: { type: 'string' }\n          }\n        }\n      },\n      response: {\n        200: {\n          type: 'object',\n          properties: {\n            message: { type: 'string' }\n          }\n        }\n      }\n    }\n  }, utmController.updateNotificationRule.bind(utmController));\n\n  fastify.delete('/notifications/rules/:id', {\n    schema: {\n      description: 'Delete notification rule',\n      tags: ['utm'],\n      params: {\n        type: 'object',\n        properties: {\n          id: { type: 'string' }\n        },\n        required: ['id']\n      },\n      response: {\n        200: {\n          type: 'object',\n          properties: {\n            message: { type: 'string' }\n          }\n        }\n      }\n    }\n  }, utmController.deleteNotificationRule.bind(utmController));\n\n  fastify.patch('/notifications/:id/read', {\n    schema: {\n      description: 'Mark notification as read',\n      tags: ['utm'],\n      params: {\n        type: 'object',\n        properties: {\n          id: { type: 'string' }\n        },\n        required: ['id']\n      },\n      response: {\n        200: {\n          type: 'object',\n          properties: {\n            message: { type: 'string' }\n          }\n        }\n      }\n    }\n  }, utmController.markNotificationAsRead.bind(utmController));\n\n  // Integration management routes\n  fastify.get('/integrations', {\n    schema: {\n      tags: ['UTM Integrations'],\n      summary: 'Get user integrations',\n      querystring: {\n        type: 'object',\n        properties: {\n          organizationId: { type: 'string' }\n        },\n        required: ['organizationId']\n      },\n      response: {\n        200: {\n          type: 'object',\n          properties: {\n            success: { type: 'boolean' },\n            data: {\n              type: 'array',\n              items: {\n                type: 'object',\n                properties: {\n                  id: { type: 'string' },\n                  name: { type: 'string' },\n                  type: { type: 'string' },\n                  status: { type: 'string' },\n                  config: { type: 'object' },\n                  lastSync: { type: 'string' },\n                  events: { type: 'array', items: { type: 'string' } }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  }, utmController.getIntegrations.bind(utmController));\n\n  fastify.post('/integrations', {\n    schema: {\n      tags: ['UTM Integrations'],\n      summary: 'Create or update integration',\n      body: {\n        type: 'object',\n        properties: {\n          organizationId: { type: 'string' },\n          type: { type: 'string', enum: ['google_analytics', 'facebook_pixel', 'google_ads', 'webhook'] },\n          name: { type: 'string' },\n          config: { type: 'object' },\n          events: { type: 'array', items: { type: 'string' } },\n          enabled: { type: 'boolean' }\n        },\n        required: ['organizationId', 'type', 'name', 'config']\n      },\n      response: {\n        200: {\n          type: 'object',\n          properties: {\n            success: { type: 'boolean' },\n            data: {\n              type: 'object',\n              properties: {\n                id: { type: 'string' },\n                message: { type: 'string' }\n              }\n            }\n          }\n        }\n      }\n    }\n  }, utmController.createIntegration.bind(utmController));\n\n  fastify.put('/integrations/:id', {\n    schema: {\n      tags: ['UTM Integrations'],\n      summary: 'Update integration',\n      params: {\n        type: 'object',\n        properties: {\n          id: { type: 'string' }\n        },\n        required: ['id']\n      },\n      body: {\n        type: 'object',\n        properties: {\n          organizationId: { type: 'string' },\n          name: { type: 'string' },\n          config: { type: 'object' },\n          events: { type: 'array', items: { type: 'string' } },\n          enabled: { type: 'boolean' }\n        },\n        required: ['organizationId']\n      }\n    }\n  }, utmController.updateIntegration.bind(utmController));\n\n  fastify.delete('/integrations/:id', {\n    schema: {\n      tags: ['UTM Integrations'],\n      summary: 'Delete integration',\n      params: {\n        type: 'object',\n        properties: {\n          id: { type: 'string' }\n        },\n        required: ['id']\n      },\n      querystring: {\n        type: 'object',\n        properties: {\n          organizationId: { type: 'string' }\n        },\n        required: ['organizationId']\n      }\n    }\n  }, utmController.deleteIntegration.bind(utmController));\n\n  fastify.post('/integrations/:id/test', {\n    schema: {\n      tags: ['UTM Integrations'],\n      summary: 'Test integration connection',\n      params: {\n        type: 'object',\n        properties: {\n          id: { type: 'string' }\n        },\n        required: ['id']\n      },\n      body: {\n        type: 'object',\n        properties: {\n          organizationId: { type: 'string' }\n        },\n        required: ['organizationId']\n      }\n    }\n  }, utmController.testIntegration.bind(utmController));\n\n  fastify.post('/integrations/send-event', {\n    schema: {\n      tags: ['UTM Integrations'],\n      summary: 'Send event to integrations',\n      body: {\n        type: 'object',\n        properties: {\n          organizationId: { type: 'string' },\n          eventType: { type: 'string' },\n          eventData: { type: 'object' },\n          utmLinkId: { type: 'string' }\n        },\n        required: ['organizationId', 'eventType', 'eventData']\n      }\n    }\n  }, utmController.sendEventToIntegrations.bind(utmController));\n\n  // Public redirect route (no authentication required)\n  fastify.get('/r/:code', {\n    schema: {\n      description: 'Redirecionar e rastrear clique',\n      tags: ['UTM'],\n      params: {\n        type: 'object',\n        required: ['code'],\n        properties: {\n          code: { type: 'string' },\n        },\n      },\n    },\n    preHandler: [], // Override global auth middleware\n  }, utmController.redirectAndTrack.bind(utmController));\n}"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "77ace78a88fe06ab500e1915b614787060d3efd2"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_zxkhxngml = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_zxkhxngml();
+import { UTMController } from '../controllers/utm.controller';
+import { UTMService } from '../services/utm.service';
+import { requireAuth } from '../middleware/auth.middleware';
+export async function utmRoutes(fastify) {
+  /* istanbul ignore next */
+  cov_zxkhxngml().f[0]++;
+  // Initialize services
+  const utmService =
+  /* istanbul ignore next */
+  (cov_zxkhxngml().s[0]++, new UTMService());
+  const utmController =
+  /* istanbul ignore next */
+  (cov_zxkhxngml().s[1]++, new UTMController(utmService));
+  // Apply authentication middleware to protected routes
+  /* istanbul ignore next */
+  cov_zxkhxngml().s[2]++;
+  fastify.addHook('preHandler', async (request, reply) => {
+    /* istanbul ignore next */
+    cov_zxkhxngml().f[1]++;
+    cov_zxkhxngml().s[3]++;
+    // Skip auth for redirect endpoint
+    if (request.url.startsWith('/r/')) {
+      /* istanbul ignore next */
+      cov_zxkhxngml().b[0][0]++;
+      cov_zxkhxngml().s[4]++;
+      return;
+    } else
+    /* istanbul ignore next */
+    {
+      cov_zxkhxngml().b[0][1]++;
+    }
+    // Apply JWT auth for other endpoints
+    cov_zxkhxngml().s[5]++;
+    await requireAuth(request, reply);
+  });
+  // UTM Management Routes
+  /* istanbul ignore next */
+  cov_zxkhxngml().s[6]++;
+  fastify.post('/utm/create', {
+    schema: {
+      description: 'Criar novo link UTM',
+      tags: ['UTM'],
+      body: {
+        type: 'object',
+        required: ['originalUrl'],
+        properties: {
+          originalUrl: {
+            type: 'string',
+            format: 'uri'
+          },
+          utmSource: {
+            type: 'string'
+          },
+          utmMedium: {
+            type: 'string'
+          },
+          utmCampaign: {
+            type: 'string'
+          },
+          utmTerm: {
+            type: 'string'
+          },
+          utmContent: {
+            type: 'string'
+          },
+          customParams: {
+            type: 'object'
+          },
+          title: {
+            type: 'string'
+          },
+          description: {
+            type: 'string'
+          },
+          tags: {
+            type: 'array',
+            items: {
+              type: 'string'
+            }
+          },
+          expiresAt: {
+            type: 'string',
+            format: 'date-time'
+          },
+          isPublic: {
+            type: 'boolean'
+          }
+        }
+      },
+      response: {
+        201: {
+          type: 'object',
+          properties: {
+            success: {
+              type: 'boolean'
+            },
+            data: {
+              type: 'object',
+              properties: {
+                id: {
+                  type: 'string'
+                },
+                shortCode: {
+                  type: 'string'
+                },
+                shortUrl: {
+                  type: 'string'
+                },
+                originalUrl: {
+                  type: 'string'
+                },
+                qrCodeUrl: {
+                  type: 'string'
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }, utmController.createUTM.bind(utmController));
+  /* istanbul ignore next */
+  cov_zxkhxngml().s[7]++;
+  fastify.get('/utm/list', {
+    schema: {
+      description: 'Listar links UTM',
+      tags: ['UTM'],
+      querystring: {
+        type: 'object',
+        properties: {
+          page: {
+            type: 'number',
+            minimum: 1,
+            default: 1
+          },
+          limit: {
+            type: 'number',
+            minimum: 1,
+            maximum: 100,
+            default: 20
+          },
+          search: {
+            type: 'string'
+          },
+          status: {
+            type: 'string',
+            enum: ['ACTIVE', 'PAUSED', 'ARCHIVED']
+          },
+          utmSource: {
+            type: 'string'
+          },
+          utmMedium: {
+            type: 'string'
+          },
+          utmCampaign: {
+            type: 'string'
+          },
+          sortBy: {
+            type: 'string',
+            enum: ['createdAt', 'clickCount', 'conversionCount', 'title'],
+            default: 'createdAt'
+          },
+          sortOrder: {
+            type: 'string',
+            enum: ['asc', 'desc'],
+            default: 'desc'
+          }
+        }
+      },
+      response: {
+        200: {
+          type: 'object',
+          properties: {
+            success: {
+              type: 'boolean'
+            },
+            data: {
+              type: 'array',
+              items: {
+                type: 'object',
+                properties: {
+                  id: {
+                    type: 'string'
+                  },
+                  title: {
+                    type: 'string'
+                  },
+                  shortCode: {
+                    type: 'string'
+                  },
+                  shortUrl: {
+                    type: 'string'
+                  },
+                  originalUrl: {
+                    type: 'string'
+                  },
+                  clickCount: {
+                    type: 'number'
+                  },
+                  conversionCount: {
+                    type: 'number'
+                  },
+                  status: {
+                    type: 'string'
+                  },
+                  createdAt: {
+                    type: 'string'
+                  }
+                }
+              }
+            },
+            pagination: {
+              type: 'object',
+              properties: {
+                page: {
+                  type: 'number'
+                },
+                limit: {
+                  type: 'number'
+                },
+                total: {
+                  type: 'number'
+                },
+                totalPages: {
+                  type: 'number'
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }, utmController.listUTM.bind(utmController));
+  /* istanbul ignore next */
+  cov_zxkhxngml().s[8]++;
+  fastify.get('/utm/:id/stats', {
+    schema: {
+      description: 'Obter estatísticas de um link UTM',
+      tags: ['UTM'],
+      params: {
+        type: 'object',
+        required: ['id'],
+        properties: {
+          id: {
+            type: 'string'
+          }
+        }
+      },
+      querystring: {
+        type: 'object',
+        properties: {
+          period: {
+            type: 'string',
+            enum: ['24h', '7d', '30d', '90d', 'all'],
+            default: '30d'
+          },
+          groupBy: {
+            type: 'string',
+            enum: ['hour', 'day', 'week', 'month'],
+            default: 'day'
+          }
+        }
+      },
+      response: {
+        200: {
+          type: 'object',
+          properties: {
+            success: {
+              type: 'boolean'
+            },
+            data: {
+              type: 'object',
+              properties: {
+                link: {
+                  type: 'object'
+                },
+                stats: {
+                  type: 'object',
+                  properties: {
+                    totalClicks: {
+                      type: 'number'
+                    },
+                    uniqueClicks: {
+                      type: 'number'
+                    },
+                    conversions: {
+                      type: 'number'
+                    },
+                    conversionRate: {
+                      type: 'number'
+                    },
+                    clicksByCountry: {
+                      type: 'array'
+                    },
+                    clicksByDevice: {
+                      type: 'array'
+                    },
+                    clicksOverTime: {
+                      type: 'array'
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }, utmController.getUTMStats.bind(utmController));
+  /* istanbul ignore next */
+  cov_zxkhxngml().s[9]++;
+  fastify.post('/utm/shorten', {
+    schema: {
+      description: 'Encurtar URL',
+      tags: ['UTM'],
+      body: {
+        type: 'object',
+        required: ['url'],
+        properties: {
+          url: {
+            type: 'string',
+            format: 'uri'
+          },
+          customCode: {
+            type: 'string',
+            minLength: 3,
+            maxLength: 20
+          }
+        }
+      },
+      response: {
+        201: {
+          type: 'object',
+          properties: {
+            success: {
+              type: 'boolean'
+            },
+            data: {
+              type: 'object',
+              properties: {
+                id: {
+                  type: 'string'
+                },
+                shortCode: {
+                  type: 'string'
+                },
+                shortUrl: {
+                  type: 'string'
+                },
+                originalUrl: {
+                  type: 'string'
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }, utmController.shortenUrl.bind(utmController));
+  /* istanbul ignore next */
+  cov_zxkhxngml().s[10]++;
+  fastify.post('/utm/bulk', {
+    schema: {
+      description: 'Criação em massa de links UTM',
+      tags: ['UTM'],
+      body: {
+        type: 'object',
+        required: ['links'],
+        properties: {
+          links: {
+            type: 'array',
+            minItems: 1,
+            maxItems: 100,
+            items: {
+              type: 'object',
+              required: ['originalUrl'],
+              properties: {
+                originalUrl: {
+                  type: 'string',
+                  format: 'uri'
+                },
+                utmSource: {
+                  type: 'string'
+                },
+                utmMedium: {
+                  type: 'string'
+                },
+                utmCampaign: {
+                  type: 'string'
+                },
+                utmTerm: {
+                  type: 'string'
+                },
+                utmContent: {
+                  type: 'string'
+                },
+                title: {
+                  type: 'string'
+                },
+                description: {
+                  type: 'string'
+                }
+              }
+            }
+          }
+        }
+      },
+      response: {
+        201: {
+          type: 'object',
+          properties: {
+            success: {
+              type: 'boolean'
+            },
+            data: {
+              type: 'object',
+              properties: {
+                created: {
+                  type: 'array'
+                },
+                failed: {
+                  type: 'array'
+                },
+                total: {
+                  type: 'number'
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }, utmController.bulkCreateUTM.bind(utmController));
+  /* istanbul ignore next */
+  cov_zxkhxngml().s[11]++;
+  fastify.put('/utm/:id', {
+    schema: {
+      description: 'Atualizar link UTM',
+      tags: ['UTM'],
+      params: {
+        type: 'object',
+        required: ['id'],
+        properties: {
+          id: {
+            type: 'string'
+          }
+        }
+      },
+      body: {
+        type: 'object',
+        properties: {
+          title: {
+            type: 'string'
+          },
+          description: {
+            type: 'string'
+          },
+          tags: {
+            type: 'array',
+            items: {
+              type: 'string'
+            }
+          },
+          status: {
+            type: 'string',
+            enum: ['ACTIVE', 'PAUSED', 'ARCHIVED']
+          },
+          expiresAt: {
+            type: 'string',
+            format: 'date-time'
+          }
+        }
+      }
+    }
+  }, utmController.updateUTM.bind(utmController));
+  /* istanbul ignore next */
+  cov_zxkhxngml().s[12]++;
+  fastify.delete('/utm/:id', {
+    schema: {
+      description: 'Deletar link UTM',
+      tags: ['UTM'],
+      params: {
+        type: 'object',
+        required: ['id'],
+        properties: {
+          id: {
+            type: 'string'
+          }
+        }
+      }
+    }
+  }, utmController.deleteUTM.bind(utmController));
+  /* istanbul ignore next */
+  cov_zxkhxngml().s[13]++;
+  fastify.post('/utm/conversion', {
+    schema: {
+      description: 'Registrar conversão',
+      tags: ['UTM'],
+      body: {
+        type: 'object',
+        properties: {
+          utmLinkId: {
+            type: 'string'
+          },
+          shortCode: {
+            type: 'string'
+          },
+          eventType: {
+            type: 'string'
+          },
+          eventName: {
+            type: 'string'
+          },
+          value: {
+            type: 'number'
+          },
+          currency: {
+            type: 'string'
+          },
+          customerId: {
+            type: 'string'
+          },
+          customerEmail: {
+            type: 'string',
+            format: 'email'
+          },
+          metadata: {
+            type: 'object'
+          }
+        }
+      }
+    }
+  }, utmController.trackConversion.bind(utmController));
+  /* istanbul ignore next */
+  cov_zxkhxngml().s[14]++;
+  fastify.get('/utm/export', {
+    schema: {
+      description: 'Exportar dados UTM',
+      tags: ['UTM'],
+      querystring: {
+        type: 'object',
+        properties: {
+          format: {
+            type: 'string',
+            enum: ['csv', 'json', 'xlsx'],
+            default: 'csv'
+          },
+          dateRange: {
+            type: 'string',
+            enum: ['last7days', 'last30days', 'last90days', 'custom'],
+            default: 'last30days'
+          },
+          startDate: {
+            type: 'string',
+            format: 'date'
+          },
+          endDate: {
+            type: 'string',
+            format: 'date'
+          },
+          includeClicks: {
+            type: 'boolean',
+            default: true
+          },
+          includeConversions: {
+            type: 'boolean',
+            default: true
+          },
+          includeMetrics: {
+            type: 'boolean',
+            default: true
+          },
+          utmSource: {
+            type: 'string'
+          },
+          utmMedium: {
+            type: 'string'
+          },
+          utmCampaign: {
+            type: 'string'
+          }
+        }
+      }
+    }
+  }, utmController.exportData.bind(utmController));
+  // Notification routes
+  /* istanbul ignore next */
+  cov_zxkhxngml().s[15]++;
+  fastify.get('/notifications', {
+    schema: {
+      description: 'Get notification alerts for organization',
+      tags: ['utm'],
+      querystring: {
+        type: 'object',
+        properties: {
+          page: {
+            type: 'integer',
+            minimum: 1,
+            default: 1
+          },
+          limit: {
+            type: 'integer',
+            minimum: 1,
+            maximum: 100,
+            default: 20
+          },
+          unread_only: {
+            type: 'boolean',
+            default: false
+          }
+        }
+      },
+      response: {
+        200: {
+          type: 'object',
+          properties: {
+            alerts: {
+              type: 'array',
+              items: {
+                type: 'object',
+                properties: {
+                  id: {
+                    type: 'string'
+                  },
+                  ruleId: {
+                    type: 'string'
+                  },
+                  ruleName: {
+                    type: 'string'
+                  },
+                  message: {
+                    type: 'string'
+                  },
+                  severity: {
+                    type: 'string',
+                    enum: ['low', 'medium', 'high', 'critical']
+                  },
+                  utmLinkId: {
+                    type: 'string'
+                  },
+                  utmCampaign: {
+                    type: 'string'
+                  },
+                  data: {
+                    type: 'object'
+                  },
+                  isRead: {
+                    type: 'boolean'
+                  },
+                  createdAt: {
+                    type: 'string'
+                  }
+                }
+              }
+            },
+            pagination: {
+              type: 'object',
+              properties: {
+                page: {
+                  type: 'integer'
+                },
+                limit: {
+                  type: 'integer'
+                },
+                total: {
+                  type: 'integer'
+                },
+                totalPages: {
+                  type: 'integer'
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }, utmController.getNotifications.bind(utmController));
+  /* istanbul ignore next */
+  cov_zxkhxngml().s[16]++;
+  fastify.post('/notifications/rules', {
+    schema: {
+      description: 'Create notification rule',
+      tags: ['utm'],
+      body: {
+        type: 'object',
+        properties: {
+          name: {
+            type: 'string'
+          },
+          description: {
+            type: 'string'
+          },
+          isActive: {
+            type: 'boolean',
+            default: true
+          },
+          triggerType: {
+            type: 'string',
+            enum: ['click_threshold', 'conversion_rate', 'budget_limit', 'time_based', 'performance_drop']
+          },
+          condition: {
+            type: 'object',
+            properties: {
+              operator: {
+                type: 'string',
+                enum: ['greater_than', 'less_than', 'equals', 'between']
+              },
+              value: {
+                type: 'number'
+              },
+              secondValue: {
+                type: 'number'
+              },
+              timeframe: {
+                type: 'string',
+                enum: ['hour', 'day', 'week', 'month']
+              }
+            },
+            required: ['operator', 'value']
+          },
+          channels: {
+            type: 'array',
+            items: {
+              type: 'string',
+              enum: ['email', 'sms', 'webhook', 'in_app']
+            }
+          },
+          recipients: {
+            type: 'array',
+            items: {
+              type: 'string'
+            }
+          },
+          message: {
+            type: 'string'
+          },
+          utmCampaigns: {
+            type: 'array',
+            items: {
+              type: 'string'
+            }
+          }
+        },
+        required: ['name', 'triggerType', 'condition', 'channels', 'recipients', 'message']
+      },
+      response: {
+        201: {
+          type: 'object',
+          properties: {
+            id: {
+              type: 'string'
+            },
+            message: {
+              type: 'string'
+            }
+          }
+        }
+      }
+    }
+  }, utmController.createNotificationRule.bind(utmController));
+  /* istanbul ignore next */
+  cov_zxkhxngml().s[17]++;
+  fastify.get('/notifications/rules', {
+    schema: {
+      description: 'Get notification rules for organization',
+      tags: ['utm'],
+      response: {
+        200: {
+          type: 'object',
+          properties: {
+            rules: {
+              type: 'array',
+              items: {
+                type: 'object',
+                properties: {
+                  id: {
+                    type: 'string'
+                  },
+                  name: {
+                    type: 'string'
+                  },
+                  description: {
+                    type: 'string'
+                  },
+                  isActive: {
+                    type: 'boolean'
+                  },
+                  triggerType: {
+                    type: 'string'
+                  },
+                  condition: {
+                    type: 'object'
+                  },
+                  channels: {
+                    type: 'array',
+                    items: {
+                      type: 'string'
+                    }
+                  },
+                  recipients: {
+                    type: 'array',
+                    items: {
+                      type: 'string'
+                    }
+                  },
+                  message: {
+                    type: 'string'
+                  },
+                  utmCampaigns: {
+                    type: 'array',
+                    items: {
+                      type: 'string'
+                    }
+                  },
+                  createdAt: {
+                    type: 'string'
+                  },
+                  lastTriggered: {
+                    type: 'string'
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }, utmController.getNotificationRules.bind(utmController));
+  /* istanbul ignore next */
+  cov_zxkhxngml().s[18]++;
+  fastify.put('/notifications/rules/:id', {
+    schema: {
+      description: 'Update notification rule',
+      tags: ['utm'],
+      params: {
+        type: 'object',
+        properties: {
+          id: {
+            type: 'string'
+          }
+        },
+        required: ['id']
+      },
+      body: {
+        type: 'object',
+        properties: {
+          name: {
+            type: 'string'
+          },
+          description: {
+            type: 'string'
+          },
+          isActive: {
+            type: 'boolean'
+          },
+          triggerType: {
+            type: 'string',
+            enum: ['click_threshold', 'conversion_rate', 'budget_limit', 'time_based', 'performance_drop']
+          },
+          condition: {
+            type: 'object',
+            properties: {
+              operator: {
+                type: 'string',
+                enum: ['greater_than', 'less_than', 'equals', 'between']
+              },
+              value: {
+                type: 'number'
+              },
+              secondValue: {
+                type: 'number'
+              },
+              timeframe: {
+                type: 'string',
+                enum: ['hour', 'day', 'week', 'month']
+              }
+            }
+          },
+          channels: {
+            type: 'array',
+            items: {
+              type: 'string',
+              enum: ['email', 'sms', 'webhook', 'in_app']
+            }
+          },
+          recipients: {
+            type: 'array',
+            items: {
+              type: 'string'
+            }
+          },
+          message: {
+            type: 'string'
+          },
+          utmCampaigns: {
+            type: 'array',
+            items: {
+              type: 'string'
+            }
+          }
+        }
+      },
+      response: {
+        200: {
+          type: 'object',
+          properties: {
+            message: {
+              type: 'string'
+            }
+          }
+        }
+      }
+    }
+  }, utmController.updateNotificationRule.bind(utmController));
+  /* istanbul ignore next */
+  cov_zxkhxngml().s[19]++;
+  fastify.delete('/notifications/rules/:id', {
+    schema: {
+      description: 'Delete notification rule',
+      tags: ['utm'],
+      params: {
+        type: 'object',
+        properties: {
+          id: {
+            type: 'string'
+          }
+        },
+        required: ['id']
+      },
+      response: {
+        200: {
+          type: 'object',
+          properties: {
+            message: {
+              type: 'string'
+            }
+          }
+        }
+      }
+    }
+  }, utmController.deleteNotificationRule.bind(utmController));
+  /* istanbul ignore next */
+  cov_zxkhxngml().s[20]++;
+  fastify.patch('/notifications/:id/read', {
+    schema: {
+      description: 'Mark notification as read',
+      tags: ['utm'],
+      params: {
+        type: 'object',
+        properties: {
+          id: {
+            type: 'string'
+          }
+        },
+        required: ['id']
+      },
+      response: {
+        200: {
+          type: 'object',
+          properties: {
+            message: {
+              type: 'string'
+            }
+          }
+        }
+      }
+    }
+  }, utmController.markNotificationAsRead.bind(utmController));
+  // Integration management routes
+  /* istanbul ignore next */
+  cov_zxkhxngml().s[21]++;
+  fastify.get('/integrations', {
+    schema: {
+      tags: ['UTM Integrations'],
+      summary: 'Get user integrations',
+      querystring: {
+        type: 'object',
+        properties: {
+          organizationId: {
+            type: 'string'
+          }
+        },
+        required: ['organizationId']
+      },
+      response: {
+        200: {
+          type: 'object',
+          properties: {
+            success: {
+              type: 'boolean'
+            },
+            data: {
+              type: 'array',
+              items: {
+                type: 'object',
+                properties: {
+                  id: {
+                    type: 'string'
+                  },
+                  name: {
+                    type: 'string'
+                  },
+                  type: {
+                    type: 'string'
+                  },
+                  status: {
+                    type: 'string'
+                  },
+                  config: {
+                    type: 'object'
+                  },
+                  lastSync: {
+                    type: 'string'
+                  },
+                  events: {
+                    type: 'array',
+                    items: {
+                      type: 'string'
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }, utmController.getIntegrations.bind(utmController));
+  /* istanbul ignore next */
+  cov_zxkhxngml().s[22]++;
+  fastify.post('/integrations', {
+    schema: {
+      tags: ['UTM Integrations'],
+      summary: 'Create or update integration',
+      body: {
+        type: 'object',
+        properties: {
+          organizationId: {
+            type: 'string'
+          },
+          type: {
+            type: 'string',
+            enum: ['google_analytics', 'facebook_pixel', 'google_ads', 'webhook']
+          },
+          name: {
+            type: 'string'
+          },
+          config: {
+            type: 'object'
+          },
+          events: {
+            type: 'array',
+            items: {
+              type: 'string'
+            }
+          },
+          enabled: {
+            type: 'boolean'
+          }
+        },
+        required: ['organizationId', 'type', 'name', 'config']
+      },
+      response: {
+        200: {
+          type: 'object',
+          properties: {
+            success: {
+              type: 'boolean'
+            },
+            data: {
+              type: 'object',
+              properties: {
+                id: {
+                  type: 'string'
+                },
+                message: {
+                  type: 'string'
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }, utmController.createIntegration.bind(utmController));
+  /* istanbul ignore next */
+  cov_zxkhxngml().s[23]++;
+  fastify.put('/integrations/:id', {
+    schema: {
+      tags: ['UTM Integrations'],
+      summary: 'Update integration',
+      params: {
+        type: 'object',
+        properties: {
+          id: {
+            type: 'string'
+          }
+        },
+        required: ['id']
+      },
+      body: {
+        type: 'object',
+        properties: {
+          organizationId: {
+            type: 'string'
+          },
+          name: {
+            type: 'string'
+          },
+          config: {
+            type: 'object'
+          },
+          events: {
+            type: 'array',
+            items: {
+              type: 'string'
+            }
+          },
+          enabled: {
+            type: 'boolean'
+          }
+        },
+        required: ['organizationId']
+      }
+    }
+  }, utmController.updateIntegration.bind(utmController));
+  /* istanbul ignore next */
+  cov_zxkhxngml().s[24]++;
+  fastify.delete('/integrations/:id', {
+    schema: {
+      tags: ['UTM Integrations'],
+      summary: 'Delete integration',
+      params: {
+        type: 'object',
+        properties: {
+          id: {
+            type: 'string'
+          }
+        },
+        required: ['id']
+      },
+      querystring: {
+        type: 'object',
+        properties: {
+          organizationId: {
+            type: 'string'
+          }
+        },
+        required: ['organizationId']
+      }
+    }
+  }, utmController.deleteIntegration.bind(utmController));
+  /* istanbul ignore next */
+  cov_zxkhxngml().s[25]++;
+  fastify.post('/integrations/:id/test', {
+    schema: {
+      tags: ['UTM Integrations'],
+      summary: 'Test integration connection',
+      params: {
+        type: 'object',
+        properties: {
+          id: {
+            type: 'string'
+          }
+        },
+        required: ['id']
+      },
+      body: {
+        type: 'object',
+        properties: {
+          organizationId: {
+            type: 'string'
+          }
+        },
+        required: ['organizationId']
+      }
+    }
+  }, utmController.testIntegration.bind(utmController));
+  /* istanbul ignore next */
+  cov_zxkhxngml().s[26]++;
+  fastify.post('/integrations/send-event', {
+    schema: {
+      tags: ['UTM Integrations'],
+      summary: 'Send event to integrations',
+      body: {
+        type: 'object',
+        properties: {
+          organizationId: {
+            type: 'string'
+          },
+          eventType: {
+            type: 'string'
+          },
+          eventData: {
+            type: 'object'
+          },
+          utmLinkId: {
+            type: 'string'
+          }
+        },
+        required: ['organizationId', 'eventType', 'eventData']
+      }
+    }
+  }, utmController.sendEventToIntegrations.bind(utmController));
+  // Public redirect route (no authentication required)
+  /* istanbul ignore next */
+  cov_zxkhxngml().s[27]++;
+  fastify.get('/r/:code', {
+    schema: {
+      description: 'Redirecionar e rastrear clique',
+      tags: ['UTM'],
+      params: {
+        type: 'object',
+        required: ['code'],
+        properties: {
+          code: {
+            type: 'string'
+          }
+        }
+      }
+    },
+    preHandler: [] // Override global auth middleware
+  }, utmController.redirectAndTrack.bind(utmController));
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfenhraHhuZ21sIiwiYWN0dWFsQ292ZXJhZ2UiLCJVVE1Db250cm9sbGVyIiwiVVRNU2VydmljZSIsInJlcXVpcmVBdXRoIiwidXRtUm91dGVzIiwiZmFzdGlmeSIsImYiLCJ1dG1TZXJ2aWNlIiwicyIsInV0bUNvbnRyb2xsZXIiLCJhZGRIb29rIiwicmVxdWVzdCIsInJlcGx5IiwidXJsIiwic3RhcnRzV2l0aCIsImIiLCJwb3N0Iiwic2NoZW1hIiwiZGVzY3JpcHRpb24iLCJ0YWdzIiwiYm9keSIsInR5cGUiLCJyZXF1aXJlZCIsInByb3BlcnRpZXMiLCJvcmlnaW5hbFVybCIsImZvcm1hdCIsInV0bVNvdXJjZSIsInV0bU1lZGl1bSIsInV0bUNhbXBhaWduIiwidXRtVGVybSIsInV0bUNvbnRlbnQiLCJjdXN0b21QYXJhbXMiLCJ0aXRsZSIsIml0ZW1zIiwiZXhwaXJlc0F0IiwiaXNQdWJsaWMiLCJyZXNwb25zZSIsInN1Y2Nlc3MiLCJkYXRhIiwiaWQiLCJzaG9ydENvZGUiLCJzaG9ydFVybCIsInFyQ29kZVVybCIsImNyZWF0ZVVUTSIsImJpbmQiLCJnZXQiLCJxdWVyeXN0cmluZyIsInBhZ2UiLCJtaW5pbXVtIiwiZGVmYXVsdCIsImxpbWl0IiwibWF4aW11bSIsInNlYXJjaCIsInN0YXR1cyIsImVudW0iLCJzb3J0QnkiLCJzb3J0T3JkZXIiLCJjbGlja0NvdW50IiwiY29udmVyc2lvbkNvdW50IiwiY3JlYXRlZEF0IiwicGFnaW5hdGlvbiIsInRvdGFsIiwidG90YWxQYWdlcyIsImxpc3RVVE0iLCJwYXJhbXMiLCJwZXJpb2QiLCJncm91cEJ5IiwibGluayIsInN0YXRzIiwidG90YWxDbGlja3MiLCJ1bmlxdWVDbGlja3MiLCJjb252ZXJzaW9ucyIsImNvbnZlcnNpb25SYXRlIiwiY2xpY2tzQnlDb3VudHJ5IiwiY2xpY2tzQnlEZXZpY2UiLCJjbGlja3NPdmVyVGltZSIsImdldFVUTVN0YXRzIiwiY3VzdG9tQ29kZSIsIm1pbkxlbmd0aCIsIm1heExlbmd0aCIsInNob3J0ZW5VcmwiLCJsaW5rcyIsIm1pbkl0ZW1zIiwibWF4SXRlbXMiLCJjcmVhdGVkIiwiZmFpbGVkIiwiYnVsa0NyZWF0ZVVUTSIsInB1dCIsInVwZGF0ZVVUTSIsImRlbGV0ZSIsImRlbGV0ZVVUTSIsInV0bUxpbmtJZCIsImV2ZW50VHlwZSIsImV2ZW50TmFtZSIsInZhbHVlIiwiY3VycmVuY3kiLCJjdXN0b21lcklkIiwiY3VzdG9tZXJFbWFpbCIsIm1ldGFkYXRhIiwidHJhY2tDb252ZXJzaW9uIiwiZGF0ZVJhbmdlIiwic3RhcnREYXRlIiwiZW5kRGF0ZSIsImluY2x1ZGVDbGlja3MiLCJpbmNsdWRlQ29udmVyc2lvbnMiLCJpbmNsdWRlTWV0cmljcyIsImV4cG9ydERhdGEiLCJ1bnJlYWRfb25seSIsImFsZXJ0cyIsInJ1bGVJZCIsInJ1bGVOYW1lIiwibWVzc2FnZSIsInNldmVyaXR5IiwiaXNSZWFkIiwiZ2V0Tm90aWZpY2F0aW9ucyIsIm5hbWUiLCJpc0FjdGl2ZSIsInRyaWdnZXJUeXBlIiwiY29uZGl0aW9uIiwib3BlcmF0b3IiLCJzZWNvbmRWYWx1ZSIsInRpbWVmcmFtZSIsImNoYW5uZWxzIiwicmVjaXBpZW50cyIsInV0bUNhbXBhaWducyIsImNyZWF0ZU5vdGlmaWNhdGlvblJ1bGUiLCJydWxlcyIsImxhc3RUcmlnZ2VyZWQiLCJnZXROb3RpZmljYXRpb25SdWxlcyIsInVwZGF0ZU5vdGlmaWNhdGlvblJ1bGUiLCJkZWxldGVOb3RpZmljYXRpb25SdWxlIiwicGF0Y2giLCJtYXJrTm90aWZpY2F0aW9uQXNSZWFkIiwic3VtbWFyeSIsIm9yZ2FuaXphdGlvbklkIiwiY29uZmlnIiwibGFzdFN5bmMiLCJldmVudHMiLCJnZXRJbnRlZ3JhdGlvbnMiLCJlbmFibGVkIiwiY3JlYXRlSW50ZWdyYXRpb24iLCJ1cGRhdGVJbnRlZ3JhdGlvbiIsImRlbGV0ZUludGVncmF0aW9uIiwidGVzdEludGVncmF0aW9uIiwiZXZlbnREYXRhIiwic2VuZEV2ZW50VG9JbnRlZ3JhdGlvbnMiLCJjb2RlIiwicHJlSGFuZGxlciIsInJlZGlyZWN0QW5kVHJhY2siXSwic291cmNlcyI6WyJDOlxcVXNlcnNcXEVuem8gTWFyY2Vsb1xcRGVza3RvcFxcUHJvamV0b3MgRW1wcmVzYVxcU2FhcyBVdG1pZnlcXHV0bWlmeS1jbG9uZVxcYXBwc1xcYXBpXFxzcmNcXHJvdXRlc1xcdXRtLnJvdXRlcy50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBGYXN0aWZ5SW5zdGFuY2UgfSBmcm9tICdmYXN0aWZ5JztcbmltcG9ydCB7IFVUTUNvbnRyb2xsZXIgfSBmcm9tICcuLi9jb250cm9sbGVycy91dG0uY29udHJvbGxlcic7XG5pbXBvcnQgeyBVVE1TZXJ2aWNlIH0gZnJvbSAnLi4vc2VydmljZXMvdXRtLnNlcnZpY2UnO1xuaW1wb3J0IHsgcmVxdWlyZUF1dGggfSBmcm9tICcuLi9taWRkbGV3YXJlL2F1dGgubWlkZGxld2FyZSc7XG5cbmV4cG9ydCBhc3luYyBmdW5jdGlvbiB1dG1Sb3V0ZXMoZmFzdGlmeTogRmFzdGlmeUluc3RhbmNlKSB7XG4gIC8vIEluaXRpYWxpemUgc2VydmljZXNcbiAgY29uc3QgdXRtU2VydmljZSA9IG5ldyBVVE1TZXJ2aWNlKCk7XG4gIGNvbnN0IHV0bUNvbnRyb2xsZXIgPSBuZXcgVVRNQ29udHJvbGxlcih1dG1TZXJ2aWNlKTtcblxuICAvLyBBcHBseSBhdXRoZW50aWNhdGlvbiBtaWRkbGV3YXJlIHRvIHByb3RlY3RlZCByb3V0ZXNcbiAgZmFzdGlmeS5hZGRIb29rKCdwcmVIYW5kbGVyJywgYXN5bmMgKHJlcXVlc3QsIHJlcGx5KSA9PiB7XG4gICAgLy8gU2tpcCBhdXRoIGZvciByZWRpcmVjdCBlbmRwb2ludFxuICAgIGlmIChyZXF1ZXN0LnVybC5zdGFydHNXaXRoKCcvci8nKSkge1xuICAgICAgcmV0dXJuO1xuICAgIH1cbiAgICBcbiAgICAvLyBBcHBseSBKV1QgYXV0aCBmb3Igb3RoZXIgZW5kcG9pbnRzXG4gICAgYXdhaXQgcmVxdWlyZUF1dGgocmVxdWVzdCwgcmVwbHkpO1xuICB9KTtcblxuICAvLyBVVE0gTWFuYWdlbWVudCBSb3V0ZXNcbiAgZmFzdGlmeS5wb3N0KCcvdXRtL2NyZWF0ZScsIHtcbiAgICBzY2hlbWE6IHtcbiAgICAgIGRlc2NyaXB0aW9uOiAnQ3JpYXIgbm92byBsaW5rIFVUTScsXG4gICAgICB0YWdzOiBbJ1VUTSddLFxuICAgICAgYm9keToge1xuICAgICAgICB0eXBlOiAnb2JqZWN0JyxcbiAgICAgICAgcmVxdWlyZWQ6IFsnb3JpZ2luYWxVcmwnXSxcbiAgICAgICAgcHJvcGVydGllczoge1xuICAgICAgICAgIG9yaWdpbmFsVXJsOiB7IHR5cGU6ICdzdHJpbmcnLCBmb3JtYXQ6ICd1cmknIH0sXG4gICAgICAgICAgdXRtU291cmNlOiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgICAgdXRtTWVkaXVtOiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgICAgdXRtQ2FtcGFpZ246IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICB1dG1UZXJtOiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgICAgdXRtQ29udGVudDogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgIGN1c3RvbVBhcmFtczogeyB0eXBlOiAnb2JqZWN0JyB9LFxuICAgICAgICAgIHRpdGxlOiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgICAgZGVzY3JpcHRpb246IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICB0YWdzOiB7IHR5cGU6ICdhcnJheScsIGl0ZW1zOiB7IHR5cGU6ICdzdHJpbmcnIH0gfSxcbiAgICAgICAgICBleHBpcmVzQXQ6IHsgdHlwZTogJ3N0cmluZycsIGZvcm1hdDogJ2RhdGUtdGltZScgfSxcbiAgICAgICAgICBpc1B1YmxpYzogeyB0eXBlOiAnYm9vbGVhbicgfSxcbiAgICAgICAgfSxcbiAgICAgIH0sXG4gICAgICByZXNwb25zZToge1xuICAgICAgICAyMDE6IHtcbiAgICAgICAgICB0eXBlOiAnb2JqZWN0JyxcbiAgICAgICAgICBwcm9wZXJ0aWVzOiB7XG4gICAgICAgICAgICBzdWNjZXNzOiB7IHR5cGU6ICdib29sZWFuJyB9LFxuICAgICAgICAgICAgZGF0YToge1xuICAgICAgICAgICAgICB0eXBlOiAnb2JqZWN0JyxcbiAgICAgICAgICAgICAgcHJvcGVydGllczoge1xuICAgICAgICAgICAgICAgIGlkOiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgICAgICAgICAgc2hvcnRDb2RlOiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgICAgICAgICAgc2hvcnRVcmw6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICAgICAgICBvcmlnaW5hbFVybDogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgICAgICAgIHFyQ29kZVVybDogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgfSxcbiAgICAgICAgICB9LFxuICAgICAgICB9LFxuICAgICAgfSxcbiAgICB9LFxuICB9LCB1dG1Db250cm9sbGVyLmNyZWF0ZVVUTS5iaW5kKHV0bUNvbnRyb2xsZXIpKTtcblxuICBmYXN0aWZ5LmdldCgnL3V0bS9saXN0Jywge1xuICAgIHNjaGVtYToge1xuICAgICAgZGVzY3JpcHRpb246ICdMaXN0YXIgbGlua3MgVVRNJyxcbiAgICAgIHRhZ3M6IFsnVVRNJ10sXG4gICAgICBxdWVyeXN0cmluZzoge1xuICAgICAgICB0eXBlOiAnb2JqZWN0JyxcbiAgICAgICAgcHJvcGVydGllczoge1xuICAgICAgICAgIHBhZ2U6IHsgdHlwZTogJ251bWJlcicsIG1pbmltdW06IDEsIGRlZmF1bHQ6IDEgfSxcbiAgICAgICAgICBsaW1pdDogeyB0eXBlOiAnbnVtYmVyJywgbWluaW11bTogMSwgbWF4aW11bTogMTAwLCBkZWZhdWx0OiAyMCB9LFxuICAgICAgICAgIHNlYXJjaDogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgIHN0YXR1czogeyB0eXBlOiAnc3RyaW5nJywgZW51bTogWydBQ1RJVkUnLCAnUEFVU0VEJywgJ0FSQ0hJVkVEJ10gfSxcbiAgICAgICAgICB1dG1Tb3VyY2U6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICB1dG1NZWRpdW06IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICB1dG1DYW1wYWlnbjogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgIHNvcnRCeTogeyB0eXBlOiAnc3RyaW5nJywgZW51bTogWydjcmVhdGVkQXQnLCAnY2xpY2tDb3VudCcsICdjb252ZXJzaW9uQ291bnQnLCAndGl0bGUnXSwgZGVmYXVsdDogJ2NyZWF0ZWRBdCcgfSxcbiAgICAgICAgICBzb3J0T3JkZXI6IHsgdHlwZTogJ3N0cmluZycsIGVudW06IFsnYXNjJywgJ2Rlc2MnXSwgZGVmYXVsdDogJ2Rlc2MnIH0sXG4gICAgICAgIH0sXG4gICAgICB9LFxuICAgICAgcmVzcG9uc2U6IHtcbiAgICAgICAgMjAwOiB7XG4gICAgICAgICAgdHlwZTogJ29iamVjdCcsXG4gICAgICAgICAgcHJvcGVydGllczoge1xuICAgICAgICAgICAgc3VjY2VzczogeyB0eXBlOiAnYm9vbGVhbicgfSxcbiAgICAgICAgICAgIGRhdGE6IHtcbiAgICAgICAgICAgICAgdHlwZTogJ2FycmF5JyxcbiAgICAgICAgICAgICAgaXRlbXM6IHtcbiAgICAgICAgICAgICAgICB0eXBlOiAnb2JqZWN0JyxcbiAgICAgICAgICAgICAgICBwcm9wZXJ0aWVzOiB7XG4gICAgICAgICAgICAgICAgICBpZDogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgICAgICAgICAgdGl0bGU6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICAgICAgICAgIHNob3J0Q29kZTogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgICAgICAgICAgc2hvcnRVcmw6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICAgICAgICAgIG9yaWdpbmFsVXJsOiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgICAgICAgICAgICBjbGlja0NvdW50OiB7IHR5cGU6ICdudW1iZXInIH0sXG4gICAgICAgICAgICAgICAgICBjb252ZXJzaW9uQ291bnQ6IHsgdHlwZTogJ251bWJlcicgfSxcbiAgICAgICAgICAgICAgICAgIHN0YXR1czogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgICAgICAgICAgY3JlYXRlZEF0OiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgICAgICAgICAgfSxcbiAgICAgICAgICAgICAgfSxcbiAgICAgICAgICAgIH0sXG4gICAgICAgICAgICBwYWdpbmF0aW9uOiB7XG4gICAgICAgICAgICAgIHR5cGU6ICdvYmplY3QnLFxuICAgICAgICAgICAgICBwcm9wZXJ0aWVzOiB7XG4gICAgICAgICAgICAgICAgcGFnZTogeyB0eXBlOiAnbnVtYmVyJyB9LFxuICAgICAgICAgICAgICAgIGxpbWl0OiB7IHR5cGU6ICdudW1iZXInIH0sXG4gICAgICAgICAgICAgICAgdG90YWw6IHsgdHlwZTogJ251bWJlcicgfSxcbiAgICAgICAgICAgICAgICB0b3RhbFBhZ2VzOiB7IHR5cGU6ICdudW1iZXInIH0sXG4gICAgICAgICAgICAgIH0sXG4gICAgICAgICAgICB9LFxuICAgICAgICAgIH0sXG4gICAgICAgIH0sXG4gICAgICB9LFxuICAgIH0sXG4gIH0sIHV0bUNvbnRyb2xsZXIubGlzdFVUTS5iaW5kKHV0bUNvbnRyb2xsZXIpKTtcblxuICBmYXN0aWZ5LmdldCgnL3V0bS86aWQvc3RhdHMnLCB7XG4gICAgc2NoZW1hOiB7XG4gICAgICBkZXNjcmlwdGlvbjogJ09idGVyIGVzdGF0w61zdGljYXMgZGUgdW0gbGluayBVVE0nLFxuICAgICAgdGFnczogWydVVE0nXSxcbiAgICAgIHBhcmFtczoge1xuICAgICAgICB0eXBlOiAnb2JqZWN0JyxcbiAgICAgICAgcmVxdWlyZWQ6IFsnaWQnXSxcbiAgICAgICAgcHJvcGVydGllczoge1xuICAgICAgICAgIGlkOiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgIH0sXG4gICAgICB9LFxuICAgICAgcXVlcnlzdHJpbmc6IHtcbiAgICAgICAgdHlwZTogJ29iamVjdCcsXG4gICAgICAgIHByb3BlcnRpZXM6IHtcbiAgICAgICAgICBwZXJpb2Q6IHsgdHlwZTogJ3N0cmluZycsIGVudW06IFsnMjRoJywgJzdkJywgJzMwZCcsICc5MGQnLCAnYWxsJ10sIGRlZmF1bHQ6ICczMGQnIH0sXG4gICAgICAgICAgZ3JvdXBCeTogeyB0eXBlOiAnc3RyaW5nJywgZW51bTogWydob3VyJywgJ2RheScsICd3ZWVrJywgJ21vbnRoJ10sIGRlZmF1bHQ6ICdkYXknIH0sXG4gICAgICAgIH0sXG4gICAgICB9LFxuICAgICAgcmVzcG9uc2U6IHtcbiAgICAgICAgMjAwOiB7XG4gICAgICAgICAgdHlwZTogJ29iamVjdCcsXG4gICAgICAgICAgcHJvcGVydGllczoge1xuICAgICAgICAgICAgc3VjY2VzczogeyB0eXBlOiAnYm9vbGVhbicgfSxcbiAgICAgICAgICAgIGRhdGE6IHtcbiAgICAgICAgICAgICAgdHlwZTogJ29iamVjdCcsXG4gICAgICAgICAgICAgIHByb3BlcnRpZXM6IHtcbiAgICAgICAgICAgICAgICBsaW5rOiB7IHR5cGU6ICdvYmplY3QnIH0sXG4gICAgICAgICAgICAgICAgc3RhdHM6IHtcbiAgICAgICAgICAgICAgICAgIHR5cGU6ICdvYmplY3QnLFxuICAgICAgICAgICAgICAgICAgcHJvcGVydGllczoge1xuICAgICAgICAgICAgICAgICAgICB0b3RhbENsaWNrczogeyB0eXBlOiAnbnVtYmVyJyB9LFxuICAgICAgICAgICAgICAgICAgICB1bmlxdWVDbGlja3M6IHsgdHlwZTogJ251bWJlcicgfSxcbiAgICAgICAgICAgICAgICAgICAgY29udmVyc2lvbnM6IHsgdHlwZTogJ251bWJlcicgfSxcbiAgICAgICAgICAgICAgICAgICAgY29udmVyc2lvblJhdGU6IHsgdHlwZTogJ251bWJlcicgfSxcbiAgICAgICAgICAgICAgICAgICAgY2xpY2tzQnlDb3VudHJ5OiB7IHR5cGU6ICdhcnJheScgfSxcbiAgICAgICAgICAgICAgICAgICAgY2xpY2tzQnlEZXZpY2U6IHsgdHlwZTogJ2FycmF5JyB9LFxuICAgICAgICAgICAgICAgICAgICBjbGlja3NPdmVyVGltZTogeyB0eXBlOiAnYXJyYXknIH0sXG4gICAgICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgICAgIH0sXG4gICAgICAgICAgICAgIH0sXG4gICAgICAgICAgICB9LFxuICAgICAgICAgIH0sXG4gICAgICAgIH0sXG4gICAgICB9LFxuICAgIH0sXG4gIH0sIHV0bUNvbnRyb2xsZXIuZ2V0VVRNU3RhdHMuYmluZCh1dG1Db250cm9sbGVyKSk7XG5cbiAgZmFzdGlmeS5wb3N0KCcvdXRtL3Nob3J0ZW4nLCB7XG4gICAgc2NoZW1hOiB7XG4gICAgICBkZXNjcmlwdGlvbjogJ0VuY3VydGFyIFVSTCcsXG4gICAgICB0YWdzOiBbJ1VUTSddLFxuICAgICAgYm9keToge1xuICAgICAgICB0eXBlOiAnb2JqZWN0JyxcbiAgICAgICAgcmVxdWlyZWQ6IFsndXJsJ10sXG4gICAgICAgIHByb3BlcnRpZXM6IHtcbiAgICAgICAgICB1cmw6IHsgdHlwZTogJ3N0cmluZycsIGZvcm1hdDogJ3VyaScgfSxcbiAgICAgICAgICBjdXN0b21Db2RlOiB7IHR5cGU6ICdzdHJpbmcnLCBtaW5MZW5ndGg6IDMsIG1heExlbmd0aDogMjAgfSxcbiAgICAgICAgfSxcbiAgICAgIH0sXG4gICAgICByZXNwb25zZToge1xuICAgICAgICAyMDE6IHtcbiAgICAgICAgICB0eXBlOiAnb2JqZWN0JyxcbiAgICAgICAgICBwcm9wZXJ0aWVzOiB7XG4gICAgICAgICAgICBzdWNjZXNzOiB7IHR5cGU6ICdib29sZWFuJyB9LFxuICAgICAgICAgICAgZGF0YToge1xuICAgICAgICAgICAgICB0eXBlOiAnb2JqZWN0JyxcbiAgICAgICAgICAgICAgcHJvcGVydGllczoge1xuICAgICAgICAgICAgICAgIGlkOiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgICAgICAgICAgc2hvcnRDb2RlOiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgICAgICAgICAgc2hvcnRVcmw6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICAgICAgICBvcmlnaW5hbFVybDogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgfSxcbiAgICAgICAgICB9LFxuICAgICAgICB9LFxuICAgICAgfSxcbiAgICB9LFxuICB9LCB1dG1Db250cm9sbGVyLnNob3J0ZW5VcmwuYmluZCh1dG1Db250cm9sbGVyKSk7XG5cbiAgZmFzdGlmeS5wb3N0KCcvdXRtL2J1bGsnLCB7XG4gICAgc2NoZW1hOiB7XG4gICAgICBkZXNjcmlwdGlvbjogJ0NyaWHDp8OjbyBlbSBtYXNzYSBkZSBsaW5rcyBVVE0nLFxuICAgICAgdGFnczogWydVVE0nXSxcbiAgICAgIGJvZHk6IHtcbiAgICAgICAgdHlwZTogJ29iamVjdCcsXG4gICAgICAgIHJlcXVpcmVkOiBbJ2xpbmtzJ10sXG4gICAgICAgIHByb3BlcnRpZXM6IHtcbiAgICAgICAgICBsaW5rczoge1xuICAgICAgICAgICAgdHlwZTogJ2FycmF5JyxcbiAgICAgICAgICAgIG1pbkl0ZW1zOiAxLFxuICAgICAgICAgICAgbWF4SXRlbXM6IDEwMCxcbiAgICAgICAgICAgIGl0ZW1zOiB7XG4gICAgICAgICAgICAgIHR5cGU6ICdvYmplY3QnLFxuICAgICAgICAgICAgICByZXF1aXJlZDogWydvcmlnaW5hbFVybCddLFxuICAgICAgICAgICAgICBwcm9wZXJ0aWVzOiB7XG4gICAgICAgICAgICAgICAgb3JpZ2luYWxVcmw6IHsgdHlwZTogJ3N0cmluZycsIGZvcm1hdDogJ3VyaScgfSxcbiAgICAgICAgICAgICAgICB1dG1Tb3VyY2U6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICAgICAgICB1dG1NZWRpdW06IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICAgICAgICB1dG1DYW1wYWlnbjogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgICAgICAgIHV0bVRlcm06IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICAgICAgICB1dG1Db250ZW50OiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgICAgICAgICAgdGl0bGU6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbjogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgfSxcbiAgICAgICAgICB9LFxuICAgICAgICB9LFxuICAgICAgfSxcbiAgICAgIHJlc3BvbnNlOiB7XG4gICAgICAgIDIwMToge1xuICAgICAgICAgIHR5cGU6ICdvYmplY3QnLFxuICAgICAgICAgIHByb3BlcnRpZXM6IHtcbiAgICAgICAgICAgIHN1Y2Nlc3M6IHsgdHlwZTogJ2Jvb2xlYW4nIH0sXG4gICAgICAgICAgICBkYXRhOiB7XG4gICAgICAgICAgICAgIHR5cGU6ICdvYmplY3QnLFxuICAgICAgICAgICAgICBwcm9wZXJ0aWVzOiB7XG4gICAgICAgICAgICAgICAgY3JlYXRlZDogeyB0eXBlOiAnYXJyYXknIH0sXG4gICAgICAgICAgICAgICAgZmFpbGVkOiB7IHR5cGU6ICdhcnJheScgfSxcbiAgICAgICAgICAgICAgICB0b3RhbDogeyB0eXBlOiAnbnVtYmVyJyB9LFxuICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgfSxcbiAgICAgICAgICB9LFxuICAgICAgICB9LFxuICAgICAgfSxcbiAgICB9LFxuICB9LCB1dG1Db250cm9sbGVyLmJ1bGtDcmVhdGVVVE0uYmluZCh1dG1Db250cm9sbGVyKSk7XG5cbiAgZmFzdGlmeS5wdXQoJy91dG0vOmlkJywge1xuICAgIHNjaGVtYToge1xuICAgICAgZGVzY3JpcHRpb246ICdBdHVhbGl6YXIgbGluayBVVE0nLFxuICAgICAgdGFnczogWydVVE0nXSxcbiAgICAgIHBhcmFtczoge1xuICAgICAgICB0eXBlOiAnb2JqZWN0JyxcbiAgICAgICAgcmVxdWlyZWQ6IFsnaWQnXSxcbiAgICAgICAgcHJvcGVydGllczoge1xuICAgICAgICAgIGlkOiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgIH0sXG4gICAgICB9LFxuICAgICAgYm9keToge1xuICAgICAgICB0eXBlOiAnb2JqZWN0JyxcbiAgICAgICAgcHJvcGVydGllczoge1xuICAgICAgICAgIHRpdGxlOiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgICAgZGVzY3JpcHRpb246IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICB0YWdzOiB7IHR5cGU6ICdhcnJheScsIGl0ZW1zOiB7IHR5cGU6ICdzdHJpbmcnIH0gfSxcbiAgICAgICAgICBzdGF0dXM6IHsgdHlwZTogJ3N0cmluZycsIGVudW06IFsnQUNUSVZFJywgJ1BBVVNFRCcsICdBUkNISVZFRCddIH0sXG4gICAgICAgICAgZXhwaXJlc0F0OiB7IHR5cGU6ICdzdHJpbmcnLCBmb3JtYXQ6ICdkYXRlLXRpbWUnIH0sXG4gICAgICAgIH0sXG4gICAgICB9LFxuICAgIH0sXG4gIH0sIHV0bUNvbnRyb2xsZXIudXBkYXRlVVRNLmJpbmQodXRtQ29udHJvbGxlcikpO1xuXG4gIGZhc3RpZnkuZGVsZXRlKCcvdXRtLzppZCcsIHtcbiAgICBzY2hlbWE6IHtcbiAgICAgIGRlc2NyaXB0aW9uOiAnRGVsZXRhciBsaW5rIFVUTScsXG4gICAgICB0YWdzOiBbJ1VUTSddLFxuICAgICAgcGFyYW1zOiB7XG4gICAgICAgIHR5cGU6ICdvYmplY3QnLFxuICAgICAgICByZXF1aXJlZDogWydpZCddLFxuICAgICAgICBwcm9wZXJ0aWVzOiB7XG4gICAgICAgICAgaWQ6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgfSxcbiAgICAgIH0sXG4gICAgfSxcbiAgfSwgdXRtQ29udHJvbGxlci5kZWxldGVVVE0uYmluZCh1dG1Db250cm9sbGVyKSk7XG5cbiAgZmFzdGlmeS5wb3N0KCcvdXRtL2NvbnZlcnNpb24nLCB7XG4gICAgc2NoZW1hOiB7XG4gICAgICBkZXNjcmlwdGlvbjogJ1JlZ2lzdHJhciBjb252ZXJzw6NvJyxcbiAgICAgIHRhZ3M6IFsnVVRNJ10sXG4gICAgICBib2R5OiB7XG4gICAgICAgIHR5cGU6ICdvYmplY3QnLFxuICAgICAgICBwcm9wZXJ0aWVzOiB7XG4gICAgICAgICAgdXRtTGlua0lkOiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgICAgc2hvcnRDb2RlOiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgICAgZXZlbnRUeXBlOiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgICAgZXZlbnROYW1lOiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgICAgdmFsdWU6IHsgdHlwZTogJ251bWJlcicgfSxcbiAgICAgICAgICBjdXJyZW5jeTogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgIGN1c3RvbWVySWQ6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICBjdXN0b21lckVtYWlsOiB7IHR5cGU6ICdzdHJpbmcnLCBmb3JtYXQ6ICdlbWFpbCcgfSxcbiAgICAgICAgICBtZXRhZGF0YTogeyB0eXBlOiAnb2JqZWN0JyB9LFxuICAgICAgICB9LFxuICAgICAgfSxcbiAgICB9LFxuICB9LCB1dG1Db250cm9sbGVyLnRyYWNrQ29udmVyc2lvbi5iaW5kKHV0bUNvbnRyb2xsZXIpKTtcblxuICBmYXN0aWZ5LmdldCgnL3V0bS9leHBvcnQnLCB7XG4gICAgc2NoZW1hOiB7XG4gICAgICBkZXNjcmlwdGlvbjogJ0V4cG9ydGFyIGRhZG9zIFVUTScsXG4gICAgICB0YWdzOiBbJ1VUTSddLFxuICAgICAgcXVlcnlzdHJpbmc6IHtcbiAgICAgICAgdHlwZTogJ29iamVjdCcsXG4gICAgICAgIHByb3BlcnRpZXM6IHtcbiAgICAgICAgICBmb3JtYXQ6IHsgdHlwZTogJ3N0cmluZycsIGVudW06IFsnY3N2JywgJ2pzb24nLCAneGxzeCddLCBkZWZhdWx0OiAnY3N2JyB9LFxuICAgICAgICAgIGRhdGVSYW5nZTogeyB0eXBlOiAnc3RyaW5nJywgZW51bTogWydsYXN0N2RheXMnLCAnbGFzdDMwZGF5cycsICdsYXN0OTBkYXlzJywgJ2N1c3RvbSddLCBkZWZhdWx0OiAnbGFzdDMwZGF5cycgfSxcbiAgICAgICAgICBzdGFydERhdGU6IHsgdHlwZTogJ3N0cmluZycsIGZvcm1hdDogJ2RhdGUnIH0sXG4gICAgICAgICAgZW5kRGF0ZTogeyB0eXBlOiAnc3RyaW5nJywgZm9ybWF0OiAnZGF0ZScgfSxcbiAgICAgICAgICBpbmNsdWRlQ2xpY2tzOiB7IHR5cGU6ICdib29sZWFuJywgZGVmYXVsdDogdHJ1ZSB9LFxuICAgICAgICAgIGluY2x1ZGVDb252ZXJzaW9uczogeyB0eXBlOiAnYm9vbGVhbicsIGRlZmF1bHQ6IHRydWUgfSxcbiAgICAgICAgICBpbmNsdWRlTWV0cmljczogeyB0eXBlOiAnYm9vbGVhbicsIGRlZmF1bHQ6IHRydWUgfSxcbiAgICAgICAgICB1dG1Tb3VyY2U6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICB1dG1NZWRpdW06IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICB1dG1DYW1wYWlnbjogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICB9LFxuICAgICAgfSxcbiAgICB9LFxuICB9LCB1dG1Db250cm9sbGVyLmV4cG9ydERhdGEuYmluZCh1dG1Db250cm9sbGVyKSk7XG5cbiAgLy8gTm90aWZpY2F0aW9uIHJvdXRlc1xuICBmYXN0aWZ5LmdldCgnL25vdGlmaWNhdGlvbnMnLCB7XG4gICAgc2NoZW1hOiB7XG4gICAgICBkZXNjcmlwdGlvbjogJ0dldCBub3RpZmljYXRpb24gYWxlcnRzIGZvciBvcmdhbml6YXRpb24nLFxuICAgICAgdGFnczogWyd1dG0nXSxcbiAgICAgIHF1ZXJ5c3RyaW5nOiB7XG4gICAgICAgIHR5cGU6ICdvYmplY3QnLFxuICAgICAgICBwcm9wZXJ0aWVzOiB7XG4gICAgICAgICAgcGFnZTogeyB0eXBlOiAnaW50ZWdlcicsIG1pbmltdW06IDEsIGRlZmF1bHQ6IDEgfSxcbiAgICAgICAgICBsaW1pdDogeyB0eXBlOiAnaW50ZWdlcicsIG1pbmltdW06IDEsIG1heGltdW06IDEwMCwgZGVmYXVsdDogMjAgfSxcbiAgICAgICAgICB1bnJlYWRfb25seTogeyB0eXBlOiAnYm9vbGVhbicsIGRlZmF1bHQ6IGZhbHNlIH1cbiAgICAgICAgfVxuICAgICAgfSxcbiAgICAgIHJlc3BvbnNlOiB7XG4gICAgICAgIDIwMDoge1xuICAgICAgICAgIHR5cGU6ICdvYmplY3QnLFxuICAgICAgICAgIHByb3BlcnRpZXM6IHtcbiAgICAgICAgICAgIGFsZXJ0czoge1xuICAgICAgICAgICAgICB0eXBlOiAnYXJyYXknLFxuICAgICAgICAgICAgICBpdGVtczoge1xuICAgICAgICAgICAgICAgIHR5cGU6ICdvYmplY3QnLFxuICAgICAgICAgICAgICAgIHByb3BlcnRpZXM6IHtcbiAgICAgICAgICAgICAgICAgIGlkOiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgICAgICAgICAgICBydWxlSWQ6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICAgICAgICAgIHJ1bGVOYW1lOiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgICAgICAgICAgICBtZXNzYWdlOiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgICAgICAgICAgICBzZXZlcml0eTogeyB0eXBlOiAnc3RyaW5nJywgZW51bTogWydsb3cnLCAnbWVkaXVtJywgJ2hpZ2gnLCAnY3JpdGljYWwnXSB9LFxuICAgICAgICAgICAgICAgICAgdXRtTGlua0lkOiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgICAgICAgICAgICB1dG1DYW1wYWlnbjogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgICAgICAgICAgZGF0YTogeyB0eXBlOiAnb2JqZWN0JyB9LFxuICAgICAgICAgICAgICAgICAgaXNSZWFkOiB7IHR5cGU6ICdib29sZWFuJyB9LFxuICAgICAgICAgICAgICAgICAgY3JlYXRlZEF0OiB7IHR5cGU6ICdzdHJpbmcnIH1cbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIH0sXG4gICAgICAgICAgICBwYWdpbmF0aW9uOiB7XG4gICAgICAgICAgICAgIHR5cGU6ICdvYmplY3QnLFxuICAgICAgICAgICAgICBwcm9wZXJ0aWVzOiB7XG4gICAgICAgICAgICAgICAgcGFnZTogeyB0eXBlOiAnaW50ZWdlcicgfSxcbiAgICAgICAgICAgICAgICBsaW1pdDogeyB0eXBlOiAnaW50ZWdlcicgfSxcbiAgICAgICAgICAgICAgICB0b3RhbDogeyB0eXBlOiAnaW50ZWdlcicgfSxcbiAgICAgICAgICAgICAgICB0b3RhbFBhZ2VzOiB7IHR5cGU6ICdpbnRlZ2VyJyB9XG4gICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIH1cbiAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG4gIH0sIHV0bUNvbnRyb2xsZXIuZ2V0Tm90aWZpY2F0aW9ucy5iaW5kKHV0bUNvbnRyb2xsZXIpKTtcblxuICBmYXN0aWZ5LnBvc3QoJy9ub3RpZmljYXRpb25zL3J1bGVzJywge1xuICAgIHNjaGVtYToge1xuICAgICAgZGVzY3JpcHRpb246ICdDcmVhdGUgbm90aWZpY2F0aW9uIHJ1bGUnLFxuICAgICAgdGFnczogWyd1dG0nXSxcbiAgICAgIGJvZHk6IHtcbiAgICAgICAgdHlwZTogJ29iamVjdCcsXG4gICAgICAgIHByb3BlcnRpZXM6IHtcbiAgICAgICAgICBuYW1lOiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgICAgZGVzY3JpcHRpb246IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICBpc0FjdGl2ZTogeyB0eXBlOiAnYm9vbGVhbicsIGRlZmF1bHQ6IHRydWUgfSxcbiAgICAgICAgICB0cmlnZ2VyVHlwZTogeyB0eXBlOiAnc3RyaW5nJywgZW51bTogWydjbGlja190aHJlc2hvbGQnLCAnY29udmVyc2lvbl9yYXRlJywgJ2J1ZGdldF9saW1pdCcsICd0aW1lX2Jhc2VkJywgJ3BlcmZvcm1hbmNlX2Ryb3AnXSB9LFxuICAgICAgICAgIGNvbmRpdGlvbjoge1xuICAgICAgICAgICAgdHlwZTogJ29iamVjdCcsXG4gICAgICAgICAgICBwcm9wZXJ0aWVzOiB7XG4gICAgICAgICAgICAgIG9wZXJhdG9yOiB7IHR5cGU6ICdzdHJpbmcnLCBlbnVtOiBbJ2dyZWF0ZXJfdGhhbicsICdsZXNzX3RoYW4nLCAnZXF1YWxzJywgJ2JldHdlZW4nXSB9LFxuICAgICAgICAgICAgICB2YWx1ZTogeyB0eXBlOiAnbnVtYmVyJyB9LFxuICAgICAgICAgICAgICBzZWNvbmRWYWx1ZTogeyB0eXBlOiAnbnVtYmVyJyB9LFxuICAgICAgICAgICAgICB0aW1lZnJhbWU6IHsgdHlwZTogJ3N0cmluZycsIGVudW06IFsnaG91cicsICdkYXknLCAnd2VlaycsICdtb250aCddIH1cbiAgICAgICAgICAgIH0sXG4gICAgICAgICAgICByZXF1aXJlZDogWydvcGVyYXRvcicsICd2YWx1ZSddXG4gICAgICAgICAgfSxcbiAgICAgICAgICBjaGFubmVsczoge1xuICAgICAgICAgICAgdHlwZTogJ2FycmF5JyxcbiAgICAgICAgICAgIGl0ZW1zOiB7IHR5cGU6ICdzdHJpbmcnLCBlbnVtOiBbJ2VtYWlsJywgJ3NtcycsICd3ZWJob29rJywgJ2luX2FwcCddIH1cbiAgICAgICAgICB9LFxuICAgICAgICAgIHJlY2lwaWVudHM6IHtcbiAgICAgICAgICAgIHR5cGU6ICdhcnJheScsXG4gICAgICAgICAgICBpdGVtczogeyB0eXBlOiAnc3RyaW5nJyB9XG4gICAgICAgICAgfSxcbiAgICAgICAgICBtZXNzYWdlOiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgICAgdXRtQ2FtcGFpZ25zOiB7XG4gICAgICAgICAgICB0eXBlOiAnYXJyYXknLFxuICAgICAgICAgICAgaXRlbXM6IHsgdHlwZTogJ3N0cmluZycgfVxuICAgICAgICAgIH1cbiAgICAgICAgfSxcbiAgICAgICAgcmVxdWlyZWQ6IFsnbmFtZScsICd0cmlnZ2VyVHlwZScsICdjb25kaXRpb24nLCAnY2hhbm5lbHMnLCAncmVjaXBpZW50cycsICdtZXNzYWdlJ11cbiAgICAgIH0sXG4gICAgICByZXNwb25zZToge1xuICAgICAgICAyMDE6IHtcbiAgICAgICAgICB0eXBlOiAnb2JqZWN0JyxcbiAgICAgICAgICBwcm9wZXJ0aWVzOiB7XG4gICAgICAgICAgICBpZDogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgICAgbWVzc2FnZTogeyB0eXBlOiAnc3RyaW5nJyB9XG4gICAgICAgICAgfVxuICAgICAgICB9XG4gICAgICB9XG4gICAgfVxuICB9LCB1dG1Db250cm9sbGVyLmNyZWF0ZU5vdGlmaWNhdGlvblJ1bGUuYmluZCh1dG1Db250cm9sbGVyKSk7XG5cbiAgZmFzdGlmeS5nZXQoJy9ub3RpZmljYXRpb25zL3J1bGVzJywge1xuICAgIHNjaGVtYToge1xuICAgICAgZGVzY3JpcHRpb246ICdHZXQgbm90aWZpY2F0aW9uIHJ1bGVzIGZvciBvcmdhbml6YXRpb24nLFxuICAgICAgdGFnczogWyd1dG0nXSxcbiAgICAgIHJlc3BvbnNlOiB7XG4gICAgICAgIDIwMDoge1xuICAgICAgICAgIHR5cGU6ICdvYmplY3QnLFxuICAgICAgICAgIHByb3BlcnRpZXM6IHtcbiAgICAgICAgICAgIHJ1bGVzOiB7XG4gICAgICAgICAgICAgIHR5cGU6ICdhcnJheScsXG4gICAgICAgICAgICAgIGl0ZW1zOiB7XG4gICAgICAgICAgICAgICAgdHlwZTogJ29iamVjdCcsXG4gICAgICAgICAgICAgICAgcHJvcGVydGllczoge1xuICAgICAgICAgICAgICAgICAgaWQ6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICAgICAgICAgIG5hbWU6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uOiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgICAgICAgICAgICBpc0FjdGl2ZTogeyB0eXBlOiAnYm9vbGVhbicgfSxcbiAgICAgICAgICAgICAgICAgIHRyaWdnZXJUeXBlOiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgICAgICAgICAgICBjb25kaXRpb246IHsgdHlwZTogJ29iamVjdCcgfSxcbiAgICAgICAgICAgICAgICAgIGNoYW5uZWxzOiB7IHR5cGU6ICdhcnJheScsIGl0ZW1zOiB7IHR5cGU6ICdzdHJpbmcnIH0gfSxcbiAgICAgICAgICAgICAgICAgIHJlY2lwaWVudHM6IHsgdHlwZTogJ2FycmF5JywgaXRlbXM6IHsgdHlwZTogJ3N0cmluZycgfSB9LFxuICAgICAgICAgICAgICAgICAgbWVzc2FnZTogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgICAgICAgICAgdXRtQ2FtcGFpZ25zOiB7IHR5cGU6ICdhcnJheScsIGl0ZW1zOiB7IHR5cGU6ICdzdHJpbmcnIH0gfSxcbiAgICAgICAgICAgICAgICAgIGNyZWF0ZWRBdDogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgICAgICAgICAgbGFzdFRyaWdnZXJlZDogeyB0eXBlOiAnc3RyaW5nJyB9XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICB9XG4gICAgICAgICAgICB9XG4gICAgICAgICAgfVxuICAgICAgICB9XG4gICAgICB9XG4gICAgfVxuICB9LCB1dG1Db250cm9sbGVyLmdldE5vdGlmaWNhdGlvblJ1bGVzLmJpbmQodXRtQ29udHJvbGxlcikpO1xuXG4gIGZhc3RpZnkucHV0KCcvbm90aWZpY2F0aW9ucy9ydWxlcy86aWQnLCB7XG4gICAgc2NoZW1hOiB7XG4gICAgICBkZXNjcmlwdGlvbjogJ1VwZGF0ZSBub3RpZmljYXRpb24gcnVsZScsXG4gICAgICB0YWdzOiBbJ3V0bSddLFxuICAgICAgcGFyYW1zOiB7XG4gICAgICAgIHR5cGU6ICdvYmplY3QnLFxuICAgICAgICBwcm9wZXJ0aWVzOiB7XG4gICAgICAgICAgaWQ6IHsgdHlwZTogJ3N0cmluZycgfVxuICAgICAgICB9LFxuICAgICAgICByZXF1aXJlZDogWydpZCddXG4gICAgICB9LFxuICAgICAgYm9keToge1xuICAgICAgICB0eXBlOiAnb2JqZWN0JyxcbiAgICAgICAgcHJvcGVydGllczoge1xuICAgICAgICAgIG5hbWU6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICBkZXNjcmlwdGlvbjogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgIGlzQWN0aXZlOiB7IHR5cGU6ICdib29sZWFuJyB9LFxuICAgICAgICAgIHRyaWdnZXJUeXBlOiB7IHR5cGU6ICdzdHJpbmcnLCBlbnVtOiBbJ2NsaWNrX3RocmVzaG9sZCcsICdjb252ZXJzaW9uX3JhdGUnLCAnYnVkZ2V0X2xpbWl0JywgJ3RpbWVfYmFzZWQnLCAncGVyZm9ybWFuY2VfZHJvcCddIH0sXG4gICAgICAgICAgY29uZGl0aW9uOiB7XG4gICAgICAgICAgICB0eXBlOiAnb2JqZWN0JyxcbiAgICAgICAgICAgIHByb3BlcnRpZXM6IHtcbiAgICAgICAgICAgICAgb3BlcmF0b3I6IHsgdHlwZTogJ3N0cmluZycsIGVudW06IFsnZ3JlYXRlcl90aGFuJywgJ2xlc3NfdGhhbicsICdlcXVhbHMnLCAnYmV0d2VlbiddIH0sXG4gICAgICAgICAgICAgIHZhbHVlOiB7IHR5cGU6ICdudW1iZXInIH0sXG4gICAgICAgICAgICAgIHNlY29uZFZhbHVlOiB7IHR5cGU6ICdudW1iZXInIH0sXG4gICAgICAgICAgICAgIHRpbWVmcmFtZTogeyB0eXBlOiAnc3RyaW5nJywgZW51bTogWydob3VyJywgJ2RheScsICd3ZWVrJywgJ21vbnRoJ10gfVxuICAgICAgICAgICAgfVxuICAgICAgICAgIH0sXG4gICAgICAgICAgY2hhbm5lbHM6IHtcbiAgICAgICAgICAgIHR5cGU6ICdhcnJheScsXG4gICAgICAgICAgICBpdGVtczogeyB0eXBlOiAnc3RyaW5nJywgZW51bTogWydlbWFpbCcsICdzbXMnLCAnd2ViaG9vaycsICdpbl9hcHAnXSB9XG4gICAgICAgICAgfSxcbiAgICAgICAgICByZWNpcGllbnRzOiB7XG4gICAgICAgICAgICB0eXBlOiAnYXJyYXknLFxuICAgICAgICAgICAgaXRlbXM6IHsgdHlwZTogJ3N0cmluZycgfVxuICAgICAgICAgIH0sXG4gICAgICAgICAgbWVzc2FnZTogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgIHV0bUNhbXBhaWduczoge1xuICAgICAgICAgICAgdHlwZTogJ2FycmF5JyxcbiAgICAgICAgICAgIGl0ZW1zOiB7IHR5cGU6ICdzdHJpbmcnIH1cbiAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgIH0sXG4gICAgICByZXNwb25zZToge1xuICAgICAgICAyMDA6IHtcbiAgICAgICAgICB0eXBlOiAnb2JqZWN0JyxcbiAgICAgICAgICBwcm9wZXJ0aWVzOiB7XG4gICAgICAgICAgICBtZXNzYWdlOiB7IHR5cGU6ICdzdHJpbmcnIH1cbiAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG4gIH0sIHV0bUNvbnRyb2xsZXIudXBkYXRlTm90aWZpY2F0aW9uUnVsZS5iaW5kKHV0bUNvbnRyb2xsZXIpKTtcblxuICBmYXN0aWZ5LmRlbGV0ZSgnL25vdGlmaWNhdGlvbnMvcnVsZXMvOmlkJywge1xuICAgIHNjaGVtYToge1xuICAgICAgZGVzY3JpcHRpb246ICdEZWxldGUgbm90aWZpY2F0aW9uIHJ1bGUnLFxuICAgICAgdGFnczogWyd1dG0nXSxcbiAgICAgIHBhcmFtczoge1xuICAgICAgICB0eXBlOiAnb2JqZWN0JyxcbiAgICAgICAgcHJvcGVydGllczoge1xuICAgICAgICAgIGlkOiB7IHR5cGU6ICdzdHJpbmcnIH1cbiAgICAgICAgfSxcbiAgICAgICAgcmVxdWlyZWQ6IFsnaWQnXVxuICAgICAgfSxcbiAgICAgIHJlc3BvbnNlOiB7XG4gICAgICAgIDIwMDoge1xuICAgICAgICAgIHR5cGU6ICdvYmplY3QnLFxuICAgICAgICAgIHByb3BlcnRpZXM6IHtcbiAgICAgICAgICAgIG1lc3NhZ2U6IHsgdHlwZTogJ3N0cmluZycgfVxuICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfSwgdXRtQ29udHJvbGxlci5kZWxldGVOb3RpZmljYXRpb25SdWxlLmJpbmQodXRtQ29udHJvbGxlcikpO1xuXG4gIGZhc3RpZnkucGF0Y2goJy9ub3RpZmljYXRpb25zLzppZC9yZWFkJywge1xuICAgIHNjaGVtYToge1xuICAgICAgZGVzY3JpcHRpb246ICdNYXJrIG5vdGlmaWNhdGlvbiBhcyByZWFkJyxcbiAgICAgIHRhZ3M6IFsndXRtJ10sXG4gICAgICBwYXJhbXM6IHtcbiAgICAgICAgdHlwZTogJ29iamVjdCcsXG4gICAgICAgIHByb3BlcnRpZXM6IHtcbiAgICAgICAgICBpZDogeyB0eXBlOiAnc3RyaW5nJyB9XG4gICAgICAgIH0sXG4gICAgICAgIHJlcXVpcmVkOiBbJ2lkJ11cbiAgICAgIH0sXG4gICAgICByZXNwb25zZToge1xuICAgICAgICAyMDA6IHtcbiAgICAgICAgICB0eXBlOiAnb2JqZWN0JyxcbiAgICAgICAgICBwcm9wZXJ0aWVzOiB7XG4gICAgICAgICAgICBtZXNzYWdlOiB7IHR5cGU6ICdzdHJpbmcnIH1cbiAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG4gIH0sIHV0bUNvbnRyb2xsZXIubWFya05vdGlmaWNhdGlvbkFzUmVhZC5iaW5kKHV0bUNvbnRyb2xsZXIpKTtcblxuICAvLyBJbnRlZ3JhdGlvbiBtYW5hZ2VtZW50IHJvdXRlc1xuICBmYXN0aWZ5LmdldCgnL2ludGVncmF0aW9ucycsIHtcbiAgICBzY2hlbWE6IHtcbiAgICAgIHRhZ3M6IFsnVVRNIEludGVncmF0aW9ucyddLFxuICAgICAgc3VtbWFyeTogJ0dldCB1c2VyIGludGVncmF0aW9ucycsXG4gICAgICBxdWVyeXN0cmluZzoge1xuICAgICAgICB0eXBlOiAnb2JqZWN0JyxcbiAgICAgICAgcHJvcGVydGllczoge1xuICAgICAgICAgIG9yZ2FuaXphdGlvbklkOiB7IHR5cGU6ICdzdHJpbmcnIH1cbiAgICAgICAgfSxcbiAgICAgICAgcmVxdWlyZWQ6IFsnb3JnYW5pemF0aW9uSWQnXVxuICAgICAgfSxcbiAgICAgIHJlc3BvbnNlOiB7XG4gICAgICAgIDIwMDoge1xuICAgICAgICAgIHR5cGU6ICdvYmplY3QnLFxuICAgICAgICAgIHByb3BlcnRpZXM6IHtcbiAgICAgICAgICAgIHN1Y2Nlc3M6IHsgdHlwZTogJ2Jvb2xlYW4nIH0sXG4gICAgICAgICAgICBkYXRhOiB7XG4gICAgICAgICAgICAgIHR5cGU6ICdhcnJheScsXG4gICAgICAgICAgICAgIGl0ZW1zOiB7XG4gICAgICAgICAgICAgICAgdHlwZTogJ29iamVjdCcsXG4gICAgICAgICAgICAgICAgcHJvcGVydGllczoge1xuICAgICAgICAgICAgICAgICAgaWQ6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICAgICAgICAgIG5hbWU6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICAgICAgICAgIHR5cGU6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICAgICAgICAgIHN0YXR1czogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgICAgICAgICAgY29uZmlnOiB7IHR5cGU6ICdvYmplY3QnIH0sXG4gICAgICAgICAgICAgICAgICBsYXN0U3luYzogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgICAgICAgICAgZXZlbnRzOiB7IHR5cGU6ICdhcnJheScsIGl0ZW1zOiB7IHR5cGU6ICdzdHJpbmcnIH0gfVxuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgfVxuICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfSwgdXRtQ29udHJvbGxlci5nZXRJbnRlZ3JhdGlvbnMuYmluZCh1dG1Db250cm9sbGVyKSk7XG5cbiAgZmFzdGlmeS5wb3N0KCcvaW50ZWdyYXRpb25zJywge1xuICAgIHNjaGVtYToge1xuICAgICAgdGFnczogWydVVE0gSW50ZWdyYXRpb25zJ10sXG4gICAgICBzdW1tYXJ5OiAnQ3JlYXRlIG9yIHVwZGF0ZSBpbnRlZ3JhdGlvbicsXG4gICAgICBib2R5OiB7XG4gICAgICAgIHR5cGU6ICdvYmplY3QnLFxuICAgICAgICBwcm9wZXJ0aWVzOiB7XG4gICAgICAgICAgb3JnYW5pemF0aW9uSWQ6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICB0eXBlOiB7IHR5cGU6ICdzdHJpbmcnLCBlbnVtOiBbJ2dvb2dsZV9hbmFseXRpY3MnLCAnZmFjZWJvb2tfcGl4ZWwnLCAnZ29vZ2xlX2FkcycsICd3ZWJob29rJ10gfSxcbiAgICAgICAgICBuYW1lOiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgICAgY29uZmlnOiB7IHR5cGU6ICdvYmplY3QnIH0sXG4gICAgICAgICAgZXZlbnRzOiB7IHR5cGU6ICdhcnJheScsIGl0ZW1zOiB7IHR5cGU6ICdzdHJpbmcnIH0gfSxcbiAgICAgICAgICBlbmFibGVkOiB7IHR5cGU6ICdib29sZWFuJyB9XG4gICAgICAgIH0sXG4gICAgICAgIHJlcXVpcmVkOiBbJ29yZ2FuaXphdGlvbklkJywgJ3R5cGUnLCAnbmFtZScsICdjb25maWcnXVxuICAgICAgfSxcbiAgICAgIHJlc3BvbnNlOiB7XG4gICAgICAgIDIwMDoge1xuICAgICAgICAgIHR5cGU6ICdvYmplY3QnLFxuICAgICAgICAgIHByb3BlcnRpZXM6IHtcbiAgICAgICAgICAgIHN1Y2Nlc3M6IHsgdHlwZTogJ2Jvb2xlYW4nIH0sXG4gICAgICAgICAgICBkYXRhOiB7XG4gICAgICAgICAgICAgIHR5cGU6ICdvYmplY3QnLFxuICAgICAgICAgICAgICBwcm9wZXJ0aWVzOiB7XG4gICAgICAgICAgICAgICAgaWQ6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICAgICAgICBtZXNzYWdlOiB7IHR5cGU6ICdzdHJpbmcnIH1cbiAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgfVxuICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfSwgdXRtQ29udHJvbGxlci5jcmVhdGVJbnRlZ3JhdGlvbi5iaW5kKHV0bUNvbnRyb2xsZXIpKTtcblxuICBmYXN0aWZ5LnB1dCgnL2ludGVncmF0aW9ucy86aWQnLCB7XG4gICAgc2NoZW1hOiB7XG4gICAgICB0YWdzOiBbJ1VUTSBJbnRlZ3JhdGlvbnMnXSxcbiAgICAgIHN1bW1hcnk6ICdVcGRhdGUgaW50ZWdyYXRpb24nLFxuICAgICAgcGFyYW1zOiB7XG4gICAgICAgIHR5cGU6ICdvYmplY3QnLFxuICAgICAgICBwcm9wZXJ0aWVzOiB7XG4gICAgICAgICAgaWQ6IHsgdHlwZTogJ3N0cmluZycgfVxuICAgICAgICB9LFxuICAgICAgICByZXF1aXJlZDogWydpZCddXG4gICAgICB9LFxuICAgICAgYm9keToge1xuICAgICAgICB0eXBlOiAnb2JqZWN0JyxcbiAgICAgICAgcHJvcGVydGllczoge1xuICAgICAgICAgIG9yZ2FuaXphdGlvbklkOiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgICAgbmFtZTogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgIGNvbmZpZzogeyB0eXBlOiAnb2JqZWN0JyB9LFxuICAgICAgICAgIGV2ZW50czogeyB0eXBlOiAnYXJyYXknLCBpdGVtczogeyB0eXBlOiAnc3RyaW5nJyB9IH0sXG4gICAgICAgICAgZW5hYmxlZDogeyB0eXBlOiAnYm9vbGVhbicgfVxuICAgICAgICB9LFxuICAgICAgICByZXF1aXJlZDogWydvcmdhbml6YXRpb25JZCddXG4gICAgICB9XG4gICAgfVxuICB9LCB1dG1Db250cm9sbGVyLnVwZGF0ZUludGVncmF0aW9uLmJpbmQodXRtQ29udHJvbGxlcikpO1xuXG4gIGZhc3RpZnkuZGVsZXRlKCcvaW50ZWdyYXRpb25zLzppZCcsIHtcbiAgICBzY2hlbWE6IHtcbiAgICAgIHRhZ3M6IFsnVVRNIEludGVncmF0aW9ucyddLFxuICAgICAgc3VtbWFyeTogJ0RlbGV0ZSBpbnRlZ3JhdGlvbicsXG4gICAgICBwYXJhbXM6IHtcbiAgICAgICAgdHlwZTogJ29iamVjdCcsXG4gICAgICAgIHByb3BlcnRpZXM6IHtcbiAgICAgICAgICBpZDogeyB0eXBlOiAnc3RyaW5nJyB9XG4gICAgICAgIH0sXG4gICAgICAgIHJlcXVpcmVkOiBbJ2lkJ11cbiAgICAgIH0sXG4gICAgICBxdWVyeXN0cmluZzoge1xuICAgICAgICB0eXBlOiAnb2JqZWN0JyxcbiAgICAgICAgcHJvcGVydGllczoge1xuICAgICAgICAgIG9yZ2FuaXphdGlvbklkOiB7IHR5cGU6ICdzdHJpbmcnIH1cbiAgICAgICAgfSxcbiAgICAgICAgcmVxdWlyZWQ6IFsnb3JnYW5pemF0aW9uSWQnXVxuICAgICAgfVxuICAgIH1cbiAgfSwgdXRtQ29udHJvbGxlci5kZWxldGVJbnRlZ3JhdGlvbi5iaW5kKHV0bUNvbnRyb2xsZXIpKTtcblxuICBmYXN0aWZ5LnBvc3QoJy9pbnRlZ3JhdGlvbnMvOmlkL3Rlc3QnLCB7XG4gICAgc2NoZW1hOiB7XG4gICAgICB0YWdzOiBbJ1VUTSBJbnRlZ3JhdGlvbnMnXSxcbiAgICAgIHN1bW1hcnk6ICdUZXN0IGludGVncmF0aW9uIGNvbm5lY3Rpb24nLFxuICAgICAgcGFyYW1zOiB7XG4gICAgICAgIHR5cGU6ICdvYmplY3QnLFxuICAgICAgICBwcm9wZXJ0aWVzOiB7XG4gICAgICAgICAgaWQ6IHsgdHlwZTogJ3N0cmluZycgfVxuICAgICAgICB9LFxuICAgICAgICByZXF1aXJlZDogWydpZCddXG4gICAgICB9LFxuICAgICAgYm9keToge1xuICAgICAgICB0eXBlOiAnb2JqZWN0JyxcbiAgICAgICAgcHJvcGVydGllczoge1xuICAgICAgICAgIG9yZ2FuaXphdGlvbklkOiB7IHR5cGU6ICdzdHJpbmcnIH1cbiAgICAgICAgfSxcbiAgICAgICAgcmVxdWlyZWQ6IFsnb3JnYW5pemF0aW9uSWQnXVxuICAgICAgfVxuICAgIH1cbiAgfSwgdXRtQ29udHJvbGxlci50ZXN0SW50ZWdyYXRpb24uYmluZCh1dG1Db250cm9sbGVyKSk7XG5cbiAgZmFzdGlmeS5wb3N0KCcvaW50ZWdyYXRpb25zL3NlbmQtZXZlbnQnLCB7XG4gICAgc2NoZW1hOiB7XG4gICAgICB0YWdzOiBbJ1VUTSBJbnRlZ3JhdGlvbnMnXSxcbiAgICAgIHN1bW1hcnk6ICdTZW5kIGV2ZW50IHRvIGludGVncmF0aW9ucycsXG4gICAgICBib2R5OiB7XG4gICAgICAgIHR5cGU6ICdvYmplY3QnLFxuICAgICAgICBwcm9wZXJ0aWVzOiB7XG4gICAgICAgICAgb3JnYW5pemF0aW9uSWQ6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICBldmVudFR5cGU6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICBldmVudERhdGE6IHsgdHlwZTogJ29iamVjdCcgfSxcbiAgICAgICAgICB1dG1MaW5rSWQ6IHsgdHlwZTogJ3N0cmluZycgfVxuICAgICAgICB9LFxuICAgICAgICByZXF1aXJlZDogWydvcmdhbml6YXRpb25JZCcsICdldmVudFR5cGUnLCAnZXZlbnREYXRhJ11cbiAgICAgIH1cbiAgICB9XG4gIH0sIHV0bUNvbnRyb2xsZXIuc2VuZEV2ZW50VG9JbnRlZ3JhdGlvbnMuYmluZCh1dG1Db250cm9sbGVyKSk7XG5cbiAgLy8gUHVibGljIHJlZGlyZWN0IHJvdXRlIChubyBhdXRoZW50aWNhdGlvbiByZXF1aXJlZClcbiAgZmFzdGlmeS5nZXQoJy9yLzpjb2RlJywge1xuICAgIHNjaGVtYToge1xuICAgICAgZGVzY3JpcHRpb246ICdSZWRpcmVjaW9uYXIgZSByYXN0cmVhciBjbGlxdWUnLFxuICAgICAgdGFnczogWydVVE0nXSxcbiAgICAgIHBhcmFtczoge1xuICAgICAgICB0eXBlOiAnb2JqZWN0JyxcbiAgICAgICAgcmVxdWlyZWQ6IFsnY29kZSddLFxuICAgICAgICBwcm9wZXJ0aWVzOiB7XG4gICAgICAgICAgY29kZTogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICB9LFxuICAgICAgfSxcbiAgICB9LFxuICAgIHByZUhhbmRsZXI6IFtdLCAvLyBPdmVycmlkZSBnbG9iYWwgYXV0aCBtaWRkbGV3YXJlXG4gIH0sIHV0bUNvbnRyb2xsZXIucmVkaXJlY3RBbmRUcmFjay5iaW5kKHV0bUNvbnRyb2xsZXIpKTtcbn0iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQW1CSztJQUFBQSxhQUFBLFlBQUFBLENBQUE7TUFBQSxPQUFBQyxjQUFBO0lBQUE7RUFBQTtFQUFBLE9BQUFBLGNBQUE7QUFBQTtBQUFBRCxhQUFBO0FBbEJMLFNBQVNFLGFBQWEsUUFBUSwrQkFBK0I7QUFDN0QsU0FBU0MsVUFBVSxRQUFRLHlCQUF5QjtBQUNwRCxTQUFTQyxXQUFXLFFBQVEsK0JBQStCO0FBRTNELE9BQU8sZUFBZUMsU0FBU0EsQ0FBQ0MsT0FBd0I7RUFBQTtFQUFBTixhQUFBLEdBQUFPLENB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

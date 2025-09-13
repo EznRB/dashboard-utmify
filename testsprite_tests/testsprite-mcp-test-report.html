@@ -1,0 +1,303 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Markdown Preview</title>
+      <style>
+        body {
+          font-family: sans-serif;
+          padding: 40px;
+          line-height: 1.6;
+          background: #fdfdfd;
+          color: #333;
+        }
+        pre {
+          background: #f4f4f4;
+          padding: 10px;
+          border-radius: 5px;
+          overflow-x: auto;
+        }
+        code {
+          font-family: monospace;
+          background: #eee;
+          padding: 2px 4px;
+        }
+        table {
+          border-collapse: collapse;
+          width: 100%;
+          margin-top: 20px;
+        }
+        th, td {
+          border: 1px solid #ccc;
+          padding: 8px 12px;
+          text-align: left;
+        }
+        th {
+          background-color: #f2f2f2;
+          font-weight: bold;
+        }
+      </style>
+    </head>
+    <body>
+      <h1>TestSprite AI Testing Report (MCP)</h1>
+<hr>
+<h2>1️⃣ Document Metadata</h2>
+<ul>
+<li><strong>Project Name:</strong> utmify-clone</li>
+<li><strong>Version:</strong> 1.0.0</li>
+<li><strong>Date:</strong> 2025-09-10</li>
+<li><strong>Prepared by:</strong> TestSprite AI Team</li>
+</ul>
+<hr>
+<h2>2️⃣ Requirement Validation Summary</h2>
+<h3>Requirement: User Authentication</h3>
+<ul>
+<li><strong>Description:</strong> Supports user login and registration with proper validation and error handling.</li>
+</ul>
+<h4>Test 1</h4>
+<ul>
+<li><strong>Test ID:</strong> TC001</li>
+<li><strong>Test Name:</strong> user login functionality</li>
+<li><strong>Test Code:</strong> <a href="./TC001_user_login_functionality.py">TC001_user_login_functionality.py</a></li>
+<li><strong>Test Error:</strong> The login API returned a 401 Unauthorized error indicating that the authentication failed despite valid credentials being used. This suggests issues with user authentication logic or token generation in the /api/v1/auth/login endpoint.</li>
+<li><strong>Test Visualization and Result:</strong> <a href="https://www.testsprite.com/dashboard/mcp/tests/3dfdd63c-f04b-4505-ae42-d94b09f99ab6/4abcd3ca-ccf4-4b82-9486-43081fb7b176">View Test Results</a></li>
+<li><strong>Status:</strong> ❌ Failed</li>
+<li><strong>Severity:</strong> HIGH</li>
+<li><strong>Analysis / Findings:</strong> Investigate the authentication mechanism to verify credentials validation, user data availability, and token issuance. Ensure the test credentials exist and the authentication service is correctly integrated with user data stores. Add detailed logging to capture failure points.</li>
+</ul>
+<hr>
+<h4>Test 2</h4>
+<ul>
+<li><strong>Test ID:</strong> TC002</li>
+<li><strong>Test Name:</strong> user registration process</li>
+<li><strong>Test Code:</strong> <a href="./TC002_user_registration_process.py">TC002_user_registration_process.py</a></li>
+<li><strong>Test Error:</strong> The user registration API returned a 409 Conflict instead of the expected 400 or 422 for a missing 'name' field, indicating improper error handling or validation logic for missing required fields.</li>
+<li><strong>Test Visualization and Result:</strong> <a href="https://www.testsprite.com/dashboard/mcp/tests/3dfdd63c-f04b-4505-ae42-d94b09f99ab6/0baa46ef-3eb7-4bd2-b935-6051c5e292cf">View Test Results</a></li>
+<li><strong>Status:</strong> ❌ Failed</li>
+<li><strong>Severity:</strong> MEDIUM</li>
+<li><strong>Analysis / Findings:</strong> Update the input validation on the registration endpoint to correctly identify missing required fields and return appropriate HTTP status codes (400 or 422). Modify conflict handling logic to distinguish between missing data and uniqueness violations.</li>
+</ul>
+<hr>
+<h3>Requirement: UTM Link Management</h3>
+<ul>
+<li><strong>Description:</strong> Allows creation and validation of UTM links with proper analytics tracking.</li>
+</ul>
+<h4>Test 1</h4>
+<ul>
+<li><strong>Test ID:</strong> TC003</li>
+<li><strong>Test Name:</strong> utm link creation and validation</li>
+<li><strong>Test Code:</strong> <a href="./TC003_utm_link_creation_and_validation.py">TC003_utm_link_creation_and_validation.py</a></li>
+<li><strong>Test Error:</strong> The UTM link creation endpoint returned a 404 Not Found error, indicating the endpoint /api/v1/utm/create is either missing or incorrectly routed.</li>
+<li><strong>Test Visualization and Result:</strong> <a href="https://www.testsprite.com/dashboard/mcp/tests/3dfdd63c-f04b-4505-ae42-d94b09f99ab6/90c5f458-edbb-43f9-b554-1efe20e32728">View Test Results</a></li>
+<li><strong>Status:</strong> ❌ Failed</li>
+<li><strong>Severity:</strong> HIGH</li>
+<li><strong>Analysis / Findings:</strong> Verify that the endpoint is correctly implemented and registered in the backend routing configuration. Confirm deployment includes this functionality. Add necessary handlers and ensure the server responds with correct status codes and response bodies.</li>
+</ul>
+<hr>
+<h3>Requirement: Google Ads Integration</h3>
+<ul>
+<li><strong>Description:</strong> Provides OAuth flow and campaign management for Google Ads integration.</li>
+</ul>
+<h4>Test 1</h4>
+<ul>
+<li><strong>Test ID:</strong> TC004</li>
+<li><strong>Test Name:</strong> google ads oauth flow initiation</li>
+<li><strong>Test Code:</strong> <a href="./TC004_google_ads_oauth_flow_initiation.py">TC004_google_ads_oauth_flow_initiation.py</a></li>
+<li><strong>Test Error:</strong> The Google Ads OAuth initiation endpoint returned a 404 Not Found error, indicating the /api/v1/google-ads/auth endpoint is likely missing, misconfigured, or not properly deployed.</li>
+<li><strong>Test Visualization and Result:</strong> <a href="https://www.testsprite.com/dashboard/mcp/tests/3dfdd63c-f04b-4505-ae42-d94b09f99ab6/617b26a0-4adc-4874-8daa-c974eb11936f">View Test Results</a></li>
+<li><strong>Status:</strong> ❌ Failed</li>
+<li><strong>Severity:</strong> HIGH</li>
+<li><strong>Analysis / Findings:</strong> Confirm the OAuth initiation endpoint is implemented and correctly registered in the API routing. Check deployment status and service availability. Add validation for redirect URIs and input parameter handling to ensure robustness once endpoint is fixed.</li>
+</ul>
+<hr>
+<h4>Test 2</h4>
+<ul>
+<li><strong>Test ID:</strong> TC005</li>
+<li><strong>Test Name:</strong> fetch google ads campaigns</li>
+<li><strong>Test Code:</strong> <a href="./TC005_fetch_google_ads_campaigns.py">TC005_fetch_google_ads_campaigns.py</a></li>
+<li><strong>Test Error:</strong> N/A</li>
+<li><strong>Test Visualization and Result:</strong> <a href="https://www.testsprite.com/dashboard/mcp/tests/3dfdd63c-f04b-4505-ae42-d94b09f99ab6/9971023f-e72a-4ce6-9020-ba429ebe6060">View Test Results</a></li>
+<li><strong>Status:</strong> ✅ Passed</li>
+<li><strong>Severity:</strong> LOW</li>
+<li><strong>Analysis / Findings:</strong> Functionality is correct as expected. Consider adding performance testing or expanding input edge cases (e.g. maximum campaigns returned) to enhance robustness.</li>
+</ul>
+<hr>
+<h3>Requirement: Metrics and Analytics</h3>
+<ul>
+<li><strong>Description:</strong> Provides dashboard metrics and historical data analysis with proper filtering.</li>
+</ul>
+<h4>Test 1</h4>
+<ul>
+<li><strong>Test ID:</strong> TC006</li>
+<li><strong>Test Name:</strong> dashboard metrics retrieval</li>
+<li><strong>Test Code:</strong> <a href="./TC006_dashboard_metrics_retrieval.py">TC006_dashboard_metrics_retrieval.py</a></li>
+<li><strong>Test Error:</strong> The dashboard metrics retrieval endpoint returned a 401 Unauthorized error, indicating authentication failed for the request without date filters.</li>
+<li><strong>Test Visualization and Result:</strong> <a href="https://www.testsprite.com/dashboard/mcp/tests/3dfdd63c-f04b-4505-ae42-d94b09f99ab6/ccedf47c-39da-44ac-a618-7add0aa8b781">View Test Results</a></li>
+<li><strong>Status:</strong> ❌ Failed</li>
+<li><strong>Severity:</strong> HIGH</li>
+<li><strong>Analysis / Findings:</strong> Verify authentication tokens and credentials used during testing. Ensure that the authorization service is correctly integrated and that token generation and validation are functioning. Add clearer error messages when authentication fails.</li>
+</ul>
+<hr>
+<h4>Test 2</h4>
+<ul>
+<li><strong>Test ID:</strong> TC007</li>
+<li><strong>Test Name:</strong> metrics history data grouping</li>
+<li><strong>Test Code:</strong> <a href="./TC007_metrics_history_data_grouping.py">TC007_metrics_history_data_grouping.py</a></li>
+<li><strong>Test Error:</strong> The metrics history endpoint returned a 500 Internal Server Error, indicating a server-side failure when processing data grouping requests.</li>
+<li><strong>Test Visualization and Result:</strong> <a href="https://www.testsprite.com/dashboard/mcp/tests/3dfdd63c-f04b-4505-ae42-d94b09f99ab6/7f3719f2-d87e-4de7-86d9-dceea4c02598">View Test Results</a></li>
+<li><strong>Status:</strong> ❌ Failed</li>
+<li><strong>Severity:</strong> HIGH</li>
+<li><strong>Analysis / Findings:</strong> Review server-side logic for grouping data by day, week, month. Debug stack traces or error logs to locate root cause such as null references, database query failures, or invalid parameters. Implement error handling and validation to prevent crashes.</li>
+</ul>
+<hr>
+<h3>Requirement: ROAS/ROI Analysis</h3>
+<ul>
+<li><strong>Description:</strong> Generates comprehensive ROAS/ROI analysis reports with calculations and alerts.</li>
+</ul>
+<h4>Test 1</h4>
+<ul>
+<li><strong>Test ID:</strong> TC008</li>
+<li><strong>Test Name:</strong> roas roi analysis report generation</li>
+<li><strong>Test Code:</strong> <a href="./TC008_roas_roi_analysis_report_generation.py">TC008_roas_roi_analysis_report_generation.py</a></li>
+<li><strong>Test Error:</strong> The ROAS/ROI analysis report generation endpoint returned a 404 Not Found, indicating that /api/v1/roas-roi/analysis endpoint is missing or incorrectly routed.</li>
+<li><strong>Test Visualization and Result:</strong> <a href="https://www.testsprite.com/dashboard/mcp/tests/3dfdd63c-f04b-4505-ae42-d94b09f99ab6/6347741d-2392-4a90-9d8a-132a9ff80266">View Test Results</a></li>
+<li><strong>Status:</strong> ❌ Failed</li>
+<li><strong>Severity:</strong> HIGH</li>
+<li><strong>Analysis / Findings:</strong> Validate that this reporting endpoint is implemented, correctly registered in the backend, and deployed. Check service dependencies for report generation and calculations are operational.</li>
+</ul>
+<hr>
+<h3>Requirement: Billing and Subscription Management</h3>
+<ul>
+<li><strong>Description:</strong> Manages billing subscriptions with proper Stripe integration.</li>
+</ul>
+<h4>Test 1</h4>
+<ul>
+<li><strong>Test ID:</strong> TC009</li>
+<li><strong>Test Name:</strong> billing subscription management</li>
+<li><strong>Test Code:</strong> <a href="./TC009_billing_subscription_management.py">TC009_billing_subscription_management.py</a></li>
+<li><strong>Test Error:</strong> The billing subscription management test failed because the login attempt returned a 401 Unauthorized error, preventing subsequent subscription API calls.</li>
+<li><strong>Test Visualization and Result:</strong> <a href="https://www.testsprite.com/dashboard/mcp/tests/3dfdd63c-f04b-4505-ae42-d94b09f99ab6/6178e2db-ea8a-4df5-b3f6-4097b1957196">View Test Results</a></li>
+<li><strong>Status:</strong> ❌ Failed</li>
+<li><strong>Severity:</strong> HIGH</li>
+<li><strong>Analysis / Findings:</strong> Fix the authentication issues first by ensuring the login service is functioning and test credentials are correct. Once authentication is resolved, retest subscription management endpoints. Improve error handling to decouple login failures from subscription errors.</li>
+</ul>
+<hr>
+<h3>Requirement: WhatsApp Integration</h3>
+<ul>
+<li><strong>Description:</strong> Enables WhatsApp message sending with proper validation and error handling.</li>
+</ul>
+<h4>Test 1</h4>
+<ul>
+<li><strong>Test ID:</strong> TC010</li>
+<li><strong>Test Name:</strong> whatsapp message sending</li>
+<li><strong>Test Code:</strong> <a href="./TC010_whatsapp_message_sending.py">TC010_whatsapp_message_sending.py</a></li>
+<li><strong>Test Error:</strong> The WhatsApp message sending endpoint returned a 404 Not Found. This implies the /api/v1/whatsapp/send endpoint is missing, not deployed, or misrouted.</li>
+<li><strong>Test Visualization and Result:</strong> <a href="https://www.testsprite.com/dashboard/mcp/tests/3dfdd63c-f04b-4505-ae42-d94b09f99ab6/6f0d1470-8f91-4993-96dd-017ff12b58b2">View Test Results</a></li>
+<li><strong>Status:</strong> ❌ Failed</li>
+<li><strong>Severity:</strong> HIGH</li>
+<li><strong>Analysis / Findings:</strong> Verify the backend implementation and API routing to ensure this endpoint exists and is accessible. Confirm integration with the WhatsApp messaging service is configured properly. Add automated deployment checks to avoid missing endpoints.</li>
+</ul>
+<hr>
+<h2>3️⃣ Coverage &amp; Matching Metrics</h2>
+<ul>
+<li><strong>10% of product requirements tested</strong></li>
+<li><strong>10% of tests passed</strong></li>
+<li><strong>Key gaps / risks:</strong></li>
+</ul>
+<blockquote>
+<p>10% of tests passed fully (1 out of 10 tests).
+Critical authentication issues preventing most functionality from working.
+Multiple endpoints returning 404 errors indicating missing or misconfigured routes.
+Server-side errors in metrics processing requiring immediate attention.
+Risks: Authentication system failure, missing core API endpoints, server stability issues.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Total Tests</th>
+<th>✅ Passed</th>
+<th>⚠️ Partial</th>
+<th>❌ Failed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User Authentication</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr>
+<td>UTM Link Management</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Google Ads Integration</td>
+<td>2</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Metrics and Analytics</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr>
+<td>ROAS/ROI Analysis</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Billing and Subscription Management</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>WhatsApp Integration</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td><strong>10</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>9</strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>🚨 Critical Issues Summary</h2>
+<ol>
+<li><strong>Authentication System Failure</strong> - Multiple endpoints failing with 401 Unauthorized errors</li>
+<li><strong>Missing API Endpoints</strong> - Several core endpoints returning 404 Not Found</li>
+<li><strong>Server Stability Issues</strong> - Internal server errors in metrics processing</li>
+<li><strong>Routing Configuration</strong> - Endpoints not properly registered or deployed</li>
+</ol>
+<p><strong>Immediate Actions Required:</strong></p>
+<ul>
+<li>Fix authentication service and token validation</li>
+<li>Implement missing API endpoints</li>
+<li>Debug and fix server-side errors</li>
+<li>Verify deployment and routing configuration</li>
+</ul>
+
+    </body>
+    </html>
+  

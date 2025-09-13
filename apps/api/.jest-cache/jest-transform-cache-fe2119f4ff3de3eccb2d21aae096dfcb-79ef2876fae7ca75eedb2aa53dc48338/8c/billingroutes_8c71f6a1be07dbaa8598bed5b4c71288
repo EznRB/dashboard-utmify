@@ -1,0 +1,911 @@
+cbed0dc3f4b1688e6570301f2bb72825
+/* istanbul ignore next */
+function cov_23xrdzgt1i() {
+  var path = "C:\\Users\\Enzo Marcelo\\Desktop\\Projetos Empresa\\Saas Utmify\\utmify-clone\\apps\\api\\src\\routes\\billing.routes.ts";
+  var hash = "2d2bb29834f5b9aa51dedfc85ecee4f3e3491161";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "C:\\Users\\Enzo Marcelo\\Desktop\\Projetos Empresa\\Saas Utmify\\utmify-clone\\apps\\api\\src\\routes\\billing.routes.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 3,
+          column: 30
+        },
+        end: {
+          line: 3,
+          column: 53
+        }
+      },
+      "1": {
+        start: {
+          line: 5,
+          column: 4
+        },
+        end: {
+          line: 10,
+          column: 7
+        }
+      },
+      "2": {
+        start: {
+          line: 11,
+          column: 4
+        },
+        end: {
+          line: 13,
+          column: 7
+        }
+      },
+      "3": {
+        start: {
+          line: 15,
+          column: 4
+        },
+        end: {
+          line: 379,
+          column: 7
+        }
+      },
+      "4": {
+        start: {
+          line: 17,
+          column: 8
+        },
+        end: {
+          line: 24,
+          column: 11
+        }
+      },
+      "5": {
+        start: {
+          line: 18,
+          column: 12
+        },
+        end: {
+          line: 23,
+          column: 13
+        }
+      },
+      "6": {
+        start: {
+          line: 19,
+          column: 16
+        },
+        end: {
+          line: 19,
+          column: 42
+        }
+      },
+      "7": {
+        start: {
+          line: 22,
+          column: 16
+        },
+        end: {
+          line: 22,
+          column: 32
+        }
+      },
+      "8": {
+        start: {
+          line: 26,
+          column: 8
+        },
+        end: {
+          line: 57,
+          column: 11
+        }
+      },
+      "9": {
+        start: {
+          line: 58,
+          column: 8
+        },
+        end: {
+          line: 98,
+          column: 11
+        }
+      },
+      "10": {
+        start: {
+          line: 99,
+          column: 8
+        },
+        end: {
+          line: 128,
+          column: 11
+        }
+      },
+      "11": {
+        start: {
+          line: 129,
+          column: 8
+        },
+        end: {
+          line: 158,
+          column: 11
+        }
+      },
+      "12": {
+        start: {
+          line: 159,
+          column: 8
+        },
+        end: {
+          line: 189,
+          column: 11
+        }
+      },
+      "13": {
+        start: {
+          line: 190,
+          column: 8
+        },
+        end: {
+          line: 217,
+          column: 11
+        }
+      },
+      "14": {
+        start: {
+          line: 218,
+          column: 8
+        },
+        end: {
+          line: 254,
+          column: 11
+        }
+      },
+      "15": {
+        start: {
+          line: 255,
+          column: 8
+        },
+        end: {
+          line: 281,
+          column: 11
+        }
+      },
+      "16": {
+        start: {
+          line: 282,
+          column: 8
+        },
+        end: {
+          line: 309,
+          column: 11
+        }
+      },
+      "17": {
+        start: {
+          line: 311,
+          column: 8
+        },
+        end: {
+          line: 333,
+          column: 11
+        }
+      },
+      "18": {
+        start: {
+          line: 334,
+          column: 8
+        },
+        end: {
+          line: 362,
+          column: 11
+        }
+      },
+      "19": {
+        start: {
+          line: 363,
+          column: 8
+        },
+        end: {
+          line: 378,
+          column: 11
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "billingRoutes",
+        decl: {
+          start: {
+            line: 2,
+            column: 22
+          },
+          end: {
+            line: 2,
+            column: 35
+          }
+        },
+        loc: {
+          start: {
+            line: 2,
+            column: 45
+          },
+          end: {
+            line: 380,
+            column: 1
+          }
+        },
+        line: 2
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 15,
+            column: 21
+          },
+          end: {
+            line: 15,
+            column: 22
+          }
+        },
+        loc: {
+          start: {
+            line: 15,
+            column: 46
+          },
+          end: {
+            line: 379,
+            column: 5
+          }
+        },
+        line: 15
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 17,
+            column: 38
+          },
+          end: {
+            line: 17,
+            column: 39
+          }
+        },
+        loc: {
+          start: {
+            line: 17,
+            column: 64
+          },
+          end: {
+            line: 24,
+            column: 9
+          }
+        },
+        line: 17
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 0,
+      "15": 0,
+      "16": 0,
+      "17": 0,
+      "18": 0,
+      "19": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "C:\\Users\\Enzo Marcelo\\Desktop\\Projetos Empresa\\Saas Utmify\\utmify-clone\\apps\\api\\src\\routes\\billing.routes.ts",
+      mappings: "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",
+      names: [],
+      sources: ["C:\\Users\\Enzo Marcelo\\Desktop\\Projetos Empresa\\Saas Utmify\\utmify-clone\\apps\\api\\src\\routes\\billing.routes.ts"],
+      sourcesContent: ["import { FastifyInstance } from 'fastify';\nimport { BillingController } from '../controllers/billing.controller';\n\nexport async function billingRoutes(fastify: FastifyInstance) {\n  const billingController = new BillingController();\n\n  // Public routes (no authentication required)\n  fastify.post('/webhook', {\n    config: {\n      rawBody: true, // Need raw body for Stripe webhook verification\n    },\n    handler: billingController.handleWebhook.bind(billingController),\n  });\n\n  fastify.get('/plans', {\n    handler: billingController.getPlans.bind(billingController),\n  });\n\n  // Protected routes (authentication required)\n  fastify.register(async function (fastify) {\n    // Add authentication hook\n    fastify.addHook('preHandler', async (request, reply) => {\n      try {\n        await request.jwtVerify();\n      } catch (err) {\n        reply.send(err);\n      }\n    });\n\n    // Billing management routes\n    fastify.post('/create-checkout', {\n      schema: {\n        description: 'Create Stripe checkout session',\n        tags: ['billing'],\n        body: {\n          type: 'object',\n          required: ['planId', 'successUrl', 'cancelUrl'],\n          properties: {\n            planId: { type: 'string' },\n            successUrl: { type: 'string', format: 'uri' },\n            cancelUrl: { type: 'string', format: 'uri' },\n            couponCode: { type: 'string' },\n          },\n        },\n        response: {\n          200: {\n            type: 'object',\n            properties: {\n              success: { type: 'boolean' },\n              data: {\n                type: 'object',\n                properties: {\n                  sessionId: { type: 'string' },\n                  url: { type: 'string' },\n                },\n              },\n            },\n          },\n        },\n      },\n      handler: billingController.createCheckout.bind(billingController),\n    });\n\n    fastify.get('/subscription', {\n      schema: {\n        description: 'Get current subscription details',\n        tags: ['billing'],\n        response: {\n          200: {\n            type: 'object',\n            properties: {\n              success: { type: 'boolean' },\n              data: {\n                type: 'object',\n                properties: {\n                  id: { type: 'string' },\n                  status: { type: 'string' },\n                  currentPeriodStart: { type: 'string', format: 'date-time' },\n                  currentPeriodEnd: { type: 'string', format: 'date-time' },\n                  cancelAtPeriodEnd: { type: 'boolean' },\n                  plan: {\n                    type: 'object',\n                    properties: {\n                      name: { type: 'string' },\n                      type: { type: 'string' },\n                      price: { type: 'number' },\n                    },\n                  },\n                  usage: {\n                    type: 'object',\n                    properties: {\n                      integrations: { type: 'number' },\n                      users: { type: 'number' },\n                      apiCalls: { type: 'number' },\n                    },\n                  },\n                },\n              },\n            },\n          },\n        },\n      },\n      handler: billingController.getSubscription.bind(billingController),\n    });\n\n    fastify.post('/cancel', {\n      schema: {\n        description: 'Cancel subscription',\n        tags: ['billing'],\n        body: {\n          type: 'object',\n          properties: {\n            cancelAtPeriodEnd: { type: 'boolean', default: true },\n          },\n        },\n        response: {\n          200: {\n            type: 'object',\n            properties: {\n              success: { type: 'boolean' },\n              data: {\n                type: 'object',\n                properties: {\n                  id: { type: 'string' },\n                  status: { type: 'string' },\n                  cancelAtPeriodEnd: { type: 'boolean' },\n                  canceledAt: { type: 'string', format: 'date-time' },\n                },\n              },\n            },\n          },\n        },\n      },\n      handler: billingController.cancelSubscription.bind(billingController),\n    });\n\n    fastify.post('/upgrade', {\n      schema: {\n        description: 'Upgrade/downgrade subscription',\n        tags: ['billing'],\n        body: {\n          type: 'object',\n          required: ['planId'],\n          properties: {\n            planId: { type: 'string' },\n          },\n        },\n        response: {\n          200: {\n            type: 'object',\n            properties: {\n              success: { type: 'boolean' },\n              data: {\n                type: 'object',\n                properties: {\n                  id: { type: 'string' },\n                  planId: { type: 'string' },\n                  status: { type: 'string' },\n                },\n              },\n            },\n          },\n        },\n      },\n      handler: billingController.upgradeSubscription.bind(billingController),\n    });\n\n    fastify.get('/invoices', {\n      schema: {\n        description: 'Get billing invoices',\n        tags: ['billing'],\n        response: {\n          200: {\n            type: 'object',\n            properties: {\n              success: { type: 'boolean' },\n              data: {\n                type: 'array',\n                items: {\n                  type: 'object',\n                  properties: {\n                    id: { type: 'string' },\n                    number: { type: 'string' },\n                    status: { type: 'string' },\n                    total: { type: 'number' },\n                    currency: { type: 'string' },\n                    paidAt: { type: 'string', format: 'date-time' },\n                    hostedInvoiceUrl: { type: 'string' },\n                    invoicePdf: { type: 'string' },\n                  },\n                },\n              },\n            },\n          },\n        },\n      },\n      handler: billingController.getInvoices.bind(billingController),\n    });\n\n    fastify.post('/payment-method', {\n      schema: {\n        description: 'Update payment method',\n        tags: ['billing'],\n        body: {\n          type: 'object',\n          required: ['paymentMethodId'],\n          properties: {\n            paymentMethodId: { type: 'string' },\n          },\n        },\n        response: {\n          200: {\n            type: 'object',\n            properties: {\n              success: { type: 'boolean' },\n              data: {\n                type: 'object',\n                properties: {\n                  success: { type: 'boolean' },\n                },\n              },\n            },\n          },\n        },\n      },\n      handler: billingController.updatePaymentMethod.bind(billingController),\n    });\n\n    fastify.get('/usage', {\n      schema: {\n        description: 'Get usage statistics and limits',\n        tags: ['billing'],\n        response: {\n          200: {\n            type: 'object',\n            properties: {\n              success: { type: 'boolean' },\n              data: {\n                type: 'object',\n                properties: {\n                  exceeded: { type: 'boolean' },\n                  limits: {\n                    type: 'object',\n                    properties: {\n                      integrations: { type: 'number' },\n                      users: { type: 'number' },\n                      apiCalls: { type: 'number' },\n                    },\n                  },\n                  usage: {\n                    type: 'object',\n                    properties: {\n                      integrations: { type: 'number' },\n                      users: { type: 'number' },\n                      apiCalls: { type: 'number' },\n                    },\n                  },\n                },\n              },\n            },\n          },\n        },\n      },\n      handler: billingController.getUsage.bind(billingController),\n    });\n\n    fastify.post('/usage', {\n      schema: {\n        description: 'Record usage for metered billing',\n        tags: ['billing'],\n        body: {\n          type: 'object',\n          required: ['metricName', 'quantity'],\n          properties: {\n            metricName: {\n              type: 'string',\n              enum: ['integrations', 'users', 'api_calls'],\n            },\n            quantity: { type: 'number', minimum: 1 },\n          },\n        },\n        response: {\n          200: {\n            type: 'object',\n            properties: {\n              success: { type: 'boolean' },\n              message: { type: 'string' },\n            },\n          },\n        },\n      },\n      handler: billingController.recordUsage.bind(billingController),\n    });\n\n    fastify.post('/portal', {\n      schema: {\n        description: 'Create Stripe customer portal session',\n        tags: ['billing'],\n        body: {\n          type: 'object',\n          required: ['returnUrl'],\n          properties: {\n            returnUrl: { type: 'string', format: 'uri' },\n          },\n        },\n        response: {\n          200: {\n            type: 'object',\n            properties: {\n              success: { type: 'boolean' },\n              data: {\n                type: 'object',\n                properties: {\n                  url: { type: 'string' },\n                },\n              },\n            },\n          },\n        },\n      },\n      handler: billingController.createPortalSession.bind(billingController),\n    });\n\n    // Soft delete management routes\n    fastify.post('/subscription/restore', {\n      schema: {\n        description: 'Restore a soft-deleted subscription',\n        tags: ['billing'],\n        response: {\n          200: {\n            type: 'object',\n            properties: {\n              success: { type: 'boolean' },\n              data: {\n                type: 'object',\n                properties: {\n                  id: { type: 'string' },\n                  status: { type: 'string' },\n                  organizationId: { type: 'string' },\n                },\n              },\n            },\n          },\n        },\n      },\n      handler: billingController.restoreSubscription.bind(billingController),\n    });\n\n    fastify.get('/subscriptions/deleted', {\n      schema: {\n        description: 'Get soft-deleted subscriptions',\n        tags: ['billing'],\n        response: {\n          200: {\n            type: 'object',\n            properties: {\n              success: { type: 'boolean' },\n              data: {\n                type: 'array',\n                items: {\n                  type: 'object',\n                  properties: {\n                    id: { type: 'string' },\n                    status: { type: 'string' },\n                    organizationId: { type: 'string' },\n                    deletedAt: { type: 'string', format: 'date-time' },\n                    plan: { type: 'object' },\n                    organization: { type: 'object' },\n                  },\n                },\n              },\n            },\n          },\n        },\n      },\n      handler: billingController.getDeletedSubscriptions.bind(billingController),\n    });\n\n    fastify.delete('/subscription/permanent', {\n      schema: {\n        description: 'Permanently delete a soft-deleted subscription (Owner only)',\n        tags: ['billing'],\n        response: {\n          200: {\n            type: 'object',\n            properties: {\n              success: { type: 'boolean' },\n              message: { type: 'string' },\n            },\n          },\n        },\n      },\n      handler: billingController.permanentlyDeleteSubscription.bind(billingController),\n    });\n  });\n}"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "2d2bb29834f5b9aa51dedfc85ecee4f3e3491161"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_23xrdzgt1i = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_23xrdzgt1i();
+import { BillingController } from '../controllers/billing.controller';
+export async function billingRoutes(fastify) {
+  /* istanbul ignore next */
+  cov_23xrdzgt1i().f[0]++;
+  const billingController =
+  /* istanbul ignore next */
+  (cov_23xrdzgt1i().s[0]++, new BillingController());
+  // Public routes (no authentication required)
+  /* istanbul ignore next */
+  cov_23xrdzgt1i().s[1]++;
+  fastify.post('/webhook', {
+    config: {
+      rawBody: true // Need raw body for Stripe webhook verification
+    },
+    handler: billingController.handleWebhook.bind(billingController)
+  });
+  /* istanbul ignore next */
+  cov_23xrdzgt1i().s[2]++;
+  fastify.get('/plans', {
+    handler: billingController.getPlans.bind(billingController)
+  });
+  // Protected routes (authentication required)
+  /* istanbul ignore next */
+  cov_23xrdzgt1i().s[3]++;
+  fastify.register(async function (fastify) {
+    /* istanbul ignore next */
+    cov_23xrdzgt1i().f[1]++;
+    cov_23xrdzgt1i().s[4]++;
+    // Add authentication hook
+    fastify.addHook('preHandler', async (request, reply) => {
+      /* istanbul ignore next */
+      cov_23xrdzgt1i().f[2]++;
+      cov_23xrdzgt1i().s[5]++;
+      try {
+        /* istanbul ignore next */
+        cov_23xrdzgt1i().s[6]++;
+        await request.jwtVerify();
+      } catch (err) {
+        /* istanbul ignore next */
+        cov_23xrdzgt1i().s[7]++;
+        reply.send(err);
+      }
+    });
+    // Billing management routes
+    /* istanbul ignore next */
+    cov_23xrdzgt1i().s[8]++;
+    fastify.post('/create-checkout', {
+      schema: {
+        description: 'Create Stripe checkout session',
+        tags: ['billing'],
+        body: {
+          type: 'object',
+          required: ['planId', 'successUrl', 'cancelUrl'],
+          properties: {
+            planId: {
+              type: 'string'
+            },
+            successUrl: {
+              type: 'string',
+              format: 'uri'
+            },
+            cancelUrl: {
+              type: 'string',
+              format: 'uri'
+            },
+            couponCode: {
+              type: 'string'
+            }
+          }
+        },
+        response: {
+          200: {
+            type: 'object',
+            properties: {
+              success: {
+                type: 'boolean'
+              },
+              data: {
+                type: 'object',
+                properties: {
+                  sessionId: {
+                    type: 'string'
+                  },
+                  url: {
+                    type: 'string'
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      handler: billingController.createCheckout.bind(billingController)
+    });
+    /* istanbul ignore next */
+    cov_23xrdzgt1i().s[9]++;
+    fastify.get('/subscription', {
+      schema: {
+        description: 'Get current subscription details',
+        tags: ['billing'],
+        response: {
+          200: {
+            type: 'object',
+            properties: {
+              success: {
+                type: 'boolean'
+              },
+              data: {
+                type: 'object',
+                properties: {
+                  id: {
+                    type: 'string'
+                  },
+                  status: {
+                    type: 'string'
+                  },
+                  currentPeriodStart: {
+                    type: 'string',
+                    format: 'date-time'
+                  },
+                  currentPeriodEnd: {
+                    type: 'string',
+                    format: 'date-time'
+                  },
+                  cancelAtPeriodEnd: {
+                    type: 'boolean'
+                  },
+                  plan: {
+                    type: 'object',
+                    properties: {
+                      name: {
+                        type: 'string'
+                      },
+                      type: {
+                        type: 'string'
+                      },
+                      price: {
+                        type: 'number'
+                      }
+                    }
+                  },
+                  usage: {
+                    type: 'object',
+                    properties: {
+                      integrations: {
+                        type: 'number'
+                      },
+                      users: {
+                        type: 'number'
+                      },
+                      apiCalls: {
+                        type: 'number'
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      handler: billingController.getSubscription.bind(billingController)
+    });
+    /* istanbul ignore next */
+    cov_23xrdzgt1i().s[10]++;
+    fastify.post('/cancel', {
+      schema: {
+        description: 'Cancel subscription',
+        tags: ['billing'],
+        body: {
+          type: 'object',
+          properties: {
+            cancelAtPeriodEnd: {
+              type: 'boolean',
+              default: true
+            }
+          }
+        },
+        response: {
+          200: {
+            type: 'object',
+            properties: {
+              success: {
+                type: 'boolean'
+              },
+              data: {
+                type: 'object',
+                properties: {
+                  id: {
+                    type: 'string'
+                  },
+                  status: {
+                    type: 'string'
+                  },
+                  cancelAtPeriodEnd: {
+                    type: 'boolean'
+                  },
+                  canceledAt: {
+                    type: 'string',
+                    format: 'date-time'
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      handler: billingController.cancelSubscription.bind(billingController)
+    });
+    /* istanbul ignore next */
+    cov_23xrdzgt1i().s[11]++;
+    fastify.post('/upgrade', {
+      schema: {
+        description: 'Upgrade/downgrade subscription',
+        tags: ['billing'],
+        body: {
+          type: 'object',
+          required: ['planId'],
+          properties: {
+            planId: {
+              type: 'string'
+            }
+          }
+        },
+        response: {
+          200: {
+            type: 'object',
+            properties: {
+              success: {
+                type: 'boolean'
+              },
+              data: {
+                type: 'object',
+                properties: {
+                  id: {
+                    type: 'string'
+                  },
+                  planId: {
+                    type: 'string'
+                  },
+                  status: {
+                    type: 'string'
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      handler: billingController.upgradeSubscription.bind(billingController)
+    });
+    /* istanbul ignore next */
+    cov_23xrdzgt1i().s[12]++;
+    fastify.get('/invoices', {
+      schema: {
+        description: 'Get billing invoices',
+        tags: ['billing'],
+        response: {
+          200: {
+            type: 'object',
+            properties: {
+              success: {
+                type: 'boolean'
+              },
+              data: {
+                type: 'array',
+                items: {
+                  type: 'object',
+                  properties: {
+                    id: {
+                      type: 'string'
+                    },
+                    number: {
+                      type: 'string'
+                    },
+                    status: {
+                      type: 'string'
+                    },
+                    total: {
+                      type: 'number'
+                    },
+                    currency: {
+                      type: 'string'
+                    },
+                    paidAt: {
+                      type: 'string',
+                      format: 'date-time'
+                    },
+                    hostedInvoiceUrl: {
+                      type: 'string'
+                    },
+                    invoicePdf: {
+                      type: 'string'
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      handler: billingController.getInvoices.bind(billingController)
+    });
+    /* istanbul ignore next */
+    cov_23xrdzgt1i().s[13]++;
+    fastify.post('/payment-method', {
+      schema: {
+        description: 'Update payment method',
+        tags: ['billing'],
+        body: {
+          type: 'object',
+          required: ['paymentMethodId'],
+          properties: {
+            paymentMethodId: {
+              type: 'string'
+            }
+          }
+        },
+        response: {
+          200: {
+            type: 'object',
+            properties: {
+              success: {
+                type: 'boolean'
+              },
+              data: {
+                type: 'object',
+                properties: {
+                  success: {
+                    type: 'boolean'
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      handler: billingController.updatePaymentMethod.bind(billingController)
+    });
+    /* istanbul ignore next */
+    cov_23xrdzgt1i().s[14]++;
+    fastify.get('/usage', {
+      schema: {
+        description: 'Get usage statistics and limits',
+        tags: ['billing'],
+        response: {
+          200: {
+            type: 'object',
+            properties: {
+              success: {
+                type: 'boolean'
+              },
+              data: {
+                type: 'object',
+                properties: {
+                  exceeded: {
+                    type: 'boolean'
+                  },
+                  limits: {
+                    type: 'object',
+                    properties: {
+                      integrations: {
+                        type: 'number'
+                      },
+                      users: {
+                        type: 'number'
+                      },
+                      apiCalls: {
+                        type: 'number'
+                      }
+                    }
+                  },
+                  usage: {
+                    type: 'object',
+                    properties: {
+                      integrations: {
+                        type: 'number'
+                      },
+                      users: {
+                        type: 'number'
+                      },
+                      apiCalls: {
+                        type: 'number'
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      handler: billingController.getUsage.bind(billingController)
+    });
+    /* istanbul ignore next */
+    cov_23xrdzgt1i().s[15]++;
+    fastify.post('/usage', {
+      schema: {
+        description: 'Record usage for metered billing',
+        tags: ['billing'],
+        body: {
+          type: 'object',
+          required: ['metricName', 'quantity'],
+          properties: {
+            metricName: {
+              type: 'string',
+              enum: ['integrations', 'users', 'api_calls']
+            },
+            quantity: {
+              type: 'number',
+              minimum: 1
+            }
+          }
+        },
+        response: {
+          200: {
+            type: 'object',
+            properties: {
+              success: {
+                type: 'boolean'
+              },
+              message: {
+                type: 'string'
+              }
+            }
+          }
+        }
+      },
+      handler: billingController.recordUsage.bind(billingController)
+    });
+    /* istanbul ignore next */
+    cov_23xrdzgt1i().s[16]++;
+    fastify.post('/portal', {
+      schema: {
+        description: 'Create Stripe customer portal session',
+        tags: ['billing'],
+        body: {
+          type: 'object',
+          required: ['returnUrl'],
+          properties: {
+            returnUrl: {
+              type: 'string',
+              format: 'uri'
+            }
+          }
+        },
+        response: {
+          200: {
+            type: 'object',
+            properties: {
+              success: {
+                type: 'boolean'
+              },
+              data: {
+                type: 'object',
+                properties: {
+                  url: {
+                    type: 'string'
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      handler: billingController.createPortalSession.bind(billingController)
+    });
+    // Soft delete management routes
+    /* istanbul ignore next */
+    cov_23xrdzgt1i().s[17]++;
+    fastify.post('/subscription/restore', {
+      schema: {
+        description: 'Restore a soft-deleted subscription',
+        tags: ['billing'],
+        response: {
+          200: {
+            type: 'object',
+            properties: {
+              success: {
+                type: 'boolean'
+              },
+              data: {
+                type: 'object',
+                properties: {
+                  id: {
+                    type: 'string'
+                  },
+                  status: {
+                    type: 'string'
+                  },
+                  organizationId: {
+                    type: 'string'
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      handler: billingController.restoreSubscription.bind(billingController)
+    });
+    /* istanbul ignore next */
+    cov_23xrdzgt1i().s[18]++;
+    fastify.get('/subscriptions/deleted', {
+      schema: {
+        description: 'Get soft-deleted subscriptions',
+        tags: ['billing'],
+        response: {
+          200: {
+            type: 'object',
+            properties: {
+              success: {
+                type: 'boolean'
+              },
+              data: {
+                type: 'array',
+                items: {
+                  type: 'object',
+                  properties: {
+                    id: {
+                      type: 'string'
+                    },
+                    status: {
+                      type: 'string'
+                    },
+                    organizationId: {
+                      type: 'string'
+                    },
+                    deletedAt: {
+                      type: 'string',
+                      format: 'date-time'
+                    },
+                    plan: {
+                      type: 'object'
+                    },
+                    organization: {
+                      type: 'object'
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      handler: billingController.getDeletedSubscriptions.bind(billingController)
+    });
+    /* istanbul ignore next */
+    cov_23xrdzgt1i().s[19]++;
+    fastify.delete('/subscription/permanent', {
+      schema: {
+        description: 'Permanently delete a soft-deleted subscription (Owner only)',
+        tags: ['billing'],
+        response: {
+          200: {
+            type: 'object',
+            properties: {
+              success: {
+                type: 'boolean'
+              },
+              message: {
+                type: 'string'
+              }
+            }
+          }
+        }
+      },
+      handler: billingController.permanentlyDeleteSubscription.bind(billingController)
+    });
+  });
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMjN4cmR6Z3QxaSIsImFjdHVhbENvdmVyYWdlIiwiQmlsbGluZ0NvbnRyb2xsZXIiLCJiaWxsaW5nUm91dGVzIiwiZmFzdGlmeSIsImYiLCJiaWxsaW5nQ29udHJvbGxlciIsInMiLCJwb3N0IiwiY29uZmlnIiwicmF3Qm9keSIsImhhbmRsZXIiLCJoYW5kbGVXZWJob29rIiwiYmluZCIsImdldCIsImdldFBsYW5zIiwicmVnaXN0ZXIiLCJhZGRIb29rIiwicmVxdWVzdCIsInJlcGx5Iiwiand0VmVyaWZ5IiwiZXJyIiwic2VuZCIsInNjaGVtYSIsImRlc2NyaXB0aW9uIiwidGFncyIsImJvZHkiLCJ0eXBlIiwicmVxdWlyZWQiLCJwcm9wZXJ0aWVzIiwicGxhbklkIiwic3VjY2Vzc1VybCIsImZvcm1hdCIsImNhbmNlbFVybCIsImNvdXBvbkNvZGUiLCJyZXNwb25zZSIsInN1Y2Nlc3MiLCJkYXRhIiwic2Vzc2lvbklkIiwidXJsIiwiY3JlYXRlQ2hlY2tvdXQiLCJpZCIsInN0YXR1cyIsImN1cnJlbnRQZXJpb2RTdGFydCIsImN1cnJlbnRQZXJpb2RFbmQiLCJjYW5jZWxBdFBlcmlvZEVuZCIsInBsYW4iLCJuYW1lIiwicHJpY2UiLCJ1c2FnZSIsImludGVncmF0aW9ucyIsInVzZXJzIiwiYXBpQ2FsbHMiLCJnZXRTdWJzY3JpcHRpb24iLCJkZWZhdWx0IiwiY2FuY2VsZWRBdCIsImNhbmNlbFN1YnNjcmlwdGlvbiIsInVwZ3JhZGVTdWJzY3JpcHRpb24iLCJpdGVtcyIsIm51bWJlciIsInRvdGFsIiwiY3VycmVuY3kiLCJwYWlkQXQiLCJob3N0ZWRJbnZvaWNlVXJsIiwiaW52b2ljZVBkZiIsImdldEludm9pY2VzIiwicGF5bWVudE1ldGhvZElkIiwidXBkYXRlUGF5bWVudE1ldGhvZCIsImV4Y2VlZGVkIiwibGltaXRzIiwiZ2V0VXNhZ2UiLCJtZXRyaWNOYW1lIiwiZW51bSIsInF1YW50aXR5IiwibWluaW11bSIsIm1lc3NhZ2UiLCJyZWNvcmRVc2FnZSIsInJldHVyblVybCIsImNyZWF0ZVBvcnRhbFNlc3Npb24iLCJvcmdhbml6YXRpb25JZCIsInJlc3RvcmVTdWJzY3JpcHRpb24iLCJkZWxldGVkQXQiLCJvcmdhbml6YXRpb24iLCJnZXREZWxldGVkU3Vic2NyaXB0aW9ucyIsImRlbGV0ZSIsInBlcm1hbmVudGx5RGVsZXRlU3Vic2NyaXB0aW9uIl0sInNvdXJjZXMiOlsiQzpcXFVzZXJzXFxFbnpvIE1hcmNlbG9cXERlc2t0b3BcXFByb2pldG9zIEVtcHJlc2FcXFNhYXMgVXRtaWZ5XFx1dG1pZnktY2xvbmVcXGFwcHNcXGFwaVxcc3JjXFxyb3V0ZXNcXGJpbGxpbmcucm91dGVzLnRzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEZhc3RpZnlJbnN0YW5jZSB9IGZyb20gJ2Zhc3RpZnknO1xuaW1wb3J0IHsgQmlsbGluZ0NvbnRyb2xsZXIgfSBmcm9tICcuLi9jb250cm9sbGVycy9iaWxsaW5nLmNvbnRyb2xsZXInO1xuXG5leHBvcnQgYXN5bmMgZnVuY3Rpb24gYmlsbGluZ1JvdXRlcyhmYXN0aWZ5OiBGYXN0aWZ5SW5zdGFuY2UpIHtcbiAgY29uc3QgYmlsbGluZ0NvbnRyb2xsZXIgPSBuZXcgQmlsbGluZ0NvbnRyb2xsZXIoKTtcblxuICAvLyBQdWJsaWMgcm91dGVzIChubyBhdXRoZW50aWNhdGlvbiByZXF1aXJlZClcbiAgZmFzdGlmeS5wb3N0KCcvd2ViaG9vaycsIHtcbiAgICBjb25maWc6IHtcbiAgICAgIHJhd0JvZHk6IHRydWUsIC8vIE5lZWQgcmF3IGJvZHkgZm9yIFN0cmlwZSB3ZWJob29rIHZlcmlmaWNhdGlvblxuICAgIH0sXG4gICAgaGFuZGxlcjogYmlsbGluZ0NvbnRyb2xsZXIuaGFuZGxlV2ViaG9vay5iaW5kKGJpbGxpbmdDb250cm9sbGVyKSxcbiAgfSk7XG5cbiAgZmFzdGlmeS5nZXQoJy9wbGFucycsIHtcbiAgICBoYW5kbGVyOiBiaWxsaW5nQ29udHJvbGxlci5nZXRQbGFucy5iaW5kKGJpbGxpbmdDb250cm9sbGVyKSxcbiAgfSk7XG5cbiAgLy8gUHJvdGVjdGVkIHJvdXRlcyAoYXV0aGVudGljYXRpb24gcmVxdWlyZWQpXG4gIGZhc3RpZnkucmVnaXN0ZXIoYXN5bmMgZnVuY3Rpb24gKGZhc3RpZnkpIHtcbiAgICAvLyBBZGQgYXV0aGVudGljYXRpb24gaG9va1xuICAgIGZhc3RpZnkuYWRkSG9vaygncHJlSGFuZGxlcicsIGFzeW5jIChyZXF1ZXN0LCByZXBseSkgPT4ge1xuICAgICAgdHJ5IHtcbiAgICAgICAgYXdhaXQgcmVxdWVzdC5qd3RWZXJpZnkoKTtcbiAgICAgIH0gY2F0Y2ggKGVycikge1xuICAgICAgICByZXBseS5zZW5kKGVycik7XG4gICAgICB9XG4gICAgfSk7XG5cbiAgICAvLyBCaWxsaW5nIG1hbmFnZW1lbnQgcm91dGVzXG4gICAgZmFzdGlmeS5wb3N0KCcvY3JlYXRlLWNoZWNrb3V0Jywge1xuICAgICAgc2NoZW1hOiB7XG4gICAgICAgIGRlc2NyaXB0aW9uOiAnQ3JlYXRlIFN0cmlwZSBjaGVja291dCBzZXNzaW9uJyxcbiAgICAgICAgdGFnczogWydiaWxsaW5nJ10sXG4gICAgICAgIGJvZHk6IHtcbiAgICAgICAgICB0eXBlOiAnb2JqZWN0JyxcbiAgICAgICAgICByZXF1aXJlZDogWydwbGFuSWQnLCAnc3VjY2Vzc1VybCcsICdjYW5jZWxVcmwnXSxcbiAgICAgICAgICBwcm9wZXJ0aWVzOiB7XG4gICAgICAgICAgICBwbGFuSWQ6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICAgIHN1Y2Nlc3NVcmw6IHsgdHlwZTogJ3N0cmluZycsIGZvcm1hdDogJ3VyaScgfSxcbiAgICAgICAgICAgIGNhbmNlbFVybDogeyB0eXBlOiAnc3RyaW5nJywgZm9ybWF0OiAndXJpJyB9LFxuICAgICAgICAgICAgY291cG9uQ29kZTogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgIH0sXG4gICAgICAgIH0sXG4gICAgICAgIHJlc3BvbnNlOiB7XG4gICAgICAgICAgMjAwOiB7XG4gICAgICAgICAgICB0eXBlOiAnb2JqZWN0JyxcbiAgICAgICAgICAgIHByb3BlcnRpZXM6IHtcbiAgICAgICAgICAgICAgc3VjY2VzczogeyB0eXBlOiAnYm9vbGVhbicgfSxcbiAgICAgICAgICAgICAgZGF0YToge1xuICAgICAgICAgICAgICAgIHR5cGU6ICdvYmplY3QnLFxuICAgICAgICAgICAgICAgIHByb3BlcnRpZXM6IHtcbiAgICAgICAgICAgICAgICAgIHNlc3Npb25JZDogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgICAgICAgICAgdXJsOiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgICAgICAgICAgfSxcbiAgICAgICAgICAgICAgfSxcbiAgICAgICAgICAgIH0sXG4gICAgICAgICAgfSxcbiAgICAgICAgfSxcbiAgICAgIH0sXG4gICAgICBoYW5kbGVyOiBiaWxsaW5nQ29udHJvbGxlci5jcmVhdGVDaGVja291dC5iaW5kKGJpbGxpbmdDb250cm9sbGVyKSxcbiAgICB9KTtcblxuICAgIGZhc3RpZnkuZ2V0KCcvc3Vic2NyaXB0aW9uJywge1xuICAgICAgc2NoZW1hOiB7XG4gICAgICAgIGRlc2NyaXB0aW9uOiAnR2V0IGN1cnJlbnQgc3Vic2NyaXB0aW9uIGRldGFpbHMnLFxuICAgICAgICB0YWdzOiBbJ2JpbGxpbmcnXSxcbiAgICAgICAgcmVzcG9uc2U6IHtcbiAgICAgICAgICAyMDA6IHtcbiAgICAgICAgICAgIHR5cGU6ICdvYmplY3QnLFxuICAgICAgICAgICAgcHJvcGVydGllczoge1xuICAgICAgICAgICAgICBzdWNjZXNzOiB7IHR5cGU6ICdib29sZWFuJyB9LFxuICAgICAgICAgICAgICBkYXRhOiB7XG4gICAgICAgICAgICAgICAgdHlwZTogJ29iamVjdCcsXG4gICAgICAgICAgICAgICAgcHJvcGVydGllczoge1xuICAgICAgICAgICAgICAgICAgaWQ6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICAgICAgICAgIHN0YXR1czogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgICAgICAgICAgY3VycmVudFBlcmlvZFN0YXJ0OiB7IHR5cGU6ICdzdHJpbmcnLCBmb3JtYXQ6ICdkYXRlLXRpbWUnIH0sXG4gICAgICAgICAgICAgICAgICBjdXJyZW50UGVyaW9kRW5kOiB7IHR5cGU6ICdzdHJpbmcnLCBmb3JtYXQ6ICdkYXRlLXRpbWUnIH0sXG4gICAgICAgICAgICAgICAgICBjYW5jZWxBdFBlcmlvZEVuZDogeyB0eXBlOiAnYm9vbGVhbicgfSxcbiAgICAgICAgICAgICAgICAgIHBsYW46IHtcbiAgICAgICAgICAgICAgICAgICAgdHlwZTogJ29iamVjdCcsXG4gICAgICAgICAgICAgICAgICAgIHByb3BlcnRpZXM6IHtcbiAgICAgICAgICAgICAgICAgICAgICBuYW1lOiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgICAgICAgICAgICAgICAgdHlwZTogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgICAgICAgICAgICAgIHByaWNlOiB7IHR5cGU6ICdudW1iZXInIH0sXG4gICAgICAgICAgICAgICAgICAgIH0sXG4gICAgICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgICAgICAgdXNhZ2U6IHtcbiAgICAgICAgICAgICAgICAgICAgdHlwZTogJ29iamVjdCcsXG4gICAgICAgICAgICAgICAgICAgIHByb3BlcnRpZXM6IHtcbiAgICAgICAgICAgICAgICAgICAgICBpbnRlZ3JhdGlvbnM6IHsgdHlwZTogJ251bWJlcicgfSxcbiAgICAgICAgICAgICAgICAgICAgICB1c2VyczogeyB0eXBlOiAnbnVtYmVyJyB9LFxuICAgICAgICAgICAgICAgICAgICAgIGFwaUNhbGxzOiB7IHR5cGU6ICdudW1iZXInIH0sXG4gICAgICAgICAgICAgICAgICAgIH0sXG4gICAgICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgICAgIH0sXG4gICAgICAgICAgICAgIH0sXG4gICAgICAgICAgICB9LFxuICAgICAgICAgIH0sXG4gICAgICAgIH0sXG4gICAgICB9LFxuICAgICAgaGFuZGxlcjogYmlsbGluZ0NvbnRyb2xsZXIuZ2V0U3Vic2NyaXB0aW9uLmJpbmQoYmlsbGluZ0NvbnRyb2xsZXIpLFxuICAgIH0pO1xuXG4gICAgZmFzdGlmeS5wb3N0KCcvY2FuY2VsJywge1xuICAgICAgc2NoZW1hOiB7XG4gICAgICAgIGRlc2NyaXB0aW9uOiAnQ2FuY2VsIHN1YnNjcmlwdGlvbicsXG4gICAgICAgIHRhZ3M6IFsnYmlsbGluZyddLFxuICAgICAgICBib2R5OiB7XG4gICAgICAgICAgdHlwZTogJ29iamVjdCcsXG4gICAgICAgICAgcHJvcGVydGllczoge1xuICAgICAgICAgICAgY2FuY2VsQXRQZXJpb2RFbmQ6IHsgdHlwZTogJ2Jvb2xlYW4nLCBkZWZhdWx0OiB0cnVlIH0sXG4gICAgICAgICAgfSxcbiAgICAgICAgfSxcbiAgICAgICAgcmVzcG9uc2U6IHtcbiAgICAgICAgICAyMDA6IHtcbiAgICAgICAgICAgIHR5cGU6ICdvYmplY3QnLFxuICAgICAgICAgICAgcHJvcGVydGllczoge1xuICAgICAgICAgICAgICBzdWNjZXNzOiB7IHR5cGU6ICdib29sZWFuJyB9LFxuICAgICAgICAgICAgICBkYXRhOiB7XG4gICAgICAgICAgICAgICAgdHlwZTogJ29iamVjdCcsXG4gICAgICAgICAgICAgICAgcHJvcGVydGllczoge1xuICAgICAgICAgICAgICAgICAgaWQ6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICAgICAgICAgIHN0YXR1czogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgICAgICAgICAgY2FuY2VsQXRQZXJpb2RFbmQ6IHsgdHlwZTogJ2Jvb2xlYW4nIH0sXG4gICAgICAgICAgICAgICAgICBjYW5jZWxlZEF0OiB7IHR5cGU6ICdzdHJpbmcnLCBmb3JtYXQ6ICdkYXRlLXRpbWUnIH0sXG4gICAgICAgICAgICAgICAgfSxcbiAgICAgICAgICAgICAgfSxcbiAgICAgICAgICAgIH0sXG4gICAgICAgICAgfSxcbiAgICAgICAgfSxcbiAgICAgIH0sXG4gICAgICBoYW5kbGVyOiBiaWxsaW5nQ29udHJvbGxlci5jYW5jZWxTdWJzY3JpcHRpb24uYmluZChiaWxsaW5nQ29udHJvbGxlciksXG4gICAgfSk7XG5cbiAgICBmYXN0aWZ5LnBvc3QoJy91cGdyYWRlJywge1xuICAgICAgc2NoZW1hOiB7XG4gICAgICAgIGRlc2NyaXB0aW9uOiAnVXBncmFkZS9kb3duZ3JhZGUgc3Vic2NyaXB0aW9uJyxcbiAgICAgICAgdGFnczogWydiaWxsaW5nJ10sXG4gICAgICAgIGJvZHk6IHtcbiAgICAgICAgICB0eXBlOiAnb2JqZWN0JyxcbiAgICAgICAgICByZXF1aXJlZDogWydwbGFuSWQnXSxcbiAgICAgICAgICBwcm9wZXJ0aWVzOiB7XG4gICAgICAgICAgICBwbGFuSWQ6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICB9LFxuICAgICAgICB9LFxuICAgICAgICByZXNwb25zZToge1xuICAgICAgICAgIDIwMDoge1xuICAgICAgICAgICAgdHlwZTogJ29iamVjdCcsXG4gICAgICAgICAgICBwcm9wZXJ0aWVzOiB7XG4gICAgICAgICAgICAgIHN1Y2Nlc3M6IHsgdHlwZTogJ2Jvb2xlYW4nIH0sXG4gICAgICAgICAgICAgIGRhdGE6IHtcbiAgICAgICAgICAgICAgICB0eXBlOiAnb2JqZWN0JyxcbiAgICAgICAgICAgICAgICBwcm9wZXJ0aWVzOiB7XG4gICAgICAgICAgICAgICAgICBpZDogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgICAgICAgICAgcGxhbklkOiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgICAgICAgICAgICBzdGF0dXM6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgfSxcbiAgICAgICAgICB9LFxuICAgICAgICB9LFxuICAgICAgfSxcbiAgICAgIGhhbmRsZXI6IGJpbGxpbmdDb250cm9sbGVyLnVwZ3JhZGVTdWJzY3JpcHRpb24uYmluZChiaWxsaW5nQ29udHJvbGxlciksXG4gICAgfSk7XG5cbiAgICBmYXN0aWZ5LmdldCgnL2ludm9pY2VzJywge1xuICAgICAgc2NoZW1hOiB7XG4gICAgICAgIGRlc2NyaXB0aW9uOiAnR2V0IGJpbGxpbmcgaW52b2ljZXMnLFxuICAgICAgICB0YWdzOiBbJ2JpbGxpbmcnXSxcbiAgICAgICAgcmVzcG9uc2U6IHtcbiAgICAgICAgICAyMDA6IHtcbiAgICAgICAgICAgIHR5cGU6ICdvYmplY3QnLFxuICAgICAgICAgICAgcHJvcGVydGllczoge1xuICAgICAgICAgICAgICBzdWNjZXNzOiB7IHR5cGU6ICdib29sZWFuJyB9LFxuICAgICAgICAgICAgICBkYXRhOiB7XG4gICAgICAgICAgICAgICAgdHlwZTogJ2FycmF5JyxcbiAgICAgICAgICAgICAgICBpdGVtczoge1xuICAgICAgICAgICAgICAgICAgdHlwZTogJ29iamVjdCcsXG4gICAgICAgICAgICAgICAgICBwcm9wZXJ0aWVzOiB7XG4gICAgICAgICAgICAgICAgICAgIGlkOiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgICAgICAgICAgICAgIG51bWJlcjogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgICAgICAgICAgICBzdGF0dXM6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICAgICAgICAgICAgdG90YWw6IHsgdHlwZTogJ251bWJlcicgfSxcbiAgICAgICAgICAgICAgICAgICAgY3VycmVuY3k6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICAgICAgICAgICAgcGFpZEF0OiB7IHR5cGU6ICdzdHJpbmcnLCBmb3JtYXQ6ICdkYXRlLXRpbWUnIH0sXG4gICAgICAgICAgICAgICAgICAgIGhvc3RlZEludm9pY2VVcmw6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICAgICAgICAgICAgaW52b2ljZVBkZjogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgICAgICAgICAgfSxcbiAgICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgfSxcbiAgICAgICAgICB9LFxuICAgICAgICB9LFxuICAgICAgfSxcbiAgICAgIGhhbmRsZXI6IGJpbGxpbmdDb250cm9sbGVyLmdldEludm9pY2VzLmJpbmQoYmlsbGluZ0NvbnRyb2xsZXIpLFxuICAgIH0pO1xuXG4gICAgZmFzdGlmeS5wb3N0KCcvcGF5bWVudC1tZXRob2QnLCB7XG4gICAgICBzY2hlbWE6IHtcbiAgICAgICAgZGVzY3JpcHRpb246ICdVcGRhdGUgcGF5bWVudCBtZXRob2QnLFxuICAgICAgICB0YWdzOiBbJ2JpbGxpbmcnXSxcbiAgICAgICAgYm9keToge1xuICAgICAgICAgIHR5cGU6ICdvYmplY3QnLFxuICAgICAgICAgIHJlcXVpcmVkOiBbJ3BheW1lbnRNZXRob2RJZCddLFxuICAgICAgICAgIHByb3BlcnRpZXM6IHtcbiAgICAgICAgICAgIHBheW1lbnRNZXRob2RJZDogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgIH0sXG4gICAgICAgIH0sXG4gICAgICAgIHJlc3BvbnNlOiB7XG4gICAgICAgICAgMjAwOiB7XG4gICAgICAgICAgICB0eXBlOiAnb2JqZWN0JyxcbiAgICAgICAgICAgIHByb3BlcnRpZXM6IHtcbiAgICAgICAgICAgICAgc3VjY2VzczogeyB0eXBlOiAnYm9vbGVhbicgfSxcbiAgICAgICAgICAgICAgZGF0YToge1xuICAgICAgICAgICAgICAgIHR5cGU6ICdvYmplY3QnLFxuICAgICAgICAgICAgICAgIHByb3BlcnRpZXM6IHtcbiAgICAgICAgICAgICAgICAgIHN1Y2Nlc3M6IHsgdHlwZTogJ2Jvb2xlYW4nIH0sXG4gICAgICAgICAgICAgICAgfSxcbiAgICAgICAgICAgICAgfSxcbiAgICAgICAgICAgIH0sXG4gICAgICAgICAgfSxcbiAgICAgICAgfSxcbiAgICAgIH0sXG4gICAgICBoYW5kbGVyOiBiaWxsaW5nQ29udHJvbGxlci51cGRhdGVQYXltZW50TWV0aG9kLmJpbmQoYmlsbGluZ0NvbnRyb2xsZXIpLFxuICAgIH0pO1xuXG4gICAgZmFzdGlmeS5nZXQoJy91c2FnZScsIHtcbiAgICAgIHNjaGVtYToge1xuICAgICAgICBkZXNjcmlwdGlvbjogJ0dldCB1c2FnZSBzdGF0aXN0aWNzIGFuZCBsaW1pdHMnLFxuICAgICAgICB0YWdzOiBbJ2JpbGxpbmcnXSxcbiAgICAgICAgcmVzcG9uc2U6IHtcbiAgICAgICAgICAyMDA6IHtcbiAgICAgICAgICAgIHR5cGU6ICdvYmplY3QnLFxuICAgICAgICAgICAgcHJvcGVydGllczoge1xuICAgICAgICAgICAgICBzdWNjZXNzOiB7IHR5cGU6ICdib29sZWFuJyB9LFxuICAgICAgICAgICAgICBkYXRhOiB7XG4gICAgICAgICAgICAgICAgdHlwZTogJ29iamVjdCcsXG4gICAgICAgICAgICAgICAgcHJvcGVydGllczoge1xuICAgICAgICAgICAgICAgICAgZXhjZWVkZWQ6IHsgdHlwZTogJ2Jvb2xlYW4nIH0sXG4gICAgICAgICAgICAgICAgICBsaW1pdHM6IHtcbiAgICAgICAgICAgICAgICAgICAgdHlwZTogJ29iamVjdCcsXG4gICAgICAgICAgICAgICAgICAgIHByb3BlcnRpZXM6IHtcbiAgICAgICAgICAgICAgICAgICAgICBpbnRlZ3JhdGlvbnM6IHsgdHlwZTogJ251bWJlcicgfSxcbiAgICAgICAgICAgICAgICAgICAgICB1c2VyczogeyB0eXBlOiAnbnVtYmVyJyB9LFxuICAgICAgICAgICAgICAgICAgICAgIGFwaUNhbGxzOiB7IHR5cGU6ICdudW1iZXInIH0sXG4gICAgICAgICAgICAgICAgICAgIH0sXG4gICAgICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgICAgICAgdXNhZ2U6IHtcbiAgICAgICAgICAgICAgICAgICAgdHlwZTogJ29iamVjdCcsXG4gICAgICAgICAgICAgICAgICAgIHByb3BlcnRpZXM6IHtcbiAgICAgICAgICAgICAgICAgICAgICBpbnRlZ3JhdGlvbnM6IHsgdHlwZTogJ251bWJlcicgfSxcbiAgICAgICAgICAgICAgICAgICAgICB1c2VyczogeyB0eXBlOiAnbnVtYmVyJyB9LFxuICAgICAgICAgICAgICAgICAgICAgIGFwaUNhbGxzOiB7IHR5cGU6ICdudW1iZXInIH0sXG4gICAgICAgICAgICAgICAgICAgIH0sXG4gICAgICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgICAgIH0sXG4gICAgICAgICAgICAgIH0sXG4gICAgICAgICAgICB9LFxuICAgICAgICAgIH0sXG4gICAgICAgIH0sXG4gICAgICB9LFxuICAgICAgaGFuZGxlcjogYmlsbGluZ0NvbnRyb2xsZXIuZ2V0VXNhZ2UuYmluZChiaWxsaW5nQ29udHJvbGxlciksXG4gICAgfSk7XG5cbiAgICBmYXN0aWZ5LnBvc3QoJy91c2FnZScsIHtcbiAgICAgIHNjaGVtYToge1xuICAgICAgICBkZXNjcmlwdGlvbjogJ1JlY29yZCB1c2FnZSBmb3IgbWV0ZXJlZCBiaWxsaW5nJyxcbiAgICAgICAgdGFnczogWydiaWxsaW5nJ10sXG4gICAgICAgIGJvZHk6IHtcbiAgICAgICAgICB0eXBlOiAnb2JqZWN0JyxcbiAgICAgICAgICByZXF1aXJlZDogWydtZXRyaWNOYW1lJywgJ3F1YW50aXR5J10sXG4gICAgICAgICAgcHJvcGVydGllczoge1xuICAgICAgICAgICAgbWV0cmljTmFtZToge1xuICAgICAgICAgICAgICB0eXBlOiAnc3RyaW5nJyxcbiAgICAgICAgICAgICAgZW51bTogWydpbnRlZ3JhdGlvbnMnLCAndXNlcnMnLCAnYXBpX2NhbGxzJ10sXG4gICAgICAgICAgICB9LFxuICAgICAgICAgICAgcXVhbnRpdHk6IHsgdHlwZTogJ251bWJlcicsIG1pbmltdW06IDEgfSxcbiAgICAgICAgICB9LFxuICAgICAgICB9LFxuICAgICAgICByZXNwb25zZToge1xuICAgICAgICAgIDIwMDoge1xuICAgICAgICAgICAgdHlwZTogJ29iamVjdCcsXG4gICAgICAgICAgICBwcm9wZXJ0aWVzOiB7XG4gICAgICAgICAgICAgIHN1Y2Nlc3M6IHsgdHlwZTogJ2Jvb2xlYW4nIH0sXG4gICAgICAgICAgICAgIG1lc3NhZ2U6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICAgIH0sXG4gICAgICAgICAgfSxcbiAgICAgICAgfSxcbiAgICAgIH0sXG4gICAgICBoYW5kbGVyOiBiaWxsaW5nQ29udHJvbGxlci5yZWNvcmRVc2FnZS5iaW5kKGJpbGxpbmdDb250cm9sbGVyKSxcbiAgICB9KTtcblxuICAgIGZhc3RpZnkucG9zdCgnL3BvcnRhbCcsIHtcbiAgICAgIHNjaGVtYToge1xuICAgICAgICBkZXNjcmlwdGlvbjogJ0NyZWF0ZSBTdHJpcGUgY3VzdG9tZXIgcG9ydGFsIHNlc3Npb24nLFxuICAgICAgICB0YWdzOiBbJ2JpbGxpbmcnXSxcbiAgICAgICAgYm9keToge1xuICAgICAgICAgIHR5cGU6ICdvYmplY3QnLFxuICAgICAgICAgIHJlcXVpcmVkOiBbJ3JldHVyblVybCddLFxuICAgICAgICAgIHByb3BlcnRpZXM6IHtcbiAgICAgICAgICAgIHJldHVyblVybDogeyB0eXBlOiAnc3RyaW5nJywgZm9ybWF0OiAndXJpJyB9LFxuICAgICAgICAgIH0sXG4gICAgICAgIH0sXG4gICAgICAgIHJlc3BvbnNlOiB7XG4gICAgICAgICAgMjAwOiB7XG4gICAgICAgICAgICB0eXBlOiAnb2JqZWN0JyxcbiAgICAgICAgICAgIHByb3BlcnRpZXM6IHtcbiAgICAgICAgICAgICAgc3VjY2VzczogeyB0eXBlOiAnYm9vbGVhbicgfSxcbiAgICAgICAgICAgICAgZGF0YToge1xuICAgICAgICAgICAgICAgIHR5cGU6ICdvYmplY3QnLFxuICAgICAgICAgICAgICAgIHByb3BlcnRpZXM6IHtcbiAgICAgICAgICAgICAgICAgIHVybDogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgICAgICAgIH0sXG4gICAgICAgICAgICAgIH0sXG4gICAgICAgICAgICB9LFxuICAgICAgICAgIH0sXG4gICAgICAgIH0sXG4gICAgICB9LFxuICAgICAgaGFuZGxlcjogYmlsbGluZ0NvbnRyb2xsZXIuY3JlYXRlUG9ydGFsU2Vzc2lvbi5iaW5kKGJpbGxpbmdDb250cm9sbGVyKSxcbiAgICB9KTtcblxuICAgIC8vIFNvZnQgZGVsZXRlIG1hbmFnZW1lbnQgcm91dGVzXG4gICAgZmFzdGlmeS5wb3N0KCcvc3Vic2NyaXB0aW9uL3Jlc3RvcmUnLCB7XG4gICAgICBzY2hlbWE6IHtcbiAgICAgICAgZGVzY3JpcHRpb246ICdSZXN0b3JlIGEgc29mdC1kZWxldGVkIHN1YnNjcmlwdGlvbicsXG4gICAgICAgIHRhZ3M6IFsnYmlsbGluZyddLFxuICAgICAgICByZXNwb25zZToge1xuICAgICAgICAgIDIwMDoge1xuICAgICAgICAgICAgdHlwZTogJ29iamVjdCcsXG4gICAgICAgICAgICBwcm9wZXJ0aWVzOiB7XG4gICAgICAgICAgICAgIHN1Y2Nlc3M6IHsgdHlwZTogJ2Jvb2xlYW4nIH0sXG4gICAgICAgICAgICAgIGRhdGE6IHtcbiAgICAgICAgICAgICAgICB0eXBlOiAnb2JqZWN0JyxcbiAgICAgICAgICAgICAgICBwcm9wZXJ0aWVzOiB7XG4gICAgICAgICAgICAgICAgICBpZDogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgICAgICAgICAgc3RhdHVzOiB7IHR5cGU6ICdzdHJpbmcnIH0sXG4gICAgICAgICAgICAgICAgICBvcmdhbml6YXRpb25JZDogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgICAgICAgIH0sXG4gICAgICAgICAgICAgIH0sXG4gICAgICAgICAgICB9LFxuICAgICAgICAgIH0sXG4gICAgICAgIH0sXG4gICAgICB9LFxuICAgICAgaGFuZGxlcjogYmlsbGluZ0NvbnRyb2xsZXIucmVzdG9yZVN1YnNjcmlwdGlvbi5iaW5kKGJpbGxpbmdDb250cm9sbGVyKSxcbiAgICB9KTtcblxuICAgIGZhc3RpZnkuZ2V0KCcvc3Vic2NyaXB0aW9ucy9kZWxldGVkJywge1xuICAgICAgc2NoZW1hOiB7XG4gICAgICAgIGRlc2NyaXB0aW9uOiAnR2V0IHNvZnQtZGVsZXRlZCBzdWJzY3JpcHRpb25zJyxcbiAgICAgICAgdGFnczogWydiaWxsaW5nJ10sXG4gICAgICAgIHJlc3BvbnNlOiB7XG4gICAgICAgICAgMjAwOiB7XG4gICAgICAgICAgICB0eXBlOiAnb2JqZWN0JyxcbiAgICAgICAgICAgIHByb3BlcnRpZXM6IHtcbiAgICAgICAgICAgICAgc3VjY2VzczogeyB0eXBlOiAnYm9vbGVhbicgfSxcbiAgICAgICAgICAgICAgZGF0YToge1xuICAgICAgICAgICAgICAgIHR5cGU6ICdhcnJheScsXG4gICAgICAgICAgICAgICAgaXRlbXM6IHtcbiAgICAgICAgICAgICAgICAgIHR5cGU6ICdvYmplY3QnLFxuICAgICAgICAgICAgICAgICAgcHJvcGVydGllczoge1xuICAgICAgICAgICAgICAgICAgICBpZDogeyB0eXBlOiAnc3RyaW5nJyB9LFxuICAgICAgICAgICAgICAgICAgICBzdGF0dXM6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICAgICAgICAgICAgb3JnYW5pemF0aW9uSWQ6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICAgICAgICAgICAgZGVsZXRlZEF0OiB7IHR5cGU6ICdzdHJpbmcnLCBmb3JtYXQ6ICdkYXRlLXRpbWUnIH0sXG4gICAgICAgICAgICAgICAgICAgIHBsYW46IHsgdHlwZTogJ29iamVjdCcgfSxcbiAgICAgICAgICAgICAgICAgICAgb3JnYW5pemF0aW9uOiB7IHR5cGU6ICdvYmplY3QnIH0sXG4gICAgICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgICAgIH0sXG4gICAgICAgICAgICAgIH0sXG4gICAgICAgICAgICB9LFxuICAgICAgICAgIH0sXG4gICAgICAgIH0sXG4gICAgICB9LFxuICAgICAgaGFuZGxlcjogYmlsbGluZ0NvbnRyb2xsZXIuZ2V0RGVsZXRlZFN1YnNjcmlwdGlvbnMuYmluZChiaWxsaW5nQ29udHJvbGxlciksXG4gICAgfSk7XG5cbiAgICBmYXN0aWZ5LmRlbGV0ZSgnL3N1YnNjcmlwdGlvbi9wZXJtYW5lbnQnLCB7XG4gICAgICBzY2hlbWE6IHtcbiAgICAgICAgZGVzY3JpcHRpb246ICdQZXJtYW5lbnRseSBkZWxldGUgYSBzb2Z0LWRlbGV0ZWQgc3Vic2NyaXB0aW9uIChPd25lciBvbmx5KScsXG4gICAgICAgIHRhZ3M6IFsnYmlsbGluZyddLFxuICAgICAgICByZXNwb25zZToge1xuICAgICAgICAgIDIwMDoge1xuICAgICAgICAgICAgdHlwZTogJ29iamVjdCcsXG4gICAgICAgICAgICBwcm9wZXJ0aWVzOiB7XG4gICAgICAgICAgICAgIHN1Y2Nlc3M6IHsgdHlwZTogJ2Jvb2xlYW4nIH0sXG4gICAgICAgICAgICAgIG1lc3NhZ2U6IHsgdHlwZTogJ3N0cmluZycgfSxcbiAgICAgICAgICAgIH0sXG4gICAgICAgICAgfSxcbiAgICAgICAgfSxcbiAgICAgIH0sXG4gICAgICBoYW5kbGVyOiBiaWxsaW5nQ29udHJvbGxlci5wZXJtYW5lbnRseURlbGV0ZVN1YnNjcmlwdGlvbi5iaW5kKGJpbGxpbmdDb250cm9sbGVyKSxcbiAgICB9KTtcbiAgfSk7XG59Il0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7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

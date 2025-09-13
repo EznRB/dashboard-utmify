@@ -1,0 +1,601 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  ADMIN
+  MEMBER
+  VIEWER
+}
+
+enum PlanType {
+  FREE
+  STARTER
+  PRO
+  ENTERPRISE
+}
+
+enum SubscriptionStatus {
+  ACTIVE
+  CANCELED
+  PAST_DUE
+  UNPAID
+  TRIALING
+  INCOMPLETE
+  INCOMPLETE_EXPIRED
+}
+
+enum InvoiceStatus {
+  DRAFT
+  OPEN
+  PAID
+  UNCOLLECTIBLE
+  VOID
+}
+
+model User {
+  id             String    @id @default(cuid())
+  email          String    @unique
+  name           String?
+  password       String
+  role           UserRole  @default(MEMBER)
+  organizationId String?
+  isActive       Boolean   @default(true)
+  lastLoginAt    DateTime?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  // Relations
+  organization   Organization? @relation(fields: [organizationId], references: [id], onDelete: SetNull)
+  integrations   Integration[]
+  campaigns      Campaign[]
+  whatsappConfig WhatsAppConfig?
+  invitations    Invitation[]  @relation("UserInvitations")
+
+  @@map("users")
+}
+
+model Integration {
+  id           String    @id @default(cuid())
+  userId       String
+  provider     String    // META_ADS, GOOGLE_ADS, etc.
+  accessToken  String    // Encrypted
+  refreshToken String?   // Encrypted
+  expiresAt    DateTime?
+  isActive     Boolean   @default(true)
+  lastSyncAt   DateTime?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, provider])
+  @@map("integrations")
+}
+
+model Campaign {
+  id             String    @id @default(cuid())
+  userId         String
+  organizationId String
+  externalId     String    // Campaign ID from the platform
+  platform       String    // META_ADS, GOOGLE_ADS, etc.
+  name           String
+  status         String    // ACTIVE, PAUSED, DELETED, etc.
+  objective      String?
+  startDate      DateTime?
+  endDate        DateTime?
+  dailyBudget    Float?
+  totalBudget    Float?
+  adAccountId    String?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  // Relations
+  user         User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  organization Organization      @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  metrics      CampaignMetrics[]
+
+  @@unique([externalId, platform])
+  @@map("campaigns")
+}
+
+model CampaignMetrics {
+  id                   String   @id @default(cuid())
+  campaignExternalId   String
+  platform             String
+  date                 DateTime
+  impressions          Int      @default(0)
+  clicks               Int      @default(0)
+  spend                Float    @default(0)
+  conversions          Int      @default(0)
+  ctr                  Float    @default(0) // Click-through rate
+  cpc                  Float    @default(0) // Cost per click
+  cpm                  Float    @default(0) // Cost per mille
+  reach                Int      @default(0)
+  frequency            Float    @default(0)
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+
+  @@unique([campaignExternalId, date, platform])
+  @@map("campaign_metrics")
+}
+
+model WebhookLog {
+  id        String   @id @default(cuid())
+  provider  String   // META_ADS, GOOGLE_ADS, etc.
+  eventType String
+  payload   Json
+  processed Boolean  @default(false)
+  error     String?
+  createdAt DateTime @default(now())
+
+  @@map("webhook_logs")
+}
+
+model SyncJob {
+  id          String    @id @default(cuid())
+  userId      String
+  provider    String
+  status      String    // PENDING, RUNNING, COMPLETED, FAILED
+  startedAt   DateTime?
+  completedAt DateTime?
+  error       String?
+  metadata    Json?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@map("sync_jobs")
+}
+
+model ApiKey {
+  id        String   @id @default(cuid())
+  userId    String
+  name      String
+  key       String   @unique // Hashed
+  isActive  Boolean  @default(true)
+  lastUsed  DateTime?
+  expiresAt DateTime?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("api_keys")
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  userId    String?
+  action    String
+  resource  String
+  details   Json?
+  ipAddress String?
+  userAgent String?
+  createdAt DateTime @default(now())
+
+  @@map("audit_logs")
+}
+
+// WhatsApp Models
+model WhatsAppConfig {
+  id             String   @id @default(cuid())
+  userId         String   @unique
+  phoneNumber    String?  // WhatsApp Business phone number
+  twilioSid      String?  // Encrypted Twilio Account SID
+  twilioToken    String?  // Encrypted Twilio Auth Token
+  webhookUrl     String?
+  isActive       Boolean  @default(false)
+  dailyLimit     Int      @default(1000)
+  messagesCount  Int      @default(0)
+  lastResetDate  DateTime @default(now())
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  // Relations
+  user         User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+  messages     WhatsAppMessage[]
+  templates    WhatsAppTemplate[]
+  conversations WhatsAppConversation[]
+  automations  WhatsAppAutomation[]
+
+  @@map("whatsapp_configs")
+}
+
+model WhatsAppMessage {
+  id             String   @id @default(cuid())
+  configId       String
+  conversationId String?
+  messageId      String?  // Twilio message SID
+  direction      String   // INBOUND, OUTBOUND
+  from           String
+  to             String
+  body           String?
+  mediaUrl       String?
+  templateName   String?
+  templateParams Json?
+  status         String   // QUEUED, SENT, DELIVERED, READ, FAILED
+  errorCode      String?
+  errorMessage   String?
+  cost           Float?   // Message cost
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  // Relations
+  config       WhatsAppConfig        @relation(fields: [configId], references: [id], onDelete: Cascade)
+  conversation WhatsAppConversation? @relation(fields: [conversationId], references: [id])
+
+  @@map("whatsapp_messages")
+}
+
+model WhatsAppTemplate {
+  id          String   @id @default(cuid())
+  configId    String
+  name        String
+  category    String   // MARKETING, UTILITY, AUTHENTICATION
+  language    String   @default("pt_BR")
+  status      String   // PENDING, APPROVED, REJECTED
+  content     String
+  variables   Json?    // Template variables
+  isActive    Boolean  @default(true)
+  usageCount  Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  config WhatsAppConfig @relation(fields: [configId], references: [id], onDelete: Cascade)
+
+  @@unique([configId, name])
+  @@map("whatsapp_templates")
+}
+
+model WhatsAppConversation {
+  id           String   @id @default(cuid())
+  configId     String
+  phoneNumber  String
+  contactName  String?
+  status       String   // ACTIVE, CLOSED, ARCHIVED
+  lastMessage  String?
+  lastActivity DateTime @default(now())
+  messageCount Int      @default(0)
+  isBot        Boolean  @default(false)
+  metadata     Json?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  // Relations
+  config   WhatsAppConfig    @relation(fields: [configId], references: [id], onDelete: Cascade)
+  messages WhatsAppMessage[]
+
+  @@unique([configId, phoneNumber])
+  @@map("whatsapp_conversations")
+}
+
+model WhatsAppAutomation {
+  id          String   @id @default(cuid())
+  configId    String
+  name        String
+  triggerType String   // CONVERSION, BUDGET_ALERT, DAILY_REPORT, WELCOME, KEYWORD
+  conditions  Json     // Trigger conditions
+  actions     Json     // Actions to execute
+  isActive    Boolean  @default(true)
+  runCount    Int      @default(0)
+  lastRun     DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  config WhatsAppConfig @relation(fields: [configId], references: [id], onDelete: Cascade)
+
+  @@map("whatsapp_automations")
+}
+
+model WhatsAppMetrics {
+  id            String   @id @default(cuid())
+  configId      String
+  date          DateTime
+  messagesSent  Int      @default(0)
+  messagesRead  Int      @default(0)
+  conversions   Int      @default(0)
+  totalCost     Float    @default(0)
+  deliveryRate  Float    @default(0)
+  readRate      Float    @default(0)
+  responseRate  Float    @default(0)
+  createdAt     DateTime @default(now())
+
+  @@unique([configId, date])
+  @@map("whatsapp_metrics")
+}
+
+model Organization {
+  id            String   @id @default(cuid())
+  name          String
+  slug          String   @unique
+  planType      String   @default("FREE") // FREE, BASIC, PRO, ENTERPRISE
+  logo          String?
+  primaryColor  String?  @default("#3B82F6")
+  secondaryColor String? @default("#1E40AF")
+  website       String?
+  description   String?
+  isActive      Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  // Relations
+  users        User[]
+  campaigns    Campaign[]
+  invitations  Invitation[]
+  subscription Subscription?
+  paymentMethods PaymentMethod[]
+  usageRecords UsageRecord[]
+  utmLinks     UTMLink[]
+  utmConversions UTMConversion[]
+
+  @@map("organizations")
+}
+
+model Invitation {
+  id             String   @id @default(cuid())
+  email          String
+  role           UserRole @default(MEMBER)
+  status         String   @default("PENDING") // PENDING, ACCEPTED, REJECTED, EXPIRED
+  token          String   @unique
+  expiresAt      DateTime
+  organizationId String
+  invitedById    String
+  invitedName    String?
+  acceptedAt     DateTime?
+  rejectedAt     DateTime?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  // Relations
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  invitedBy    User         @relation("UserInvitations", fields: [invitedById], references: [id], onDelete: Cascade)
+
+  @@unique([email, organizationId])
+  @@map("invitations")
+}
+
+// Billing Models
+model Plan {
+  id                String   @id @default(cuid())
+  name              String   @unique
+  stripePriceId     String?  @unique
+  stripeProductId   String?  @unique
+  type              PlanType
+  price             Float    // Price in cents
+  currency          String   @default("BRL")
+  interval          String   // month, year
+  maxIntegrations   Int      @default(1)
+  maxUsers          Int      @default(1)
+  maxApiCalls       Int?     // null = unlimited
+  features          Json     // Array of features
+  isActive          Boolean  @default(true)
+  trialDays         Int      @default(7)
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  // Relations
+  subscriptions Subscription[]
+
+  @@map("plans")
+}
+
+model Subscription {
+  id                    String             @id @default(cuid())
+  organizationId        String             @unique
+  planId                String
+  stripeSubscriptionId  String?            @unique
+  stripeCustomerId      String?
+  status                SubscriptionStatus @default(TRIALING)
+  currentPeriodStart    DateTime?
+  currentPeriodEnd      DateTime?
+  trialStart            DateTime?
+  trialEnd              DateTime?
+  canceledAt            DateTime?
+  cancelAtPeriodEnd     Boolean            @default(false)
+  quantity              Int                @default(1)
+  pricePerUnit          Float?             // Price in cents
+  currency              String             @default("BRL")
+  metadata              Json?
+  deletedAt             DateTime?          // Soft delete
+  createdAt             DateTime           @default(now())
+  updatedAt             DateTime           @updatedAt
+
+  // Relations
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  plan         Plan         @relation(fields: [planId], references: [id])
+  invoices     Invoice[]
+  usageRecords UsageRecord[]
+
+  @@map("subscriptions")
+}
+
+model Invoice {
+  id                String        @id @default(cuid())
+  subscriptionId    String
+  stripeInvoiceId   String?       @unique
+  number            String?
+  status            InvoiceStatus @default(DRAFT)
+  amountPaid        Float         @default(0) // Amount in cents
+  amountDue         Float         @default(0) // Amount in cents
+  subtotal          Float         @default(0) // Amount in cents
+  tax               Float         @default(0) // Amount in cents
+  total             Float         @default(0) // Amount in cents
+  currency          String        @default("BRL")
+  description       String?
+  hostedInvoiceUrl  String?
+  invoicePdf        String?
+  periodStart       DateTime?
+  periodEnd         DateTime?
+  dueDate           DateTime?
+  paidAt            DateTime?
+  attemptCount      Int           @default(0)
+  nextPaymentAttempt DateTime?
+  metadata          Json?
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+
+  // Relations
+  subscription Subscription @relation(fields: [subscriptionId], references: [id], onDelete: Cascade)
+
+  @@map("invoices")
+}
+
+model PaymentMethod {
+  id               String   @id @default(cuid())
+  organizationId   String
+  stripePaymentMethodId String @unique
+  type             String   // card, bank_account, etc.
+  brand            String?  // visa, mastercard, etc.
+  last4            String?
+  expiryMonth      Int?
+  expiryYear       Int?
+  isDefault        Boolean  @default(false)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  // Relations
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  @@map("payment_methods")
+}
+
+model UsageRecord {
+  id             String   @id @default(cuid())
+  subscriptionId String
+  organizationId String
+  metricName     String   // api_calls, integrations, users
+  quantity       Int
+  timestamp      DateTime
+  metadata       Json?
+  createdAt      DateTime @default(now())
+
+  // Relations
+  subscription Subscription @relation(fields: [subscriptionId], references: [id], onDelete: Cascade)
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  @@unique([subscriptionId, metricName, timestamp])
+  @@map("usage_records")
+}
+
+model Coupon {
+  id               String    @id @default(cuid())
+  stripeCouponId   String?   @unique
+  code             String    @unique
+  name             String?
+  percentOff       Float?    // Percentage discount (0-100)
+  amountOff        Float?    // Fixed amount discount in cents
+  currency         String?   @default("BRL")
+  duration         String    // once, repeating, forever
+  durationInMonths Int?
+  maxRedemptions   Int?
+  timesRedeemed    Int       @default(0)
+  isActive         Boolean   @default(true)
+  validFrom        DateTime?
+  validUntil       DateTime?
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+
+  @@map("coupons")
+}
+
+model BillingEvent {
+  id             String   @id @default(cuid())
+  organizationId String?
+  subscriptionId String?
+  eventType      String   // subscription.created, invoice.paid, etc.
+  stripeEventId  String?  @unique
+  data           Json
+  processed      Boolean  @default(false)
+  error          String?
+  createdAt      DateTime @default(now())
+
+  @@map("billing_events")
+}
+
+model UTMLink {
+  id            String    @id @default(cuid())
+  title         String?
+  description   String?
+  originalUrl   String
+  shortCode     String    @unique
+  shortUrl      String
+  qrCodeUrl     String?
+  utmSource     String?
+  utmMedium     String?
+  utmCampaign   String?
+  utmTerm       String?
+  utmContent    String?
+  customParams  Json?     // JSON object for custom parameters
+  tags          Json?     // JSON array for tags
+  isPublic      Boolean   @default(false)
+  clickCount    Int       @default(0)
+  uniqueClicks  Int       @default(0)
+  conversionCount Int     @default(0)
+  conversionValue Float   @default(0)
+  lastClickAt   DateTime?
+  expiresAt     DateTime?
+  status        String    @default("ACTIVE") // ACTIVE, PAUSED, ARCHIVED
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  // Relations
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  clicks         UTMClick[]
+  conversions    UTMConversion[]
+
+  @@map("utm_links")
+}
+
+model UTMClick {
+  id            String   @id @default(cuid())
+  userAgent     String?
+  referer       String?
+  ipAddress     String?
+  country       String?
+  region        String?
+  city          String?
+  deviceType    String?
+  browser       String?
+  browserVersion String?
+  os            String?
+  osVersion     String?
+  sessionId     String?
+  isUnique      Boolean  @default(false)
+  createdAt     DateTime @default(now())
+
+  // Relations
+  utmLinkId String
+  utmLink   UTMLink @relation(fields: [utmLinkId], references: [id], onDelete: Cascade)
+
+  @@map("utm_clicks")
+}
+
+model UTMConversion {
+  id            String   @id @default(cuid())
+  eventType     String
+  eventName     String?
+  value         Float?
+  currency      String?
+  customerId    String?
+  customerEmail String?
+  metadata      Json?    // JSON object for additional data
+  createdAt     DateTime @default(now())
+
+  // Relations
+  utmLinkId      String
+  utmLink        UTMLink @relation(fields: [utmLinkId], references: [id], onDelete: Cascade)
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  @@map("utm_conversions")
+}

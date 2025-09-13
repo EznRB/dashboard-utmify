@@ -1,0 +1,167 @@
+# ===========================================
+# UTMIFY PERFORMANCE TEST CONFIGURATION
+# ===========================================
+# Artillery.js configuration for load testing
+# Run with: npx artillery run performance-test.yml
+
+config:
+  target: 'http://localhost:3001'
+  phases:
+    # Warm-up phase
+    - duration: 60
+      arrivalRate: 5
+      name: "Warm-up"
+    # Ramp-up phase
+    - duration: 120
+      arrivalRate: 10
+      rampTo: 50
+      name: "Ramp-up load"
+    # Sustained load phase
+    - duration: 300
+      arrivalRate: 50
+      name: "Sustained load"
+    # Peak load phase
+    - duration: 120
+      arrivalRate: 100
+      name: "Peak load"
+    # Stress test phase
+    - duration: 60
+      arrivalRate: 200
+      name: "Stress test"
+  
+  # Performance thresholds
+  ensure:
+    p95: 500  # 95% of requests should complete within 500ms
+    p99: 1000 # 99% of requests should complete within 1000ms
+    maxErrorRate: 5 # Maximum 5% error rate
+  
+  # Load test configuration
+  http:
+    timeout: 10
+    pool: 50
+  
+  # Variables for dynamic data
+  variables:
+    testUser:
+      - "user1@test.com"
+      - "user2@test.com"
+      - "user3@test.com"
+    testPassword: "testpassword123"
+
+scenarios:
+  # Authentication flow test
+  - name: "Authentication Flow"
+    weight: 30
+    flow:
+      - post:
+          url: "/api/auth/login"
+          json:
+            email: "{{ testUser }}"
+            password: "{{ testPassword }}"
+          capture:
+            - json: "$.token"
+              as: "authToken"
+      - think: 2
+      - get:
+          url: "/api/auth/me"
+          headers:
+            Authorization: "Bearer {{ authToken }}"
+
+  # UTM Link creation test
+  - name: "UTM Link Management"
+    weight: 40
+    flow:
+      # Login first
+      - post:
+          url: "/api/auth/login"
+          json:
+            email: "{{ testUser }}"
+            password: "{{ testPassword }}"
+          capture:
+            - json: "$.token"
+              as: "authToken"
+      - think: 1
+      # Create UTM link
+      - post:
+          url: "/api/utm-links"
+          headers:
+            Authorization: "Bearer {{ authToken }}"
+          json:
+            url: "https://example.com"
+            campaign: "test-campaign-{{ $randomString() }}"
+            source: "performance-test"
+            medium: "automated"
+      - think: 2
+      # List UTM links
+      - get:
+          url: "/api/utm-links"
+          headers:
+            Authorization: "Bearer {{ authToken }}"
+          qs:
+            page: 1
+            limit: 20
+
+  # Dashboard metrics test
+  - name: "Dashboard Metrics"
+    weight: 20
+    flow:
+      # Login
+      - post:
+          url: "/api/auth/login"
+          json:
+            email: "{{ testUser }}"
+            password: "{{ testPassword }}"
+          capture:
+            - json: "$.token"
+              as: "authToken"
+      - think: 1
+      # Get dashboard metrics
+      - get:
+          url: "/api/dashboard/metrics"
+          headers:
+            Authorization: "Bearer {{ authToken }}"
+      - think: 2
+      # Get analytics data
+      - get:
+          url: "/api/analytics/summary"
+          headers:
+            Authorization: "Bearer {{ authToken }}"
+          qs:
+            period: "7d"
+
+  # Health check test
+  - name: "Health Checks"
+    weight: 10
+    flow:
+      - get:
+          url: "/health"
+      - think: 1
+      - get:
+          url: "/api/health"
+
+# Custom functions for realistic data
+functions:
+  generateRandomEmail: |
+    function(context, events, done) {
+      const randomId = Math.random().toString(36).substring(7);
+      context.vars.randomEmail = `test${randomId}@example.com`;
+      return done();
+    }
+  
+  generateRandomCampaign: |
+    function(context, events, done) {
+      const campaigns = ['summer-sale', 'winter-promo', 'black-friday', 'newsletter', 'social-media'];
+      const randomCampaign = campaigns[Math.floor(Math.random() * campaigns.length)];
+      context.vars.randomCampaign = `${randomCampaign}-${Date.now()}`;
+      return done();
+    }
+
+# Plugins for enhanced reporting
+plugins:
+  expect: {}
+  metrics-by-endpoint: {}
+  publish-metrics:
+    - type: "json"
+      path: "./performance-results.json"
+    - type: "csv"
+      path: "./performance-results.csv"

@@ -1,0 +1,501 @@
+# PostgreSQL custom queries for Utmify monitoring
+
+# Database size metrics
+db_size:
+  query: |
+    SELECT 
+      datname as database,
+      pg_database_size(datname) as size_bytes
+    FROM pg_database 
+    WHERE datname NOT IN ('template0', 'template1', 'postgres')
+  master: true
+  metrics:
+    - database:
+        usage: "LABEL"
+        description: "Database name"
+    - size_bytes:
+        usage: "GAUGE"
+        description: "Database size in bytes"
+
+# Table size metrics
+table_size:
+  query: |
+    SELECT 
+      schemaname,
+      tablename,
+      pg_total_relation_size(schemaname||'.'||tablename) as size_bytes,
+      pg_relation_size(schemaname||'.'||tablename) as table_size_bytes,
+      pg_total_relation_size(schemaname||'.'||tablename) - pg_relation_size(schemaname||'.'||tablename) as index_size_bytes
+    FROM pg_tables 
+    WHERE schemaname NOT IN ('information_schema', 'pg_catalog')
+  master: true
+  metrics:
+    - schemaname:
+        usage: "LABEL"
+        description: "Schema name"
+    - tablename:
+        usage: "LABEL"
+        description: "Table name"
+    - size_bytes:
+        usage: "GAUGE"
+        description: "Total table size including indexes in bytes"
+    - table_size_bytes:
+        usage: "GAUGE"
+        description: "Table size in bytes"
+    - index_size_bytes:
+        usage: "GAUGE"
+        description: "Index size in bytes"
+
+# Connection metrics
+connections:
+  query: |
+    SELECT 
+      datname as database,
+      state,
+      COUNT(*) as connections
+    FROM pg_stat_activity 
+    WHERE datname IS NOT NULL
+    GROUP BY datname, state
+  master: true
+  metrics:
+    - database:
+        usage: "LABEL"
+        description: "Database name"
+    - state:
+        usage: "LABEL"
+        description: "Connection state"
+    - connections:
+        usage: "GAUGE"
+        description: "Number of connections"
+
+# Long running queries
+long_running_queries:
+  query: |
+    SELECT 
+      datname as database,
+      usename as username,
+      state,
+      COUNT(*) as count,
+      MAX(EXTRACT(EPOCH FROM (now() - query_start))) as max_duration_seconds
+    FROM pg_stat_activity 
+    WHERE state = 'active' 
+      AND query_start < now() - interval '1 minute'
+      AND datname IS NOT NULL
+    GROUP BY datname, usename, state
+  master: true
+  metrics:
+    - database:
+        usage: "LABEL"
+        description: "Database name"
+    - username:
+        usage: "LABEL"
+        description: "Username"
+    - state:
+        usage: "LABEL"
+        description: "Query state"
+    - count:
+        usage: "GAUGE"
+        description: "Number of long running queries"
+    - max_duration_seconds:
+        usage: "GAUGE"
+        description: "Maximum query duration in seconds"
+
+# Blocked queries
+blocked_queries:
+  query: |
+    SELECT 
+      blocked_locks.pid as blocked_pid,
+      blocked_activity.datname as database,
+      blocked_activity.usename as blocked_user,
+      blocking_locks.pid as blocking_pid,
+      blocking_activity.usename as blocking_user,
+      blocked_activity.query as blocked_query,
+      blocking_activity.query as blocking_query,
+      EXTRACT(EPOCH FROM (now() - blocked_activity.query_start)) as blocked_duration_seconds
+    FROM pg_catalog.pg_locks blocked_locks
+    JOIN pg_catalog.pg_stat_activity blocked_activity ON blocked_activity.pid = blocked_locks.pid
+    JOIN pg_catalog.pg_locks blocking_locks ON blocking_locks.locktype = blocked_locks.locktype
+      AND blocking_locks.database IS NOT DISTINCT FROM blocked_locks.database
+      AND blocking_locks.relation IS NOT DISTINCT FROM blocked_locks.relation
+      AND blocking_locks.page IS NOT DISTINCT FROM blocked_locks.page
+      AND blocking_locks.tuple IS NOT DISTINCT FROM blocked_locks.tuple
+      AND blocking_locks.virtualxid IS NOT DISTINCT FROM blocked_locks.virtualxid
+      AND blocking_locks.transactionid IS NOT DISTINCT FROM blocked_locks.transactionid
+      AND blocking_locks.classid IS NOT DISTINCT FROM blocked_locks.classid
+      AND blocking_locks.objid IS NOT DISTINCT FROM blocked_locks.objid
+      AND blocking_locks.objsubid IS NOT DISTINCT FROM blocked_locks.objsubid
+      AND blocking_locks.pid != blocked_locks.pid
+    JOIN pg_catalog.pg_stat_activity blocking_activity ON blocking_activity.pid = blocking_locks.pid
+    WHERE NOT blocked_locks.granted
+  master: true
+  metrics:
+    - blocked_pid:
+        usage: "LABEL"
+        description: "Blocked process ID"
+    - database:
+        usage: "LABEL"
+        description: "Database name"
+    - blocked_user:
+        usage: "LABEL"
+        description: "Blocked user"
+    - blocking_pid:
+        usage: "LABEL"
+        description: "Blocking process ID"
+    - blocking_user:
+        usage: "LABEL"
+        description: "Blocking user"
+    - blocked_duration_seconds:
+        usage: "GAUGE"
+        description: "Duration of blocked query in seconds"
+
+# Replication lag
+replication_lag:
+  query: |
+    SELECT 
+      client_addr,
+      client_hostname,
+      client_port,
+      state,
+      EXTRACT(EPOCH FROM (now() - backend_start)) as backend_age_seconds,
+      COALESCE(EXTRACT(EPOCH FROM (now() - pg_last_xact_replay_timestamp())), 0) as lag_seconds
+    FROM pg_stat_replication
+  master: true
+  metrics:
+    - client_addr:
+        usage: "LABEL"
+        description: "Client IP address"
+    - client_hostname:
+        usage: "LABEL"
+        description: "Client hostname"
+    - client_port:
+        usage: "LABEL"
+        description: "Client port"
+    - state:
+        usage: "LABEL"
+        description: "Replication state"
+    - backend_age_seconds:
+        usage: "GAUGE"
+        description: "Backend age in seconds"
+    - lag_seconds:
+        usage: "GAUGE"
+        description: "Replication lag in seconds"
+
+# Index usage
+index_usage:
+  query: |
+    SELECT 
+      schemaname,
+      tablename,
+      indexname,
+      idx_tup_read,
+      idx_tup_fetch,
+      idx_scan
+    FROM pg_stat_user_indexes
+  master: true
+  metrics:
+    - schemaname:
+        usage: "LABEL"
+        description: "Schema name"
+    - tablename:
+        usage: "LABEL"
+        description: "Table name"
+    - indexname:
+        usage: "LABEL"
+        description: "Index name"
+    - idx_tup_read:
+        usage: "COUNTER"
+        description: "Number of index entries returned by scans on this index"
+    - idx_tup_fetch:
+        usage: "COUNTER"
+        description: "Number of live table rows fetched by simple index scans using this index"
+    - idx_scan:
+        usage: "COUNTER"
+        description: "Number of index scans initiated on this index"
+
+# Unused indexes
+unused_indexes:
+  query: |
+    SELECT 
+      schemaname,
+      tablename,
+      indexname,
+      pg_size_pretty(pg_relation_size(indexrelid)) as size,
+      pg_relation_size(indexrelid) as size_bytes,
+      idx_scan
+    FROM pg_stat_user_indexes 
+    WHERE idx_scan = 0 
+      AND schemaname NOT IN ('information_schema', 'pg_catalog')
+  master: true
+  metrics:
+    - schemaname:
+        usage: "LABEL"
+        description: "Schema name"
+    - tablename:
+        usage: "LABEL"
+        description: "Table name"
+    - indexname:
+        usage: "LABEL"
+        description: "Index name"
+    - size_bytes:
+        usage: "GAUGE"
+        description: "Index size in bytes"
+    - idx_scan:
+        usage: "GAUGE"
+        description: "Number of index scans (should be 0 for unused indexes)"
+
+# Vacuum and analyze stats
+vacuum_stats:
+  query: |
+    SELECT 
+      schemaname,
+      tablename,
+      last_vacuum,
+      last_autovacuum,
+      last_analyze,
+      last_autoanalyze,
+      vacuum_count,
+      autovacuum_count,
+      analyze_count,
+      autoanalyze_count,
+      n_tup_ins,
+      n_tup_upd,
+      n_tup_del,
+      n_live_tup,
+      n_dead_tup
+    FROM pg_stat_user_tables
+  master: true
+  metrics:
+    - schemaname:
+        usage: "LABEL"
+        description: "Schema name"
+    - tablename:
+        usage: "LABEL"
+        description: "Table name"
+    - vacuum_count:
+        usage: "COUNTER"
+        description: "Number of times this table has been manually vacuumed"
+    - autovacuum_count:
+        usage: "COUNTER"
+        description: "Number of times this table has been vacuumed by the autovacuum daemon"
+    - analyze_count:
+        usage: "COUNTER"
+        description: "Number of times this table has been manually analyzed"
+    - autoanalyze_count:
+        usage: "COUNTER"
+        description: "Number of times this table has been analyzed by the autovacuum daemon"
+    - n_tup_ins:
+        usage: "COUNTER"
+        description: "Number of rows inserted"
+    - n_tup_upd:
+        usage: "COUNTER"
+        description: "Number of rows updated"
+    - n_tup_del:
+        usage: "COUNTER"
+        description: "Number of rows deleted"
+    - n_live_tup:
+        usage: "GAUGE"
+        description: "Estimated number of live rows"
+    - n_dead_tup:
+        usage: "GAUGE"
+        description: "Estimated number of dead rows"
+
+# Checkpoint stats
+checkpoint_stats:
+  query: |
+    SELECT 
+      checkpoints_timed,
+      checkpoints_req,
+      checkpoint_write_time,
+      checkpoint_sync_time,
+      buffers_checkpoint,
+      buffers_clean,
+      maxwritten_clean,
+      buffers_backend,
+      buffers_backend_fsync,
+      buffers_alloc
+    FROM pg_stat_bgwriter
+  master: true
+  metrics:
+    - checkpoints_timed:
+        usage: "COUNTER"
+        description: "Number of scheduled checkpoints that have been performed"
+    - checkpoints_req:
+        usage: "COUNTER"
+        description: "Number of requested checkpoints that have been performed"
+    - checkpoint_write_time:
+        usage: "COUNTER"
+        description: "Total amount of time spent in checkpoint processing where files were written to disk, in milliseconds"
+    - checkpoint_sync_time:
+        usage: "COUNTER"
+        description: "Total amount of time spent in checkpoint processing where files were synchronized to disk, in milliseconds"
+    - buffers_checkpoint:
+        usage: "COUNTER"
+        description: "Number of buffers written during checkpoints"
+    - buffers_clean:
+        usage: "COUNTER"
+        description: "Number of buffers written by the background writer"
+    - maxwritten_clean:
+        usage: "COUNTER"
+        description: "Number of times the background writer stopped a cleaning scan because it had written too many buffers"
+    - buffers_backend:
+        usage: "COUNTER"
+        description: "Number of buffers written directly by a backend"
+    - buffers_backend_fsync:
+        usage: "COUNTER"
+        description: "Number of times a backend had to execute its own fsync call"
+    - buffers_alloc:
+        usage: "COUNTER"
+        description: "Number of buffers allocated"
+
+# WAL stats
+wal_stats:
+  query: |
+    SELECT 
+      wal_records,
+      wal_fpi,
+      wal_bytes,
+      wal_buffers_full,
+      wal_write,
+      wal_sync,
+      wal_write_time,
+      wal_sync_time,
+      stats_reset
+    FROM pg_stat_wal
+  master: true
+  metrics:
+    - wal_records:
+        usage: "COUNTER"
+        description: "Total number of WAL records generated"
+    - wal_fpi:
+        usage: "COUNTER"
+        description: "Total number of WAL full page images generated"
+    - wal_bytes:
+        usage: "COUNTER"
+        description: "Total amount of WAL generated in bytes"
+    - wal_buffers_full:
+        usage: "COUNTER"
+        description: "Number of times WAL data was written to disk because WAL buffers became full"
+    - wal_write:
+        usage: "COUNTER"
+        description: "Number of times WAL buffers were written out to disk via XLogWrite request"
+    - wal_sync:
+        usage: "COUNTER"
+        description: "Number of times WAL files were synced to disk via issue_xlog_fsync request"
+    - wal_write_time:
+        usage: "COUNTER"
+        description: "Total amount of time spent writing WAL buffers to disk via XLogWrite request, in milliseconds"
+    - wal_sync_time:
+        usage: "COUNTER"
+        description: "Total amount of time spent syncing WAL files to disk via issue_xlog_fsync request, in milliseconds"
+
+# Business metrics - Users
+user_metrics:
+  query: |
+    SELECT 
+      COUNT(*) as total_users,
+      COUNT(*) FILTER (WHERE created_at >= NOW() - INTERVAL '24 hours') as new_users_24h,
+      COUNT(*) FILTER (WHERE created_at >= NOW() - INTERVAL '7 days') as new_users_7d,
+      COUNT(*) FILTER (WHERE created_at >= NOW() - INTERVAL '30 days') as new_users_30d,
+      COUNT(*) FILTER (WHERE last_login >= NOW() - INTERVAL '24 hours') as active_users_24h,
+      COUNT(*) FILTER (WHERE last_login >= NOW() - INTERVAL '7 days') as active_users_7d,
+      COUNT(*) FILTER (WHERE last_login >= NOW() - INTERVAL '30 days') as active_users_30d
+    FROM users
+  master: true
+  metrics:
+    - total_users:
+        usage: "GAUGE"
+        description: "Total number of users"
+    - new_users_24h:
+        usage: "GAUGE"
+        description: "New users in the last 24 hours"
+    - new_users_7d:
+        usage: "GAUGE"
+        description: "New users in the last 7 days"
+    - new_users_30d:
+        usage: "GAUGE"
+        description: "New users in the last 30 days"
+    - active_users_24h:
+        usage: "GAUGE"
+        description: "Active users in the last 24 hours"
+    - active_users_7d:
+        usage: "GAUGE"
+        description: "Active users in the last 7 days"
+    - active_users_30d:
+        usage: "GAUGE"
+        description: "Active users in the last 30 days"
+
+# Business metrics - UTM Links
+utm_metrics:
+  query: |
+    SELECT 
+      COUNT(*) as total_utm_links,
+      COUNT(*) FILTER (WHERE created_at >= NOW() - INTERVAL '24 hours') as new_utm_links_24h,
+      COUNT(*) FILTER (WHERE created_at >= NOW() - INTERVAL '7 days') as new_utm_links_7d,
+      COUNT(*) FILTER (WHERE created_at >= NOW() - INTERVAL '30 days') as new_utm_links_30d,
+      COUNT(*) FILTER (WHERE status = 'active') as active_utm_links,
+      SUM(click_count) as total_clicks,
+      SUM(CASE WHEN created_at >= NOW() - INTERVAL '24 hours' THEN click_count ELSE 0 END) as clicks_24h
+    FROM utm_links
+  master: true
+  metrics:
+    - total_utm_links:
+        usage: "GAUGE"
+        description: "Total number of UTM links"
+    - new_utm_links_24h:
+        usage: "GAUGE"
+        description: "New UTM links in the last 24 hours"
+    - new_utm_links_7d:
+        usage: "GAUGE"
+        description: "New UTM links in the last 7 days"
+    - new_utm_links_30d:
+        usage: "GAUGE"
+        description: "New UTM links in the last 30 days"
+    - active_utm_links:
+        usage: "GAUGE"
+        description: "Number of active UTM links"
+    - total_clicks:
+        usage: "GAUGE"
+        description: "Total number of clicks across all UTM links"
+    - clicks_24h:
+        usage: "GAUGE"
+        description: "Total clicks in the last 24 hours"
+
+# Business metrics - Subscriptions
+subscription_metrics:
+  query: |
+    SELECT 
+      COUNT(*) as total_subscriptions,
+      COUNT(*) FILTER (WHERE status = 'active') as active_subscriptions,
+      COUNT(*) FILTER (WHERE status = 'cancelled') as cancelled_subscriptions,
+      COUNT(*) FILTER (WHERE status = 'expired') as expired_subscriptions,
+      COUNT(*) FILTER (WHERE created_at >= NOW() - INTERVAL '24 hours') as new_subscriptions_24h,
+      COUNT(*) FILTER (WHERE created_at >= NOW() - INTERVAL '7 days') as new_subscriptions_7d,
+      COUNT(*) FILTER (WHERE created_at >= NOW() - INTERVAL '30 days') as new_subscriptions_30d,
+      SUM(CASE WHEN status = 'active' THEN price ELSE 0 END) as monthly_recurring_revenue
+    FROM subscriptions
+  master: true
+  metrics:
+    - total_subscriptions:
+        usage: "GAUGE"
+        description: "Total number of subscriptions"
+    - active_subscriptions:
+        usage: "GAUGE"
+        description: "Number of active subscriptions"
+    - cancelled_subscriptions:
+        usage: "GAUGE"
+        description: "Number of cancelled subscriptions"
+    - expired_subscriptions:
+        usage: "GAUGE"
+        description: "Number of expired subscriptions"
+    - new_subscriptions_24h:
+        usage: "GAUGE"
+        description: "New subscriptions in the last 24 hours"
+    - new_subscriptions_7d:
+        usage: "GAUGE"
+        description: "New subscriptions in the last 7 days"
+    - new_subscriptions_30d:
+        usage: "GAUGE"
+        description: "New subscriptions in the last 30 days"
+    - monthly_recurring_revenue:
+        usage: "GAUGE"
+        description: "Monthly recurring revenue from active subscriptions"

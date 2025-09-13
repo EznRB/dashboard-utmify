@@ -1,0 +1,390 @@
+d9ee70608a45ba0554750df9754ec4c9
+/* istanbul ignore next */
+function cov_es7as08ko() {
+  var path = "C:\\Users\\Enzo Marcelo\\Desktop\\Projetos Empresa\\Saas Utmify\\utmify-clone\\apps\\api\\src\\routes\\dashboard.routes.ts";
+  var hash = "ee753ecb30951e24318957c029f069a7a9aef3db";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "C:\\Users\\Enzo Marcelo\\Desktop\\Projetos Empresa\\Saas Utmify\\utmify-clone\\apps\\api\\src\\routes\\dashboard.routes.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 3,
+          column: 20
+        },
+        end: {
+          line: 10,
+          column: 1
+        }
+      },
+      "1": {
+        start: {
+          line: 9,
+          column: 4
+        },
+        end: {
+          line: 9,
+          column: 11
+        }
+      },
+      "2": {
+        start: {
+          line: 13,
+          column: 4
+        },
+        end: {
+          line: 54,
+          column: 6
+        }
+      },
+      "3": {
+        start: {
+          line: 58,
+          column: 4
+        },
+        end: {
+          line: 71,
+          column: 8
+        }
+      },
+      "4": {
+        start: {
+          line: 66,
+          column: 24
+        },
+        end: {
+          line: 66,
+          column: 45
+        }
+      },
+      "5": {
+        start: {
+          line: 67,
+          column: 8
+        },
+        end: {
+          line: 70,
+          column: 11
+        }
+      },
+      "6": {
+        start: {
+          line: 73,
+          column: 4
+        },
+        end: {
+          line: 95,
+          column: 8
+        }
+      },
+      "7": {
+        start: {
+          line: 81,
+          column: 24
+        },
+        end: {
+          line: 81,
+          column: 45
+        }
+      },
+      "8": {
+        start: {
+          line: 82,
+          column: 8
+        },
+        end: {
+          line: 94,
+          column: 11
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 3,
+            column: 20
+          },
+          end: {
+            line: 3,
+            column: 21
+          }
+        },
+        loc: {
+          start: {
+            line: 3,
+            column: 46
+          },
+          end: {
+            line: 10,
+            column: 1
+          }
+        },
+        line: 3
+      },
+      "1": {
+        name: "generateMockMetrics",
+        decl: {
+          start: {
+            line: 12,
+            column: 9
+          },
+          end: {
+            line: 12,
+            column: 28
+          }
+        },
+        loc: {
+          start: {
+            line: 12,
+            column: 31
+          },
+          end: {
+            line: 55,
+            column: 1
+          }
+        },
+        line: 12
+      },
+      "2": {
+        name: "dashboardRoutes",
+        decl: {
+          start: {
+            line: 56,
+            column: 22
+          },
+          end: {
+            line: 56,
+            column: 37
+          }
+        },
+        loc: {
+          start: {
+            line: 56,
+            column: 43
+          },
+          end: {
+            line: 96,
+            column: 1
+          }
+        },
+        line: 56
+      },
+      "3": {
+        name: "(anonymous_3)",
+        decl: {
+          start: {
+            line: 65,
+            column: 20
+          },
+          end: {
+            line: 65,
+            column: 21
+          }
+        },
+        loc: {
+          start: {
+            line: 65,
+            column: 46
+          },
+          end: {
+            line: 71,
+            column: 5
+          }
+        },
+        line: 65
+      },
+      "4": {
+        name: "(anonymous_4)",
+        decl: {
+          start: {
+            line: 80,
+            column: 20
+          },
+          end: {
+            line: 80,
+            column: 21
+          }
+        },
+        loc: {
+          start: {
+            line: 80,
+            column: 46
+          },
+          end: {
+            line: 95,
+            column: 5
+          }
+        },
+        line: 80
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "C:\\Users\\Enzo Marcelo\\Desktop\\Projetos Empresa\\Saas Utmify\\utmify-clone\\apps\\api\\src\\routes\\dashboard.routes.ts",
+      mappings: "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",
+      names: [],
+      sources: ["C:\\Users\\Enzo Marcelo\\Desktop\\Projetos Empresa\\Saas Utmify\\utmify-clone\\apps\\api\\src\\routes\\dashboard.routes.ts"],
+      sourcesContent: ["import { FastifyInstance } from 'fastify';\nimport { authMiddleware } from '../middleware/auth.middleware';\nimport { asyncHandler } from '../utils/errors';\n\n// Tipos para as m\xE9tricas do dashboard\ninterface DashboardMetrics {\n  faturamentoLiquido: {\n    value: number;\n    variation: number;\n    period: string;\n  };\n  gastosAnuncios: {\n    value: number;\n    variation: number;\n    period: string;\n  };\n  roas: {\n    value: number;\n    variation: number;\n    period: string;\n  };\n  lucro: {\n    value: number;\n    variation: number;\n    period: string;\n  };\n  roi: {\n    value: number;\n    variation: number;\n    period: string;\n  };\n  margemLucro: {\n    value: number;\n    variation: number;\n    period: string;\n  };\n  conversoes: {\n    value: number;\n    variation: number;\n    period: string;\n  };\n  ticketMedio: {\n    value: number;\n    variation: number;\n    period: string;\n  };\n}\n\n// Middleware de autentica\xE7\xE3o - TEMPORARILY DISABLED FOR DEVELOPMENT\nconst requireAuth = async (request: any, reply: any) => {\n  // DEVELOPMENT: Skip auth for testing\n  // await authMiddleware(request, reply, {\n  //   required: true,\n  //   organizationRequired: false\n  // });\n  return; // Skip auth for now\n};\n\n// Fun\xE7\xE3o para gerar dados mockados das m\xE9tricas\nfunction generateMockMetrics(): DashboardMetrics {\n  return {\n    faturamentoLiquido: {\n      value: 635789.23 + (Math.random() - 0.5) * 50000,\n      variation: 12.5 + (Math.random() - 0.5) * 10,\n      period: 'vs m\xEAs anterior'\n    },\n    gastosAnuncios: {\n      value: 456827.90 + (Math.random() - 0.5) * 30000,\n      variation: -8.2 + (Math.random() - 0.5) * 8,\n      period: 'vs m\xEAs anterior'\n    },\n    roas: {\n      value: 1.39 + (Math.random() - 0.5) * 0.5,\n      variation: 15.3 + (Math.random() - 0.5) * 12,\n      period: 'vs m\xEAs anterior'\n    },\n    lucro: {\n      value: 159887.65 + (Math.random() - 0.5) * 20000,\n      variation: 22.1 + (Math.random() - 0.5) * 15,\n      period: 'vs m\xEAs anterior'\n    },\n    roi: {\n      value: 35.0 + (Math.random() - 0.5) * 10,\n      variation: 18.7 + (Math.random() - 0.5) * 12,\n      period: 'vs m\xEAs anterior'\n    },\n    margemLucro: {\n      value: 25.1 + (Math.random() - 0.5) * 8,\n      variation: 5.4 + (Math.random() - 0.5) * 6,\n      period: 'vs m\xEAs anterior'\n    },\n    conversoes: {\n      value: Math.floor(1247 + (Math.random() - 0.5) * 300),\n      variation: 28.9 + (Math.random() - 0.5) * 20,\n      period: 'vs m\xEAs anterior'\n    },\n    ticketMedio: {\n      value: 510.23 + (Math.random() - 0.5) * 100,\n      variation: -3.1 + (Math.random() - 0.5) * 8,\n      period: 'vs m\xEAs anterior'\n    }\n  };\n}\n\nexport async function dashboardRoutes(app: FastifyInstance) {\n  // GET /dashboard/metrics - Obter m\xE9tricas do dashboard\n  app.get(\n    '/metrics',\n    {\n      preHandler: requireAuth,\n      schema: {\n        tags: ['Dashboard'],\n        summary: 'Get dashboard metrics',\n        description: 'Retrieve main dashboard metrics with variations'\n      }\n    },\n    asyncHandler(async (request: any, reply) => {\n      const metrics = generateMockMetrics();\n      \n      return reply.status(200).send({\n        success: true,\n        data: metrics\n      });\n    })\n  );\n\n  // GET /dashboard/overview - Obter vis\xE3o geral do dashboard\n  app.get(\n    '/overview',\n    {\n      preHandler: requireAuth,\n      schema: {\n        tags: ['Dashboard'],\n        summary: 'Get dashboard overview',\n        description: 'Retrieve complete dashboard overview data'\n      }\n    },\n    asyncHandler(async (request: any, reply) => {\n      const metrics = generateMockMetrics();\n      \n      return reply.status(200).send({\n        success: true,\n        data: {\n          metrics,\n          summary: {\n            totalCampaigns: 5,\n            activeCampaigns: 3,\n            totalSpent: 32378,\n            totalRevenue: 89456,\n            averageRoas: 2.76\n          }\n        }\n      });\n    })\n  );\n}"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "ee753ecb30951e24318957c029f069a7a9aef3db"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_es7as08ko = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_es7as08ko();
+import { asyncHandler } from '../utils/errors';
+// Middleware de autenticação - TEMPORARILY DISABLED FOR DEVELOPMENT
+/* istanbul ignore next */
+cov_es7as08ko().s[0]++;
+const requireAuth = async (request, reply) => {
+  /* istanbul ignore next */
+  cov_es7as08ko().f[0]++;
+  cov_es7as08ko().s[1]++;
+  // DEVELOPMENT: Skip auth for testing
+  // await authMiddleware(request, reply, {
+  //   required: true,
+  //   organizationRequired: false
+  // });
+  return; // Skip auth for now
+};
+// Função para gerar dados mockados das métricas
+function generateMockMetrics() {
+  /* istanbul ignore next */
+  cov_es7as08ko().f[1]++;
+  cov_es7as08ko().s[2]++;
+  return {
+    faturamentoLiquido: {
+      value: 635789.23 + (Math.random() - 0.5) * 50000,
+      variation: 12.5 + (Math.random() - 0.5) * 10,
+      period: 'vs mês anterior'
+    },
+    gastosAnuncios: {
+      value: 456827.90 + (Math.random() - 0.5) * 30000,
+      variation: -8.2 + (Math.random() - 0.5) * 8,
+      period: 'vs mês anterior'
+    },
+    roas: {
+      value: 1.39 + (Math.random() - 0.5) * 0.5,
+      variation: 15.3 + (Math.random() - 0.5) * 12,
+      period: 'vs mês anterior'
+    },
+    lucro: {
+      value: 159887.65 + (Math.random() - 0.5) * 20000,
+      variation: 22.1 + (Math.random() - 0.5) * 15,
+      period: 'vs mês anterior'
+    },
+    roi: {
+      value: 35.0 + (Math.random() - 0.5) * 10,
+      variation: 18.7 + (Math.random() - 0.5) * 12,
+      period: 'vs mês anterior'
+    },
+    margemLucro: {
+      value: 25.1 + (Math.random() - 0.5) * 8,
+      variation: 5.4 + (Math.random() - 0.5) * 6,
+      period: 'vs mês anterior'
+    },
+    conversoes: {
+      value: Math.floor(1247 + (Math.random() - 0.5) * 300),
+      variation: 28.9 + (Math.random() - 0.5) * 20,
+      period: 'vs mês anterior'
+    },
+    ticketMedio: {
+      value: 510.23 + (Math.random() - 0.5) * 100,
+      variation: -3.1 + (Math.random() - 0.5) * 8,
+      period: 'vs mês anterior'
+    }
+  };
+}
+export async function dashboardRoutes(app) {
+  /* istanbul ignore next */
+  cov_es7as08ko().f[2]++;
+  cov_es7as08ko().s[3]++;
+  // GET /dashboard/metrics - Obter métricas do dashboard
+  app.get('/metrics', {
+    preHandler: requireAuth,
+    schema: {
+      tags: ['Dashboard'],
+      summary: 'Get dashboard metrics',
+      description: 'Retrieve main dashboard metrics with variations'
+    }
+  }, asyncHandler(async (request, reply) => {
+    /* istanbul ignore next */
+    cov_es7as08ko().f[3]++;
+    const metrics =
+    /* istanbul ignore next */
+    (cov_es7as08ko().s[4]++, generateMockMetrics());
+    /* istanbul ignore next */
+    cov_es7as08ko().s[5]++;
+    return reply.status(200).send({
+      success: true,
+      data: metrics
+    });
+  }));
+  // GET /dashboard/overview - Obter visão geral do dashboard
+  /* istanbul ignore next */
+  cov_es7as08ko().s[6]++;
+  app.get('/overview', {
+    preHandler: requireAuth,
+    schema: {
+      tags: ['Dashboard'],
+      summary: 'Get dashboard overview',
+      description: 'Retrieve complete dashboard overview data'
+    }
+  }, asyncHandler(async (request, reply) => {
+    /* istanbul ignore next */
+    cov_es7as08ko().f[4]++;
+    const metrics =
+    /* istanbul ignore next */
+    (cov_es7as08ko().s[7]++, generateMockMetrics());
+    /* istanbul ignore next */
+    cov_es7as08ko().s[8]++;
+    return reply.status(200).send({
+      success: true,
+      data: {
+        metrics,
+        summary: {
+          totalCampaigns: 5,
+          activeCampaigns: 3,
+          totalSpent: 32378,
+          totalRevenue: 89456,
+          averageRoas: 2.76
+        }
+      }
+    });
+  }));
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfZXM3YXMwOGtvIiwiYWN0dWFsQ292ZXJhZ2UiLCJhc3luY0hhbmRsZXIiLCJzIiwicmVxdWlyZUF1dGgiLCJyZXF1ZXN0IiwicmVwbHkiLCJmIiwiZ2VuZXJhdGVNb2NrTWV0cmljcyIsImZhdHVyYW1lbnRvTGlxdWlkbyIsInZhbHVlIiwiTWF0aCIsInJhbmRvbSIsInZhcmlhdGlvbiIsInBlcmlvZCIsImdhc3Rvc0FudW5jaW9zIiwicm9hcyIsImx1Y3JvIiwicm9pIiwibWFyZ2VtTHVjcm8iLCJjb252ZXJzb2VzIiwiZmxvb3IiLCJ0aWNrZXRNZWRpbyIsImRhc2hib2FyZFJvdXRlcyIsImFwcCIsImdldCIsInByZUhhbmRsZXIiLCJzY2hlbWEiLCJ0YWdzIiwic3VtbWFyeSIsImRlc2NyaXB0aW9uIiwibWV0cmljcyIsInN0YXR1cyIsInNlbmQiLCJzdWNjZXNzIiwiZGF0YSIsInRvdGFsQ2FtcGFpZ25zIiwiYWN0aXZlQ2FtcGFpZ25zIiwidG90YWxTcGVudCIsInRvdGFsUmV2ZW51ZSIsImF2ZXJhZ2VSb2FzIl0sInNvdXJjZXMiOlsiQzpcXFVzZXJzXFxFbnpvIE1hcmNlbG9cXERlc2t0b3BcXFByb2pldG9zIEVtcHJlc2FcXFNhYXMgVXRtaWZ5XFx1dG1pZnktY2xvbmVcXGFwcHNcXGFwaVxcc3JjXFxyb3V0ZXNcXGRhc2hib2FyZC5yb3V0ZXMudHMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgRmFzdGlmeUluc3RhbmNlIH0gZnJvbSAnZmFzdGlmeSc7XG5pbXBvcnQgeyBhdXRoTWlkZGxld2FyZSB9IGZyb20gJy4uL21pZGRsZXdhcmUvYXV0aC5taWRkbGV3YXJlJztcbmltcG9ydCB7IGFzeW5jSGFuZGxlciB9IGZyb20gJy4uL3V0aWxzL2Vycm9ycyc7XG5cbi8vIFRpcG9zIHBhcmEgYXMgbcOpdHJpY2FzIGRvIGRhc2hib2FyZFxuaW50ZXJmYWNlIERhc2hib2FyZE1ldHJpY3Mge1xuICBmYXR1cmFtZW50b0xpcXVpZG86IHtcbiAgICB2YWx1ZTogbnVtYmVyO1xuICAgIHZhcmlhdGlvbjogbnVtYmVyO1xuICAgIHBlcmlvZDogc3RyaW5nO1xuICB9O1xuICBnYXN0b3NBbnVuY2lvczoge1xuICAgIHZhbHVlOiBudW1iZXI7XG4gICAgdmFyaWF0aW9uOiBudW1iZXI7XG4gICAgcGVyaW9kOiBzdHJpbmc7XG4gIH07XG4gIHJvYXM6IHtcbiAgICB2YWx1ZTogbnVtYmVyO1xuICAgIHZhcmlhdGlvbjogbnVtYmVyO1xuICAgIHBlcmlvZDogc3RyaW5nO1xuICB9O1xuICBsdWNybzoge1xuICAgIHZhbHVlOiBudW1iZXI7XG4gICAgdmFyaWF0aW9uOiBudW1iZXI7XG4gICAgcGVyaW9kOiBzdHJpbmc7XG4gIH07XG4gIHJvaToge1xuICAgIHZhbHVlOiBudW1iZXI7XG4gICAgdmFyaWF0aW9uOiBudW1iZXI7XG4gICAgcGVyaW9kOiBzdHJpbmc7XG4gIH07XG4gIG1hcmdlbUx1Y3JvOiB7XG4gICAgdmFsdWU6IG51bWJlcjtcbiAgICB2YXJpYXRpb246IG51bWJlcjtcbiAgICBwZXJpb2Q6IHN0cmluZztcbiAgfTtcbiAgY29udmVyc29lczoge1xuICAgIHZhbHVlOiBudW1iZXI7XG4gICAgdmFyaWF0aW9uOiBudW1iZXI7XG4gICAgcGVyaW9kOiBzdHJpbmc7XG4gIH07XG4gIHRpY2tldE1lZGlvOiB7XG4gICAgdmFsdWU6IG51bWJlcjtcbiAgICB2YXJpYXRpb246IG51bWJlcjtcbiAgICBwZXJpb2Q6IHN0cmluZztcbiAgfTtcbn1cblxuLy8gTWlkZGxld2FyZSBkZSBhdXRlbnRpY2HDp8OjbyAtIFRFTVBPUkFSSUxZIERJU0FCTEVEIEZPUiBERVZFTE9QTUVOVFxuY29uc3QgcmVxdWlyZUF1dGggPSBhc3luYyAocmVxdWVzdDogYW55LCByZXBseTogYW55KSA9PiB7XG4gIC8vIERFVkVMT1BNRU5UOiBTa2lwIGF1dGggZm9yIHRlc3RpbmdcbiAgLy8gYXdhaXQgYXV0aE1pZGRsZXdhcmUocmVxdWVzdCwgcmVwbHksIHtcbiAgLy8gICByZXF1aXJlZDogdHJ1ZSxcbiAgLy8gICBvcmdhbml6YXRpb25SZXF1aXJlZDogZmFsc2VcbiAgLy8gfSk7XG4gIHJldHVybjsgLy8gU2tpcCBhdXRoIGZvciBub3dcbn07XG5cbi8vIEZ1bsOnw6NvIHBhcmEgZ2VyYXIgZGFkb3MgbW9ja2Fkb3MgZGFzIG3DqXRyaWNhc1xuZnVuY3Rpb24gZ2VuZXJhdGVNb2NrTWV0cmljcygpOiBEYXNoYm9hcmRNZXRyaWNzIHtcbiAgcmV0dXJuIHtcbiAgICBmYXR1cmFtZW50b0xpcXVpZG86IHtcbiAgICAgIHZhbHVlOiA2MzU3ODkuMjMgKyAoTWF0aC5yYW5kb20oKSAtIDAuNSkgKiA1MDAwMCxcbiAgICAgIHZhcmlhdGlvbjogMTIuNSArIChNYXRoLnJhbmRvbSgpIC0gMC41KSAqIDEwLFxuICAgICAgcGVyaW9kOiAndnMgbcOqcyBhbnRlcmlvcidcbiAgICB9LFxuICAgIGdhc3Rvc0FudW5jaW9zOiB7XG4gICAgICB2YWx1ZTogNDU2ODI3LjkwICsgKE1hdGgucmFuZG9tKCkgLSAwLjUpICogMzAwMDAsXG4gICAgICB2YXJpYXRpb246IC04LjIgKyAoTWF0aC5yYW5kb20oKSAtIDAuNSkgKiA4LFxuICAgICAgcGVyaW9kOiAndnMgbcOqcyBhbnRlcmlvcidcbiAgICB9LFxuICAgIHJvYXM6IHtcbiAgICAgIHZhbHVlOiAxLjM5ICsgKE1hdGgucmFuZG9tKCkgLSAwLjUpICogMC41LFxuICAgICAgdmFyaWF0aW9uOiAxNS4zICsgKE1hdGgucmFuZG9tKCkgLSAwLjUpICogMTIsXG4gICAgICBwZXJpb2Q6ICd2cyBtw6pzIGFudGVyaW9yJ1xuICAgIH0sXG4gICAgbHVjcm86IHtcbiAgICAgIHZhbHVlOiAxNTk4ODcuNjUgKyAoTWF0aC5yYW5kb20oKSAtIDAuNSkgKiAyMDAwMCxcbiAgICAgIHZhcmlhdGlvbjogMjIuMSArIChNYXRoLnJhbmRvbSgpIC0gMC41KSAqIDE1LFxuICAgICAgcGVyaW9kOiAndnMgbcOqcyBhbnRlcmlvcidcbiAgICB9LFxuICAgIHJvaToge1xuICAgICAgdmFsdWU6IDM1LjAgKyAoTWF0aC5yYW5kb20oKSAtIDAuNSkgKiAxMCxcbiAgICAgIHZhcmlhdGlvbjogMTguNyArIChNYXRoLnJhbmRvbSgpIC0gMC41KSAqIDEyLFxuICAgICAgcGVyaW9kOiAndnMgbcOqcyBhbnRlcmlvcidcbiAgICB9LFxuICAgIG1hcmdlbUx1Y3JvOiB7XG4gICAgICB2YWx1ZTogMjUuMSArIChNYXRoLnJhbmRvbSgpIC0gMC41KSAqIDgsXG4gICAgICB2YXJpYXRpb246IDUuNCArIChNYXRoLnJhbmRvbSgpIC0gMC41KSAqIDYsXG4gICAgICBwZXJpb2Q6ICd2cyBtw6pzIGFudGVyaW9yJ1xuICAgIH0sXG4gICAgY29udmVyc29lczoge1xuICAgICAgdmFsdWU6IE1hdGguZmxvb3IoMTI0NyArIChNYXRoLnJhbmRvbSgpIC0gMC41KSAqIDMwMCksXG4gICAgICB2YXJpYXRpb246IDI4LjkgKyAoTWF0aC5yYW5kb20oKSAtIDAuNSkgKiAyMCxcbiAgICAgIHBlcmlvZDogJ3ZzIG3DqnMgYW50ZXJpb3InXG4gICAgfSxcbiAgICB0aWNrZXRNZWRpbzoge1xuICAgICAgdmFsdWU6IDUxMC4yMyArIChNYXRoLnJhbmRvbSgpIC0gMC41KSAqIDEwMCxcbiAgICAgIHZhcmlhdGlvbjogLTMuMSArIChNYXRoLnJhbmRvbSgpIC0gMC41KSAqIDgsXG4gICAgICBwZXJpb2Q6ICd2cyBtw6pzIGFudGVyaW9yJ1xuICAgIH1cbiAgfTtcbn1cblxuZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGRhc2hib2FyZFJvdXRlcyhhcHA6IEZhc3RpZnlJbnN0YW5jZSkge1xuICAvLyBHRVQgL2Rhc2hib2FyZC9tZXRyaWNzIC0gT2J0ZXIgbcOpdHJpY2FzIGRvIGRhc2hib2FyZFxuICBhcHAuZ2V0KFxuICAgICcvbWV0cmljcycsXG4gICAge1xuICAgICAgcHJlSGFuZGxlcjogcmVxdWlyZUF1dGgsXG4gICAgICBzY2hlbWE6IHtcbiAgICAgICAgdGFnczogWydEYXNoYm9hcmQnXSxcbiAgICAgICAgc3VtbWFyeTogJ0dldCBkYXNoYm9hcmQgbWV0cmljcycsXG4gICAgICAgIGRlc2NyaXB0aW9uOiAnUmV0cmlldmUgbWFpbiBkYXNoYm9hcmQgbWV0cmljcyB3aXRoIHZhcmlhdGlvbnMnXG4gICAgICB9XG4gICAgfSxcbiAgICBhc3luY0hhbmRsZXIoYXN5bmMgKHJlcXVlc3Q6IGFueSwgcmVwbHkpID0+IHtcbiAgICAgIGNvbnN0IG1ldHJpY3MgPSBnZW5lcmF0ZU1vY2tNZXRyaWNzKCk7XG4gICAgICBcbiAgICAgIHJldHVybiByZXBseS5zdGF0dXMoMjAwKS5zZW5kKHtcbiAgICAgICAgc3VjY2VzczogdHJ1ZSxcbiAgICAgICAgZGF0YTogbWV0cmljc1xuICAgICAgfSk7XG4gICAgfSlcbiAgKTtcblxuICAvLyBHRVQgL2Rhc2hib2FyZC9vdmVydmlldyAtIE9idGVyIHZpc8OjbyBnZXJhbCBkbyBkYXNoYm9hcmRcbiAgYXBwLmdldChcbiAgICAnL292ZXJ2aWV3JyxcbiAgICB7XG4gICAgICBwcmVIYW5kbGVyOiByZXF1aXJlQXV0aCxcbiAgICAgIHNjaGVtYToge1xuICAgICAgICB0YWdzOiBbJ0Rhc2hib2FyZCddLFxuICAgICAgICBzdW1tYXJ5OiAnR2V0IGRhc2hib2FyZCBvdmVydmlldycsXG4gICAgICAgIGRlc2NyaXB0aW9uOiAnUmV0cmlldmUgY29tcGxldGUgZGFzaGJvYXJkIG92ZXJ2aWV3IGRhdGEnXG4gICAgICB9XG4gICAgfSxcbiAgICBhc3luY0hhbmRsZXIoYXN5bmMgKHJlcXVlc3Q6IGFueSwgcmVwbHkpID0+IHtcbiAgICAgIGNvbnN0IG1ldHJpY3MgPSBnZW5lcmF0ZU1vY2tNZXRyaWNzKCk7XG4gICAgICBcbiAgICAgIHJldHVybiByZXBseS5zdGF0dXMoMjAwKS5zZW5kKHtcbiAgICAgICAgc3VjY2VzczogdHJ1ZSxcbiAgICAgICAgZGF0YToge1xuICAgICAgICAgIG1ldHJpY3MsXG4gICAgICAgICAgc3VtbWFyeToge1xuICAgICAgICAgICAgdG90YWxDYW1wYWlnbnM6IDUsXG4gICAgICAgICAgICBhY3RpdmVDYW1wYWlnbnM6IDMsXG4gICAgICAgICAgICB0b3RhbFNwZW50OiAzMjM3OCxcbiAgICAgICAgICAgIHRvdGFsUmV2ZW51ZTogODk0NTYsXG4gICAgICAgICAgICBhdmVyYWdlUm9hczogMi43NlxuICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgICAgfSk7XG4gICAgfSlcbiAgKTtcbn0iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUErRE07SUFBQUEsYUFBQSxZQUFBQSxDQUFBO01BQUEsT0FBQUMsY0FBQTtJQUFBO0VBQUE7RUFBQSxPQUFBQSxjQUFBO0FBQUE7QUFBQUQsYUFBQTtBQTdETixTQUFTRSxZQUFZLFFBQVEsaUJBQWlCO0FBOEM5QztBQUFBO0FBQUFGLGFBQUEsR0FBQUcsQ0FBQTtBQUNBLE1BQU1DLFdBQVcsR0FBRyxNQUFBQSxDQUFPQyxPQUFZLEVBQUVDLEtBQVUsS0FBSTtFQUFBO0VBQUFOLGFBQUEsR0FBQU8sQ0FBQTtFQUFBUCxhQUFBLEdBQUFHLENBQUE7RUFDckQ7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBLE9BQU8sQ0FBQztBQUNWLENBQUM7QUFFRDtBQUNBLFNBQVNLLG1CQUFtQkEsQ0FBQTtFQUFBO0VBQUFSLGFBQUEsR0FBQU8sQ0FBQTtFQUFBUCxhQUFBLEdBQUFHLENBQUE7RUFDMUIsT0FBTztJQUNMTSxrQkFBa0IsRUFBRTtNQUNsQkMsS0FBSyxFQUFFLFNBQVMsR0FBRyxDQUFDQyxJQUFJLENBQUNDLE1BQU0sRUFBRSxHQUFHLEdBQUcsSUFBSSxLQUFLO01BQ2hEQyxTQUFTLEVBQUUsSUFBSSxHQUFHLENBQUNGLElBQUksQ0FBQ0MsTUFBTSxFQUFFLEdBQUcsR0FBRyxJQUFJLEVBQUU7TUFDNUNFLE1BQU0sRUFBRTtLQUNUO0lBQ0RDLGNBQWMsRUFBRTtNQUNkTCxLQUFLLEVBQUUsU0FBUyxHQUFHLENBQUNDLElBQUksQ0FBQ0MsTUFBTSxFQUFFLEdBQUcsR0FBRyxJQUFJLEtBQUs7TUFDaERDLFNBQVMsRUFBRSxDQUFDLEdBQUcsR0FBRyxDQUFDRixJQUFJLENBQUNDLE1BQU0sRUFBRSxHQUFHLEdBQUcsSUFBSSxDQUFDO01BQzNDRSxNQUFNLEVBQUU7S0FDVDtJQUNERSxJQUFJLEVBQUU7TUFDSk4sS0FBSyxFQUFFLElBQUksR0FBRyxDQUFDQyxJQUFJLENBQUNDLE1BQU0sRUFBRSxHQUFHLEdBQUcsSUFBSSxHQUFHO01BQ3pDQyxTQUFTLEVBQUUsSUFBSSxHQUFHLENBQUNGLElBQUksQ0FBQ0MsTUFBTSxFQUFFLEdBQUcsR0FBRyxJQUFJLEVBQUU7TUFDNUNFLE1BQU0sRUFBRTtLQUNUO0lBQ0RHLEtBQUssRUFBRTtNQUNMUCxLQUFLLEVBQUUsU0FBUyxHQUFHLENBQUNDLElBQUksQ0FBQ0MsTUFBTSxFQUFFLEdBQUcsR0FBRyxJQUFJLEtBQUs7TUFDaERDLFNBQVMsRUFBRSxJQUFJLEdBQUcsQ0FBQ0YsSUFBSSxDQUFDQyxNQUFNLEVBQUUsR0FBRyxHQUFHLElBQUksRUFBRTtNQUM1Q0UsTUFBTSxFQUFFO0tBQ1Q7SUFDREksR0FBRyxFQUFFO01BQ0hSLEtBQUssRUFBRSxJQUFJLEdBQUcsQ0FBQ0MsSUFBSSxDQUFDQyxNQUFNLEVBQUUsR0FBRyxHQUFHLElBQUksRUFBRTtNQUN4Q0MsU0FBUyxFQUFFLElBQUksR0FBRyxDQUFDRixJQUFJLENBQUNDLE1BQU0sRUFBRSxHQUFHLEdBQUcsSUFBSSxFQUFFO01BQzVDRSxNQUFNLEVBQUU7S0FD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

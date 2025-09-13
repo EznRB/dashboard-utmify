@@ -1,0 +1,118 @@
+# Utmify Infrastructure - Example Terraform Variables
+# Copy this file to terraform.tfvars and customize the values for your environment
+
+# General Configuration
+environment = "dev"
+aws_region  = "us-east-1"
+project_name = "utmify"
+
+# VPC Configuration
+vpc_cidr = "10.0.0.0/16"
+public_subnet_cidrs = ["10.0.1.0/24", "10.0.2.0/24"]
+private_subnet_cidrs = ["10.0.10.0/24", "10.0.20.0/24"]
+database_subnet_cidrs = ["10.0.100.0/24", "10.0.200.0/24"]
+
+# ECS Configuration
+api_cpu = 512
+api_memory = 1024
+web_cpu = 256
+web_memory = 512
+
+api_desired_count = 2
+web_desired_count = 2
+
+api_min_capacity = 1
+api_max_capacity = 10
+web_min_capacity = 1
+web_max_capacity = 5
+
+# Database Configuration
+db_instance_class = "db.t3.micro"
+db_allocated_storage = 20
+db_max_allocated_storage = 100
+db_engine_version = "15.4"
+db_name = "utmify"
+db_username = "utmify_user"
+db_backup_retention_period = 7
+db_backup_window = "03:00-04:00"
+db_maintenance_window = "sun:04:00-sun:05:00"
+db_multi_az = false
+db_deletion_protection = false
+
+# Redis Configuration
+redis_node_type = "cache.t3.micro"
+redis_num_cache_nodes = 1
+redis_engine_version = "7.0"
+redis_port = 6379
+redis_parameter_group_name = "default.redis7"
+
+# Domain and SSL Configuration
+# domain_names = ["app.utmify.com", "www.utmify.com"]
+# ssl_certificate_arn = "arn:aws:acm:us-east-1:123456789012:certificate/12345678-1234-1234-1234-123456789012"
+# create_route53_records = true
+# route53_zone_id = "Z1234567890ABC"
+
+# CloudFront Configuration
+cloudfront_price_class = "PriceClass_100"
+
+# Container Images
+api_image = "utmify/api:latest"
+web_image = "utmify/web:latest"
+
+# Environment Variables
+api_environment_variables = {
+  NODE_ENV = "development"
+  PORT = "3001"
+  LOG_LEVEL = "debug"
+}
+
+web_environment_variables = {
+  NODE_ENV = "development"
+  PORT = "3000"
+}
+
+# Secrets (use environment variables or AWS Secrets Manager)
+# jwt_secret = "your-jwt-secret-here"
+# encryption_key = "your-encryption-key-here"
+# sentry_dsn = "https://your-sentry-dsn@sentry.io/project-id"
+# smtp_host = "smtp.gmail.com"
+# smtp_port = 587
+# smtp_username = "your-email@gmail.com"
+# smtp_password = "your-app-password"
+# stripe_secret_key = "sk_test_your_stripe_secret_key"
+# stripe_webhook_secret = "whsec_your_webhook_secret"
+
+# Feature Flags
+enable_monitoring = true
+enable_auto_scaling = true
+enable_backups = true
+enable_waf = false
+enable_vpc_flow_logs = false
+enable_spot_instances = false
+enable_scheduled_scaling = false
+enable_redis_cluster = false
+enable_rds_proxy = false
+enable_container_insights = true
+enable_x_ray = false
+
+# Monitoring Configuration
+log_retention_days = 14
+
+# Auto Scaling Configuration
+scale_up_cpu_threshold = 70
+scale_down_cpu_threshold = 30
+scale_up_memory_threshold = 80
+scale_down_memory_threshold = 40
+
+# Backup Configuration
+backup_schedule = "cron(0 2 * * ? *)"
+
+# Security Configuration
+allowed_cidr_blocks = ["0.0.0.0/0"]
+
+# Additional Tags
+additional_tags = {
+  Owner = "DevOps Team"
+  CostCenter = "Engineering"
+  Backup = "Required"
+}

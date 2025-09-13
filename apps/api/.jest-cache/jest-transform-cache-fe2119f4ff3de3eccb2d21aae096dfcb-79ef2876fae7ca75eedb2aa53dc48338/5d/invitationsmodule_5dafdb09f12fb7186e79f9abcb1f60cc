@@ -1,0 +1,665 @@
+e84df77ac16dfa435404d73f7d7ef848
+/* istanbul ignore next */
+function cov_10duikzvee() {
+  var path = "C:\\Users\\Enzo Marcelo\\Desktop\\Projetos Empresa\\Saas Utmify\\utmify-clone\\apps\\api\\src\\modules\\invitations.module.ts";
+  var hash = "de6af5d390cf7712e10b46457856cef4345c35e2";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "C:\\Users\\Enzo Marcelo\\Desktop\\Projetos Empresa\\Saas Utmify\\utmify-clone\\apps\\api\\src\\modules\\invitations.module.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 1,
+          column: 17
+        },
+        end: {
+          line: 6,
+          column: 1
+        }
+      },
+      "1": {
+        start: {
+          line: 2,
+          column: 12
+        },
+        end: {
+          line: 2,
+          column: 28
+        }
+      },
+      "2": {
+        start: {
+          line: 2,
+          column: 34
+        },
+        end: {
+          line: 2,
+          column: 125
+        }
+      },
+      "3": {
+        start: {
+          line: 3,
+          column: 4
+        },
+        end: {
+          line: 4,
+          column: 150
+        }
+      },
+      "4": {
+        start: {
+          line: 3,
+          column: 79
+        },
+        end: {
+          line: 3,
+          column: 131
+        }
+      },
+      "5": {
+        start: {
+          line: 4,
+          column: 9
+        },
+        end: {
+          line: 4,
+          column: 150
+        }
+      },
+      "6": {
+        start: {
+          line: 4,
+          column: 22
+        },
+        end: {
+          line: 4,
+          column: 43
+        }
+      },
+      "7": {
+        start: {
+          line: 4,
+          column: 58
+        },
+        end: {
+          line: 4,
+          column: 150
+        }
+      },
+      "8": {
+        start: {
+          line: 4,
+          column: 81
+        },
+        end: {
+          line: 4,
+          column: 150
+        }
+      },
+      "9": {
+        start: {
+          line: 5,
+          column: 4
+        },
+        end: {
+          line: 5,
+          column: 66
+        }
+      },
+      "10": {
+        start: {
+          line: 18,
+          column: 24
+        },
+        end: {
+          line: 19,
+          column: 1
+        }
+      },
+      "11": {
+        start: {
+          line: 20,
+          column: 0
+        },
+        end: {
+          line: 45,
+          column: 22
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 1,
+            column: 46
+          },
+          end: {
+            line: 1,
+            column: 47
+          }
+        },
+        loc: {
+          start: {
+            line: 1,
+            column: 87
+          },
+          end: {
+            line: 6,
+            column: 1
+          }
+        },
+        line: 1
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 1,
+            column: 17
+          },
+          end: {
+            line: 6,
+            column: 1
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 1,
+            column: 18
+          },
+          end: {
+            line: 1,
+            column: 22
+          }
+        }, {
+          start: {
+            line: 1,
+            column: 26
+          },
+          end: {
+            line: 1,
+            column: 41
+          }
+        }, {
+          start: {
+            line: 1,
+            column: 46
+          },
+          end: {
+            line: 6,
+            column: 1
+          }
+        }],
+        line: 1
+      },
+      "1": {
+        loc: {
+          start: {
+            line: 2,
+            column: 34
+          },
+          end: {
+            line: 2,
+            column: 125
+          }
+        },
+        type: "cond-expr",
+        locations: [{
+          start: {
+            line: 2,
+            column: 42
+          },
+          end: {
+            line: 2,
+            column: 48
+          }
+        }, {
+          start: {
+            line: 2,
+            column: 51
+          },
+          end: {
+            line: 2,
+            column: 125
+          }
+        }],
+        line: 2
+      },
+      "2": {
+        loc: {
+          start: {
+            line: 2,
+            column: 51
+          },
+          end: {
+            line: 2,
+            column: 125
+          }
+        },
+        type: "cond-expr",
+        locations: [{
+          start: {
+            line: 2,
+            column: 67
+          },
+          end: {
+            line: 2,
+            column: 118
+          }
+        }, {
+          start: {
+            line: 2,
+            column: 121
+          },
+          end: {
+            line: 2,
+            column: 125
+          }
+        }],
+        line: 2
+      },
+      "3": {
+        loc: {
+          start: {
+            line: 3,
+            column: 4
+          },
+          end: {
+            line: 4,
+            column: 150
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 3,
+            column: 4
+          },
+          end: {
+            line: 4,
+            column: 150
+          }
+        }, {
+          start: {
+            line: 4,
+            column: 9
+          },
+          end: {
+            line: 4,
+            column: 150
+          }
+        }],
+        line: 3
+      },
+      "4": {
+        loc: {
+          start: {
+            line: 3,
+            column: 8
+          },
+          end: {
+            line: 3,
+            column: 77
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 3,
+            column: 8
+          },
+          end: {
+            line: 3,
+            column: 35
+          }
+        }, {
+          start: {
+            line: 3,
+            column: 39
+          },
+          end: {
+            line: 3,
+            column: 77
+          }
+        }],
+        line: 3
+      },
+      "5": {
+        loc: {
+          start: {
+            line: 4,
+            column: 58
+          },
+          end: {
+            line: 4,
+            column: 150
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 4,
+            column: 58
+          },
+          end: {
+            line: 4,
+            column: 150
+          }
+        }, {
+          start: {
+            line: undefined,
+            column: undefined
+          },
+          end: {
+            line: undefined,
+            column: undefined
+          }
+        }],
+        line: 4
+      },
+      "6": {
+        loc: {
+          start: {
+            line: 4,
+            column: 85
+          },
+          end: {
+            line: 4,
+            column: 149
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 4,
+            column: 86
+          },
+          end: {
+            line: 4,
+            column: 143
+          }
+        }, {
+          start: {
+            line: 4,
+            column: 148
+          },
+          end: {
+            line: 4,
+            column: 149
+          }
+        }],
+        line: 4
+      },
+      "7": {
+        loc: {
+          start: {
+            line: 4,
+            column: 86
+          },
+          end: {
+            line: 4,
+            column: 143
+          }
+        },
+        type: "cond-expr",
+        locations: [{
+          start: {
+            line: 4,
+            column: 94
+          },
+          end: {
+            line: 4,
+            column: 98
+          }
+        }, {
+          start: {
+            line: 4,
+            column: 101
+          },
+          end: {
+            line: 4,
+            column: 143
+          }
+        }],
+        line: 4
+      },
+      "8": {
+        loc: {
+          start: {
+            line: 4,
+            column: 101
+          },
+          end: {
+            line: 4,
+            column: 143
+          }
+        },
+        type: "cond-expr",
+        locations: [{
+          start: {
+            line: 4,
+            column: 109
+          },
+          end: {
+            line: 4,
+            column: 126
+          }
+        }, {
+          start: {
+            line: 4,
+            column: 129
+          },
+          end: {
+            line: 4,
+            column: 143
+          }
+        }],
+        line: 4
+      },
+      "9": {
+        loc: {
+          start: {
+            line: 5,
+            column: 11
+          },
+          end: {
+            line: 5,
+            column: 62
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 5,
+            column: 11
+          },
+          end: {
+            line: 5,
+            column: 16
+          }
+        }, {
+          start: {
+            line: 5,
+            column: 20
+          },
+          end: {
+            line: 5,
+            column: 21
+          }
+        }, {
+          start: {
+            line: 5,
+            column: 25
+          },
+          end: {
+            line: 5,
+            column: 62
+          }
+        }],
+        line: 5
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {
+      "0": [0, 0, 0],
+      "1": [0, 0],
+      "2": [0, 0],
+      "3": [0, 0],
+      "4": [0, 0],
+      "5": [0, 0],
+      "6": [0, 0],
+      "7": [0, 0],
+      "8": [0, 0],
+      "9": [0, 0, 0]
+    },
+    inputSourceMap: {
+      file: "C:\\Users\\Enzo Marcelo\\Desktop\\Projetos Empresa\\Saas Utmify\\utmify-clone\\apps\\api\\src\\modules\\invitations.module.ts",
+      mappings: ";;;;;;AAAA,OAAO,EAAE,MAAM,EAAE,MAAM,gBAAgB,CAAC;AACxC,OAAO,EAAE,UAAU,EAAE,MAAM,cAAc,CAAC;AAC1C,OAAO,EAAE,cAAc,EAAE,MAAM,kBAAkB,CAAC;AAClD,OAAO,EAAE,qBAAqB,EAAE,MAAM,uCAAuC,CAAC;AAC9E,OAAO,EAAE,iBAAiB,EAAE,MAAM,gCAAgC,CAAC;AACnE,OAAO,EAAE,aAAa,EAAE,MAAM,4BAA4B,CAAC;AAC3D,OAAO,EAAE,qBAAqB,EAAE,MAAM,qCAAqC,CAAC;AAC5E,OAAO,EAAE,kBAAkB,EAAE,MAAM,kCAAkC,CAAC;AACtE,OAAO,EAAE,kBAAkB,EAAE,MAAM,kCAAkC,CAAC;AACtE,OAAO,EAAE,wBAAwB,EAAE,MAAM,0CAA0C,CAAC;AACpF,OAAO,EAAE,0BAA0B,EAAE,MAAM,4CAA4C,CAAC;AA0BjF,IAAM,iBAAiB,GAAvB,MAAM,iBAAiB;CAAG,CAAA;AAApB,iBAAiB;IAxB7B,MAAM,CAAC;QACN,OAAO,EAAE;YACP,UAAU,CAAC,aAAa,CAAC;gBACvB,IAAI,EAAE,OAAO;aACd,CAAC;YACF,cAAc,CAAC,OAAO,EAAE;SACzB;QACD,WAAW,EAAE,CAAC,qBAAqB,CAAC;QACpC,SAAS,EAAE;YACT,iBAAiB;YACjB,aAAa;YACb,qBAAqB;YACrB,kBAAkB;YAClB,kBAAkB;YAClB,wBAAwB;YACxB,0BAA0B;SAC3B;QACD,OAAO,EAAE;YACP,iBAAiB;YACjB,qBAAqB;YACrB,kBAAkB;YAClB,kBAAkB;SACnB;KACF,CAAC;GACW,iBAAiB,CAAG",
+      names: [],
+      sources: ["C:\\Users\\Enzo Marcelo\\Desktop\\Projetos Empresa\\Saas Utmify\\utmify-clone\\apps\\api\\src\\modules\\invitations.module.ts"],
+      sourcesContent: ["import { Module } from '@nestjs/common';\nimport { BullModule } from '@nestjs/bull';\nimport { ScheduleModule } from '@nestjs/schedule';\nimport { InvitationsController } from '../controllers/invitations.controller';\nimport { InvitationService } from '../services/invitation.service';\nimport { PrismaService } from '../services/prisma.service';\nimport { TenantDatabaseService } from '../services/tenant-database.service';\nimport { TenantCacheService } from '../services/tenant-cache.service';\nimport { TenantQueueService } from '../services/tenant-queue.service';\nimport { InvitationEmailProcessor } from '../processors/invitation-email.processor';\nimport { InvitationCleanupScheduler } from '../schedulers/invitation-cleanup.scheduler';\n\n@Module({\n  imports: [\n    BullModule.registerQueue({\n      name: 'email',\n    }),\n    ScheduleModule.forRoot(),\n  ],\n  controllers: [InvitationsController],\n  providers: [\n    InvitationService,\n    PrismaService,\n    TenantDatabaseService,\n    TenantCacheService,\n    TenantQueueService,\n    InvitationEmailProcessor,\n    InvitationCleanupScheduler,\n  ],\n  exports: [\n    InvitationService,\n    TenantDatabaseService,\n    TenantCacheService,\n    TenantQueueService,\n  ],\n})\nexport class InvitationsModule {}"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "de6af5d390cf7712e10b46457856cef4345c35e2"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_10duikzvee = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_10duikzvee();
+var __decorate =
+/* istanbul ignore next */
+(cov_10duikzvee().s[0]++,
+/* istanbul ignore next */
+(cov_10duikzvee().b[0][0]++, this) &&
+/* istanbul ignore next */
+(cov_10duikzvee().b[0][1]++, this.__decorate) ||
+/* istanbul ignore next */
+(cov_10duikzvee().b[0][2]++, function (decorators, target, key, desc) {
+  /* istanbul ignore next */
+  cov_10duikzvee().f[0]++;
+  var c =
+    /* istanbul ignore next */
+    (cov_10duikzvee().s[1]++, arguments.length),
+    r =
+    /* istanbul ignore next */
+    (cov_10duikzvee().s[2]++, c < 3 ?
+    /* istanbul ignore next */
+    (cov_10duikzvee().b[1][0]++, target) :
+    /* istanbul ignore next */
+    (cov_10duikzvee().b[1][1]++, desc === null ?
+    /* istanbul ignore next */
+    (cov_10duikzvee().b[2][0]++, desc = Object.getOwnPropertyDescriptor(target, key)) :
+    /* istanbul ignore next */
+    (cov_10duikzvee().b[2][1]++, desc))),
+    d;
+  /* istanbul ignore next */
+  cov_10duikzvee().s[3]++;
+  if (
+  /* istanbul ignore next */
+  (cov_10duikzvee().b[4][0]++, typeof Reflect === "object") &&
+  /* istanbul ignore next */
+  (cov_10duikzvee().b[4][1]++, typeof Reflect.decorate === "function")) {
+    /* istanbul ignore next */
+    cov_10duikzvee().b[3][0]++;
+    cov_10duikzvee().s[4]++;
+    r = Reflect.decorate(decorators, target, key, desc);
+  } else {
+    /* istanbul ignore next */
+    cov_10duikzvee().b[3][1]++;
+    cov_10duikzvee().s[5]++;
+    for (var i =
+    /* istanbul ignore next */
+    (cov_10duikzvee().s[6]++, decorators.length - 1); i >= 0; i--) {
+      /* istanbul ignore next */
+      cov_10duikzvee().s[7]++;
+      if (d = decorators[i]) {
+        /* istanbul ignore next */
+        cov_10duikzvee().b[5][0]++;
+        cov_10duikzvee().s[8]++;
+        r =
+        /* istanbul ignore next */
+        (cov_10duikzvee().b[6][0]++, c < 3 ?
+        /* istanbul ignore next */
+        (cov_10duikzvee().b[7][0]++, d(r)) :
+        /* istanbul ignore next */
+        (cov_10duikzvee().b[7][1]++, c > 3 ?
+        /* istanbul ignore next */
+        (cov_10duikzvee().b[8][0]++, d(target, key, r)) :
+        /* istanbul ignore next */
+        (cov_10duikzvee().b[8][1]++, d(target, key)))) ||
+        /* istanbul ignore next */
+        (cov_10duikzvee().b[6][1]++, r);
+      } else
+      /* istanbul ignore next */
+      {
+        cov_10duikzvee().b[5][1]++;
+      }
+    }
+  }
+  /* istanbul ignore next */
+  cov_10duikzvee().s[9]++;
+  return /* istanbul ignore next */(cov_10duikzvee().b[9][0]++, c > 3) &&
+  /* istanbul ignore next */
+  (cov_10duikzvee().b[9][1]++, r) &&
+  /* istanbul ignore next */
+  (cov_10duikzvee().b[9][2]++, Object.defineProperty(target, key, r)), r;
+}));
+import { Module } from '@nestjs/common';
+import { BullModule } from '@nestjs/bull';
+import { ScheduleModule } from '@nestjs/schedule';
+import { InvitationsController } from '../controllers/invitations.controller';
+import { InvitationService } from '../services/invitation.service';
+import { PrismaService } from '../services/prisma.service';
+import { TenantDatabaseService } from '../services/tenant-database.service';
+import { TenantCacheService } from '../services/tenant-cache.service';
+import { TenantQueueService } from '../services/tenant-queue.service';
+import { InvitationEmailProcessor } from '../processors/invitation-email.processor';
+import { InvitationCleanupScheduler } from '../schedulers/invitation-cleanup.scheduler';
+/* istanbul ignore next */
+cov_10duikzvee().s[10]++;
+let InvitationsModule = class InvitationsModule {};
+/* istanbul ignore next */
+cov_10duikzvee().s[11]++;
+InvitationsModule = __decorate([Module({
+  imports: [BullModule.registerQueue({
+    name: 'email'
+  }), ScheduleModule.forRoot()],
+  controllers: [InvitationsController],
+  providers: [InvitationService, PrismaService, TenantDatabaseService, TenantCacheService, TenantQueueService, InvitationEmailProcessor, InvitationCleanupScheduler],
+  exports: [InvitationService, TenantDatabaseService, TenantCacheService, TenantQueueService]
+})], InvitationsModule);
+export { InvitationsModule };
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMTBkdWlrenZlZSIsImFjdHVhbENvdmVyYWdlIiwiTW9kdWxlIiwiQnVsbE1vZHVsZSIsIlNjaGVkdWxlTW9kdWxlIiwiSW52aXRhdGlvbnNDb250cm9sbGVyIiwiSW52aXRhdGlvblNlcnZpY2UiLCJQcmlzbWFTZXJ2aWNlIiwiVGVuYW50RGF0YWJhc2VTZXJ2aWNlIiwiVGVuYW50Q2FjaGVTZXJ2aWNlIiwiVGVuYW50UXVldWVTZXJ2aWNlIiwiSW52aXRhdGlvbkVtYWlsUHJvY2Vzc29yIiwiSW52aXRhdGlvbkNsZWFudXBTY2hlZHVsZXIiLCJzIiwiSW52aXRhdGlvbnNNb2R1bGUiLCJfX2RlY29yYXRlIiwiaW1wb3J0cyIsInJlZ2lzdGVyUXVldWUiLCJuYW1lIiwiZm9yUm9vdCIsImNvbnRyb2xsZXJzIiwicHJvdmlkZXJzIiwiZXhwb3J0cyJdLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcRW56byBNYXJjZWxvXFxEZXNrdG9wXFxQcm9qZXRvcyBFbXByZXNhXFxTYWFzIFV0bWlmeVxcdXRtaWZ5LWNsb25lXFxhcHBzXFxhcGlcXHNyY1xcbW9kdWxlc1xcaW52aXRhdGlvbnMubW9kdWxlLnRzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IE1vZHVsZSB9IGZyb20gJ0BuZXN0anMvY29tbW9uJztcbmltcG9ydCB7IEJ1bGxNb2R1bGUgfSBmcm9tICdAbmVzdGpzL2J1bGwnO1xuaW1wb3J0IHsgU2NoZWR1bGVNb2R1bGUgfSBmcm9tICdAbmVzdGpzL3NjaGVkdWxlJztcbmltcG9ydCB7IEludml0YXRpb25zQ29udHJvbGxlciB9IGZyb20gJy4uL2NvbnRyb2xsZXJzL2ludml0YXRpb25zLmNvbnRyb2xsZXInO1xuaW1wb3J0IHsgSW52aXRhdGlvblNlcnZpY2UgfSBmcm9tICcuLi9zZXJ2aWNlcy9pbnZpdGF0aW9uLnNlcnZpY2UnO1xuaW1wb3J0IHsgUHJpc21hU2VydmljZSB9IGZyb20gJy4uL3NlcnZpY2VzL3ByaXNtYS5zZXJ2aWNlJztcbmltcG9ydCB7IFRlbmFudERhdGFiYXNlU2VydmljZSB9IGZyb20gJy4uL3NlcnZpY2VzL3RlbmFudC1kYXRhYmFzZS5zZXJ2aWNlJztcbmltcG9ydCB7IFRlbmFudENhY2hlU2VydmljZSB9IGZyb20gJy4uL3NlcnZpY2VzL3RlbmFudC1jYWNoZS5zZXJ2aWNlJztcbmltcG9ydCB7IFRlbmFudFF1ZXVlU2VydmljZSB9IGZyb20gJy4uL3NlcnZpY2VzL3RlbmFudC1xdWV1ZS5zZXJ2aWNlJztcbmltcG9ydCB7IEludml0YXRpb25FbWFpbFByb2Nlc3NvciB9IGZyb20gJy4uL3Byb2Nlc3NvcnMvaW52aXRhdGlvbi1lbWFpbC5wcm9jZXNzb3InO1xuaW1wb3J0IHsgSW52aXRhdGlvbkNsZWFudXBTY2hlZHVsZXIgfSBmcm9tICcuLi9zY2hlZHVsZXJzL2ludml0YXRpb24tY2xlYW51cC5zY2hlZHVsZXInO1xuXG5ATW9kdWxlKHtcbiAgaW1wb3J0czogW1xuICAgIEJ1bGxNb2R1bGUucmVnaXN0ZXJRdWV1ZSh7XG4gICAgICBuYW1lOiAnZW1haWwnLFxuICAgIH0pLFxuICAgIFNjaGVkdWxlTW9kdWxlLmZvclJvb3QoKSxcbiAgXSxcbiAgY29udHJvbGxlcnM6IFtJbnZpdGF0aW9uc0NvbnRyb2xsZXJdLFxuICBwcm92aWRlcnM6IFtcbiAgICBJbnZpdGF0aW9uU2VydmljZSxcbiAgICBQcmlzbWFTZXJ2aWNlLFxuICAgIFRlbmFudERhdGFiYXNlU2VydmljZSxcbiAgICBUZW5hbnRDYWNoZVNlcnZpY2UsXG4gICAgVGVuYW50UXVldWVTZXJ2aWNlLFxuICAgIEludml0YXRpb25FbWFpbFByb2Nlc3NvcixcbiAgICBJbnZpdGF0aW9uQ2xlYW51cFNjaGVkdWxlcixcbiAgXSxcbiAgZXhwb3J0czogW1xuICAgIEludml0YXRpb25TZXJ2aWNlLFxuICAgIFRlbmFudERhdGFiYXNlU2VydmljZSxcbiAgICBUZW5hbnRDYWNoZVNlcnZpY2UsXG4gICAgVGVuYW50UXVldWVTZXJ2aWNlLFxuICBdLFxufSlcbmV4cG9ydCBjbGFzcyBJbnZpdGF0aW9uc01vZHVsZSB7fSJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lBU1M7SUFBQUEsY0FBQSxZQUFBQSxDQUFBO01BQUEsT0FBQUMsY0FBQTtJQUFBO0VBQUE7RUFBQSxPQUFBQSxjQUFBO0FBQUE7QUFBQUQsY0FBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQVRULFNBQVNFLE1BQU0sUUFBUSxnQkFBZ0I7QUFDdkMsU0FBU0MsVUFBVSxRQUFRLGNBQWM7QUFDekMsU0FBU0MsY0FBYyxRQUFRLGtCQUFrQjtBQUNqRCxTQUFTQyxxQkFBcUIsUUFBUSx1Q0FBdUM7QUFDN0UsU0FBU0MsaUJBQWlCLFFBQVEsZ0NBQWdDO0FBQ2xFLFNBQVNDLGFBQWEsUUFBUSw0QkFBNEI7QUFDMUQsU0FBU0MscUJBQXFCLFFBQVEscUNBQXFDO0FBQzNFLFNBQVNDLGtCQUFrQixRQUFRLGtDQUFrQztBQUNyRSxTQUFTQyxrQkFBa0IsUUFBUSxrQ0FBa0M7QUFDckUsU0FBU0Msd0JBQXdCLFFBQVEsMENBQTBDO0FBQ25GLFNBQVNDLDBCQUEwQixRQUFRLDRDQUE0QztBQUFDO0FBQUFaLGNBQUEsR0FBQWEsQ0FBQTtBQTBCakYsSUFBTUMsaUJBQWlCLEdBQXZCLE1BQU1BLGlCQUFpQixHQUFHO0FBQUE7QUFBQWQsY0FBQSxHQUFBYSxDQUFBO0FBQXBCQyxpQkFBaUIsR0FBQUMsVUFBQSxFQXhCN0JiLE1BQU0sQ0FBQztFQUNOYyxPQUFPLEVBQUUsQ0FDUGIsVUFBVSxDQUFDYyxhQUFhLENBQUM7SUFDdkJDLElBQUksRUFBRTtHQUNQLENBQUMsRUFDRmQsY0FBYyxDQUFDZSxPQUFPLEVBQUUsQ0FDekI7RUFDREMsV0FBVyxFQUFFLENBQUNmLHFCQUFxQixDQUFDO0VBQ3BDZ0IsU0FBUyxFQUFFLENBQ1RmLGlCQUFpQixFQUNqQkMsYUFBYSxFQUNiQyxxQkFBcUIsRUFDckJDLGtCQUFrQixFQUNsQkMsa0JBQWtCLEVBQ2xCQyx3QkFBd0IsRUFDeEJDLDBCQUEwQixDQUMzQjtFQUNEVSxPQUFPLEVBQUUsQ0FDUGhCLGlCQUFpQixFQUNqQkUscUJBQXFCLEVBQ3JCQyxrQkFBa0IsRUFDbEJDLGtCQUFrQjtDQUVyQixDQUFDLEMsRUFDV0ksaUJBQWlCLENBQUciLCJpZ25vcmVMaXN0IjpbXX0=

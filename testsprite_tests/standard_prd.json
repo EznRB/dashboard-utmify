@@ -1,0 +1,418 @@
+{
+  "meta": {
+    "project": "AdPerformance Platform",
+    "date": "2025-09-10",
+    "prepared_by": "Software Development Manager"
+  },
+  "product_overview": "AdPerformance Platform is a comprehensive marketing analytics and campaign management solution integrating authentication, UTM link tracking, Google Ads data ingestion, advanced ROAS/ROI analysis, and multi-channel communication including WhatsApp. It empowers marketing teams with actionable insights through rich dashboards, metrics, and billing management.",
+  "core_goals": [
+    "Provide a secure and scalable user authentication system with session management.",
+    "Enable users to create, manage and track UTM links for marketing campaigns.",
+    "Integrate seamlessly with Google Ads to import campaigns, metrics, and manage accounts.",
+    "Offer advanced analytics and dashboards for metrics visualization and campaign performance.",
+    "Deliver sophisticated ROAS and ROI analysis with alerts and actionable insights.",
+    "Support billing and subscription management with Stripe integration.",
+    "Manage asynchronous task processing via queue system for scalability.",
+    "Facilitate communication through WhatsApp Business integration for real-time notifications."
+  ],
+  "key_features": [
+    "JWT-based authentication system with user registration, login, refresh tokens, and session management.",
+    "UTM management API for creation and detailed tracking of campaign links with analytics.",
+    "Full Google Ads integration supporting OAuth flows, campaign and metrics data retrieval.",
+    "Rich metrics and analytics dashboards with historical data views and performance comparisons.",
+    "ROAS/ROI analysis module with date filtered comprehensive reports and alerts.",
+    "Billing and subscription service integrating Stripe for payment processing and subscription lifecycle management.",
+    "Asynchronous queue management for handling background tasks efficiently.",
+    "WhatsApp Business API integration enabling messaging capabilities for notifications and user engagement."
+  ],
+  "user_flow_summary": [
+    "User registers and logs in to the platform using secure authentication system.",
+    "Users create UTM links and monitor their campaign performance via analytics dashboards.",
+    "Users connect their Google Ads accounts through OAuth to import campaigns and metrics automatically.",
+    "Users access dashboards to view historical metrics, analyze ROAS/ROI and receive insights.",
+    "Billing and subscription management handled via account dashboard, allowing plan updates and payments.",
+    "Background tasks like data imports and notifications are processed asynchronously via queue system.",
+    "Users send notifications and messages through the integrated WhatsApp API interface."
+  ],
+  "validation_criteria": [
+    "Successful user registration, login, token refresh, and session management under load.",
+    "Correct creation and accurate tracking of UTM links with validated analytics data.",
+    "Reliable and secure OAuth integration with Google Ads and accurate campaign/metrics syncing.",
+    "Dashboards correctly display metrics data with filtering options and historical views.",
+    "Detailed ROAS/ROI reports generated accurately for specified date ranges with associated alerts.",
+    "Billing flows complete without errors, supporting subscription creation, modification, and retrieval.",
+    "Background queue processes tasks within expected timeframes and reports status accurately.",
+    "WhatsApp messages sent successfully and delivered to intended recipients with error handling."
+  ],
+  "code_summary": {
+    "tech_stack": [
+      "Node.js",
+      "TypeScript",
+      "Fastify",
+      "Next.js",
+      "PostgreSQL",
+      "Prisma ORM",
+      "Redis",
+      "JWT Authentication",
+      "Docker",
+      "Turborepo",
+      "pnpm"
+    ],
+    "features": [
+      {
+        "name": "Authentication API",
+        "description": "Sistema completo de autenticação com JWT, registro, login, refresh tokens e gerenciamento de sessões",
+        "files": [
+          "apps/api/src/routes/auth.routes.ts",
+          "apps/api/src/services/auth.service.ts",
+          "apps/api/src/middleware/auth.middleware.ts"
+        ],
+        "api_doc": {
+          "openapi": "3.0.0",
+          "paths": {
+            "/api/v1/auth/login": {
+              "post": {
+                "summary": "User login",
+                "requestBody": {
+                  "required": true,
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "type": "object",
+                        "properties": {
+                          "email": {
+                            "type": "string",
+                            "format": "email"
+                          },
+                          "password": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "email",
+                          "password"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "/api/v1/auth/register": {
+              "post": {
+                "summary": "User registration",
+                "requestBody": {
+                  "required": true,
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string"
+                          },
+                          "email": {
+                            "type": "string",
+                            "format": "email"
+                          },
+                          "password": {
+                            "type": "string"
+                          },
+                          "organizationName": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "name",
+                          "email",
+                          "password",
+                          "organizationName"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "UTM Management API",
+        "description": "Sistema de criação, gerenciamento e tracking de links UTM com analytics",
+        "files": [
+          "apps/api/src/routes/utm.routes.ts",
+          "apps/api/src/services/utm.service.ts",
+          "apps/api/src/controllers/utm.controller.ts"
+        ],
+        "api_doc": {
+          "openapi": "3.0.0",
+          "paths": {
+            "/api/v1/utm/create": {
+              "post": {
+                "summary": "Create UTM link",
+                "requestBody": {
+                  "required": true,
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "type": "object",
+                        "properties": {
+                          "originalUrl": {
+                            "type": "string",
+                            "format": "uri"
+                          },
+                          "utmSource": {
+                            "type": "string"
+                          },
+                          "utmMedium": {
+                            "type": "string"
+                          },
+                          "utmCampaign": {
+                            "type": "string"
+                          },
+                          "utmTerm": {
+                            "type": "string"
+                          },
+                          "utmContent": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "originalUrl"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Google Ads Integration API",
+        "description": "Integração completa com Google Ads para importar campanhas, métricas e gerenciar contas",
+        "files": [
+          "apps/api/src/routes/google-ads.routes.ts",
+          "apps/api/src/services/google-ads.service.ts",
+          "apps/api/src/controllers/google-ads.controller.ts"
+        ],
+        "api_doc": {
+          "openapi": "3.0.0",
+          "paths": {
+            "/api/v1/google-ads/auth": {
+              "post": {
+                "summary": "Initiate Google Ads OAuth flow",
+                "requestBody": {
+                  "required": true,
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "type": "object",
+                        "properties": {
+                          "redirect_uri": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "redirect_uri"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "/api/v1/google-ads/campaigns": {
+              "get": {
+                "summary": "Get Google Ads campaigns",
+                "parameters": [
+                  {
+                    "name": "customer_id",
+                    "in": "query",
+                    "required": true,
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Metrics and Analytics API",
+        "description": "Sistema de métricas e analytics com dashboards, relatórios e comparações de performance",
+        "files": [
+          "apps/api/src/routes/metrics.routes.ts",
+          "apps/api/src/services/metrics.service.ts",
+          "apps/api/src/routes/dashboard.routes.ts"
+        ],
+        "api_doc": {
+          "openapi": "3.0.0",
+          "paths": {
+            "/api/v1/metrics/dashboard": {
+              "get": {
+                "summary": "Get dashboard metrics",
+                "parameters": [
+                  {
+                    "name": "startDate",
+                    "in": "query",
+                    "schema": {
+                      "type": "string",
+                      "format": "date"
+                    }
+                  },
+                  {
+                    "name": "endDate",
+                    "in": "query",
+                    "schema": {
+                      "type": "string",
+                      "format": "date"
+                    }
+                  }
+                ]
+              }
+            },
+            "/api/v1/metrics/history": {
+              "get": {
+                "summary": "Get metrics history",
+                "parameters": [
+                  {
+                    "name": "groupBy",
+                    "in": "query",
+                    "schema": {
+                      "type": "string",
+                      "enum": [
+                        "day",
+                        "week",
+                        "month"
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "ROAS/ROI Analysis API",
+        "description": "Sistema avançado de análise de ROAS (Return on Ad Spend) e ROI com alertas e insights",
+        "files": [
+          "apps/api/src/routes/roas-roi.routes.ts",
+          "apps/api/src/services/roas-roi.service.ts"
+        ],
+        "api_doc": {
+          "openapi": "3.0.0",
+          "paths": {
+            "/api/v1/roas-roi/analysis": {
+              "get": {
+                "summary": "Get comprehensive ROAS/ROI analysis",
+                "parameters": [
+                  {
+                    "name": "startDate",
+                    "in": "query",
+                    "schema": {
+                      "type": "string",
+                      "format": "date"
+                    }
+                  },
+                  {
+                    "name": "endDate",
+                    "in": "query",
+                    "schema": {
+                      "type": "string",
+                      "format": "date"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Billing and Subscription API",
+        "description": "Sistema de cobrança e gerenciamento de assinaturas com integração Stripe",
+        "files": [
+          "apps/api/src/routes/billing.routes.ts",
+          "apps/api/src/services/billing.service.ts"
+        ],
+        "api_doc": {
+          "openapi": "3.0.0",
+          "paths": {
+            "/api/v1/billing/subscription": {
+              "get": {
+                "summary": "Get current subscription details"
+              },
+              "post": {
+                "summary": "Create or update subscription"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Queue Management API",
+        "description": "Sistema de gerenciamento de filas para processamento assíncrono de tarefas",
+        "files": [
+          "apps/api/src/routes/queue.routes.ts",
+          "apps/api/src/queue/index.ts"
+        ],
+        "api_doc": {
+          "openapi": "3.0.0",
+          "paths": {
+            "/api/v1/queue/status": {
+              "get": {
+                "summary": "Get queue status and statistics"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "WhatsApp Integration API",
+        "description": "Integração com WhatsApp Business API para envio de mensagens e notificações",
+        "files": [
+          "apps/api/src/routes/whatsapp.routes.ts",
+          "apps/api/src/services/whatsapp.service.ts"
+        ],
+        "api_doc": {
+          "openapi": "3.0.0",
+          "paths": {
+            "/api/v1/whatsapp/send": {
+              "post": {
+                "summary": "Send WhatsApp message",
+                "requestBody": {
+                  "required": true,
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "type": "object",
+                        "properties": {
+                          "to": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "to",
+                          "message"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

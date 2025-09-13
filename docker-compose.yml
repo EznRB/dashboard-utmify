@@ -1,0 +1,116 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: utmify-postgres
+    environment:
+      POSTGRES_DB: utmify
+      POSTGRES_USER: utmify
+      POSTGRES_PASSWORD: utmify123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./docker/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - utmify-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U utmify -d utmify"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  redis:
+    image: redis:7-alpine
+    container_name: utmify-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+      - ./docker/redis/redis.conf:/usr/local/etc/redis/redis.conf
+    command: redis-server /usr/local/etc/redis/redis.conf
+    networks:
+      - utmify-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Opcional: Redis Commander para interface web do Redis
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    container_name: utmify-redis-commander
+    environment:
+      REDIS_HOSTS: local:redis:6379
+    ports:
+      - "8081:8081"
+    networks:
+      - utmify-network
+    depends_on:
+      - redis
+    profiles:
+      - tools
+
+  # Opcional: pgAdmin para interface web do PostgreSQL
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: utmify-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@utmify.com
+      PGADMIN_DEFAULT_PASSWORD: admin123
+    ports:
+      - "8080:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    networks:
+      - utmify-network
+    depends_on:
+      - postgres
+    profiles:
+      - tools
+
+  # API Service
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    container_name: utmify-api
+    ports:
+      - "3001:8000"
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=postgresql://utmify:utmify123@postgres:5432/utmify
+      - REDIS_URL=redis://redis:6379
+      - JWT_SECRET=your-super-secret-jwt-key-change-in-production
+      - PORT=8000
+      - HOST=0.0.0.0
+    volumes:
+      - ./apps/api/uploads:/app/apps/api/uploads
+    networks:
+      - utmify-network
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:8000/health', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) })"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+  pgadmin_data:
+    driver: local
+
+networks:
+  utmify-network:
+    driver: bridge
+    name: utmify-network

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "TC001",
+    "title": "user login functionality",
+    "description": "Test the user login API endpoint /api/v1/auth/login to verify successful authentication with valid credentials and proper error handling with invalid credentials."
+  },
+  {
+    "id": "TC002",
+    "title": "user registration process",
+    "description": "Validate the user registration API endpoint /api/v1/auth/register to ensure new users can register with required fields and receive appropriate responses for missing or invalid data."
+  },
+  {
+    "id": "TC003",
+    "title": "utm link creation and validation",
+    "description": "Verify the UTM link creation endpoint /api/v1/utm/create to confirm that UTM links are generated correctly with required parameters and handle invalid URLs properly."
+  },
+  {
+    "id": "TC004",
+    "title": "google ads oauth flow initiation",
+    "description": "Test the Google Ads OAuth initiation endpoint /api/v1/google-ads/auth to ensure the OAuth flow starts correctly with a valid redirect URI and handles missing or invalid parameters."
+  },
+  {
+    "id": "TC005",
+    "title": "fetch google ads campaigns",
+    "description": "Validate the retrieval of Google Ads campaigns via /api/v1/google-ads/campaigns ensuring campaigns are fetched correctly for a valid customer_id and errors are handled for invalid or missing IDs."
+  },
+  {
+    "id": "TC006",
+    "title": "dashboard metrics retrieval",
+    "description": "Test the dashboard metrics endpoint /api/v1/metrics/dashboard to verify metrics are returned correctly for given date ranges and handle cases with missing or invalid dates."
+  },
+  {
+    "id": "TC007",
+    "title": "metrics history data retrieval",
+    "description": "Validate the metrics history endpoint /api/v1/metrics/history to ensure data is grouped correctly by day, week, or month and errors are handled for invalid groupBy values."
+  },
+  {
+    "id": "TC008",
+    "title": "roas roi analysis report generation",
+    "description": "Test the ROAS/ROI analysis endpoint /api/v1/roas-roi/analysis to confirm comprehensive reports are generated accurately for specified date ranges and handle invalid or missing date parameters."
+  },
+  {
+    "id": "TC009",
+    "title": "billing subscription management",
+    "description": "Validate the billing subscription endpoints /api/v1/billing/subscription for retrieving current subscription details and creating or updating subscriptions with proper validation and error handling."
+  },
+  {
+    "id": "TC010",
+    "title": "whatsapp message sending",
+    "description": "Test the WhatsApp message sending endpoint /api/v1/whatsapp/send to ensure messages are sent successfully to valid recipients and handle errors for missing or invalid message content or recipient."
+  }
+]

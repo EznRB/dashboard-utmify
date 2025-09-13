@@ -1,0 +1,439 @@
+# Prometheus Alert Rules for Utmify
+groups:
+  # System-level alerts
+  - name: system.rules
+    rules:
+      # High CPU usage
+      - alert: HighCPUUsage
+        expr: 100 - (avg by(instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 80
+        for: 5m
+        labels:
+          severity: warning
+          category: system
+        annotations:
+          summary: "High CPU usage detected"
+          description: "CPU usage is above 80% for more than 5 minutes on {{ $labels.instance }}"
+          runbook_url: "https://docs.utmify.com/runbooks/high-cpu"
+
+      # Critical CPU usage
+      - alert: CriticalCPUUsage
+        expr: 100 - (avg by(instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 95
+        for: 2m
+        labels:
+          severity: critical
+          category: system
+        annotations:
+          summary: "Critical CPU usage detected"
+          description: "CPU usage is above 95% for more than 2 minutes on {{ $labels.instance }}"
+          runbook_url: "https://docs.utmify.com/runbooks/critical-cpu"
+
+      # High memory usage
+      - alert: HighMemoryUsage
+        expr: (1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) * 100 > 85
+        for: 5m
+        labels:
+          severity: warning
+          category: system
+        annotations:
+          summary: "High memory usage detected"
+          description: "Memory usage is above 85% for more than 5 minutes on {{ $labels.instance }}"
+          runbook_url: "https://docs.utmify.com/runbooks/high-memory"
+
+      # Critical memory usage
+      - alert: CriticalMemoryUsage
+        expr: (1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) * 100 > 95
+        for: 2m
+        labels:
+          severity: critical
+          category: system
+        annotations:
+          summary: "Critical memory usage detected"
+          description: "Memory usage is above 95% for more than 2 minutes on {{ $labels.instance }}"
+          runbook_url: "https://docs.utmify.com/runbooks/critical-memory"
+
+      # High disk usage
+      - alert: HighDiskUsage
+        expr: (1 - (node_filesystem_avail_bytes{fstype!="tmpfs"} / node_filesystem_size_bytes{fstype!="tmpfs"})) * 100 > 85
+        for: 5m
+        labels:
+          severity: warning
+          category: system
+        annotations:
+          summary: "High disk usage detected"
+          description: "Disk usage is above 85% for more than 5 minutes on {{ $labels.instance }} ({{ $labels.mountpoint }})"
+          runbook_url: "https://docs.utmify.com/runbooks/high-disk"
+
+      # Critical disk usage
+      - alert: CriticalDiskUsage
+        expr: (1 - (node_filesystem_avail_bytes{fstype!="tmpfs"} / node_filesystem_size_bytes{fstype!="tmpfs"})) * 100 > 95
+        for: 2m
+        labels:
+          severity: critical
+          category: system
+        annotations:
+          summary: "Critical disk usage detected"
+          description: "Disk usage is above 95% for more than 2 minutes on {{ $labels.instance }} ({{ $labels.mountpoint }})"
+          runbook_url: "https://docs.utmify.com/runbooks/critical-disk"
+
+      # High load average
+      - alert: HighLoadAverage
+        expr: node_load15 > 2
+        for: 10m
+        labels:
+          severity: warning
+          category: system
+        annotations:
+          summary: "High load average detected"
+          description: "Load average is above 2 for more than 10 minutes on {{ $labels.instance }}"
+          runbook_url: "https://docs.utmify.com/runbooks/high-load"
+
+      # Instance down
+      - alert: InstanceDown
+        expr: up == 0
+        for: 1m
+        labels:
+          severity: critical
+          category: system
+        annotations:
+          summary: "Instance is down"
+          description: "{{ $labels.instance }} of job {{ $labels.job }} has been down for more than 1 minute"
+          runbook_url: "https://docs.utmify.com/runbooks/instance-down"
+
+  # Application-level alerts
+  - name: application.rules
+    rules:
+      # High response time
+      - alert: HighResponseTime
+        expr: histogram_quantile(0.95, rate(http_request_duration_seconds_bucket[5m])) > 1
+        for: 5m
+        labels:
+          severity: warning
+          category: application
+        annotations:
+          summary: "High response time detected"
+          description: "95th percentile response time is above 1 second for more than 5 minutes"
+          runbook_url: "https://docs.utmify.com/runbooks/high-response-time"
+
+      # Critical response time
+      - alert: CriticalResponseTime
+        expr: histogram_quantile(0.95, rate(http_request_duration_seconds_bucket[5m])) > 5
+        for: 2m
+        labels:
+          severity: critical
+          category: application
+        annotations:
+          summary: "Critical response time detected"
+          description: "95th percentile response time is above 5 seconds for more than 2 minutes"
+          runbook_url: "https://docs.utmify.com/runbooks/critical-response-time"
+
+      # High error rate
+      - alert: HighErrorRate
+        expr: rate(http_requests_total{status=~"5.."}[5m]) / rate(http_requests_total[5m]) * 100 > 5
+        for: 5m
+        labels:
+          severity: warning
+          category: application
+        annotations:
+          summary: "High error rate detected"
+          description: "Error rate is above 5% for more than 5 minutes"
+          runbook_url: "https://docs.utmify.com/runbooks/high-error-rate"
+
+      # Critical error rate
+      - alert: CriticalErrorRate
+        expr: rate(http_requests_total{status=~"5.."}[5m]) / rate(http_requests_total[5m]) * 100 > 20
+        for: 2m
+        labels:
+          severity: critical
+          category: application
+        annotations:
+          summary: "Critical error rate detected"
+          description: "Error rate is above 20% for more than 2 minutes"
+          runbook_url: "https://docs.utmify.com/runbooks/critical-error-rate"
+
+      # Low request rate (possible issue)
+      - alert: LowRequestRate
+        expr: rate(http_requests_total[5m]) < 0.1
+        for: 10m
+        labels:
+          severity: warning
+          category: application
+        annotations:
+          summary: "Low request rate detected"
+          description: "Request rate is below 0.1 requests/second for more than 10 minutes"
+          runbook_url: "https://docs.utmify.com/runbooks/low-request-rate"
+
+      # High memory usage (Node.js heap)
+      - alert: HighNodeJSHeapUsage
+        expr: (nodejs_heap_size_used_bytes / nodejs_heap_size_total_bytes) * 100 > 85
+        for: 5m
+        labels:
+          severity: warning
+          category: application
+        annotations:
+          summary: "High Node.js heap usage detected"
+          description: "Node.js heap usage is above 85% for more than 5 minutes on {{ $labels.instance }}"
+          runbook_url: "https://docs.utmify.com/runbooks/high-nodejs-heap"
+
+      # Application restart detected
+      - alert: ApplicationRestart
+        expr: increase(process_start_time_seconds[5m]) > 0
+        for: 0m
+        labels:
+          severity: info
+          category: application
+        annotations:
+          summary: "Application restart detected"
+          description: "Application {{ $labels.job }} on {{ $labels.instance }} has restarted"
+          runbook_url: "https://docs.utmify.com/runbooks/app-restart"
+
+  # Database alerts
+  - name: database.rules
+    rules:
+      # PostgreSQL down
+      - alert: PostgreSQLDown
+        expr: pg_up == 0
+        for: 1m
+        labels:
+          severity: critical
+          category: database
+        annotations:
+          summary: "PostgreSQL is down"
+          description: "PostgreSQL database is down on {{ $labels.instance }}"
+          runbook_url: "https://docs.utmify.com/runbooks/postgresql-down"
+
+      # High database connections
+      - alert: HighDatabaseConnections
+        expr: pg_stat_database_numbackends / pg_settings_max_connections * 100 > 80
+        for: 5m
+        labels:
+          severity: warning
+          category: database
+        annotations:
+          summary: "High database connections detected"
+          description: "Database connections are above 80% of max connections for more than 5 minutes"
+          runbook_url: "https://docs.utmify.com/runbooks/high-db-connections"
+
+      # Slow queries
+      - alert: SlowQueries
+        expr: rate(pg_stat_database_tup_returned[5m]) / rate(pg_stat_database_tup_fetched[5m]) < 0.1
+        for: 10m
+        labels:
+          severity: warning
+          category: database
+        annotations:
+          summary: "Slow queries detected"
+          description: "Database query efficiency is below 10% for more than 10 minutes"
+          runbook_url: "https://docs.utmify.com/runbooks/slow-queries"
+
+      # Database locks
+      - alert: DatabaseLocks
+        expr: pg_locks_count > 100
+        for: 5m
+        labels:
+          severity: warning
+          category: database
+        annotations:
+          summary: "High number of database locks detected"
+          description: "Number of database locks is above 100 for more than 5 minutes"
+          runbook_url: "https://docs.utmify.com/runbooks/database-locks"
+
+      # Redis down
+      - alert: RedisDown
+        expr: redis_up == 0
+        for: 1m
+        labels:
+          severity: critical
+          category: database
+        annotations:
+          summary: "Redis is down"
+          description: "Redis cache is down on {{ $labels.instance }}"
+          runbook_url: "https://docs.utmify.com/runbooks/redis-down"
+
+      # High Redis memory usage
+      - alert: HighRedisMemoryUsage
+        expr: redis_memory_used_bytes / redis_memory_max_bytes * 100 > 85
+        for: 5m
+        labels:
+          severity: warning
+          category: database
+        annotations:
+          summary: "High Redis memory usage detected"
+          description: "Redis memory usage is above 85% for more than 5 minutes"
+          runbook_url: "https://docs.utmify.com/runbooks/high-redis-memory"
+
+  # Business metrics alerts
+  - name: business.rules
+    rules:
+      # Low UTM creation rate
+      - alert: LowUTMCreationRate
+        expr: rate(utm_links_created_total[1h]) < 1
+        for: 2h
+        labels:
+          severity: warning
+          category: business
+        annotations:
+          summary: "Low UTM creation rate detected"
+          description: "UTM link creation rate is below 1 per hour for more than 2 hours"
+          runbook_url: "https://docs.utmify.com/runbooks/low-utm-creation"
+
+      # High UTM click rate anomaly
+      - alert: UTMClickRateAnomaly
+        expr: abs(rate(utm_clicks_total[1h]) - rate(utm_clicks_total[1h] offset 24h)) / rate(utm_clicks_total[1h] offset 24h) > 0.5
+        for: 1h
+        labels:
+          severity: info
+          category: business
+        annotations:
+          summary: "UTM click rate anomaly detected"
+          description: "UTM click rate has changed by more than 50% compared to the same time yesterday"
+          runbook_url: "https://docs.utmify.com/runbooks/utm-click-anomaly"
+
+      # Low conversion rate
+      - alert: LowConversionRate
+        expr: utm_conversion_rate < 0.01
+        for: 4h
+        labels:
+          severity: warning
+          category: business
+        annotations:
+          summary: "Low conversion rate detected"
+          description: "UTM conversion rate is below 1% for more than 4 hours"
+          runbook_url: "https://docs.utmify.com/runbooks/low-conversion-rate"
+
+      # New user registration drop
+      - alert: LowUserRegistrations
+        expr: rate(user_registrations_total[1h]) < 0.1
+        for: 2h
+        labels:
+          severity: warning
+          category: business
+        annotations:
+          summary: "Low user registration rate detected"
+          description: "User registration rate is below 0.1 per hour for more than 2 hours"
+          runbook_url: "https://docs.utmify.com/runbooks/low-registrations"
+
+      # High subscription churn
+      - alert: HighSubscriptionChurn
+        expr: rate(subscription_cancellations_total[24h]) / rate(subscription_activations_total[24h]) > 0.1
+        for: 1h
+        labels:
+          severity: warning
+          category: business
+        annotations:
+          summary: "High subscription churn detected"
+          description: "Subscription churn rate is above 10% for more than 1 hour"
+          runbook_url: "https://docs.utmify.com/runbooks/high-churn"
+
+  # Security alerts
+  - name: security.rules
+    rules:
+      # High failed login attempts
+      - alert: HighFailedLogins
+        expr: rate(auth_failed_attempts_total[5m]) > 10
+        for: 2m
+        labels:
+          severity: warning
+          category: security
+        annotations:
+          summary: "High failed login attempts detected"
+          description: "Failed login attempts rate is above 10 per minute for more than 2 minutes"
+          runbook_url: "https://docs.utmify.com/runbooks/high-failed-logins"
+
+      # Suspicious API usage
+      - alert: SuspiciousAPIUsage
+        expr: rate(http_requests_total{status="429"}[5m]) > 5
+        for: 5m
+        labels:
+          severity: warning
+          category: security
+        annotations:
+          summary: "Suspicious API usage detected"
+          description: "Rate limiting is being triggered frequently (>5 per minute) for more than 5 minutes"
+          runbook_url: "https://docs.utmify.com/runbooks/suspicious-api-usage"
+
+      # SSL certificate expiry
+      - alert: SSLCertificateExpiry
+        expr: probe_ssl_earliest_cert_expiry - time() < 86400 * 7
+        for: 1h
+        labels:
+          severity: warning
+          category: security
+        annotations:
+          summary: "SSL certificate expiring soon"
+          description: "SSL certificate for {{ $labels.instance }} expires in less than 7 days"
+          runbook_url: "https://docs.utmify.com/runbooks/ssl-expiry"
+
+      # Critical SSL certificate expiry
+      - alert: CriticalSSLCertificateExpiry
+        expr: probe_ssl_earliest_cert_expiry - time() < 86400 * 1
+        for: 1h
+        labels:
+          severity: critical
+          category: security
+        annotations:
+          summary: "SSL certificate expiring very soon"
+          description: "SSL certificate for {{ $labels.instance }} expires in less than 1 day"
+          runbook_url: "https://docs.utmify.com/runbooks/critical-ssl-expiry"
+
+  # Infrastructure alerts
+  - name: infrastructure.rules
+    rules:
+      # Website down
+      - alert: WebsiteDown
+        expr: probe_success{job="blackbox-http"} == 0
+        for: 1m
+        labels:
+          severity: critical
+          category: infrastructure
+        annotations:
+          summary: "Website is down"
+          description: "Website {{ $labels.instance }} is not responding"
+          runbook_url: "https://docs.utmify.com/runbooks/website-down"
+
+      # High response time from external monitoring
+      - alert: HighExternalResponseTime
+        expr: probe_duration_seconds{job="blackbox-http"} > 5
+        for: 5m
+        labels:
+          severity: warning
+          category: infrastructure
+        annotations:
+          summary: "High external response time detected"
+          description: "External response time for {{ $labels.instance }} is above 5 seconds for more than 5 minutes"
+          runbook_url: "https://docs.utmify.com/runbooks/high-external-response-time"
+
+      # Docker container down
+      - alert: DockerContainerDown
+        expr: absent(container_last_seen{name=~".+"})
+        for: 1m
+        labels:
+          severity: critical
+          category: infrastructure
+        annotations:
+          summary: "Docker container is down"
+          description: "Docker container {{ $labels.name }} is not running"
+          runbook_url: "https://docs.utmify.com/runbooks/container-down"
+
+      # High container CPU usage
+      - alert: HighContainerCPUUsage
+        expr: rate(container_cpu_usage_seconds_total{name=~".+"}[5m]) * 100 > 80
+        for: 5m
+        labels:
+          severity: warning
+          category: infrastructure
+        annotations:
+          summary: "High container CPU usage detected"
+          description: "Container {{ $labels.name }} CPU usage is above 80% for more than 5 minutes"
+          runbook_url: "https://docs.utmify.com/runbooks/high-container-cpu"
+
+      # High container memory usage
+      - alert: HighContainerMemoryUsage
+        expr: container_memory_usage_bytes{name=~".+"} / container_spec_memory_limit_bytes * 100 > 85
+        for: 5m
+        labels:
+          severity: warning
+          category: infrastructure
+        annotations:
+          summary: "High container memory usage detected"
+          description: "Container {{ $labels.name }} memory usage is above 85% for more than 5 minutes"
+          runbook_url: "https://docs.utmify.com/runbooks/high-container-memory"

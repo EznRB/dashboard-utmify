@@ -1,0 +1,395 @@
+# Promtail configuration for Utmify log collection
+server:
+  http_listen_port: 9080
+  grpc_listen_port: 0
+  log_level: info
+  log_format: json
+  graceful_shutdown_timeout: 5s
+  http_server_read_timeout: 30s
+  http_server_write_timeout: 30s
+  http_server_idle_timeout: 120s
+
+# Position file to track log reading progress
+positions:
+  filename: /tmp/positions.yaml
+  sync_period: 10s
+  ignore_invalid_yaml: false
+
+# Loki client configuration
+clients:
+  - url: http://loki:3100/loki/api/v1/push
+    tenant_id: ""
+    batchwait: 1s
+    batchsize: 1048576  # 1MB
+    timeout: 10s
+    backoff_config:
+      min_period: 500ms
+      max_period: 5m
+      max_retries: 10
+    external_labels:
+      cluster: utmify-production
+      environment: production
+      hostname: "${HOSTNAME}"
+
+# Scrape configurations
+scrape_configs:
+  # System logs
+  - job_name: system-logs
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: system-logs
+          __path__: /var/log/*.log
+    pipeline_stages:
+      - match:
+          selector: '{job="system-logs"}'
+          stages:
+            - regex:
+                expression: '^(?P<timestamp>\S+\s+\S+\s+\S+)\s+(?P<hostname>\S+)\s+(?P<service>\S+)\[(?P<pid>\d+)\]:\s+(?P<message>.*)$'
+            - labels:
+                hostname:
+                service:
+                pid:
+            - timestamp:
+                source: timestamp
+                format: 'Jan 02 15:04:05'
+                location: 'America/Sao_Paulo'
+
+  # Docker container logs
+  - job_name: docker-logs
+    docker_sd_configs:
+      - host: unix:///var/run/docker.sock
+        refresh_interval: 5s
+        filters:
+          - name: label
+            values: ["logging=promtail"]
+    relabel_configs:
+      - source_labels: ['__meta_docker_container_name']
+        regex: '/(.*?)'
+        target_label: 'container_name'
+      - source_labels: ['__meta_docker_container_log_stream']
+        target_label: 'stream'
+      - source_labels: ['__meta_docker_container_label_com_docker_compose_service']
+        target_label: 'service'
+      - source_labels: ['__meta_docker_container_label_com_docker_compose_project']
+        target_label: 'project'
+    pipeline_stages:
+      - cri: {}
+      - match:
+          selector: '{container_name=~"utmify.*"}'
+          stages:
+            - json:
+                expressions:
+                  level: level
+                  message: message
+                  timestamp: timestamp
+                  service: service
+                  trace_id: trace_id
+                  span_id: span_id
+            - labels:
+                level:
+                service:
+                trace_id:
+                span_id:
+            - timestamp:
+                source: timestamp
+                format: RFC3339Nano
+
+  # Nginx access logs
+  - job_name: nginx-access
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: nginx-access
+          __path__: /var/log/nginx/access.log
+    pipeline_stages:
+      - regex:
+          expression: '^(?P<remote_addr>\S+)\s+-\s+(?P<remote_user>\S+)\s+\[(?P<time_local>[^\]]+)\]\s+"(?P<method>\S+)\s+(?P<request_uri>\S+)\s+(?P<server_protocol>\S+)"\s+(?P<status>\d+)\s+(?P<body_bytes_sent>\d+)\s+"(?P<http_referer>[^"]*)"\s+"(?P<http_user_agent>[^"]*)"\s+"(?P<http_x_forwarded_for>[^"]*)"\s+(?P<request_time>\S+)\s+(?P<upstream_response_time>\S+)$'
+      - labels:
+          method:
+          status:
+          remote_addr:
+      - timestamp:
+          source: time_local
+          format: '02/Jan/2006:15:04:05 -0700'
+      - metrics:
+          nginx_request_duration_seconds:
+            type: Histogram
+            description: "Nginx request duration in seconds"
+            source: request_time
+            config:
+              buckets: [0.1, 0.5, 1.0, 2.5, 5.0, 10.0]
+          nginx_requests_total:
+            type: Counter
+            description: "Total number of nginx requests"
+            config:
+              action: inc
+
+  # Nginx error logs
+  - job_name: nginx-error
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: nginx-error
+          __path__: /var/log/nginx/error.log
+    pipeline_stages:
+      - regex:
+          expression: '^(?P<timestamp>\d{4}/\d{2}/\d{2}\s+\d{2}:\d{2}:\d{2})\s+\[(?P<level>\w+)\]\s+(?P<pid>\d+)#(?P<tid>\d+):\s+(?P<message>.*)$'
+      - labels:
+          level:
+          pid:
+      - timestamp:
+          source: timestamp
+          format: '2006/01/02 15:04:05'
+
+  # PostgreSQL logs
+  - job_name: postgresql
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: postgresql
+          __path__: /var/log/postgresql/*.log
+    pipeline_stages:
+      - regex:
+          expression: '^(?P<timestamp>\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2}\.\d{3}\s+\w+)\s+\[(?P<pid>\d+)\]\s+(?P<level>\w+):\s+(?P<message>.*)$'
+      - labels:
+          level:
+          pid:
+      - timestamp:
+          source: timestamp
+          format: '2006-01-02 15:04:05.000 MST'
+
+  # Redis logs
+  - job_name: redis
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: redis
+          __path__: /var/log/redis/*.log
+    pipeline_stages:
+      - regex:
+          expression: '^(?P<pid>\d+):(?P<role>\w+)\s+(?P<timestamp>\d{2}\s+\w{3}\s+\d{4}\s+\d{2}:\d{2}:\d{2}\.\d{3})\s+(?P<level>[\*\#\-\.])\s+(?P<message>.*)$'
+      - labels:
+          level:
+          role:
+          pid:
+      - timestamp:
+          source: timestamp
+          format: '02 Jan 2006 15:04:05.000'
+
+  # Application logs (API)
+  - job_name: utmify-api
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: utmify-api
+          service: api
+          __path__: /var/log/utmify/api/*.log
+    pipeline_stages:
+      - json:
+          expressions:
+            level: level
+            message: msg
+            timestamp: time
+            service: service
+            method: method
+            url: url
+            status: status
+            duration: duration
+            user_id: user_id
+            trace_id: trace_id
+            span_id: span_id
+            error: error
+      - labels:
+          level:
+          service:
+          method:
+          status:
+          user_id:
+          trace_id:
+          span_id:
+      - timestamp:
+          source: timestamp
+          format: RFC3339Nano
+      - metrics:
+          api_request_duration_seconds:
+            type: Histogram
+            description: "API request duration in seconds"
+            source: duration
+            config:
+              buckets: [0.01, 0.05, 0.1, 0.5, 1.0, 2.5, 5.0, 10.0]
+          api_requests_total:
+            type: Counter
+            description: "Total number of API requests"
+            config:
+              action: inc
+
+  # Application logs (Web)
+  - job_name: utmify-web
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: utmify-web
+          service: web
+          __path__: /var/log/utmify/web/*.log
+    pipeline_stages:
+      - json:
+          expressions:
+            level: level
+            message: message
+            timestamp: timestamp
+            service: service
+            page: page
+            user_id: user_id
+            session_id: session_id
+            trace_id: trace_id
+            span_id: span_id
+            error: error
+      - labels:
+          level:
+          service:
+          page:
+          user_id:
+          session_id:
+          trace_id:
+          span_id:
+      - timestamp:
+          source: timestamp
+          format: RFC3339Nano
+
+  # Security logs
+  - job_name: security
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: security
+          __path__: /var/log/auth.log
+    pipeline_stages:
+      - regex:
+          expression: '^(?P<timestamp>\w{3}\s+\d{1,2}\s+\d{2}:\d{2}:\d{2})\s+(?P<hostname>\S+)\s+(?P<service>\S+)(?:\[(?P<pid>\d+)\])?:\s+(?P<message>.*)$'
+      - labels:
+          hostname:
+          service:
+          pid:
+      - timestamp:
+          source: timestamp
+          format: 'Jan 02 15:04:05'
+          location: 'America/Sao_Paulo'
+      - match:
+          selector: '{job="security"} |~ "Failed password|Invalid user|authentication failure"'
+          stages:
+            - metrics:
+                security_failed_logins_total:
+                  type: Counter
+                  description: "Total number of failed login attempts"
+                  config:
+                    action: inc
+
+  # Fail2Ban logs
+  - job_name: fail2ban
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: fail2ban
+          __path__: /var/log/fail2ban.log
+    pipeline_stages:
+      - regex:
+          expression: '^(?P<timestamp>\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2},\d{3})\s+(?P<level>\w+)\s+\[(?P<service>\S+)\]\s+(?P<action>\w+)\s+(?P<ip>\S+)$'
+      - labels:
+          level:
+          service:
+          action:
+          ip:
+      - timestamp:
+          source: timestamp
+          format: '2006-01-02 15:04:05,000'
+      - metrics:
+          fail2ban_actions_total:
+            type: Counter
+            description: "Total number of fail2ban actions"
+            config:
+              action: inc
+
+  # Monitoring logs
+  - job_name: monitoring
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: monitoring
+          __path__: /var/log/utmify/monitoring/*.log
+    pipeline_stages:
+      - json:
+          expressions:
+            level: level
+            message: message
+            timestamp: timestamp
+            component: component
+            metric: metric
+            value: value
+            alert: alert
+      - labels:
+          level:
+          component:
+          metric:
+          alert:
+      - timestamp:
+          source: timestamp
+          format: RFC3339Nano
+
+  # Backup logs
+  - job_name: backup
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: backup
+          __path__: /var/log/utmify/backup/*.log
+    pipeline_stages:
+      - regex:
+          expression: '^(?P<timestamp>\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2})\s+\[(?P<level>\w+)\]\s+(?P<operation>\w+):\s+(?P<message>.*)$'
+      - labels:
+          level:
+          operation:
+      - timestamp:
+          source: timestamp
+          format: '2006-01-02 15:04:05'
+
+  # Cron logs
+  - job_name: cron
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: cron
+          __path__: /var/log/cron.log
+    pipeline_stages:
+      - regex:
+          expression: '^(?P<timestamp>\w{3}\s+\d{1,2}\s+\d{2}:\d{2}:\d{2})\s+(?P<hostname>\S+)\s+(?P<service>\S+)(?:\[(?P<pid>\d+)\])?:\s+\((?P<user>\S+)\)\s+(?P<action>\w+)\s+\((?P<command>.*)\)$'
+      - labels:
+          hostname:
+          service:
+          user:
+          action:
+      - timestamp:
+          source: timestamp
+          format: 'Jan 02 15:04:05'
+          location: 'America/Sao_Paulo'
+
+# Limits configuration
+limits_config:
+  readline_rate: 10000
+  readline_burst: 10000
+
+# Target configuration
+target_config:
+  sync_period: 10s

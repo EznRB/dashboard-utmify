@@ -1,0 +1,396 @@
+modules:
+  # HTTP 2xx probe
+  http_2xx:
+    prober: http
+    timeout: 5s
+    http:
+      valid_http_versions: ["HTTP/1.1", "HTTP/2.0"]
+      valid_status_codes: [200, 201, 202, 204]
+      method: GET
+      headers:
+        Host: utmify.com
+        Accept-Language: en-US
+        User-Agent: "Blackbox Exporter/Utmify Health Check"
+      no_follow_redirects: false
+      fail_if_ssl: false
+      fail_if_not_ssl: false
+      tls_config:
+        insecure_skip_verify: false
+      preferred_ip_protocol: "ip4"
+      ip_protocol_fallback: true
+
+  # HTTP POST probe
+  http_post_2xx:
+    prober: http
+    timeout: 5s
+    http:
+      valid_http_versions: ["HTTP/1.1", "HTTP/2.0"]
+      valid_status_codes: [200, 201, 202]
+      method: POST
+      headers:
+        Content-Type: application/json
+        User-Agent: "Blackbox Exporter/Utmify Health Check"
+      body: '{"health": "check"}'
+      no_follow_redirects: false
+      fail_if_ssl: false
+      fail_if_not_ssl: false
+
+  # HTTPS probe with SSL verification
+  https_2xx:
+    prober: http
+    timeout: 10s
+    http:
+      valid_http_versions: ["HTTP/1.1", "HTTP/2.0"]
+      valid_status_codes: [200, 201, 202, 204]
+      method: GET
+      headers:
+        Host: utmify.com
+        User-Agent: "Blackbox Exporter/Utmify SSL Check"
+      no_follow_redirects: false
+      fail_if_ssl: false
+      fail_if_not_ssl: true
+      tls_config:
+        insecure_skip_verify: false
+        ca_file: "/etc/ssl/certs/ca-certificates.crt"
+      preferred_ip_protocol: "ip4"
+      ip_protocol_fallback: true
+
+  # HTTP probe with basic auth
+  http_basic_auth:
+    prober: http
+    timeout: 5s
+    http:
+      valid_http_versions: ["HTTP/1.1", "HTTP/2.0"]
+      valid_status_codes: [200, 401]
+      method: GET
+      headers:
+        User-Agent: "Blackbox Exporter/Utmify Auth Check"
+      basic_auth:
+        username: "monitor"
+        password: "${MONITOR_PASSWORD:-password}"
+      no_follow_redirects: false
+      fail_if_ssl: false
+      fail_if_not_ssl: false
+
+  # API health check probe
+  api_health_check:
+    prober: http
+    timeout: 10s
+    http:
+      valid_http_versions: ["HTTP/1.1", "HTTP/2.0"]
+      valid_status_codes: [200]
+      method: GET
+      headers:
+        Content-Type: application/json
+        User-Agent: "Blackbox Exporter/Utmify API Health"
+      body: ''
+      no_follow_redirects: false
+      fail_if_ssl: false
+      fail_if_not_ssl: false
+      fail_if_body_not_matches_regexp:
+        - '"status":\s*"ok"'
+        - '"database":\s*"connected"'
+      fail_if_header_not_matches_regexp:
+        - header: "Content-Type"
+          regexp: "application/json"
+
+  # Database connection probe (via HTTP endpoint)
+  database_health:
+    prober: http
+    timeout: 15s
+    http:
+      valid_http_versions: ["HTTP/1.1", "HTTP/2.0"]
+      valid_status_codes: [200]
+      method: GET
+      headers:
+        User-Agent: "Blackbox Exporter/Utmify DB Health"
+      fail_if_body_not_matches_regexp:
+        - '"database":\s*"healthy"'
+        - '"response_time":\s*[0-9]+'
+      no_follow_redirects: false
+
+  # Redis health check probe
+  redis_health:
+    prober: http
+    timeout: 10s
+    http:
+      valid_http_versions: ["HTTP/1.1", "HTTP/2.0"]
+      valid_status_codes: [200]
+      method: GET
+      headers:
+        User-Agent: "Blackbox Exporter/Utmify Redis Health"
+      fail_if_body_not_matches_regexp:
+        - '"redis":\s*"connected"'
+        - '"cache":\s*"operational"'
+      no_follow_redirects: false
+
+  # TCP connect probe
+  tcp_connect:
+    prober: tcp
+    timeout: 5s
+    tcp:
+      preferred_ip_protocol: "ip4"
+      ip_protocol_fallback: true
+
+  # PostgreSQL TCP probe
+  postgres_tcp:
+    prober: tcp
+    timeout: 10s
+    tcp:
+      preferred_ip_protocol: "ip4"
+      ip_protocol_fallback: true
+      query_response:
+        - expect: "^\\x00\\x00\\x00\\x08\\x04\\xd2\\x16/"
+          send: "\\x00\\x00\\x00\\x08\\x04\\xd2\\x16."
+
+  # Redis TCP probe
+  redis_tcp:
+    prober: tcp
+    timeout: 5s
+    tcp:
+      preferred_ip_protocol: "ip4"
+      ip_protocol_fallback: true
+      query_response:
+        - expect: "^\\+PONG"
+          send: "PING\\r\\n"
+
+  # SSH probe
+  ssh_banner:
+    prober: tcp
+    timeout: 10s
+    tcp:
+      preferred_ip_protocol: "ip4"
+      ip_protocol_fallback: true
+      query_response:
+        - expect: "^SSH-2.0-"
+
+  # ICMP ping probe
+  icmp:
+    prober: icmp
+    timeout: 5s
+    icmp:
+      preferred_ip_protocol: "ip4"
+      source_ip_address: ""
+      payload_size: 64
+      dont_fragment: false
+
+  # ICMP IPv6 probe
+  icmp_ipv6:
+    prober: icmp
+    timeout: 5s
+    icmp:
+      preferred_ip_protocol: "ip6"
+      source_ip_address: ""
+      payload_size: 64
+
+  # DNS probe
+  dns_udp:
+    prober: dns
+    timeout: 5s
+    dns:
+      query_name: "utmify.com"
+      query_type: "A"
+      valid_rcodes:
+        - NOERROR
+      validate_answer_rrs:
+        fail_if_matches_regexp:
+          - ".*127.0.0.1"
+        fail_if_all_match_regexp:
+          - ".*127.0.0.1"
+      validate_authority_rrs:
+        fail_if_matches_regexp:
+          - ".*127.0.0.1"
+      validate_additional_rrs:
+        fail_if_matches_regexp:
+          - ".*127.0.0.1"
+      preferred_ip_protocol: "ip4"
+      ip_protocol_fallback: true
+
+  # DNS over TCP probe
+  dns_tcp:
+    prober: dns
+    timeout: 5s
+    dns:
+      transport_protocol: "tcp"
+      query_name: "utmify.com"
+      query_type: "A"
+      valid_rcodes:
+        - NOERROR
+      preferred_ip_protocol: "ip4"
+      ip_protocol_fallback: true
+
+  # DNS SOA probe
+  dns_soa:
+    prober: dns
+    timeout: 5s
+    dns:
+      query_name: "utmify.com"
+      query_type: "SOA"
+      valid_rcodes:
+        - NOERROR
+      preferred_ip_protocol: "ip4"
+      ip_protocol_fallback: true
+
+  # SMTP probe
+  smtp_starttls:
+    prober: tcp
+    timeout: 10s
+    tcp:
+      preferred_ip_protocol: "ip4"
+      ip_protocol_fallback: true
+      query_response:
+        - expect: "^220 "
+        - send: "EHLO blackbox.utmify.com"
+        - expect: "^250-STARTTLS"
+        - send: "STARTTLS"
+        - expect: "^220 "
+        - starttls: true
+        - send: "EHLO blackbox.utmify.com"
+        - expect: "^250 "
+        - send: "QUIT"
+
+  # FTP probe
+  ftp_banner:
+    prober: tcp
+    timeout: 10s
+    tcp:
+      preferred_ip_protocol: "ip4"
+      ip_protocol_fallback: true
+      query_response:
+        - expect: "^220 "
+        - send: "QUIT"
+
+  # Custom application probe
+  utmify_app_health:
+    prober: http
+    timeout: 15s
+    http:
+      valid_http_versions: ["HTTP/1.1", "HTTP/2.0"]
+      valid_status_codes: [200]
+      method: GET
+      headers:
+        Content-Type: application/json
+        User-Agent: "Blackbox Exporter/Utmify App Health"
+        X-Health-Check: "true"
+      no_follow_redirects: false
+      fail_if_ssl: false
+      fail_if_not_ssl: false
+      fail_if_body_not_matches_regexp:
+        - '"status":\s*"healthy"'
+        - '"version":\s*"[0-9]+\\.[0-9]+\\.[0-9]+"'
+        - '"uptime":\s*[0-9]+'
+        - '"services":\s*\\{'
+      fail_if_header_not_matches_regexp:
+        - header: "Content-Type"
+          regexp: "application/json"
+        - header: "X-Response-Time"
+          regexp: "[0-9]+ms"
+
+  # SSL certificate expiry probe
+  ssl_expiry:
+    prober: http
+    timeout: 10s
+    http:
+      valid_http_versions: ["HTTP/1.1", "HTTP/2.0"]
+      valid_status_codes: []
+      method: GET
+      headers:
+        User-Agent: "Blackbox Exporter/Utmify SSL Expiry"
+      no_follow_redirects: true
+      fail_if_ssl: false
+      fail_if_not_ssl: true
+      tls_config:
+        insecure_skip_verify: false
+        ca_file: "/etc/ssl/certs/ca-certificates.crt"
+      preferred_ip_protocol: "ip4"
+      ip_protocol_fallback: true
+
+  # GraphQL endpoint probe
+  graphql_health:
+    prober: http
+    timeout: 10s
+    http:
+      valid_http_versions: ["HTTP/1.1", "HTTP/2.0"]
+      valid_status_codes: [200]
+      method: POST
+      headers:
+        Content-Type: application/json
+        User-Agent: "Blackbox Exporter/Utmify GraphQL Health"
+      body: '{"query": "query { health { status version uptime } }"}'
+      no_follow_redirects: false
+      fail_if_body_not_matches_regexp:
+        - '"status":\s*"ok"'
+        - '"data":\s*\\{'
+      fail_if_header_not_matches_regexp:
+        - header: "Content-Type"
+          regexp: "application/json"
+
+  # WebSocket probe
+  websocket_health:
+    prober: http
+    timeout: 10s
+    http:
+      valid_http_versions: ["HTTP/1.1"]
+      valid_status_codes: [101]
+      method: GET
+      headers:
+        Connection: Upgrade
+        Upgrade: websocket
+        Sec-WebSocket-Key: "dGhlIHNhbXBsZSBub25jZQ=="
+        Sec-WebSocket-Version: "13"
+        User-Agent: "Blackbox Exporter/Utmify WebSocket Health"
+      no_follow_redirects: false
+      fail_if_header_not_matches_regexp:
+        - header: "Upgrade"
+          regexp: "websocket"
+        - header: "Connection"
+          regexp: "upgrade"
+
+  # Load balancer health probe
+  load_balancer_health:
+    prober: http
+    timeout: 5s
+    http:
+      valid_http_versions: ["HTTP/1.1", "HTTP/2.0"]
+      valid_status_codes: [200, 503]
+      method: GET
+      headers:
+        User-Agent: "Blackbox Exporter/Utmify LB Health"
+        X-Forwarded-For: "127.0.0.1"
+      no_follow_redirects: false
+      fail_if_ssl: false
+      fail_if_not_ssl: false
+
+  # CDN endpoint probe
+  cdn_health:
+    prober: http
+    timeout: 10s
+    http:
+      valid_http_versions: ["HTTP/1.1", "HTTP/2.0"]
+      valid_status_codes: [200, 304]
+      method: GET
+      headers:
+        User-Agent: "Blackbox Exporter/Utmify CDN Health"
+        Cache-Control: "no-cache"
+      no_follow_redirects: false
+      fail_if_ssl: false
+      fail_if_not_ssl: false
+      fail_if_header_not_matches_regexp:
+        - header: "X-Cache"
+          regexp: "(HIT|MISS)"
+
+  # Monitoring endpoint probe
+  monitoring_health:
+    prober: http
+    timeout: 5s
+    http:
+      valid_http_versions: ["HTTP/1.1", "HTTP/2.0"]
+      valid_status_codes: [200]
+      method: GET
+      headers:
+        User-Agent: "Blackbox Exporter/Utmify Monitoring Health"
+      no_follow_redirects: false
+      fail_if_body_not_matches_regexp:
+        - '"prometheus":\s*"up"'
+        - '"grafana":\s*"up"'
+        - '"alertmanager":\s*"up"'

@@ -1,0 +1,493 @@
+864447ca6b270680f555d7c86cae6856
+"use strict";
+
+/* istanbul ignore next */
+function cov_2neyvqopj6() {
+  var path = "C:\\Users\\Enzo Marcelo\\Desktop\\Projetos Empresa\\Saas Utmify\\utmify-clone\\apps\\api\\src\\routes\\index.ts";
+  var hash = "f77cda106e958d91cf4ad8b4bb15ae85a661e1bc";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "C:\\Users\\Enzo Marcelo\\Desktop\\Projetos Empresa\\Saas Utmify\\utmify-clone\\apps\\api\\src\\routes\\index.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 2,
+          column: 0
+        },
+        end: {
+          line: 2,
+          column: 62
+        }
+      },
+      "1": {
+        start: {
+          line: 3,
+          column: 0
+        },
+        end: {
+          line: 3,
+          column: 40
+        }
+      },
+      "2": {
+        start: {
+          line: 4,
+          column: 22
+        },
+        end: {
+          line: 4,
+          column: 46
+        }
+      },
+      "3": {
+        start: {
+          line: 5,
+          column: 25
+        },
+        end: {
+          line: 5,
+          column: 52
+        }
+      },
+      "4": {
+        start: {
+          line: 6,
+          column: 27
+        },
+        end: {
+          line: 6,
+          column: 56
+        }
+      },
+      "5": {
+        start: {
+          line: 8,
+          column: 26
+        },
+        end: {
+          line: 8,
+          column: 54
+        }
+      },
+      "6": {
+        start: {
+          line: 9,
+          column: 28
+        },
+        end: {
+          line: 9,
+          column: 58
+        }
+      },
+      "7": {
+        start: {
+          line: 10,
+          column: 21
+        },
+        end: {
+          line: 10,
+          column: 44
+        }
+      },
+      "8": {
+        start: {
+          line: 12,
+          column: 26
+        },
+        end: {
+          line: 12,
+          column: 54
+        }
+      },
+      "9": {
+        start: {
+          line: 17,
+          column: 4
+        },
+        end: {
+          line: 25,
+          column: 7
+        }
+      },
+      "10": {
+        start: {
+          line: 18,
+          column: 8
+        },
+        end: {
+          line: 24,
+          column: 10
+        }
+      },
+      "11": {
+        start: {
+          line: 27,
+          column: 4
+        },
+        end: {
+          line: 58,
+          column: 30
+        }
+      },
+      "12": {
+        start: {
+          line: 29,
+          column: 8
+        },
+        end: {
+          line: 29,
+          column: 74
+        }
+      },
+      "13": {
+        start: {
+          line: 30,
+          column: 8
+        },
+        end: {
+          line: 30,
+          column: 83
+        }
+      },
+      "14": {
+        start: {
+          line: 31,
+          column: 8
+        },
+        end: {
+          line: 31,
+          column: 89
+        }
+      },
+      "15": {
+        start: {
+          line: 33,
+          column: 8
+        },
+        end: {
+          line: 33,
+          column: 71
+        }
+      },
+      "16": {
+        start: {
+          line: 35,
+          column: 8
+        },
+        end: {
+          line: 35,
+          column: 91
+        }
+      },
+      "17": {
+        start: {
+          line: 39,
+          column: 8
+        },
+        end: {
+          line: 39,
+          column: 85
+        }
+      },
+      "18": {
+        start: {
+          line: 49,
+          column: 8
+        },
+        end: {
+          line: 49,
+          column: 86
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "registerRoutes",
+        decl: {
+          start: {
+            line: 14,
+            column: 15
+          },
+          end: {
+            line: 14,
+            column: 29
+          }
+        },
+        loc: {
+          start: {
+            line: 14,
+            column: 35
+          },
+          end: {
+            line: 65,
+            column: 1
+          }
+        },
+        line: 14
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 17,
+            column: 23
+          },
+          end: {
+            line: 17,
+            column: 24
+          }
+        },
+        loc: {
+          start: {
+            line: 17,
+            column: 49
+          },
+          end: {
+            line: 25,
+            column: 5
+          }
+        },
+        line: 17
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 27,
+            column: 23
+          },
+          end: {
+            line: 27,
+            column: 24
+          }
+        },
+        loc: {
+          start: {
+            line: 27,
+            column: 44
+          },
+          end: {
+            line: 58,
+            column: 5
+          }
+        },
+        line: 27
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 23,
+            column: 21
+          },
+          end: {
+            line: 23,
+            column: 63
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 23,
+            column: 21
+          },
+          end: {
+            line: 23,
+            column: 52
+          }
+        }, {
+          start: {
+            line: 23,
+            column: 56
+          },
+          end: {
+            line: 23,
+            column: 63
+          }
+        }],
+        line: 23
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 0,
+      "15": 0,
+      "16": 0,
+      "17": 0,
+      "18": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    b: {
+      "0": [0, 0]
+    },
+    inputSourceMap: {
+      file: "C:\\Users\\Enzo Marcelo\\Desktop\\Projetos Empresa\\Saas Utmify\\utmify-clone\\apps\\api\\src\\routes\\index.ts",
+      mappings: ";;AAgBA,wCAiEC;AAhFD,+CAA0C;AAC1C,qDAAgD;AAChD,yDAAoD;AAIpD,qDAAqD;AACrD,uDAAkD;AAClD,2DAAqD;AAErD,6CAAwC;AACxC,oDAAoD;AACpD,uDAAiD;AAEjD,sBAAsB;AACf,KAAK,UAAU,cAAc,CAAC,GAAoB;IACvD,wDAAwD;IACxD,qCAAqC;IACrC,GAAG,CAAC,GAAG,CAAC,SAAS,EAAE,KAAK,EAAE,OAAO,EAAE,KAAK,EAAE,EAAE;QAC1C,OAAO;YACL,MAAM,EAAE,IAAI;YACZ,SAAS,EAAE,IAAI,IAAI,EAAE,CAAC,WAAW,EAAE;YACnC,MAAM,EAAE,OAAO,CAAC,MAAM,EAAE;YACxB,WAAW,EAAE,OAAO,CAAC,GAAG,CAAC,QAAQ;YACjC,OAAO,EAAE,OAAO,CAAC,GAAG,CAAC,mBAAmB,IAAI,OAAO;SACpD,CAAA;IACH,CAAC,CAAC,CAAA;IAEF,2DAA2D;IAC3D,MAAM,GAAG,CAAC,QAAQ,CAAC,KAAK,WAAW,GAAG;QACpC,8CAA8C;QAC9C,MAAM,GAAG,CAAC,QAAQ,CAAC,wBAAU,EAAE,EAAE,MAAM,EAAE,OAAO,EAAE,CAAC,CAAA;QACnD,MAAM,GAAG,CAAC,QAAQ,CAAC,8BAAa,EAAE,EAAE,MAAM,EAAE,UAAU,EAAE,CAAC,CAAA;QACzD,MAAM,GAAG,CAAC,QAAQ,CAAC,kCAAe,EAAE,EAAE,MAAM,EAAE,YAAY,EAAE,CAAC,CAAA;QAE7D,aAAa;QACb,MAAM,GAAG,CAAC,QAAQ,CAAC,sBAAS,EAAE,EAAE,MAAM,EAAE,MAAM,EAAE,CAAC,CAAA;QAEjD,gCAAgC;QAChC,MAAM,GAAG,CAAC,QAAQ,CAAC,mCAAe,EAAE,EAAE,MAAM,EAAE,aAAa,EAAE,CAAC,CAAA;QAE9D,qDAAqD;QACrD,sEAAsE;QAEtE,kBAAkB;QAClB,MAAM,GAAG,CAAC,QAAQ,CAAC,+BAAa,EAAE,EAAE,MAAM,EAAE,WAAW,EAAE,CAAC,CAAA;QAE1D,iBAAiB;QACjB,4DAA4D;QAE5D,cAAc;QACd,sDAAsD;QAEtD,eAAe;QACf,wDAAwD;QAExD,wCAAwC;QACxC,8DAA8D;QAE9D,kBAAkB;QAClB,MAAM,GAAG,CAAC,QAAQ,CAAC,gCAAc,EAAE,EAAE,MAAM,EAAE,WAAW,EAAE,CAAC,CAAA;QAE3D,gCAAgC;QAChC,iEAAiE;QAEjE,oEAAoE;QACtE,0DAA0D;QAExD,oCAAoC;QACpC,uDAAuD;QACvD,uEAAuE;QACvE,+DAA+D;IACjE,CAAC,EAAE,EAAE,MAAM,EAAE,SAAS,EAAE,CAAC,CAAA;IAEzB,mEAAmE;IACnE,gDAAgD;IAChD,iDAAiD;IACjD,8CAA8C;IAC9C,OAAO;IACP,IAAI;AACN,CAAC",
+      names: [],
+      sources: ["C:\\Users\\Enzo Marcelo\\Desktop\\Projetos Empresa\\Saas Utmify\\utmify-clone\\apps\\api\\src\\routes\\index.ts"],
+      sourcesContent: ["import type { FastifyInstance } from 'fastify'\nimport { authRoutes } from './auth.routes'\nimport { metricsRoutes } from './metrics.routes'\nimport { dashboardRoutes } from './dashboard.routes'\nimport { workersRoutes } from './workers.routes'\nimport { jobsRoutes } from './jobs.routes'\nimport { queueRoutes } from './queue.routes'\n// import { webhooksRoutes } from './webhooks.routes'\nimport { whatsappRoutes } from './whatsapp.routes'\nimport { googleAdsRoutes } from './google-ads.routes'\nimport { billingRoutes } from './billing.routes'\nimport { utmRoutes } from './utm.routes'\n// import { metaAdsRoutes } from './meta-ads.routes'\nimport { roasRoiRoutes } from './roas-roi.routes'\n\n// Register all routes\nexport async function registerRoutes(app: FastifyInstance) {\n  // Health check route (already defined in main index.ts)\n  // We'll add it here for completeness\n  app.get('/health', async (request, reply) => {\n    return {\n      status: 'ok',\n      timestamp: new Date().toISOString(),\n      uptime: process.uptime(),\n      environment: process.env.NODE_ENV,\n      version: process.env.npm_package_version || '1.0.0',\n    }\n  })\n\n  // Register routes under /api/v1 prefix - Testing auth only\n  await app.register(async function (app) {\n    // Working routes: auth, metrics and dashboard\n    await app.register(authRoutes, { prefix: '/auth' })\n    await app.register(metricsRoutes, { prefix: '/metrics' })\n    await app.register(dashboardRoutes, { prefix: '/dashboard' })\n    \n    // UTM routes\n    await app.register(utmRoutes, { prefix: '/utm' })\n    \n    // Google Ads integration routes\n    await app.register(googleAdsRoutes, { prefix: '/google-ads' })\n    \n    // Meta Ads integration routes - TEMPORARILY DISABLED\n    // await app.register(metaAdsRoutes, { prefix: '/integrations/meta' })\n    \n    // ROAS/ROI routes\n    await app.register(roasRoiRoutes, { prefix: '/roas-roi' })\n\n    // Workers routes\n    // await app.register(workersRoutes, { prefix: '/workers' })\n\n    // Jobs routes\n    // await app.register(jobsRoutes, { prefix: '/jobs' })\n\n    // Queue routes\n    // await app.register(queueRoutes, { prefix: '/queue' })\n    \n    // Webhook routes - TEMPORARILY DISABLED\n    // await app.register(webhooksRoutes, { prefix: '/webhooks' })\n    \n    // WhatsApp routes\n    await app.register(whatsappRoutes, { prefix: '/whatsapp' })\n    \n    // Google Ads integration routes\n    // await app.register(googleAdsRoutes, { prefix: '/google-ads' })\n    \n    // Billing routes - temporarily disabled due to Prisma client issues\n  // app.register(billingRoutes, { prefix: '/billing' }); })\n    \n    // TODO: Add other route groups here\n    // await app.register(userRoutes, { prefix: '/users' })\n    // await app.register(organizationRoutes, { prefix: '/organizations' })\n    // await app.register(campaignRoutes, { prefix: '/campaigns' })\n  }, { prefix: '/api/v1' })\n\n  // API documentation route - TEMPORARILY DISABLED (DUPLICATE ROUTE)\n  // if (process.env.NODE_ENV === 'development') {\n  //   app.get('/docs', async (request, reply) => {\n  //     return reply.redirect('/documentation')\n  //   })\n  // }\n}"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "f77cda106e958d91cf4ad8b4bb15ae85a661e1bc"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2neyvqopj6 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2neyvqopj6();
+cov_2neyvqopj6().s[0]++;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/* istanbul ignore next */
+cov_2neyvqopj6().s[1]++;
+exports.registerRoutes = registerRoutes;
+const auth_routes_1 =
+/* istanbul ignore next */
+(cov_2neyvqopj6().s[2]++, require("./auth.routes"));
+const metrics_routes_1 =
+/* istanbul ignore next */
+(cov_2neyvqopj6().s[3]++, require("./metrics.routes"));
+const dashboard_routes_1 =
+/* istanbul ignore next */
+(cov_2neyvqopj6().s[4]++, require("./dashboard.routes"));
+// import { webhooksRoutes } from './webhooks.routes'
+const whatsapp_routes_1 =
+/* istanbul ignore next */
+(cov_2neyvqopj6().s[5]++, require("./whatsapp.routes"));
+const google_ads_routes_1 =
+/* istanbul ignore next */
+(cov_2neyvqopj6().s[6]++, require("./google-ads.routes"));
+const utm_routes_1 =
+/* istanbul ignore next */
+(cov_2neyvqopj6().s[7]++, require("./utm.routes"));
+// import { metaAdsRoutes } from './meta-ads.routes'
+const roas_roi_routes_1 =
+/* istanbul ignore next */
+(cov_2neyvqopj6().s[8]++, require("./roas-roi.routes"));
+// Register all routes
+async function registerRoutes(app) {
+  /* istanbul ignore next */
+  cov_2neyvqopj6().f[0]++;
+  cov_2neyvqopj6().s[9]++;
+  // Health check route (already defined in main index.ts)
+  // We'll add it here for completeness
+  app.get('/health', async (request, reply) => {
+    /* istanbul ignore next */
+    cov_2neyvqopj6().f[1]++;
+    cov_2neyvqopj6().s[10]++;
+    return {
+      status: 'ok',
+      timestamp: new Date().toISOString(),
+      uptime: process.uptime(),
+      environment: process.env.NODE_ENV,
+      version:
+      /* istanbul ignore next */
+      (cov_2neyvqopj6().b[0][0]++, process.env.npm_package_version) ||
+      /* istanbul ignore next */
+      (cov_2neyvqopj6().b[0][1]++, '1.0.0')
+    };
+  });
+  // Register routes under /api/v1 prefix - Testing auth only
+  /* istanbul ignore next */
+  cov_2neyvqopj6().s[11]++;
+  await app.register(async function (app) {
+    /* istanbul ignore next */
+    cov_2neyvqopj6().f[2]++;
+    cov_2neyvqopj6().s[12]++;
+    // Working routes: auth, metrics and dashboard
+    await app.register(auth_routes_1.authRoutes, {
+      prefix: '/auth'
+    });
+    /* istanbul ignore next */
+    cov_2neyvqopj6().s[13]++;
+    await app.register(metrics_routes_1.metricsRoutes, {
+      prefix: '/metrics'
+    });
+    /* istanbul ignore next */
+    cov_2neyvqopj6().s[14]++;
+    await app.register(dashboard_routes_1.dashboardRoutes, {
+      prefix: '/dashboard'
+    });
+    // UTM routes
+    /* istanbul ignore next */
+    cov_2neyvqopj6().s[15]++;
+    await app.register(utm_routes_1.utmRoutes, {
+      prefix: '/utm'
+    });
+    // Google Ads integration routes
+    /* istanbul ignore next */
+    cov_2neyvqopj6().s[16]++;
+    await app.register(google_ads_routes_1.googleAdsRoutes, {
+      prefix: '/google-ads'
+    });
+    // Meta Ads integration routes - TEMPORARILY DISABLED
+    // await app.register(metaAdsRoutes, { prefix: '/integrations/meta' })
+    // ROAS/ROI routes
+    /* istanbul ignore next */
+    cov_2neyvqopj6().s[17]++;
+    await app.register(roas_roi_routes_1.roasRoiRoutes, {
+      prefix: '/roas-roi'
+    });
+    // Workers routes
+    // await app.register(workersRoutes, { prefix: '/workers' })
+    // Jobs routes
+    // await app.register(jobsRoutes, { prefix: '/jobs' })
+    // Queue routes
+    // await app.register(queueRoutes, { prefix: '/queue' })
+    // Webhook routes - TEMPORARILY DISABLED
+    // await app.register(webhooksRoutes, { prefix: '/webhooks' })
+    // WhatsApp routes
+    /* istanbul ignore next */
+    cov_2neyvqopj6().s[18]++;
+    await app.register(whatsapp_routes_1.whatsappRoutes, {
+      prefix: '/whatsapp'
+    });
+    // Google Ads integration routes
+    // await app.register(googleAdsRoutes, { prefix: '/google-ads' })
+    // Billing routes - temporarily disabled due to Prisma client issues
+    // app.register(billingRoutes, { prefix: '/billing' }); })
+    // TODO: Add other route groups here
+    // await app.register(userRoutes, { prefix: '/users' })
+    // await app.register(organizationRoutes, { prefix: '/organizations' })
+    // await app.register(campaignRoutes, { prefix: '/campaigns' })
+  }, {
+    prefix: '/api/v1'
+  });
+  // API documentation route - TEMPORARILY DISABLED (DUPLICATE ROUTE)
+  // if (process.env.NODE_ENV === 'development') {
+  //   app.get('/docs', async (request, reply) => {
+  //     return reply.redirect('/documentation')
+  //   })
+  // }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMm5leXZxb3BqNiIsImFjdHVhbENvdmVyYWdlIiwicyIsImV4cG9ydHMiLCJyZWdpc3RlclJvdXRlcyIsImF1dGhfcm91dGVzXzEiLCJyZXF1aXJlIiwibWV0cmljc19yb3V0ZXNfMSIsImRhc2hib2FyZF9yb3V0ZXNfMSIsIndoYXRzYXBwX3JvdXRlc18xIiwiZ29vZ2xlX2Fkc19yb3V0ZXNfMSIsInV0bV9yb3V0ZXNfMSIsInJvYXNfcm9pX3JvdXRlc18xIiwiYXBwIiwiZiIsImdldCIsInJlcXVlc3QiLCJyZXBseSIsInN0YXR1cyIsInRpbWVzdGFtcCIsIkRhdGUiLCJ0b0lTT1N0cmluZyIsInVwdGltZSIsInByb2Nlc3MiLCJlbnZpcm9ubWVudCIsImVudiIsIk5PREVfRU5WIiwidmVyc2lvbiIsImIiLCJucG1fcGFja2FnZV92ZXJzaW9uIiwicmVnaXN0ZXIiLCJhdXRoUm91dGVzIiwicHJlZml4IiwibWV0cmljc1JvdXRlcyIsImRhc2hib2FyZFJvdXRlcyIsInV0bVJvdXRlcyIsImdvb2dsZUFkc1JvdXRlcyIsInJvYXNSb2lSb3V0ZXMiLCJ3aGF0c2FwcFJvdXRlcyJdLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcRW56byBNYXJjZWxvXFxEZXNrdG9wXFxQcm9qZXRvcyBFbXByZXNhXFxTYWFzIFV0bWlmeVxcdXRtaWZ5LWNsb25lXFxhcHBzXFxhcGlcXHNyY1xccm91dGVzXFxpbmRleC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgdHlwZSB7IEZhc3RpZnlJbnN0YW5jZSB9IGZyb20gJ2Zhc3RpZnknXG5pbXBvcnQgeyBhdXRoUm91dGVzIH0gZnJvbSAnLi9hdXRoLnJvdXRlcydcbmltcG9ydCB7IG1ldHJpY3NSb3V0ZXMgfSBmcm9tICcuL21ldHJpY3Mucm91dGVzJ1xuaW1wb3J0IHsgZGFzaGJvYXJkUm91dGVzIH0gZnJvbSAnLi9kYXNoYm9hcmQucm91dGVzJ1xuaW1wb3J0IHsgd29ya2Vyc1JvdXRlcyB9IGZyb20gJy4vd29ya2Vycy5yb3V0ZXMnXG5pbXBvcnQgeyBqb2JzUm91dGVzIH0gZnJvbSAnLi9qb2JzLnJvdXRlcydcbmltcG9ydCB7IHF1ZXVlUm91dGVzIH0gZnJvbSAnLi9xdWV1ZS5yb3V0ZXMnXG4vLyBpbXBvcnQgeyB3ZWJob29rc1JvdXRlcyB9IGZyb20gJy4vd2ViaG9va3Mucm91dGVzJ1xuaW1wb3J0IHsgd2hhdHNhcHBSb3V0ZXMgfSBmcm9tICcuL3doYXRzYXBwLnJvdXRlcydcbmltcG9ydCB7IGdvb2dsZUFkc1JvdXRlcyB9IGZyb20gJy4vZ29vZ2xlLWFkcy5yb3V0ZXMnXG5pbXBvcnQgeyBiaWxsaW5nUm91dGVzIH0gZnJvbSAnLi9iaWxsaW5nLnJvdXRlcydcbmltcG9ydCB7IHV0bVJvdXRlcyB9IGZyb20gJy4vdXRtLnJvdXRlcydcbi8vIGltcG9ydCB7IG1ldGFBZHNSb3V0ZXMgfSBmcm9tICcuL21ldGEtYWRzLnJvdXRlcydcbmltcG9ydCB7IHJvYXNSb2lSb3V0ZXMgfSBmcm9tICcuL3JvYXMtcm9pLnJvdXRlcydcblxuLy8gUmVnaXN0ZXIgYWxsIHJvdXRlc1xuZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIHJlZ2lzdGVyUm91dGVzKGFwcDogRmFzdGlmeUluc3RhbmNlKSB7XG4gIC8vIEhlYWx0aCBjaGVjayByb3V0ZSAoYWxyZWFkeSBkZWZpbmVkIGluIG1haW4gaW5kZXgudHMpXG4gIC8vIFdlJ2xsIGFkZCBpdCBoZXJlIGZvciBjb21wbGV0ZW5lc3NcbiAgYXBwLmdldCgnL2hlYWx0aCcsIGFzeW5jIChyZXF1ZXN0LCByZXBseSkgPT4ge1xuICAgIHJldHVybiB7XG4gICAgICBzdGF0dXM6ICdvaycsXG4gICAgICB0aW1lc3RhbXA6IG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKSxcbiAgICAgIHVwdGltZTogcHJvY2Vzcy51cHRpbWUoKSxcbiAgICAgIGVudmlyb25tZW50OiBwcm9jZXNzLmVudi5OT0RFX0VOVixcbiAgICAgIHZlcnNpb246IHByb2Nlc3MuZW52Lm5wbV9wYWNrYWdlX3ZlcnNpb24gfHwgJzEuMC4wJyxcbiAgICB9XG4gIH0pXG5cbiAgLy8gUmVnaXN0ZXIgcm91dGVzIHVuZGVyIC9hcGkvdjEgcHJlZml4IC0gVGVzdGluZyBhdXRoIG9ubHlcbiAgYXdhaXQgYXBwLnJlZ2lzdGVyKGFzeW5jIGZ1bmN0aW9uIChhcHApIHtcbiAgICAvLyBXb3JraW5nIHJvdXRlczogYXV0aCwgbWV0cmljcyBhbmQgZGFzaGJvYXJkXG4gICAgYXdhaXQgYXBwLnJlZ2lzdGVyKGF1dGhSb3V0ZXMsIHsgcHJlZml4OiAnL2F1dGgnIH0pXG4gICAgYXdhaXQgYXBwLnJlZ2lzdGVyKG1ldHJpY3NSb3V0ZXMsIHsgcHJlZml4OiAnL21ldHJpY3MnIH0pXG4gICAgYXdhaXQgYXBwLnJlZ2lzdGVyKGRhc2hib2FyZFJvdXRlcywgeyBwcmVmaXg6ICcvZGFzaGJvYXJkJyB9KVxuICAgIFxuICAgIC8vIFVUTSByb3V0ZXNcbiAgICBhd2FpdCBhcHAucmVnaXN0ZXIodXRtUm91dGVzLCB7IHByZWZpeDogJy91dG0nIH0pXG4gICAgXG4gICAgLy8gR29vZ2xlIEFkcyBpbnRlZ3JhdGlvbiByb3V0ZXNcbiAgICBhd2FpdCBhcHAucmVnaXN0ZXIoZ29vZ2xlQWRzUm91dGVzLCB7IHByZWZpeDogJy9nb29nbGUtYWRzJyB9KVxuICAgIFxuICAgIC8vIE1ldGEgQWRzIGludGVncmF0aW9uIHJvdXRlcyAtIFRFTVBPUkFSSUxZIERJU0FCTEVEXG4gICAgLy8gYXdhaXQgYXBwLnJlZ2lzdGVyKG1ldGFBZHNSb3V0ZXMsIHsgcHJlZml4OiAnL2ludGVncmF0aW9ucy9tZXRhJyB9KVxuICAgIFxuICAgIC8vIFJPQVMvUk9JIHJvdXRlc1xuICAgIGF3YWl0IGFwcC5yZWdpc3Rlcihyb2FzUm9pUm91dGVzLCB7IHByZWZpeDogJy9yb2FzLXJvaScgfSlcblxuICAgIC8vIFdvcmtlcnMgcm91dGVzXG4gICAgLy8gYXdhaXQgYXBwLnJlZ2lzdGVyKHdvcmtlcnNSb3V0ZXMsIHsgcHJlZml4OiAnL3dvcmtlcnMnIH0pXG5cbiAgICAvLyBKb2JzIHJvdXRlc1xuICAgIC8vIGF3YWl0IGFwcC5yZWdpc3Rlcihqb2JzUm91dGVzLCB7IHByZWZpeDogJy9qb2JzJyB9KVxuXG4gICAgLy8gUXVldWUgcm91dGVzXG4gICAgLy8gYXdhaXQgYXBwLnJlZ2lzdGVyKHF1ZXVlUm91dGVzLCB7IHByZWZpeDogJy9xdWV1ZScgfSlcbiAgICBcbiAgICAvLyBXZWJob29rIHJvdXRlcyAtIFRFTVBPUkFSSUxZIERJU0FCTEVEXG4gICAgLy8gYXdhaXQgYXBwLnJlZ2lzdGVyKHdlYmhvb2tzUm91dGVzLCB7IHByZWZpeDogJy93ZWJob29rcycgfSlcbiAgICBcbiAgICAvLyBXaGF0c0FwcCByb3V0ZXNcbiAgICBhd2FpdCBhcHAucmVnaXN0ZXIod2hhdHNhcHBSb3V0ZXMsIHsgcHJlZml4OiAnL3doYXRzYXBwJyB9KVxuICAgIFxuICAgIC8vIEdvb2dsZSBBZHMgaW50ZWdyYXRpb24gcm91dGVzXG4gICAgLy8gYXdhaXQgYXBwLnJlZ2lzdGVyKGdvb2dsZUFkc1JvdXRlcywgeyBwcmVmaXg6ICcvZ29vZ2xlLWFkcycgfSlcbiAgICBcbiAgICAvLyBCaWxsaW5nIHJvdXRlcyAtIHRlbXBvcmFyaWx5IGRpc2FibGVkIGR1ZSB0byBQcmlzbWEgY2xpZW50IGlzc3Vlc1xuICAvLyBhcHAucmVnaXN0ZXIoYmlsbGluZ1JvdXRlcywgeyBwcmVmaXg6ICcvYmlsbGluZycgfSk7IH0pXG4gICAgXG4gICAgLy8gVE9ETzogQWRkIG90aGVyIHJvdXRlIGdyb3VwcyBoZXJlXG4gICAgLy8gYXdhaXQgYXBwLnJlZ2lzdGVyKHVzZXJSb3V0ZXMsIHsgcHJlZml4OiAnL3VzZXJzJyB9KVxuICAgIC8vIGF3YWl0IGFwcC5yZWdpc3Rlcihvcmdhbml6YXRpb25Sb3V0ZXMsIHsgcHJlZml4OiAnL29yZ2FuaXphdGlvbnMnIH0pXG4gICAgLy8gYXdhaXQgYXBwLnJlZ2lzdGVyKGNhbXBhaWduUm91dGVzLCB7IHByZWZpeDogJy9jYW1wYWlnbnMnIH0pXG4gIH0sIHsgcHJlZml4OiAnL2FwaS92MScgfSlcblxuICAvLyBBUEkgZG9jdW1lbnRhdGlvbiByb3V0ZSAtIFRFTVBPUkFSSUxZIERJU0FCTEVEIChEVVBMSUNBVEUgUk9VVEUpXG4gIC8vIGlmIChwcm9jZXNzLmVudi5OT0RFX0VOViA9PT0gJ2RldmVsb3BtZW50Jykge1xuICAvLyAgIGFwcC5nZXQoJy9kb2NzJywgYXN5bmMgKHJlcXVlc3QsIHJlcGx5KSA9PiB7XG4gIC8vICAgICByZXR1cm4gcmVwbHkucmVkaXJlY3QoJy9kb2N1bWVudGF0aW9uJylcbiAgLy8gICB9KVxuICAvLyB9XG59Il0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUFrQkU7SUFBQUEsY0FBQSxZQUFBQSxDQUFBO01BQUEsT0FBQUMsY0FBQTtJQUFBO0VBQUE7RUFBQSxPQUFBQSxjQUFBO0FBQUE7QUFBQUQsY0FBQTtBQUFBQSxjQUFBLEdBQUFFLENBQUE7Ozs7OztBQUZGQyxPQUFBLENBQUFDLGNBQUEsR0FBQUEsY0FBQTtBQWZBLE1BQUFDLGFBQUE7QUFBQTtBQUFBLENBQUFMLGNBQUEsR0FBQUUsQ0FBQSxPQUFBSSxPQUFBO0FBQ0EsTUFBQUMsZ0JBQUE7QUFBQTtBQUFBLENBQUFQLGNBQUEsR0FBQUUsQ0FBQSxPQUFBSSxPQUFBO0FBQ0EsTUFBQUUsa0JBQUE7QUFBQTtBQUFBLENBQUFSLGNBQUEsR0FBQUUsQ0FBQSxPQUFBSSxPQUFBO0FBSUE7QUFDQSxNQUFBRyxpQkFBQTtBQUFBO0FBQUEsQ0FBQVQsY0FBQSxHQUFBRSxDQUFBLE9BQUFJLE9BQUE7QUFDQSxNQUFBSSxtQkFBQTtBQUFBO0FBQUEsQ0FBQVYsY0FBQSxHQUFBRSxDQUFBLE9BQUFJLE9BQUE7QUFFQSxNQUFBSyxZQUFBO0FBQUE7QUFBQSxDQUFBWCxjQUFBLEdBQUFFLENBQUEsT0FBQUksT0FBQTtBQUNBO0FBQ0EsTUFBQU0saUJBQUE7QUFBQTtBQUFBLENBQUFaLGNBQUEsR0FBQUUsQ0FBQSxPQUFBSSxPQUFBO0FBRUE7QUFDTyxlQUFlRixjQUFjQSxDQUFDUyxHQUFvQjtFQUFBO0VBQUFiLGNBQUEsR0FBQWMsQ0FBQTtFQUFBZCxjQUFBLEdBQUFFLENBQUE7RUFDdkQ7RUFDQTtFQUNBVyxHQUFHLENBQUNFLEdBQUcsQ0FBQyxTQUFTLEVBQUUsT0FBT0MsT0FBTyxFQUFFQyxLQUFLLEtBQUk7SUFBQTtJQUFBakIsY0FBQSxHQUFBYyxDQUFBO0lBQUFkLGNBQUEsR0FBQUUsQ0FBQTtJQUMxQyxPQUFPO01BQ0xnQixNQUFNLEVBQUUsSUFBSTtNQUNaQyxTQUFTLEVBQUUsSUFBSUMsSUFBSSxFQUFFLENBQUNDLFdBQVcsRUFBRTtNQUNuQ0MsTUFBTSxFQUFFQyxPQUFPLENBQUNELE1BQU0sRUFBRTtNQUN4QkUsV0FBVyxFQUFFRCxPQUFPLENBQUNFLEdBQUcsQ0FBQ0MsUUFBUTtNQUNqQ0MsT0FBTztNQUFFO01BQUEsQ0FBQTNCLGNBQUEsR0FBQTRCLENBQUEsVUFBQUwsT0FBTyxDQUFDRSxHQUFHLENBQUNJLG1CQUFtQjtNQUFBO01BQUEsQ0FBQTdCLGNBQUEsR0FBQTRCLENBQUEsVUFBSSxPQUFPO0tBQ3BEO0VBQ0gsQ0FBQyxDQUFDO0VBRUY7RUFBQTtFQUFBNUIsY0FBQSxHQUFBRSxDQUFBO0VBQ0EsTUFBTVcsR0FBRyxDQUFDaUIsUUFBUSxDQUFDLGdCQUFnQmpCLEdBQUc7SUFBQTtJQUFBYixjQUFBLEdBQUFjLENBQUE7SUFBQWQsY0FBQSxHQUFBRSxDQUFBO0lBQ3BDO0lBQ0EsTUFBTVcsR0FBRyxDQUFDaUIsUUFBUSxDQUFDekIsYUFBQSxDQUFBMEIsVUFBVSxFQUFFO01BQUVDLE1BQU0sRUFBRTtJQUFPLENBQUUsQ0FBQztJQUFBO0lBQUFoQyxjQUFBLEdBQUFFLENBQUE7SUFDbkQsTUFBTVcsR0FBRyxDQUFDaUIsUUFBUSxDQUFDdkIsZ0JBQUEsQ0FBQTBCLGFBQWEsRUFBRTtNQUFFRCxNQUFNLEVBQUU7SUFBVSxDQUFFLENBQUM7SUFBQTtJQUFBaEMsY0FBQSxHQUFBRSxDQUFBO0lBQ3pELE1BQU1XLEdBQUcsQ0FBQ2lCLFFBQVEsQ0FBQ3RCLGtCQUFBLENBQUEwQixlQUFlLEVBQUU7TUFBRUYsTUFBTSxFQUFFO0lBQVksQ0FBRSxDQUFDO0lBRTdEO0lBQUE7SUFBQWhDLGNBQUEsR0FBQUUsQ0FBQTtJQUNBLE1BQU1XLEdBQUcsQ0FBQ2lCLFFBQVEsQ0FBQ25CLFlBQUEsQ0FBQXdCLFNBQVMsRUFBRTtNQUFFSCxNQUFNLEVBQUU7SUFBTSxDQUFFLENBQUM7SUFFakQ7SUFBQTtJQUFBaEMsY0FBQSxHQUFBRSxDQUFBO0lBQ0EsTUFBTVcsR0FBRyxDQUFDaUIsUUFBUSxDQUFDcEIsbUJBQUEsQ0FBQTBCLGVBQWUsRUFBRTtNQUFFSixNQUFNLEVBQUU7SUFBYSxDQUFFLENBQUM7SUFFOUQ7SUFDQTtJQUVBO0lBQUE7SUFBQWhDLGNBQUEsR0FBQUUsQ0FBQTtJQUNBLE1BQU1XLEdBQUcsQ0FBQ2lCLFFBQVEsQ0FBQ2xCLGlCQUFBLENBQUF5QixhQUFhLEVBQUU7TUFBRUwsTUFBTSxFQUFFO0lBQVcsQ0FBRSxDQUFDO0lBRTFEO0lBQ0E7SUFFQTtJQUNBO0lBRUE7SUFDQTtJQUVBO0lBQ0E7SUFFQTtJQUFBO0lBQUFoQyxjQUFBLEdBQUFFLENBQUE7SUFDQSxNQUFNVyxHQUFHLENBQUNpQixRQUFRLENBQUNyQixpQkFBQSxDQUFBNkIsY0FBYyxFQUFFO01BQUVOLE1BQU0sRUFBRTtJQUFXLENBQUUsQ0FBQztJQUUzRDtJQUNBO0lBRUE7SUFDRjtJQUVFO0lBQ0E7SUFDQTtJQUNBO0VBQ0YsQ0FBQyxFQUFFO0lBQUVBLE1BQU0sRUFBRTtFQUFTLENBQUUsQ0FBQztFQUV6QjtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7QUFDRiIsImlnbm9yZUxpc3QiOltdfQ==
