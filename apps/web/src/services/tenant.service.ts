@@ -1,4 +1,4 @@
-import { apiClient } from '@/lib/api-client'
+import { apiClient, ApiResponse } from '@/lib/api-client'
 import { 
   Tenant, 
   TenantUser, 
@@ -7,29 +7,33 @@ import {
   TenantSettings,
   CreateTenantData,
   UpdateTenantData,
-  InviteUserData,
-  UpdateUserRoleData
+  InviteUserData
 } from '@/types/tenant'
+
+// Tipo para atualização de role de usuário
+interface UpdateUserRoleData {
+  role: 'OWNER' | 'ADMIN' | 'MANAGER' | 'VIEWER'
+}
 
 export class TenantService {
   // Tenant management
   static async getTenants(): Promise<Tenant[]> {
-    const response = await apiClient.get('/organizations')
+    const response = await apiClient.get<ApiResponse<Tenant[]>>('/organizations')
     return response.data
   }
 
   static async getTenant(tenantId: string): Promise<Tenant> {
-    const response = await apiClient.get(`/organizations/${tenantId}`)
+    const response = await apiClient.get<ApiResponse<Tenant>>(`/organizations/${tenantId}`)
     return response.data
   }
 
   static async createTenant(data: CreateTenantData): Promise<Tenant> {
-    const response = await apiClient.post('/organizations', data)
+    const response = await apiClient.post<ApiResponse<Tenant>>('/organizations', data)
     return response.data
   }
 
   static async updateTenant(tenantId: string, data: UpdateTenantData): Promise<Tenant> {
-    const response = await apiClient.put(`/organizations/${tenantId}`, data)
+    const response = await apiClient.put<ApiResponse<Tenant>>(`/organizations/${tenantId}`, data)
     return response.data
   }
 
@@ -39,17 +43,17 @@ export class TenantService {
 
   // User management
   static async getTenantUsers(tenantId: string): Promise<TenantUser[]> {
-    const response = await apiClient.get(`/organizations/${tenantId}/users`)
+    const response = await apiClient.get<ApiResponse<TenantUser[]>>(`/organizations/${tenantId}/users`)
     return response.data
   }
 
   static async inviteUser(tenantId: string, data: InviteUserData): Promise<TenantInvitation> {
-    const response = await apiClient.post(`/organizations/${tenantId}/invitations`, data)
+    const response = await apiClient.post<ApiResponse<TenantInvitation>>(`/organizations/${tenantId}/invitations`, data)
     return response.data
   }
 
   static async updateUserRole(tenantId: string, userId: string, data: UpdateUserRoleData): Promise<TenantUser> {
-    const response = await apiClient.put(`/organizations/${tenantId}/users/${userId}/role`, data)
+    const response = await apiClient.put<ApiResponse<TenantUser>>(`/organizations/${tenantId}/users/${userId}/role`, data)
     return response.data
   }
 
@@ -59,7 +63,7 @@ export class TenantService {
 
   // Invitations
   static async getTenantInvitations(tenantId: string): Promise<TenantInvitation[]> {
-    const response = await apiClient.get(`/organizations/${tenantId}/invitations`)
+    const response = await apiClient.get<ApiResponse<TenantInvitation[]>>(`/organizations/${tenantId}/invitations`)
     return response.data
   }
 
@@ -72,30 +76,30 @@ export class TenantService {
   }
 
   static async acceptInvitation(token: string): Promise<{ tenant: Tenant; user: TenantUser }> {
-    const response = await apiClient.post('/invitations/accept', { token })
+    const response = await apiClient.post<ApiResponse<{ tenant: Tenant; user: TenantUser }>>('/invitations/accept', { token })
     return response.data
   }
 
   // Usage and limits
   static async getTenantUsage(tenantId: string): Promise<TenantUsage> {
-    const response = await apiClient.get(`/organizations/${tenantId}/usage`)
+    const response = await apiClient.get<ApiResponse<TenantUsage>>(`/organizations/${tenantId}/usage`)
     return response.data
   }
 
   // Settings
   static async getTenantSettings(tenantId: string): Promise<TenantSettings> {
-    const response = await apiClient.get(`/organizations/${tenantId}/settings`)
+    const response = await apiClient.get<ApiResponse<TenantSettings>>(`/organizations/${tenantId}/settings`)
     return response.data
   }
 
   static async updateTenantSettings(tenantId: string, settings: Partial<TenantSettings>): Promise<TenantSettings> {
-    const response = await apiClient.put(`/organizations/${tenantId}/settings`, settings)
+    const response = await apiClient.put<ApiResponse<TenantSettings>>(`/organizations/${tenantId}/settings`, settings)
     return response.data
   }
 
   // API Keys
   static async generateApiKey(tenantId: string, name: string): Promise<{ key: string; id: string }> {
-    const response = await apiClient.post(`/organizations/${tenantId}/api-keys`, { name })
+    const response = await apiClient.post<ApiResponse<{ key: string; id: string }>>(`/organizations/${tenantId}/api-keys`, { name })
     return response.data
   }
 
@@ -104,7 +108,7 @@ export class TenantService {
   }
 
   static async getApiKeys(tenantId: string): Promise<Array<{ id: string; name: string; createdAt: string; lastUsed?: string }>> {
-    const response = await apiClient.get(`/organizations/${tenantId}/api-keys`)
+    const response = await apiClient.get<ApiResponse<Array<{ id: string; name: string; createdAt: string; lastUsed?: string }>>>(`/organizations/${tenantId}/api-keys`)
     return response.data
   }
 
@@ -113,11 +117,7 @@ export class TenantService {
     const formData = new FormData()
     formData.append('logo', file)
     
-    const response = await apiClient.post(`/organizations/${tenantId}/logo`, formData, {
-      headers: {
-        'Content-Type': 'multipart/form-data'
-      }
-    })
+    const response = await apiClient.post<ApiResponse<{ logoUrl: string }>>(`/organizations/${tenantId}/logo`, formData)
     return response.data
   }
 

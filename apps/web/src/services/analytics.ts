@@ -74,7 +74,8 @@ class AnalyticsService {
       console.error('Error fetching dashboard overview:', error)
       return {
         success: false,
-        error: 'Failed to fetch dashboard overview'
+        data: undefined as any,
+        message: 'Failed to fetch dashboard overview'
       }
     }
   }
@@ -119,7 +120,8 @@ class AnalyticsService {
       console.error('Error fetching revenue chart:', error)
       return {
         success: false,
-        error: 'Failed to fetch revenue chart data'
+        data: undefined as any,
+        message: 'Failed to fetch revenue chart data'
       }
     }
   }

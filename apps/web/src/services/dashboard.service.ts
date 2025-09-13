@@ -94,7 +94,8 @@ class DashboardService {
       console.error('Error fetching dashboard metrics:', error)
       return {
         success: false,
-        error: 'Failed to fetch dashboard metrics'
+        data: undefined as any,
+        message: 'Failed to fetch dashboard metrics'
       }
     }
   }
@@ -110,7 +111,8 @@ class DashboardService {
       console.error('Error fetching revenue chart:', error)
       return {
         success: false,
-        error: 'Failed to fetch revenue chart data'
+        data: undefined as any,
+        message: 'Failed to fetch revenue chart data'
       }
     }
   }
@@ -126,7 +128,8 @@ class DashboardService {
       console.error('Error fetching campaigns:', error)
       return {
         success: false,
-        error: 'Failed to fetch campaigns data'
+        data: undefined as any,
+        message: 'Failed to fetch campaigns data'
       }
     }
   }
@@ -142,7 +145,8 @@ class DashboardService {
       console.error('Error fetching dashboard overview:', error)
       return {
         success: false,
-        error: 'Failed to fetch dashboard overview'
+        data: undefined as any,
+        message: 'Failed to fetch dashboard overview'
       }
     }
   }
@@ -162,7 +166,8 @@ class DashboardService {
       console.error('Error refreshing dashboard:', error)
       return {
         success: false,
-        error: 'Failed to refresh dashboard'
+        data: undefined as any,
+        message: 'Failed to refresh dashboard'
       }
     }
   }

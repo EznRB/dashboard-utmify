@@ -1,4 +1,4 @@
-import { apiClient } from '@/lib/api-client'
+import { apiClient, ApiResponse } from '@/lib/api-client'
 
 export interface WhatsAppConfig {
   id: string
@@ -126,49 +126,49 @@ export interface UpdateAutomationRequest {
 export const whatsappService = {
   // Configuração
   async getConfig(): Promise<WhatsAppConfig | null> {
-    const response = await apiClient.get('/whatsapp/config')
+    const response = await apiClient.get<ApiResponse<WhatsAppConfig | null>>('/whatsapp/config')
     return response.data
   },
 
   async updateConfig(config: Partial<WhatsAppConfig>): Promise<WhatsAppConfig> {
-    const response = await apiClient.put('/whatsapp/config', config)
+    const response = await apiClient.put<ApiResponse<WhatsAppConfig>>('/whatsapp/config', config)
     return response.data
   },
 
   async testConnection(): Promise<{ success: boolean; message: string }> {
-    const response = await apiClient.post('/whatsapp/test-connection')
+    const response = await apiClient.post('/whatsapp/test-connection') as { data: { success: boolean; message: string } }
     return response.data
   },
 
   // Mensagens
   async sendMessage(data: SendMessageRequest): Promise<WhatsAppMessage> {
-    const response = await apiClient.post('/whatsapp/send', data)
+    const response = await apiClient.post('/whatsapp/send', data) as { data: WhatsAppMessage }
     return response.data
   },
 
   async broadcast(data: BroadcastRequest): Promise<{ success: boolean; messageIds: string[] }> {
-    const response = await apiClient.post('/whatsapp/broadcast', data)
+    const response = await apiClient.post('/whatsapp/broadcast', data) as { data: { success: boolean; messageIds: string[] } }
     return response.data
   },
 
   async getMessages(page = 1, limit = 20): Promise<{ messages: WhatsAppMessage[]; total: number }> {
-    const response = await apiClient.get(`/whatsapp/messages?page=${page}&limit=${limit}`)
+    const response = await apiClient.get(`/whatsapp/messages?page=${page}&limit=${limit}`) as { data: { messages: WhatsAppMessage[]; total: number } }
     return response.data
   },
 
   // Templates
   async getTemplates(): Promise<WhatsAppTemplate[]> {
-    const response = await apiClient.get('/whatsapp/templates')
+    const response = await apiClient.get('/whatsapp/templates') as { data: WhatsAppTemplate[] }
     return response.data
   },
 
   async createTemplate(data: CreateTemplateRequest): Promise<WhatsAppTemplate> {
-    const response = await apiClient.post('/whatsapp/templates', data)
+    const response = await apiClient.post('/whatsapp/templates', data) as { data: WhatsAppTemplate }
     return response.data
   },
 
   async updateTemplate(id: string, data: UpdateTemplateRequest): Promise<WhatsAppTemplate> {
-    const response = await apiClient.put(`/whatsapp/templates/${id}`, data)
+    const response = await apiClient.put<ApiResponse<WhatsAppTemplate>>(`/whatsapp/templates/${id}`, data)
     return response.data
   },
 
@@ -177,34 +177,34 @@ export const whatsappService = {
   },
 
   async previewTemplate(id: string, variables?: Record<string, string>): Promise<{ preview: string }> {
-    const response = await apiClient.post(`/whatsapp/templates/${id}/preview`, { variables })
+    const response = await apiClient.post(`/whatsapp/templates/${id}/preview`, { variables }) as { data: { preview: string } }
     return response.data
   },
 
   // Conversas
   async getConversations(page = 1, limit = 20): Promise<{ conversations: WhatsAppConversation[]; total: number }> {
-    const response = await apiClient.get(`/whatsapp/conversations?page=${page}&limit=${limit}`)
+    const response = await apiClient.get(`/whatsapp/conversations?page=${page}&limit=${limit}`) as { data: { conversations: WhatsAppConversation[]; total: number } }
     return response.data
   },
 
   async getConversation(id: string): Promise<WhatsAppConversation> {
-    const response = await apiClient.get(`/whatsapp/conversations/${id}`)
+    const response = await apiClient.get(`/whatsapp/conversations/${id}`) as { data: WhatsAppConversation }
     return response.data
   },
 
   // Automações
   async getAutomations(): Promise<WhatsAppAutomation[]> {
-    const response = await apiClient.get('/whatsapp/automations')
+    const response = await apiClient.get('/whatsapp/automations') as { data: WhatsAppAutomation[] }
     return response.data
   },
 
   async createAutomation(data: CreateAutomationRequest): Promise<WhatsAppAutomation> {
-    const response = await apiClient.post('/whatsapp/automations', data)
+    const response = await apiClient.post('/whatsapp/automations', data) as { data: WhatsAppAutomation }
     return response.data
   },
 
   async updateAutomation(id: string, data: UpdateAutomationRequest): Promise<WhatsAppAutomation> {
-    const response = await apiClient.put(`/whatsapp/automations/${id}`, data)
+    const response = await apiClient.put(`/whatsapp/automations/${id}`, data) as { data: WhatsAppAutomation }
     return response.data
   },
 
@@ -213,7 +213,7 @@ export const whatsappService = {
   },
 
   async toggleAutomation(id: string): Promise<WhatsAppAutomation> {
-    const response = await apiClient.patch(`/whatsapp/automations/${id}/toggle`)
+    const response = await apiClient.patch(`/whatsapp/automations/${id}/toggle`) as { data: WhatsAppAutomation }
     return response.data
   },
 
@@ -223,7 +223,7 @@ export const whatsappService = {
     if (startDate) params.append('startDate', startDate)
     if (endDate) params.append('endDate', endDate)
     
-    const response = await apiClient.get(`/whatsapp/metrics?${params.toString()}`)
+    const response = await apiClient.get(`/whatsapp/metrics?${params.toString()}`) as { data: WhatsAppMetrics[] }
     return response.data
   },
 
@@ -236,7 +236,15 @@ export const whatsappService = {
     dailyUsage: number
     dailyLimit: number
   }> {
-    const response = await apiClient.get('/whatsapp/stats')
+    const response = await apiClient.get('/whatsapp/stats') as { data: {
+      totalMessages: number
+      messagesThisMonth: number
+      deliveryRate: number
+      activeConversations: number
+      activeAutomations: number
+      dailyUsage: number
+      dailyLimit: number
+    } }
     return response.data
   }
 }

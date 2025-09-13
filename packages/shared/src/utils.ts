@@ -154,7 +154,7 @@ export const omit = <T, K extends keyof T>(obj: T, keys: K[]): Omit<T, K> => {
   return result
 }
 
-export const pick = <T, K extends keyof T>(obj: T, keys: K[]): Pick<T, K> => {
+export const pick = <T extends Record<string, any>, K extends keyof T>(obj: T, keys: K[]): Pick<T, K> => {
   const result = {} as Pick<T, K>
   keys.forEach(key => {
     if (key in obj) {
@@ -171,7 +171,7 @@ export const isEmpty = (obj: any): boolean => {
   return false
 }
 
-export const deepMerge = <T>(target: T, source: Partial<T>): T => {
+export const deepMerge = <T extends Record<string, any>>(target: T, source: Partial<T>): T => {
   const result = { ...target }
   
   for (const key in source) {

@@ -64,25 +64,17 @@ export const authOptions: NextAuthOptions = {
   ],
   pages: {
     signIn: "/auth/signin",
-    signUp: "/auth/signup",
     error: "/auth/error",
   },
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
-        token.role = user.role
-        token.accessToken = user.accessToken
-        token.refreshToken = user.refreshToken
+        token.sub = user.id
       }
       return token
     },
     async session({ session, token }) {
-      if (token) {
-        session.user.id = token.sub
-        session.user.role = token.role
-        session.accessToken = token.accessToken
-        session.refreshToken = token.refreshToken
-      }
+      // Session callback - customize as needed
       return session
     },
   },

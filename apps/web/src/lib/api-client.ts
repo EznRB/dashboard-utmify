@@ -13,8 +13,9 @@ class ApiClient {
       'Content-Type': 'application/json',
     }
 
-    if (session?.accessToken) {
-      headers.Authorization = `Bearer ${session.accessToken}`
+    if (session?.user) {
+      // For now, we'll use a placeholder token or implement proper token handling
+      // headers.Authorization = `Bearer ${session.user.accessToken}`
     }
 
     return headers

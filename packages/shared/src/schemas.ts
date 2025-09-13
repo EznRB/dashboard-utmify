@@ -18,6 +18,7 @@ export const userSchema = baseEntitySchema.extend({
   isActive: z.boolean(),
   lastLoginAt: z.date().optional(),
   organizationId: z.string().min(1),
+  password: z.string().min(8),
 })
 
 export const safeUserSchema = userSchema.omit({ password: true })
