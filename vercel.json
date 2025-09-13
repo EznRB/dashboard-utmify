@@ -1,19 +1,18 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
-  "name": "utmify-web",
   "buildCommand": "cd apps/web && pnpm build",
   "installCommand": "npm install -g pnpm && pnpm install",
   "framework": "nextjs",
   "regions": ["iad1"],
   "env": {
-    "NEXT_PUBLIC_API_URL": "@next_public_api_url",
-    "NEXTAUTH_SECRET": "@nextauth_secret",
-    "NEXTAUTH_URL": "@nextauth_url",
-    "GOOGLE_CLIENT_ID": "@google_client_id",
-    "GOOGLE_CLIENT_SECRET": "@google_client_secret",
-    "GITHUB_ID": "@github_id",
-    "GITHUB_SECRET": "@github_secret"
+    "NEXT_PUBLIC_API_URL": "https://api.utmify.com",
+    "NEXTAUTH_SECRET": "your-nextauth-secret-here",
+    "NEXTAUTH_URL": "https://utmify.vercel.app",
+    "GOOGLE_CLIENT_ID": "your-google-client-id",
+    "GOOGLE_CLIENT_SECRET": "your-google-client-secret",
+    "GITHUB_ID": "your-github-id",
+    "GITHUB_SECRET": "your-github-secret"
   },
   "build": {
     "env": {
@@ -21,8 +20,8 @@
     }
   },
   "functions": {
-    "apps/web/src/pages/api/**/*.ts": {
-      "runtime": "nodejs18.x"
+    "apps/web/src/app/api/**/*.ts": {
+      "runtime": "nodejs20.x"
     }
   },
   "rewrites": [
